@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        /* Only show write-answer-box when write-view is visible */
+        #write-view:not([style*="display: flex"]) #write-answer-box {
+            display: none !important;
+        }
+        /* Choice mode styles */
+        .choice-view {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 64px;
+        }
+        .choice-question {
+            font-size: 1.2em;
+            margin: 32px 0 24px 0;
+            text-align: center;
+        }
+        .choice-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 64px;
+        }
+        .choice-option {
+            background: #222;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 16px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.2s, border-color 0.2s;
+            text-align: left;
+        }
+        .choice-option.correct {
+            background: #295d2e;
+            border-color: #4caf50;
+            color: #fff;
+        }
+        .choice-option.incorrect {
+            background: #5d2929;
+            border-color: #f44336;
+            color: #fff;
+        }
+        .choice-option:active {
+            filter: brightness(0.95);
+        }
+        .choice-option * {
+            text-align: left !important;
+        }
+        /* Hand cursor for Close and Start buttons in learn modal */
+        #learn-modal .modal-content button[type="button"] {
+            cursor: pointer !important;
+        }
+        .card-wrapper {
+            position: relative;
+            border-bottom: 1px solid #333;
+            padding: 12px 40px 12px 0;
+        }
+        .card-wrapper:last-child {
+            border-bottom: none;
+        }
+        .card-star {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 4px;
+            font-size: 1.4em;
+            cursor: pointer;
+            color: #555;
+            user-select: none;
+            transition: color 0.15s;
+            background: none;
+            border: none;
+            padding: 0;
+            line-height: 1;
+        }
+        .card-star.starred {
+            color: #f5c518;
+        }
+        .search-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 24px auto;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 10px 14px;
+            font-size: 1em;
+            background: #23232b;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+        .search-input::placeholder {
+            color: #888;
+        }
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #1e1e1e;
+            border: 1px solid #555;
+            border-top: none;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 100;
+            display: none;
+        }
+        .search-result-item {
+            padding: 10px 14px;
+            cursor: pointer;
+            border-bottom: 1px solid #333;
+        }
+        .search-result-item:hover,
+        .search-result-item.active {
+            background: #333;
+        }
+        .search-result-term {
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .search-result-meta {
+            font-size: 0.75em;
+            color: #888;
+            margin-top: 2px;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+        }
+        .folder-list, .file-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .folder, .file {
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            width: 200px;
+            text-align: center;
+        }
+        .folder:hover, .file:hover {
+            background-color: #444;
+        }
+        .back-button {
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #444;
+        }
+        .content {
+            text-align: left;
+        }
+        .options-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #444;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #222;
+            padding: 20px;
+            border: 1px solid #555;
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+        }
+        select, input {
+            width: 100%;
+            padding: 5px;
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #555;
+        }
+        .flashcard-view {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 64px;
+        }
+        .progress-bar {
+            width: 80%;
+            height: 20px;
+            background-color: #333;
+            margin: 20px 0;
+            position: relative;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 12px;
+        }
+        .flashcard {
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 20px;
+            margin: 20px;
+            cursor: pointer;
+            min-height: 300px;
+            max-height: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            word-break: break-word;
+            overflow-wrap: anywhere;
+        }
+        .flashcard * {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .flashcard .mjx-container,
+        .flashcard math[display="block"] {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        .flashcard .flashcard-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .flashcard math[display="block"] {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .nav-arrows {
+            display: flex;
+            gap: 20px;
+        }
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .shuffle-btn {
+            background: #222;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 8px;
+            padding: 4px 18px;
+            cursor: pointer;
+            font-size: 15px;
+            text-align: left;
+            transition: background 0.2s, color 0.2s;
+        }
+        .shuffle-btn.active {
+            background: #4caf50;
+            color: #fff;
+            border-color: #4caf50;
+        }
+        .toggle-switch {
+            width: 44px;
+            height: 24px;
+            background: #222;
+            border: 1px solid #555;
+            border-radius: 16px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            display: flex;
+            align-items: center;
+        }
+        .toggle-switch.active {
+            background: #4caf50;
+            border-color: #4caf50;
+        }
+        .toggle-slider {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            transition: left 0.2s;
+        }
+        .toggle-switch.active .toggle-slider {
+            left: 22px;
+            background: #fff;
+        }
+        .page-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .options-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .learn-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin: 0;
+            text-align: center;
+        }
+        .learn-progress-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        .learn-back-btn {
+            background-color: #333;
+            border: 1px solid #555;
+            padding: 5px 10px;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 0;
+            font-size: 16px;
+        }
+        .learn-back-btn:hover {
+            background-color: #444;
+        }
+        .learn-ratio {
+            font-size: 18px;
+            min-width: 60px;
+            text-align: left;
+        }
+        .learn-progress-bar {
+            flex: 1;
+            margin: 0;
+        }
+        .choice-question {
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        window.MathJax = {
+            tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div id="home" class="container">
+        <h1></h1>
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search notes" autocomplete="off" oninput="app.searchEngine.selectedIndex=-1;app.searchEngine.search()" onfocus="app.searchEngine.search()" onkeydown="app.searchEngine.handleKeydown(event)" />
+            <div id="search-results" class="search-results"></div>
+        </div>
+        <div id="folder-list" class="folder-list"></div>
+    </div>
+    <div id="folder-view" class="container" style="display: none;">
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <h1 id="folder-title" style="text-align: center; margin-bottom: 20px;"></h1>
+            <button type="button" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; margin-bottom: 20px; font-family: inherit; cursor: pointer; transition: background 0.2s, color 0.2s;" onclick="app.showHome()">Back</button>
+            <div id="file-list" class="file-list"></div>
+        </div>
+    </div>
+    <div id="file-view" class="container" style="display: none;">
+        <h1 id="file-title" class="page-title" style="text-align: center; margin-bottom: 24px; margin-top: 40px;"></h1>
+        <div class="options-bar" style="margin-bottom: 40px;">
+            <button type="button" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; font-family: inherit; cursor: pointer; transition: background 0.2s, color 0.2s;" onclick="app.showFolder(app.currentFolder)">Back</button>
+            <button type="button" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; font-family: inherit; cursor: pointer; transition: background 0.2s, color 0.2s;" onclick="app.showHome()">Home</button>
+            <button type="button" id="learn-btn" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; font-family: inherit; cursor: pointer; transition: background 0.2s, color 0.2s;" onclick="app.showLearnModal()">Learn</button>
+        </div>
+        <div id="file-content" class="content"></div>
+    </div>
+    <div id="choice-view" class="choice-view" style="display: none;">
+        <h1 id="choice-title" class="learn-title page-title" style="text-align: center; margin-bottom: 24px; margin-top: 40px;"></h1>
+        <div class="learn-progress-row" style="margin-bottom: 20px;">
+            <button class="back-button learn-back-btn" onclick="app.goBackToLearnModal()">Back</button>
+            <span id="choice-ratio" class="learn-ratio"></span>
+            <div class="progress-bar learn-progress-bar">
+                <div id="choice-progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+        <div id="choice-question" class="choice-question"></div>
+        <div id="choice-options" class="choice-options"></div>
+    </div>
+    <div id="write-view" class="choice-view" style="display: none;">
+        <h1 id="write-title" class="learn-title page-title" style="text-align: center; margin-bottom: 24px; margin-top: 40px;"></h1>
+        <div class="learn-progress-row" style="margin-bottom: 20px;">
+            <button class="back-button learn-back-btn" onclick="app.goBackToLearnModal()">Back</button>
+            <span id="write-ratio" class="learn-ratio"></span>
+            <div class="progress-bar learn-progress-bar">
+                <div id="write-progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+        <div id="write-question" class="choice-question"></div>
+        <div id="write-answer-box" style="width: 100%; max-width: 600px; margin: 0 auto 32px auto;">
+            <input id="write-input-single" type="text" autocomplete="off" style="width: 100%; font-size: 1.2em; background: #23232b; color: #fff; border: 3px solid #555; border-radius: 0; padding: 18px 16px; outline: none; box-sizing: border-box; margin-bottom: 0;" onfocus="this.style.borderColor='#555'" onblur="this.style.borderColor='#555'" onkeydown="if(event.key==='Enter'){app.writeMode._submittedWithEnter=true;app.writeMode.submit();}" />
+            <textarea id="write-input-multi" autocomplete="off" rows="3" style="display: none; width: 100%; font-size: 1.2em; background: #23232b; color: #fff; border: 3px solid #555; border-radius: 0; padding: 18px 16px; outline: none; box-sizing: border-box; margin-bottom: 0; resize: vertical; font-family: inherit;" onfocus="this.style.borderColor='#555'" onblur="this.style.borderColor='#555'" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();app.writeMode._submittedWithEnter=true;app.writeMode.submit();}"></textarea>
+            <div id="write-feedback" style="margin-top: 18px;"></div>
+            <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-top: 24px;">
+                <button id="write-override-btn" type="button" class="back-button" style="display: none; color: #fff; background-color: #333; border: 1px solid #555; border-radius: 0; font-size: 1em; padding: 5px 18px; font-weight: 400;" onclick="app.writeMode.override()">I was correct</button>
+                <button id="write-skip-btn" type="button" class="back-button" style="color: #fff; background-color: #333; border: 1px solid #555; border-radius: 0; font-size: 1em; padding: 5px 18px; margin-right: 8px; font-weight: 400;" onclick="app.writeMode.skip()">Don't know?</button>
+                <button id="write-submit-btn" type="button" class="back-button" style="color: #fff; background-color: #333; border: 1px solid #555; border-radius: 0; font-size: 1em; padding: 5px 18px; font-weight: 500;" onclick="app.writeMode.submit()">Answer</button>
+            </div>
+        </div>
+    </div>
+    <div id="flashcard-view" class="flashcard-view">
+        <h1 id="flashcard-title" class="learn-title page-title" style="text-align: center; margin-bottom: 24px; margin-top: 40px;"></h1>
+        <div class="learn-progress-row" style="margin-bottom: 20px;">
+            <button class="back-button learn-back-btn" onclick="app.goBackToLearnModal()">Back</button>
+            <span id="flashcard-ratio" class="learn-ratio"></span>
+            <div class="progress-bar learn-progress-bar" id="flashcard-progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+        <div id="flashcard" class="flashcard" onclick="app.flashcardMode.flip()"></div>
+        <div class="nav-arrows">
+            <div class="arrow" onclick="app.flashcardMode.prev()">&#8592;</div>
+            <div class="arrow" onclick="app.flashcardMode.next()">&#8594;</div>
+        </div>
+    </div>
+    <div id="learn-modal" class="modal">
+        <div class="modal-content">
+            <form id="learn-form">
+                <div class="form-group">
+                    <label for="type">Mode:</label>
+                    <select id="type">
+                        <option value="flashcards">Flashcards</option>
+                        <option value="choice">Choice</option>
+                        <option value="write">Write</option>
+                        <option value="test">Test</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="answer">Answer:</label>
+                    <select id="answer">
+                        <option value="term" selected>Term</option>
+                        <option value="definition">Definition</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shuffle-toggle" style="margin: 0; min-width: 60px; display: block;">Shuffle:</label>
+                    <div style="display: flex; align-items: center;">
+                        <div id="shuffle-toggle" class="toggle-switch" onclick="app.toggleShuffle()">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span id="shuffle-toggle-label" style="margin-left: 12px; font-size: 15px;">Off</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="margin: 0; min-width: 60px; display: block;">Star:</label>
+                    <div style="display: flex; align-items: center; height: 28px;">
+                        <span id="star-toggle" class="card-star" style="position: static; font-size: 1.4em; cursor: pointer; line-height: 1; transform: none;" onclick="app.toggleStar()">☆</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 16px;">
+                    <button type="button" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; font-family: inherit; cursor: pointer;" onclick="app.closeModal()">Close</button>
+                    <button type="button" style="background: #fff; color: #222; border: 1px solid #222; border-radius: 0; font-size: 16px; padding: 5px 18px; font-weight: 400; font-family: inherit; cursor: pointer;" onclick="app.startLearning()">Start</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    // =====================================================================
+    // UTILITY CLASSES
+    // =====================================================================
+
+    class MathRenderer {
+        static extractMathBlocks(md) {
+            const mathBlocks = [];
+            const regex = /\$\$[\s\S]+?\$\$|\$(?!\$)(?:\\.|[^\\$\n])+?\$/g;
+            let out = md.replace(regex, function(match) {
+                mathBlocks.push(match);
+                return `<!--MATHBLOCK_${mathBlocks.length - 1}-->`;
+            });
+            return { text: out, mathBlocks };
+        }
+
+        static restoreMathBlocks(html, mathBlocks) {
+            return html.replace(/<!--MATHBLOCK_(\d+)-->/g, (m, idx) => mathBlocks[parseInt(idx)]);
+        }
+
+        static renderToHtml(content, replaceAllBackslash = true) {
+            const { text, mathBlocks } = this.extractMathBlocks(content);
+            const processed = replaceAllBackslash
+                ? text.replace(/\\/g, '<br>')
+                : text.replace(/\\\\/g, '<br>');
+            let html = window.marked.parse(processed);
+            return this.restoreMathBlocks(html, mathBlocks);
+        }
+
+        static typeset(element) {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([element]).catch(() => {});
+            }
+        }
+
+        static typesetClear() {
+            if (window.MathJax && window.MathJax.typesetClear) {
+                window.MathJax.typesetClear();
+            }
+        }
+    }
+
+    class CardParser {
+        static parseCards(text) {
+            const parts = text.split('---').map(p => p.trim()).filter(Boolean);
+            const cards = [];
+            const sections = parts.length > 1 ? parts : [parts[0]];
+            for (const part of sections) {
+                const card = this.parseCard(part);
+                if (card) cards.push(card);
+            }
+            return cards;
+        }
+
+        static parseCard(part) {
+            const lines = part.split('\n');
+            let term = '';
+            let defLines = [];
+            let foundTerm = false;
+            let foundDef = false;
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (!foundTerm && (line && line[0] !== '-' && !line.startsWith('$$'))) {
+                    term = line;
+                    foundTerm = true;
+                    continue;
+                }
+                if (foundTerm && !foundDef) {
+                    if (line.startsWith('-') || line.startsWith('$$')) {
+                        foundDef = true;
+                    }
+                }
+                if (foundDef) {
+                    defLines.push(lines[i]);
+                }
+            }
+            if (term && defLines.length) {
+                return { term, definition: defLines.join('\n') };
+            }
+            return null;
+        }
+    }
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    // =====================================================================
+    // DATA MANAGEMENT
+    // =====================================================================
+
+    class StarManager {
+        static getKey(folder, file) {
+            return `stars:${folder}/${file}`;
+        }
+
+        static getIndices(folder, file) {
+            try {
+                return JSON.parse(localStorage.getItem(this.getKey(folder, file)) || '[]');
+            } catch (e) { return []; }
+        }
+
+        static setIndices(folder, file, indices) {
+            localStorage.setItem(this.getKey(folder, file), JSON.stringify(indices));
+        }
+
+        static toggle(folder, file, cardIndex, starEl) {
+            let starred = this.getIndices(folder, file);
+            if (starred.includes(cardIndex)) {
+                starred = starred.filter(i => i !== cardIndex);
+                starEl.classList.remove('starred');
+                starEl.textContent = '☆';
+            } else {
+                starred.push(cardIndex);
+                starEl.classList.add('starred');
+                starEl.textContent = '★';
+            }
+            this.setIndices(folder, file, starred);
+        }
+    }
+
+    class SessionManager {
+        static saveNavState(view, folder, file, mode, settings) {
+            sessionStorage.setItem('navState', JSON.stringify({
+                view, folder: folder || '', file: file || '',
+                mode: mode || '', settings: settings || null
+            }));
+        }
+
+        static getNavState() {
+            const saved = sessionStorage.getItem('navState');
+            if (!saved) return null;
+            try { return JSON.parse(saved); }
+            catch (e) { return null; }
+        }
+
+        static saveLearnProgress(progress) {
+            sessionStorage.setItem('learnProgress', JSON.stringify(progress));
+        }
+
+        static getLearnProgress() {
+            try { return JSON.parse(sessionStorage.getItem('learnProgress') || '{}'); }
+            catch (e) { return {}; }
+        }
+
+        static clearProgress() {
+            sessionStorage.removeItem('learnProgress');
+        }
+    }
+
+    class RetryQueue {
+        constructor(k = 1) {
+            this.k = k;
+            this.reset();
+        }
+
+        reset() {
+            this.queue = [];
+            this.countdown = 0;
+            this.isRetry = false;
+            this.correctStreaks = {};
+        }
+
+        getCurrentIdx(normalIdx) {
+            return this.isRetry ? this.queue[0].idx : normalIdx;
+        }
+
+        handleCorrect(idx) {
+            if (this.isRetry) {
+                this.correctStreaks[idx] = (this.correctStreaks[idx] || 0) + 1;
+                if (this.correctStreaks[idx] >= 2) {
+                    this.queue.shift();
+                    delete this.correctStreaks[idx];
+                } else {
+                    this.queue.push(this.queue.shift());
+                }
+            }
+        }
+
+        handleWrong(idx) {
+            this.correctStreaks[idx] = 0;
+            if (this.isRetry) {
+                this.queue.push(this.queue.shift());
+            } else {
+                this.queue.push({ idx });
+                if (this.countdown <= 0) this.countdown = this.k + 1;
+            }
+        }
+
+        advance() {
+            if (this.isRetry) {
+                this.isRetry = false;
+                this.countdown = this.k + 1;
+            }
+            if (this.countdown > 0) this.countdown--;
+        }
+
+        shouldRetry() {
+            return this.countdown <= 0 && this.queue.length > 0;
+        }
+
+        hasRetries() {
+            return this.queue.length > 0;
+        }
+
+        override(idx, normalIdx) {
+            if (this.isRetry) {
+                this.queue.shift();
+            } else {
+                this.queue = this.queue.filter(item => item.idx !== idx);
+            }
+            delete this.correctStreaks[idx];
+        }
+
+        serialize() {
+            return {
+                retryQueue: this.queue,
+                retryCountdown: this.countdown,
+                retryStreaks: this.correctStreaks,
+                isRetry: this.isRetry
+            };
+        }
+
+        deserialize(data) {
+            if (data.retryQueue) this.queue = data.retryQueue;
+            if (data.retryCountdown !== undefined) this.countdown = data.retryCountdown;
+            if (data.retryStreaks) this.correctStreaks = data.retryStreaks;
+            if (data.isRetry !== undefined) this.isRetry = data.isRetry;
+        }
+    }
+
+    // =====================================================================
+    // UI MANAGEMENT
+    // =====================================================================
+
+    class ViewManager {
+        static VIEWS = ['home', 'folder-view', 'file-view', 'flashcard-view', 'choice-view', 'write-view'];
+        static FLEX_VIEWS = new Set(['flashcard-view', 'choice-view', 'write-view']);
+
+        static show(viewName) {
+            for (const id of this.VIEWS) {
+                document.getElementById(id).style.display = 'none';
+            }
+            const display = this.FLEX_VIEWS.has(viewName) ? 'flex' : 'block';
+            document.getElementById(viewName).style.display = display;
+        }
+    }
+
+    class SearchEngine {
+        constructor(app) {
+            this.app = app;
+            this.index = [];
+            this.indexBuilt = false;
+            this.selectedIndex = -1;
+
+            // Close search results when clicking outside
+            document.addEventListener('click', (e) => {
+                const container = document.querySelector('.search-container');
+                if (container && !container.contains(e.target)) {
+                    this.clear();
+                }
+            });
+        }
+
+        async buildIndex() {
+            if (this.indexBuilt) return;
+            this.index = [];
+            const folders = Object.keys(this.app.manifestData);
+            const fetches = [];
+            for (const folder of folders) {
+                for (const file of this.app.manifestData[folder]) {
+                    fetches.push(
+                        fetch(`${encodeURIComponent(folder)}/${file}`)
+                            .then(r => r.text())
+                            .then(text => {
+                                // Use raw split to preserve cardIndex alignment with loadFileContent
+                                const parts = text.split('---').map(p => p.trim()).filter(Boolean);
+                                parts.forEach((part, cardIndex) => {
+                                    const card = CardParser.parseCard(part);
+                                    if (card) {
+                                        this.index.push({
+                                            term: card.term,
+                                            definition: card.definition,
+                                            folder, file, cardIndex
+                                        });
+                                    }
+                                });
+                            }).catch(() => {})
+                    );
+                }
+            }
+            await Promise.all(fetches);
+            this.indexBuilt = true;
+        }
+
+        handleKeydown(e) {
+            const resultsDiv = document.getElementById('search-results');
+            const items = resultsDiv.querySelectorAll('.search-result-item');
+            if (!items.length || resultsDiv.style.display === 'none') return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                this.selectedIndex = Math.min(this.selectedIndex + 1, items.length - 1);
+                this._updateHighlight(items);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                this.selectedIndex = Math.max(this.selectedIndex - 1, 0);
+                this._updateHighlight(items);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (this.selectedIndex >= 0 && items[this.selectedIndex]) {
+                    items[this.selectedIndex].click();
+                }
+            }
+        }
+
+        _updateHighlight(items) {
+            items.forEach((el, i) => {
+                el.classList.toggle('active', i === this.selectedIndex);
+            });
+            if (items[this.selectedIndex]) {
+                items[this.selectedIndex].scrollIntoView({ block: 'nearest' });
+            }
+        }
+
+        search() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            const resultsDiv = document.getElementById('search-results');
+            if (!query) {
+                resultsDiv.style.display = 'none';
+                return;
+            }
+            const words = query.split(/\s+/).filter(Boolean);
+
+            function wordMatchesText(w, text) {
+                if (text.includes(w)) return true;
+                const textWords = text.split(/\s+/);
+                return textWords.some(tw => {
+                    let qi = 0;
+                    for (let ti = 0; ti < tw.length && qi < w.length; ti++) {
+                        if (w[qi] === tw[ti]) qi++;
+                    }
+                    return qi === w.length;
+                });
+            }
+            function allWordsMatch(text) {
+                return words.every(w => wordMatchesText(w, text));
+            }
+
+            // File-level results
+            const fileResults = [];
+            const seenFiles = new Set();
+            for (const folder of Object.keys(this.app.manifestData)) {
+                for (const file of this.app.manifestData[folder]) {
+                    const key = folder + '/' + file;
+                    if (seenFiles.has(key)) continue;
+                    const fileClean = decodeURIComponent(file).replace(/\.md$/, '').replace(/[#*_`]/g, '').toLowerCase();
+                    const folderClean = folder.replace(/[#*_`]/g, '').toLowerCase();
+                    if (allWordsMatch(folderClean + ' ' + fileClean)) {
+                        seenFiles.add(key);
+                        fileResults.push({ type: 'file', folder, file });
+                    }
+                }
+            }
+            // Term-level results
+            const termResults = this.index.filter(item => {
+                const combined = [
+                    item.term, item.definition,
+                    decodeURIComponent(item.file).replace(/\.md$/, ''),
+                    item.folder
+                ].map(s => s.replace(/[#*_`]/g, '').toLowerCase()).join(' ');
+                return allWordsMatch(combined);
+            });
+
+            const all = [...fileResults, ...termResults].slice(0, 20);
+            if (all.length === 0) {
+                resultsDiv.innerHTML = '<div style="padding: 10px 14px; color: #888;">No results</div>';
+                resultsDiv.style.display = 'block';
+                return;
+            }
+            resultsDiv.innerHTML = '';
+            all.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'search-result-item';
+                const folderName = item.folder.replace(/^\d+\s*/, '');
+                const fileName = decodeURIComponent(item.file).replace(/^\d+\s*/, '').replace('.md', '');
+                if (item.type === 'file') {
+                    div.innerHTML = `<div class="search-result-term">${escapeHtml(fileName)}</div><div class="search-result-meta">${escapeHtml(folderName)}</div>`;
+                    div.onclick = () => { this.clear(); this.app.showFile(item.folder, item.file); };
+                } else {
+                    div.innerHTML = `<div class="search-result-term">${escapeHtml(item.term.replace(/^#+\s*/, ''))}</div><div class="search-result-meta">${escapeHtml(folderName)} › ${escapeHtml(fileName)}</div>`;
+                    div.onclick = () => this.navigateToCard(item.folder, item.file, item.cardIndex);
+                }
+                resultsDiv.appendChild(div);
+            });
+            resultsDiv.style.display = 'block';
+        }
+
+        async navigateToCard(folder, file, cardIndex) {
+            this.clear();
+            await this.app.showFile(folder, file);
+            const cards = document.querySelectorAll('#file-content .card-wrapper');
+            if (cards[cardIndex]) {
+                cards[cardIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                cards[cardIndex].style.outline = '2px solid #f5c518';
+                setTimeout(() => { cards[cardIndex].style.outline = ''; }, 2000);
+            }
+        }
+
+        clear() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('search-results').style.display = 'none';
+        }
+    }
+
+    // =====================================================================
+    // MODE CONTROLLERS
+    // =====================================================================
+
+    class FlashcardMode {
+        constructor(app) {
+            this.app = app;
+            this.currentIndex = 0;
+            this.showingTerm = true;
+            this.shuffleOrder = [];
+        }
+
+        async start(shuffle, starOnly) {
+            try {
+                const response = await fetch(`${encodeURIComponent(this.app.currentFolder)}/${this.app.currentFile}`);
+                const text = await response.text();
+                this.app.flashcards = CardParser.parseCards(text);
+                if (starOnly) {
+                    const starredIdx = StarManager.getIndices(this.app.currentFolder, this.app.currentFile);
+                    this.app.flashcards = this.app.flashcards.filter((c, i) => starredIdx.includes(i));
+                }
+                if (shuffle) {
+                    const combined = this.app.flashcards.map((c, i) => ({ card: c, origIdx: i }));
+                    combined.sort(() => Math.random() - 0.5);
+                    this.app.flashcards = combined.map(x => x.card);
+                    this.shuffleOrder = combined.map(x => x.origIdx);
+                } else {
+                    this.shuffleOrder = this.app.flashcards.map((c, i) => i);
+                }
+                this.currentIndex = 0;
+                this.showingTerm = true;
+                this._showView();
+                this.update();
+            } catch (error) {
+                console.error('error starting flashcards:', error);
+            }
+        }
+
+        _showView() {
+            ViewManager.show('flashcard-view');
+            document.getElementById('flashcard-title').textContent =
+                decodeURIComponent(this.app.currentFile).replace(/^[0-9]+\s*/, '').replace('.md', '');
+        }
+
+        update() {
+            this.app.saveLearnProgress();
+            const card = this.app.flashcards[this.currentIndex];
+            let showFront, showBack;
+            if (this.app.answerType === 'term') {
+                showFront = card.definition;
+                showBack = card.term;
+            } else {
+                showFront = card.term;
+                showBack = card.definition;
+            }
+            const content = this.showingTerm ? showFront : showBack;
+            const flashcardDiv = document.getElementById('flashcard');
+            const html = MathRenderer.renderToHtml(content);
+
+            flashcardDiv.innerHTML = '';
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'flashcard-content';
+            contentWrapper.innerHTML = html;
+            flashcardDiv.appendChild(contentWrapper);
+
+            MathRenderer.typesetClear();
+            MathRenderer.typeset(flashcardDiv);
+
+            const progress = ((this.currentIndex + 1) / this.app.flashcards.length) * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+            document.getElementById('progress-fill').textContent = '';
+            document.getElementById('flashcard-ratio').textContent = `${this.currentIndex + 1} / ${this.app.flashcards.length}`;
+        }
+
+        flip() {
+            this.showingTerm = !this.showingTerm;
+            this.update();
+        }
+
+        prev() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+                this.showingTerm = true;
+                this.update();
+            }
+        }
+
+        next() {
+            if (this.currentIndex < this.app.flashcards.length - 1) {
+                this.currentIndex++;
+                this.showingTerm = true;
+                this.update();
+            } else {
+                ViewManager.show('file-view');
+                this.app.showLearnModal(true);
+            }
+        }
+    }
+
+    class ChoiceMode {
+        constructor(app) {
+            this.app = app;
+            this.order = [];
+            this.currentIndex = 0;
+            this.answered = false;
+            this.gotWrong = false;
+            this.retry = new RetryQueue(1);
+        }
+
+        start(shuffle) {
+            this.order = [...Array(this.app.flashcards.length).keys()];
+            if (shuffle) this.order.sort(() => Math.random() - 0.5);
+            this.currentIndex = 0;
+            this.gotWrong = false;
+            this.retry.reset();
+            ViewManager.show('choice-view');
+            this.update();
+        }
+
+        update() {
+            this.app.saveLearnProgress();
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+            const card = this.app.flashcards[idx];
+            this.gotWrong = false;
+
+            const choiceSource = this.app.allFlashcards.length > 0 ? this.app.allFlashcards : this.app.flashcards;
+            let question, correct, pool;
+            if (this.app.answerType === 'definition') {
+                question = card.term;
+                correct = card.definition;
+                pool = choiceSource.map(c => c.definition).filter(opt => opt !== correct);
+            } else {
+                question = card.definition;
+                correct = card.term;
+                pool = choiceSource.map(c => c.term).filter(opt => opt !== correct);
+            }
+            pool = pool.sort(() => Math.random() - 0.5).slice(0, 3);
+            const options = [...pool, correct].sort(() => Math.random() - 0.5);
+
+            const qHtml = MathRenderer.renderToHtml(question);
+
+            document.getElementById('choice-title').textContent = document.getElementById('file-title').textContent;
+            if (this.retry.isRetry) {
+                document.getElementById('choice-ratio').textContent = 'Retry';
+                document.getElementById('choice-ratio').style.cssText = 'color: #fff; background: none; border: none; outline: none; padding: 0;';
+            } else {
+                document.getElementById('choice-ratio').textContent = `${this.currentIndex + 1} / ${this.app.flashcards.length}`;
+                document.getElementById('choice-ratio').style.cssText = '';
+            }
+            const progress = this.retry.isRetry
+                ? (this.currentIndex / this.app.flashcards.length) * 100
+                : ((this.currentIndex + 1) / this.app.flashcards.length) * 100;
+            document.getElementById('choice-progress-fill').style.width = progress + '%';
+            document.getElementById('choice-progress-fill').textContent = '';
+            document.getElementById('choice-question').innerHTML = qHtml;
+
+            const optsDiv = document.getElementById('choice-options');
+            optsDiv.innerHTML = '';
+            options.forEach(opt => {
+                const oHtml = MathRenderer.renderToHtml(opt);
+                const btn = document.createElement('div');
+                btn.className = 'choice-option';
+                btn.innerHTML = oHtml;
+                btn.setAttribute('data-choice-value', opt.trim());
+                btn.onclick = () => this.handleAnswer(btn, correct);
+                optsDiv.appendChild(btn);
+            });
+            this.answered = false;
+            MathRenderer.typeset(document.getElementById('choice-question'));
+            MathRenderer.typeset(optsDiv);
+        }
+
+        handleAnswer(btn, correct) {
+            if (btn.classList.contains('correct')) return;
+            const opts = document.querySelectorAll('.choice-option');
+            const isCorrect = btn.getAttribute('data-choice-value') === correct.trim();
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+
+            if (isCorrect) {
+                opts.forEach(optBtn => {
+                    if (optBtn.getAttribute('data-choice-value') === correct.trim()) {
+                        optBtn.classList.add('correct');
+                    }
+                    optBtn.style.pointerEvents = 'none';
+                });
+                if (this.gotWrong) {
+                    this.retry.handleWrong(idx);
+                } else if (this.retry.isRetry) {
+                    this.retry.handleCorrect(idx);
+                }
+                const self = this;
+                function proceedNext(e) {
+                    document.removeEventListener('keydown', proceedNext);
+                    document.removeEventListener('mousedown', proceedNext);
+                    self.next();
+                }
+                setTimeout(() => {
+                    document.addEventListener('keydown', proceedNext);
+                    document.addEventListener('mousedown', proceedNext);
+                }, 100);
+                this.answered = true;
+            } else {
+                btn.classList.add('incorrect');
+                btn.style.pointerEvents = 'none';
+                this.gotWrong = true;
+            }
+        }
+
+        next() {
+            const wasRetry = this.retry.isRetry;
+            this.retry.advance();
+            if (!wasRetry) {
+                this.currentIndex++;
+            }
+            let hasMoreNormal = this.currentIndex < this.order.length;
+            if (this.retry.shouldRetry()) {
+                this.retry.isRetry = true;
+                this.update();
+                return;
+            }
+            if (hasMoreNormal) {
+                this.update();
+            } else if (this.retry.hasRetries()) {
+                this.retry.isRetry = true;
+                this.update();
+            } else {
+                ViewManager.show('file-view');
+                this.app.showLearnModal(true);
+            }
+        }
+    }
+
+    class WriteMode {
+        constructor(app) {
+            this.app = app;
+            this.order = [];
+            this.currentIndex = 0;
+            this.answered = false;
+            this.retry = new RetryQueue(1);
+            this._submittedWithEnter = false;
+        }
+
+        _getInput() {
+            return this.app.answerType === 'definition'
+                ? document.getElementById('write-input-multi')
+                : document.getElementById('write-input-single');
+        }
+
+        start(shuffle) {
+            this.order = [...Array(this.app.flashcards.length).keys()];
+            if (shuffle) this.order.sort(() => Math.random() - 0.5);
+            this.currentIndex = 0;
+            this.retry.reset();
+            if (this.app.answerType === 'definition') {
+                document.getElementById('write-input-single').style.display = 'none';
+                document.getElementById('write-input-multi').style.display = '';
+            } else {
+                document.getElementById('write-input-single').style.display = '';
+                document.getElementById('write-input-multi').style.display = 'none';
+            }
+            ViewManager.show('write-view');
+            this.update();
+        }
+
+        update() {
+            this.app.saveLearnProgress();
+            const feedbackBox = document.getElementById('write-feedback');
+            feedbackBox.innerHTML = '';
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+            const card = this.app.flashcards[idx];
+
+            let question;
+            if (this.app.answerType === 'definition') {
+                question = card.term;
+            } else {
+                question = card.definition;
+            }
+
+            const qHtml = MathRenderer.renderToHtml(question);
+
+            document.getElementById('write-title').textContent = document.getElementById('file-title').textContent;
+            if (this.retry.isRetry) {
+                document.getElementById('write-ratio').textContent = 'Retry';
+                document.getElementById('write-ratio').style.cssText = 'color: #fff; background: none; border: none; outline: none; padding: 0;';
+            } else {
+                document.getElementById('write-ratio').textContent = `${this.currentIndex + 1} / ${this.app.flashcards.length}`;
+                document.getElementById('write-ratio').style.cssText = '';
+            }
+            const progress = this.retry.isRetry
+                ? (this.currentIndex / this.app.flashcards.length) * 100
+                : ((this.currentIndex + 1) / this.app.flashcards.length) * 100;
+            document.getElementById('write-progress-fill').style.width = progress + '%';
+            document.getElementById('write-progress-fill').textContent = '';
+            document.getElementById('write-question').innerHTML = qHtml;
+
+            const input = this._getInput();
+            input.value = '';
+            input.disabled = false;
+            input.style.borderColor = '#555';
+            document.getElementById('write-skip-btn').disabled = false;
+            document.getElementById('write-submit-btn').disabled = false;
+            document.getElementById('write-override-btn').style.display = 'none';
+            this.answered = false;
+            input.focus();
+            MathRenderer.typeset(document.getElementById('write-question'));
+        }
+
+        submit() {
+            const feedbackBox = document.getElementById('write-feedback');
+            feedbackBox.innerHTML = '';
+            if (this.answered) return;
+
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+            const card = this.app.flashcards[idx];
+            const correct = this.app.answerType === 'definition' ? card.definition : card.term;
+            const userInput = this._getInput().value.trim();
+
+            function normalize(s) { return s.replace(/\s+/g, ' ').trim().toLowerCase(); }
+            function stripMarkdown(s) {
+                return s.replace(/^#+\s*/gm, '').replace(/^[-*]\s*/gm, '').replace(/\s+/g, ' ').trim();
+            }
+            const isCorrect = normalize(stripMarkdown(userInput)) === normalize(stripMarkdown(correct));
+
+            this._getInput().disabled = true;
+            document.getElementById('write-skip-btn').disabled = true;
+            document.getElementById('write-submit-btn').disabled = true;
+
+            if (isCorrect) {
+                this._getInput().style.borderColor = '#4caf50';
+                feedbackBox.innerHTML = '';
+                this.answered = true;
+                if (this.retry.isRetry) {
+                    this.retry.handleCorrect(idx);
+                }
+                let submittedWithEnter = !!this._submittedWithEnter;
+                this._submittedWithEnter = false;
+                const self = this;
+                function proceedNext(e) {
+                    if (document.getElementById('write-view').style.display !== 'flex') {
+                        document.removeEventListener('keyup', proceedNext);
+                        document.removeEventListener('click', proceedNext);
+                        return;
+                    }
+                    if (submittedWithEnter && e.type === 'keyup' && (e.key === 'Enter' || e.code === 'Enter')) {
+                        submittedWithEnter = false;
+                        return;
+                    }
+                    document.removeEventListener('keyup', proceedNext);
+                    document.removeEventListener('click', proceedNext);
+                    self.next();
+                }
+                setTimeout(() => {
+                    document.addEventListener('keyup', proceedNext);
+                    document.addEventListener('click', proceedNext);
+                }, 0);
+            } else {
+                this._getInput().style.borderColor = '#f44336';
+                this.retry.handleWrong(idx);
+                this._showCorrectAnswer(feedbackBox, correct);
+                document.getElementById('write-override-btn').style.display = 'inline-block';
+                this.answered = true;
+                const self = this;
+                function proceedNext(e) {
+                    if (document.getElementById('write-view').style.display !== 'flex') {
+                        document.removeEventListener('keyup', proceedNext);
+                        document.removeEventListener('click', proceedNext);
+                        return;
+                    }
+                    document.removeEventListener('keyup', proceedNext);
+                    document.removeEventListener('click', proceedNext);
+                    self.next();
+                }
+                setTimeout(() => {
+                    document.addEventListener('keyup', proceedNext);
+                    document.addEventListener('click', proceedNext);
+                }, 100);
+                MathRenderer.typeset(feedbackBox);
+            }
+        }
+
+        skip() {
+            const feedbackBox = document.getElementById('write-feedback');
+            feedbackBox.innerHTML = '';
+            if (this.answered) return;
+
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+            const card = this.app.flashcards[idx];
+            const correct = this.app.answerType === 'definition' ? card.definition : card.term;
+
+            this._getInput().disabled = true;
+            document.getElementById('write-skip-btn').disabled = true;
+            document.getElementById('write-submit-btn').disabled = true;
+            this._getInput().style.borderColor = '#555';
+            this.retry.handleWrong(idx);
+            this._showCorrectAnswer(feedbackBox, correct);
+            this.answered = true;
+
+            const self = this;
+            function proceedNext(e) {
+                if (document.getElementById('write-view').style.display !== 'flex') {
+                    document.removeEventListener('keyup', proceedNext);
+                    document.removeEventListener('click', proceedNext);
+                    return;
+                }
+                document.removeEventListener('keyup', proceedNext);
+                document.removeEventListener('click', proceedNext);
+                self.next();
+            }
+            setTimeout(() => {
+                document.addEventListener('keyup', proceedNext);
+                document.addEventListener('click', proceedNext);
+            }, 100);
+            MathRenderer.typeset(feedbackBox);
+        }
+
+        _showCorrectAnswer(feedbackBox, correct) {
+            const correctHtml = MathRenderer.renderToHtml(correct);
+            feedbackBox.innerHTML = `<div style="margin-top: 18px; background: #183d1a; color: #4caf50; font-size: 1.2em; border: 2px solid #4caf50; border-radius: 0; padding: 18px 22px; display: block; font-weight: 500;">${correctHtml}</div>`;
+            feedbackBox.style.display = 'block';
+        }
+
+        next() {
+            const wasRetry = this.retry.isRetry;
+            this.retry.advance();
+            if (!wasRetry) {
+                this.currentIndex++;
+            }
+            let hasMoreNormal = this.currentIndex < this.order.length;
+            if (this.retry.shouldRetry()) {
+                this.retry.isRetry = true;
+                document.getElementById('write-feedback').innerHTML = '';
+                this.update();
+                return;
+            }
+            if (hasMoreNormal) {
+                document.getElementById('write-feedback').innerHTML = '';
+                this.update();
+            } else if (this.retry.hasRetries()) {
+                this.retry.isRetry = true;
+                document.getElementById('write-feedback').innerHTML = '';
+                this.update();
+            } else {
+                ViewManager.show('file-view');
+                this.app.showLearnModal(true);
+            }
+        }
+
+        override() {
+            const idx = this.retry.getCurrentIdx(this.order[this.currentIndex]);
+            this.retry.override(idx);
+            document.getElementById('write-override-btn').style.display = 'none';
+            this._getInput().style.borderColor = '#4caf50';
+        }
+    }
+
+    // =====================================================================
+    // APPLICATION
+    // =====================================================================
+
+    class App {
+        constructor() {
+            this.currentFolder = '';
+            this.currentFile = '';
+            this.flashcards = [];
+            this.allFlashcards = [];
+            this.answerType = 'term';
+            this.manifestData = {};
+            this.lastLearnSettings = { type: 'flashcards', answer: 'term', shuffle: false };
+
+            this.searchEngine = new SearchEngine(this);
+            this.flashcardMode = new FlashcardMode(this);
+            this.choiceMode = new ChoiceMode(this);
+            this.writeMode = new WriteMode(this);
+        }
+
+        async init() {
+            await this.loadFolders();
+            await this._restoreSession();
+            this._initScrollButton();
+            this._initKeyboardListeners();
+        }
+
+        // --- Navigation ---
+
+        async loadFolders() {
+            try {
+                const response = await fetch('library.json');
+                this.manifestData = await response.json();
+                const folders = Object.keys(this.manifestData).sort((a, b) => {
+                    const numA = parseInt(a.match(/^\d+/));
+                    const numB = parseInt(b.match(/^\d+/));
+                    return numA - numB;
+                });
+                const folderList = document.getElementById('folder-list');
+                folderList.innerHTML = '';
+                folders.forEach(name => {
+                    const folderDiv = document.createElement('div');
+                    folderDiv.className = 'folder';
+                    folderDiv.textContent = name.replace(/^\d+\s*/, '');
+                    folderDiv.onclick = () => this.showFolder(name);
+                    folderList.appendChild(folderDiv);
+                });
+            } catch (e) {
+                document.getElementById('folder-list').innerHTML = '<div style="color: #f66">Could not load library.json.</div>';
+            }
+            this.searchEngine.buildIndex();
+        }
+
+        showHome() {
+            ViewManager.show('home');
+            this.searchEngine.clear();
+            this.currentFolder = '';
+            this.currentFile = '';
+            SessionManager.saveNavState('home');
+            SessionManager.clearProgress();
+        }
+
+        showFolder(folder) {
+            this.currentFolder = folder;
+            ViewManager.show('folder-view');
+            document.getElementById('learn-modal').style.display = 'none';
+            document.getElementById('folder-title').textContent = folder.replace(/^\d+\s*/, '');
+            this._loadFiles(folder);
+            SessionManager.saveNavState('folder', folder);
+        }
+
+        async _loadFiles(folder) {
+            const fileList = document.getElementById('file-list');
+            fileList.innerHTML = '';
+            if (!this.manifestData[folder]) {
+                fileList.innerHTML = '<div style="color: #f66">No files found in manifest.</div>';
+                return;
+            }
+            const mdFiles = this.manifestData[folder].slice().sort((a, b) => {
+                const getNum = s => {
+                    const m = decodeURIComponent(s).match(/^\d+/);
+                    return m ? parseInt(m[0]) : 9999;
+                };
+                return getNum(b) - getNum(a);
+            });
+            mdFiles.forEach(name => {
+                const fileDiv = document.createElement('div');
+                fileDiv.className = 'file';
+                fileDiv.textContent = decodeURIComponent(name).replace(/^\d+\s*/, '').replace('.md', '');
+                fileDiv.onclick = () => this.showFile(folder, name);
+                fileList.appendChild(fileDiv);
+            });
+        }
+
+        async showFile(folder, file) {
+            this.currentFolder = folder;
+            this.currentFile = file;
+            ViewManager.show('file-view');
+            const fileTitle = document.getElementById('file-title');
+            fileTitle.textContent = decodeURIComponent(file).replace(/^[0-9]+\s*/, '').replace('.md', '');
+            fileTitle.style.textAlign = 'center';
+            await this._loadFileContent(folder, file);
+            SessionManager.saveNavState('file', folder, file);
+        }
+
+        async _loadFileContent(folder, file) {
+            try {
+                const response = await fetch(`${encodeURIComponent(folder)}/${file}`);
+                const text = await response.text();
+                const contentDiv = document.getElementById('file-content');
+                const cards = text.split('---').map(c => c.trim()).filter(Boolean);
+                const starred = StarManager.getIndices(folder, file);
+                contentDiv.innerHTML = '';
+                cards.forEach((cardText, i) => {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'card-wrapper';
+                    const star = document.createElement('button');
+                    star.className = 'card-star' + (starred.includes(i) ? ' starred' : '');
+                    star.textContent = starred.includes(i) ? '★' : '☆';
+                    star.onclick = () => StarManager.toggle(folder, file, i, star);
+                    wrapper.appendChild(star);
+                    const cardDiv = document.createElement('div');
+                    // File content uses double-backslash replacement only
+                    cardDiv.innerHTML = MathRenderer.renderToHtml(cardText, false);
+                    wrapper.appendChild(cardDiv);
+                    contentDiv.appendChild(wrapper);
+                });
+                MathRenderer.typeset(contentDiv);
+            } catch (error) {
+                console.error('error loading file content:', error);
+            }
+        }
+
+        // --- Learn Modal ---
+
+        showLearnModal(preserve = false) {
+            const modal = document.getElementById('learn-modal');
+            modal.style.display = 'flex';
+            SessionManager.saveNavState('file', this.currentFolder, this.currentFile, 'learn-modal');
+            setTimeout(() => {
+                if (preserve && this.lastLearnSettings) {
+                    document.getElementById('type').value = this.lastLearnSettings.type;
+                    document.getElementById('answer').value = this.lastLearnSettings.answer;
+                    this.setShuffleState(this.lastLearnSettings.shuffle);
+                    this.setStarState(this.lastLearnSettings.starOnly || false);
+                } else {
+                    document.getElementById('answer').value = 'term';
+                    this.setShuffleState(false);
+                    this.setStarState(false);
+                }
+            }, 0);
+        }
+
+        closeModal() {
+            document.getElementById('learn-modal').style.display = 'none';
+            setTimeout(() => {
+                document.getElementById('answer').value = 'term';
+                this.setShuffleState(false);
+                this.setStarState(false);
+            }, 200);
+            SessionManager.saveNavState('file', this.currentFolder, this.currentFile);
+            SessionManager.clearProgress();
+        }
+
+        goBackToLearnModal() {
+            ViewManager.show('file-view');
+            this.showLearnModal(true);
+            SessionManager.saveNavState('file', this.currentFolder, this.currentFile, 'learn-modal');
+        }
+
+        startLearning() {
+            const type = document.getElementById('type').value;
+            this.answerType = document.getElementById('answer').value;
+            const shuffle = this.getShuffleState();
+            const starOnly = this.getStarState();
+            this.lastLearnSettings = { type, answer: this.answerType, shuffle, starOnly };
+            const learnSettings = { type, answer: this.answerType, shuffle, starOnly };
+
+            if (type === 'flashcards') {
+                this.flashcardMode.start(shuffle, starOnly);
+                this.closeModal();
+                SessionManager.saveNavState('file', this.currentFolder, this.currentFile, 'flashcards', learnSettings);
+            } else if (type === 'choice' || type === 'write') {
+                fetch(`${encodeURIComponent(this.currentFolder)}/${this.currentFile}`)
+                    .then(r => r.text())
+                    .then(text => {
+                        this.flashcards = CardParser.parseCards(text);
+                        if (type === 'choice') {
+                            this.allFlashcards = [...this.flashcards];
+                            if (starOnly) {
+                                const starredIdx = StarManager.getIndices(this.currentFolder, this.currentFile);
+                                this.flashcards = this.flashcards.filter((c, i) => starredIdx.includes(i));
+                            }
+                            this.choiceMode.start(shuffle);
+                        } else {
+                            this.allFlashcards = [...this.flashcards];
+                            if (starOnly) {
+                                const starredIdx = StarManager.getIndices(this.currentFolder, this.currentFile);
+                                this.flashcards = this.flashcards.filter((c, i) => starredIdx.includes(i));
+                            }
+                            this.writeMode.start(shuffle);
+                        }
+                        this.closeModal();
+                        SessionManager.saveNavState('file', this.currentFolder, this.currentFile, type, learnSettings);
+                    });
+            } else {
+                this.closeModal();
+            }
+        }
+
+        // --- Toggle Controls ---
+
+        toggleShuffle() {
+            const toggle = document.getElementById('shuffle-toggle');
+            const label = document.getElementById('shuffle-toggle-label');
+            if (toggle.classList.contains('active')) {
+                toggle.classList.remove('active');
+                label.textContent = 'Off';
+            } else {
+                toggle.classList.add('active');
+                label.textContent = 'On';
+            }
+        }
+
+        getShuffleState() {
+            const toggle = document.getElementById('shuffle-toggle');
+            return toggle && toggle.classList.contains('active');
+        }
+
+        setShuffleState(val) {
+            const toggle = document.getElementById('shuffle-toggle');
+            const label = document.getElementById('shuffle-toggle-label');
+            if (!toggle || !label) return;
+            if (val) {
+                toggle.classList.add('active');
+                label.textContent = 'On';
+            } else {
+                toggle.classList.remove('active');
+                label.textContent = 'Off';
+            }
+        }
+
+        toggleStar() {
+            const toggle = document.getElementById('star-toggle');
+            if (toggle.classList.contains('starred')) {
+                toggle.classList.remove('starred');
+                toggle.textContent = '☆';
+            } else {
+                toggle.classList.add('starred');
+                toggle.textContent = '★';
+            }
+        }
+
+        getStarState() {
+            const toggle = document.getElementById('star-toggle');
+            return toggle && toggle.classList.contains('starred');
+        }
+
+        setStarState(val) {
+            const toggle = document.getElementById('star-toggle');
+            if (!toggle) return;
+            if (val) {
+                toggle.classList.add('starred');
+                toggle.textContent = '★';
+            } else {
+                toggle.classList.remove('starred');
+                toggle.textContent = '☆';
+            }
+        }
+
+        // --- Progress Persistence ---
+
+        saveLearnProgress() {
+            const state = SessionManager.getNavState();
+            if (!state || !state.mode || state.mode === 'learn-modal') return;
+            let progress = {};
+            if (state.mode === 'flashcards') {
+                progress = {
+                    cardIndex: this.flashcardMode.currentIndex,
+                    order: this.flashcardMode.shuffleOrder
+                };
+            } else if (state.mode === 'choice') {
+                progress = {
+                    cardIndex: this.choiceMode.currentIndex,
+                    order: this.choiceMode.order,
+                    ...this.choiceMode.retry.serialize()
+                };
+            } else if (state.mode === 'write') {
+                progress = {
+                    cardIndex: this.writeMode.currentIndex,
+                    order: this.writeMode.order,
+                    ...this.writeMode.retry.serialize()
+                };
+            }
+            SessionManager.saveLearnProgress(progress);
+        }
+
+        // --- Session Restore ---
+
+        async _restoreSession() {
+            const state = SessionManager.getNavState();
+            if (!state) return;
+            try {
+                if (state.view === 'file' && state.folder && state.file) {
+                    await this.showFile(state.folder, state.file);
+                    if (state.mode === 'learn-modal') {
+                        this.showLearnModal();
+                    } else if (state.mode && state.settings) {
+                        this.answerType = state.settings.answer || 'term';
+                        this.lastLearnSettings = state.settings;
+                        if (state.mode === 'flashcards') {
+                            await this.flashcardMode.start(false);
+                            const fp = SessionManager.getLearnProgress();
+                            if (fp.order && fp.order.length === this.flashcards.length) {
+                                const original = [...this.flashcards];
+                                this.flashcards = fp.order.map(i => original[i]);
+                                if (fp.cardIndex !== undefined) this.flashcardMode.currentIndex = fp.cardIndex;
+                                this.flashcardMode.update();
+                            }
+                            SessionManager.saveNavState('file', state.folder, state.file, 'flashcards', state.settings);
+                        } else if (state.mode === 'choice' || state.mode === 'write') {
+                            const response = await fetch(`${encodeURIComponent(state.folder)}/${state.file}`);
+                            const text = await response.text();
+                            this.flashcards = CardParser.parseCards(text);
+                            if (state.mode === 'choice') {
+                                this.choiceMode.start(false);
+                                const cp = SessionManager.getLearnProgress();
+                                if (cp.order) this.choiceMode.order = cp.order;
+                                if (cp.cardIndex !== undefined) this.choiceMode.currentIndex = cp.cardIndex;
+                                this.choiceMode.retry.deserialize(cp);
+                                this.choiceMode.update();
+                            } else {
+                                this.writeMode.start(false);
+                                const wp = SessionManager.getLearnProgress();
+                                if (wp.order) this.writeMode.order = wp.order;
+                                if (wp.cardIndex !== undefined) this.writeMode.currentIndex = wp.cardIndex;
+                                this.writeMode.retry.deserialize(wp);
+                                this.writeMode.update();
+                            }
+                            SessionManager.saveNavState('file', state.folder, state.file, state.mode, state.settings);
+                        }
+                    }
+                } else if (state.view === 'folder' && state.folder) {
+                    this.showFolder(state.folder);
+                }
+            } catch (e) { console.error('restore error', e); }
+        }
+
+        _initScrollButton() {
+            const scrollBtn = document.getElementById('scroll-top-btn');
+            window.addEventListener('scroll', function() {
+                scrollBtn.style.display = window.scrollY > 200 ? 'flex' : 'none';
+            });
+            scrollBtn.onclick = function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+        }
+
+        _initKeyboardListeners() {
+            const self = this;
+            document.addEventListener('keydown', function(event) {
+                if (document.getElementById('flashcard-view').style.display === 'flex') {
+                    if (event.code === 'ArrowLeft') self.flashcardMode.prev();
+                    else if (event.code === 'ArrowRight') self.flashcardMode.next();
+                    else if (event.code === 'Space') { event.preventDefault(); self.flashcardMode.flip(); }
+                }
+            });
+        }
+    }
+
+    // =====================================================================
+    // INITIALIZATION
+    // =====================================================================
+
+    const app = new App();
+    window.onload = () => app.init();
+    </script>
+    <button id="scroll-top-btn" style="position: fixed; bottom: 40px; right: 40px; z-index: 1000; display: none; background: #333; color: #fff; border: 1px solid #555; border-radius: 50%; width: 48px; height: 48px; font-size: 28px; cursor: pointer; align-items: center; justify-content: center;">
+        &#8593;
+    </button>
+</body>
+</html>
