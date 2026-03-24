@@ -111,8 +111,8 @@ $$
 ---
 ### asymptotic equilibrium stability
 
-- solution of nearby initial condition remain nearby for all time
-- solution of nearby initial condition eventually converge on equilibrium point
+- sufficiently nearby solution remain arbitrarily nearby equilibrium point for all time
+- sufficiently nearby solution eventually converge on equilibrium point
 ---
 ### asymptotic equilibrium stability formula
 
@@ -131,8 +131,8 @@ $$
 ---
 ### neutral equilibrium stability
 
-- solution of nearby initial condition remain nearby for all time
-- solution of nearby initial condition sometimes converge on equilibrium point
+- sufficiently nearby solution remain arbitrarily nearby equilibrium point for all time
+- sufficiently nearby solution sometimes converge on equilibrium point
 ---
 ### neutral equilibrium stability formula
 
