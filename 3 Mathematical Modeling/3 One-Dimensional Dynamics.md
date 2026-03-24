@@ -102,59 +102,68 @@ $$
 
 $$
 \begin{aligned}
-I(\rho) = (u_* - \rho, u_* + \rho) \\
-u_* = \text{equilibrium point}
+N_{\rho}(u_*) = (u_* - \rho, u_* + \rho) \\
+u_* = \text{equilibrium point} \\
+\rho = \text{radius} 
 \end{aligned}
 $$
 
 ---
-### asymptotic stability
+### asymptotic equilibrium stability
 
-- if nearby initial condition then nearby solution converge on equilibrium point
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition eventually converge on equilibrium point
 ---
-### asymptotic stability formula
+### asymptotic equilibrium stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: |u_0 - u_*| < \delta \rightarrow (\forall \epsilon > 0, \forall t \ge 0: |u(t) - u_* | < \epsilon) \land (\forall u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) = u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \rightarrow u(t) \in N_{\epsilon}(u_*) \\
+\land \forall u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) = u_* \\
 u_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 u_* = \text{equilibrium point} \\
 u = \text{solution} \\
-t = \text{time} \\
+t = \text{time} 
 \end{aligned}
 $$
 
 ---
-### neutral stability
+### neutral equilibrium stability
 
-- if nearby initial condition then nearby solution sometimes converge on equilibrium point
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition sometimes converge on equilibrium point
 ---
-### neutral stability formula
+### neutral equilibrium stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: |u_0 - u_*| < \delta \rightarrow (\forall \epsilon > 0, \forall t \ge 0: |u(t) - u_* | < \epsilon) \land (\exists u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \rightarrow u(t) \in N_{\epsilon}(u_*) \\
+\land \exists u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 u_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 u_* = \text{equilibrium point} \\
 u = \text{solution} \\
-t = \text{time} \\
+t = \text{time} 
 \end{aligned}
 $$
 
 ---
-### instability
+### equilibrium instability
 
-- if far initial condition then far solution diverge off equilibrium point
+- every solution infinitely diverge off equilibrium point
 ---
-### instability formula
+### equilibrium instability formula
 
 $$
 \begin{aligned}
-(\forall \delta > 0: |u_0 - u_*| < \delta) \land (\exists \epsilon > 0, \exists t \ge 0: |u(t) - u_* | \ge \epsilon) \land (\forall u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_*) \\
+\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: u_0 \in N_{\delta}(u_*) \land u(t) \not\in N_{\epsilon}(u_*) \\
+\land \forall u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 u_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 u_* = \text{equilibrium point} \\
 u = \text{solution} \\
-t = \text{time} \\
+t = \text{time} 
 \end{aligned}
 $$
 

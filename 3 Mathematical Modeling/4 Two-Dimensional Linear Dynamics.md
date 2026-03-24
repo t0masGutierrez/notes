@@ -7,8 +7,11 @@
 
 $$
 \begin{aligned}
-\frac{dx}{dt} = f(x, y, c_1, \dots, c_n), x(t=0) = x_0, t \ge 0 \\
-\frac{dy}{dt} = g(x, y, c_1, \dots, c_n), y(t=0) = y_0, t \ge 0 \\
+\frac{dx}{dt} = f(x, y, c_1, \dots, c_n) \\
+\frac{dy}{dt} = g(x, y, c_1, \dots, c_n) \\
+x(t=0) = x_0 \\
+y(t=0) = y_0 \\
+t \ge 0 \\
 x, y = \text{solution} \\
 t = \text{time} \\
 x_0, y_0 = \text{initial condition} \\
@@ -40,7 +43,7 @@ $$
 
 $$
 \begin{aligned}
-\vec v = (f, g) \\
+\vec v = [f, g] \\
 f, g = \text{velocity}
 \end{aligned}
 $$
@@ -54,8 +57,8 @@ $$
 
 $$
 \begin{aligned}
-\forall (x_0, y_0) \in \mathbb R, \exists t \in (T_0, T_1): (x, y)(t) \in D = \{(x, y) \in \mathbb R| \exists (\frac{dx}{dt}, \frac{dy}{dt})\} \\
-(t \le T_0) \lor (t \ge T_1) \rightarrow (x, y)(t) \not\in D = \{(x, y) \in \mathbb R| \exists (\frac{dx}{dt}, \frac{dy}{dt})\} \\
+\forall (x_0, y_0) \in \mathbb R, \exists t \in (T_0, T_1): (x, y)(t) \in D = \{(x, y) \in \mathbb R| \exists! (\frac{dx}{dt}, \frac{dy}{dt})\} \\
+(t \le T_0) \lor (t \ge T_1) \rightarrow (x, y)(t) \not\in D = \{(x, y) \in \mathbb R| \exists! (\frac{dx}{dt}, \frac{dy}{dt})\} \\
 (x_0, y_0) \ne (\hat x_0, \hat y_0) \rightarrow \forall t \in (T_0, T_1): (x, y)(t) \ne (\hat x, \hat y)(t)
 \end{aligned}
 $$
@@ -99,8 +102,8 @@ $$
 
 $$
 \begin{aligned}
-f(x, y) = \{(x, y)| \frac{dx}{dt} = 0\} \\
-g(x, y) = \{(x, y) | \frac{dy}{dt} = 0\} \\
+F(x, y) = \{(x, y)| \frac{dx}{dt} = 0\} \\
+G(x, y) = \{(x, y) | \frac{dy}{dt} = 0\} \\
 x, y = \text{solution} \\
 t = \text{time} \\
 \frac{dx}{dt}, \frac{dy}{dt} = \text{velocity} 
@@ -119,7 +122,6 @@ $$
 \begin{aligned}
 \frac{dy}{dx} = \frac{g(x, y)}{f(x, y)} \\
 x, y = \text{solution} \\
-t = \text{time} \\
 f, g = \text{velocity}
 \end{aligned}
 $$
@@ -127,8 +129,7 @@ $$
 ---
 ### first integral
 
-- general solution of path equation equal arbitrary constant
-- level set of first integral contain every solution of dynamical system
+- general solution of path equation constant along every trajectory
 
 ---
 ### first integral formula
@@ -173,22 +174,26 @@ $$
 
 $$
 \begin{aligned}
-I(\rho) = (x_* - \rho, x_* + \rho) \times (y_* - \rho, y_* + \rho) \\
+N_{\rho}(x_*, y_*) = (x_* - \rho, x_* + \rho) \times (y_* - \rho, y_* + \rho) \\
 x_*, y_* = \text{equilibrium point} \\
+\rho = \text{radius} 
 \end{aligned}
 $$
 
 ---
 ### asymptotic equilibrium stability
 
-- if nearby initial condition then nearby solution converge on equilibrium point
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition eventually converge on equilibrium point
 ---
 ### asymptotic equilibrium stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: (x_0, y_0) \in I(\delta) \rightarrow (\forall \epsilon > 0, \forall t \ge 0: (x, y) \in I(\epsilon)) \land (\forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*)) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
 t = \text{time} 
@@ -198,31 +203,36 @@ $$
 ---
 ### neutral equilibrium stability
 
-- if nearby initial condition then nearby solution sometimes converge on equilibrium point
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition sometimes converge on equilibrium point
 ---
 ### neutral equilibrium stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: (x_0, y_0) \in I(\delta) \rightarrow (\forall \epsilon > 0, \forall t \ge 0: (x, y) \in I(\epsilon)) \land (\exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*)) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\land \exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
-t = \text{time}
+t = \text{time} 
 \end{aligned}
 $$
 
 ---
 ### equilibrium instability
 
-- if far initial condition then far solution diverge off equilibrium point
+- every solution infinitely diverge off equilibrium point
 ---
 ### equilibrium instability formula
 
 $$
 \begin{aligned}
-(\forall \delta > 0: (x_0, y_0) \in I(\delta)) \land (\exists \epsilon > 0, \exists t \ge 0: (x, y) \not \in I(\epsilon)) \land (\forall x_0, y_0 \in \mathbb R\lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*)) \\
+\exists \epsilon > 0, \forall \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \\
+\land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
 t = \text{time} 
@@ -248,14 +258,17 @@ $$
 ---
 ### asymptotic periodic stability
 
-- if nearby initial condition then nearby solution spirally converge on periodic solution
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition eventually converge on periodic solution
 ---
 ### asymptotic periodic stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: (x_0, y_0) \in I(\delta) \rightarrow (\forall \epsilon > 0, \forall t \ge 0: (x, y) \in I(\epsilon)) \land (\forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*)) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
 t = \text{time} 
@@ -265,14 +278,17 @@ $$
 ---
 ### neutral periodic stability
 
-- if nearby initial condition then nearby solution sometimes spirally converge on periodic solution
+- solution of nearby initial condition remain nearby for all time
+- solution of nearby initial condition sometimes converge on periodic solution
 ---
 ### neutral periodic stability formula
 
 $$
 \begin{aligned}
-\exists \delta > 0: (x_0, y_0) \in I(\delta) \rightarrow (\forall \epsilon > 0, \forall t \ge 0: (x, y) \in I(\epsilon)) \land (\exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*)) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\land \exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
 t = \text{time} 
@@ -282,14 +298,16 @@ $$
 ---
 ### periodic instability
 
-- if far initial condition then far solution diverge off spirally periodic solution
+- every solution infinitely diverge off periodic solution
 ---
 ### periodic instability formula
 
 $$
 \begin{aligned}
-(\forall \delta > 0: (x_0, y_0) \in I(\delta)) \land (\exists \epsilon > 0, \exists t \ge 0: (x, y) \not \in I(\epsilon)) \land (\forall x_0, y_0 \in \mathbb R\lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*)) \\
+\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \\
+\land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
+N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
 x, y = \text{solution} \\
 t = \text{time} 
@@ -339,28 +357,32 @@ $$
 ---
 ### nondegenerate system
 
-- nonzero determinant of matrix equal single equilibrium point 
+- nonzero determinant of coefficient matrix generate single equilibrium point 
 
 ---
 ### nondegenerate system formula
 
 $$
 \begin{aligned}
-\det(A) \ne 0
+\det(A) \ne 0 \rightarrow \#v_* = 1 \\
+A = \text{coefficient matrix} \\
+v_* = \text{equilibrium point}
 \end{aligned}
 $$
 
 ---
 ### degenerate system
 
-- zero determinant of matrix equal infinite equilibrium point
+- zero determinant of coefficient matrix generate infinite equilibrium point
 
 ---
 ### degenerate system formula
 
 $$
 \begin{aligned}
-\det(A) = 0
+\det(A) = 0 \rightarrow \#v_* = \infty \\
+A = \text{coefficient matrix} \\
+v_* = \text{equilibrium point}
 \end{aligned}
 $$
 
@@ -382,7 +404,7 @@ c & d \\
 \end{bmatrix} \\
 v = \text{solution} \\
 t = \text{time} \\
-a, b, c, d = \text{constant} \\
+a, b, c, d = \text{coefficient} \\
 \lambda = \text{eigenvalue} \\
 \hat u = \text{eigenvector}
 \end{aligned}
@@ -391,9 +413,9 @@ $$
 ---
 ### distinct real eigenvalues property
 
-- two negative eigenvalues equal node with asymptotic stability
-- two opposite eigenvalues equal saddle with instability
-- two positive eigenvalues equal node with instability
+- two negative eigenvalues equal asymptotically stable node
+- two opposite eigenvalues equal unstable saddle
+- two positive eigenvalues equal unstable node
 ---
 ### distinct real eigenvalues property formula
 
@@ -423,7 +445,7 @@ c & d \\
 \end{bmatrix} \\
 v = \text{solution} \\
 t = \text{time} \\
-a, b, c, d = \text{constant} \\
+a, b, c, d = \text{coefficient} \\
 \lambda = \text{eigenvalue} \\
 \hat u = \text{eigenvector} \\
 \hat w = \text{generalized eigenvector}
@@ -433,8 +455,8 @@ $$
 ---
 ### repeated real eigenvalues property
 
-- single negative eigenvalue equal node with asymptotic stability
-- single positive eigenvalue equal node with instability
+- single negative eigenvalue equal asymptotically stable node
+- single positive eigenvalue equal unstable node 
 - single eigenvector equal improper node
 
 ---
@@ -456,23 +478,25 @@ $$
 
 $$
 \begin{aligned}
-v(t) = C_1e^{\alpha t}(\gamma \cos\beta t - \eta \sin\beta t) + C_2e^{\alpha t}(\gamma \cos\beta t + \eta \sin\beta t) \\
-\alpha = 0 \rightarrow v(t) = v_0 \cos\beta t + \beta^{-1} Av_0 \sin \beta t \\
-\alpha = \text{real eigenvalue part} \\
-\beta = \text{imaginary eigenvalue part} \\
+v(t) = C_1e^{\alpha t}(\gamma \cos\beta t - \lambda \sin\beta t) + C_2e^{\alpha t}(\gamma \cos\beta t + \lambda \sin\beta t) \\
+\alpha = 0 \rightarrow v(t) = v_0 (\cos\beta t + \frac{A \sin \beta t}{\beta}) \\
 v = \text{solution} \\
 t = \text{time} \\
+\alpha = \text{real eigenvalue part} \\
+\beta = \text{imaginary eigenvalue part} \\
 \gamma = \text{real eigenvector part} \\
-\eta = \text{imaginary eigenvector part} 
+\lambda = \text{imaginary eigenvector part} \\
+A = \text{coefficient matrix} \\
+v_0 = \text{initial condition} 
 \end{aligned}
 $$
 
 ---
 ### complex eigenvalues property
 
-- negative real eigenvalue part equal converging spiral with asymptotic stability
-- zero real eigenvalue part equal constant spiral with neutral stability
-- positive real eigenvalue part equal diverging spiral with instability
+- negative real eigenvalue part equal asymptotically stable spiral
+- zero real eigenvalue part equal neutrally stable center
+- positive real eigenvalue part equal unstable spiral
 
 ---
 ### complex eigenvalues property formula
