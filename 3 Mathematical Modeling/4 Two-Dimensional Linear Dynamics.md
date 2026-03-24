@@ -259,7 +259,7 @@ $$
 ### asymptotic periodic stability
 
 - sufficiently nearby solution remain arbitrarily nearby equilibrium point for all time
-- sufficiently nearby solution eventually converge on equilibrium point
+- sufficiently nearby solution eventually converge on periodic solution
 ---
 ### asymptotic periodic stability formula
 
@@ -279,7 +279,7 @@ $$
 ### neutral periodic stability
 
 - sufficiently nearby solution remain arbitrarily nearby equilibrium point for all time
-- sufficiently nearby solution sometimes converge on equilibrium point
+- sufficiently nearby solution sometimes converge on periodic solution
 ---
 ### neutral periodic stability formula
 
