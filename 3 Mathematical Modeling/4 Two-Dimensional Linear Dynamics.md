@@ -43,7 +43,7 @@ $$
 
 $$
 \begin{aligned}
-\vec v = [f, g] \\
+v = [f, g] \\
 f, g = \text{velocity}
 \end{aligned}
 $$
@@ -72,7 +72,7 @@ $$
 
 $$
 \begin{aligned}
-\vec v(x, y) = \{(\frac{dx}{dt}, \frac{dy}{dt})| x, y \in D\} \\
+v(x, y) = \{(\frac{dx}{dt}, \frac{dy}{dt})| x, y \in D\} \\
 \frac{dx}{dt}, \frac{dy}{dt} = \text{velocity} \\
 \end{aligned}
 $$
