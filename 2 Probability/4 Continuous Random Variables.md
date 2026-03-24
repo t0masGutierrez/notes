@@ -197,7 +197,7 @@ $$
 $$
 \begin{aligned}
 f(x) = \lambda e^{-\lambda x} \\
-x = \text{interarrival time} \\
+x = \text{time} \\
 \lambda = \text{average number of events per time}
 \end{aligned}
 $$
@@ -236,7 +236,7 @@ f(x) = \frac{\lambda^r e^{-\lambda x}x^{r-1}}{\Gamma(r)} \\
 \Gamma(r) = \int_0^{\infty}e^{-x}x^{r-1}dx \\
 \lambda = \text{average number of events per time} \\
 r = \text{event number} \\
-x = \text{interarrival time} \\
+x = \text{time} \\
 \Gamma = \text{gamma} 
 \end{aligned}
 $$
