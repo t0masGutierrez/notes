@@ -72,8 +72,9 @@ $$
 
 $$
 \begin{aligned}
-v(x, y) = \{(\frac{dx}{dt}, \frac{dy}{dt})| x, y \in D\} \\
+v(t) = \{(\frac{dx}{dt}, \frac{dy}{dt})| x, y \in D\} \\
 \frac{dx}{dt}, \frac{dy}{dt} = \text{velocity} \\
+D = \text{domain}
 \end{aligned}
 $$
 
@@ -87,7 +88,8 @@ $$
 $$
 \begin{aligned}
 (f, g)(x, y) = \{(\hat x, \hat y)| x, y \in D\} \\
-\hat x, \hat y = \text{unit vector}
+\hat x, \hat y = \text{unit vector} \\
+D = \text{domain}
 \end{aligned}
 $$
 

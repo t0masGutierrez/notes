@@ -225,7 +225,7 @@ $$
 ---
 ### algebraic property
 
-- for every analytic algebraic equation thats regular near initial condition there exists unique analytic solution
+- for every regular, analytic algebraic equation there exists unique analytic solution
 
 ---
 ### algebraic property formula
@@ -296,7 +296,7 @@ $$
 ---
 ### differential property
 
-- for every analytic differential equation thats regular near initial condition there exists unique analytic solution
+- for every regular, analytic differential equation there exists unique analytic solution
 
 ---
 ### differential property formula
@@ -412,7 +412,7 @@ $$
 - solve the outer problem
 - locate the outer boundary condition
 - solve the inner problem
-- ignore higher order term(s)
+- ignore lower order term(s)
 - solve the matching problem
 - change of variable
 - composite solution equal single equation with multiple scales
