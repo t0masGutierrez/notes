@@ -42,7 +42,25 @@ $$
 $$
 \begin{aligned}
 P(X) = \sum_i P(X = x_i) = 1 \\
-P(a \le X \le b) = \sum_{i=a}^b P(X = x_i)
+P(X = x) = P(X \le x) - P(X \le x-1) \\
+P(a \le X \le b) = \sum_{i=a}^b P(X = x_i) \\ 
+P(X \le x) = \sum_{x_i\le x} P(X = x_i) 
+\end{aligned}
+$$
+
+---
+### cumulative distribution function
+
+- cumulative probability as function of random variable
+
+---
+### cumulative distribution function formula
+
+$$
+\begin{aligned}
+F(x) = P(X \le x) \\
+X = \text{random variable} \\
+x = \text{real number} 
 \end{aligned}
 $$
 
@@ -89,7 +107,7 @@ $$
 
 $$
 \begin{aligned}
-E[\sum_i c_iX_i] = \sum_i c_iE[X_i] \\
+E[aX + b] = aE[X] + b \\
 E[g(X)] = \sum_i g(x_i)P(X=x_i) \\
 \end{aligned}
 $$

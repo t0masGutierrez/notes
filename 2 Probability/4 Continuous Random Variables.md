@@ -43,7 +43,8 @@ $$
 \begin{aligned}
 P(X = x) = 0 \\
 P(X) = \int_{-\infty}^{\infty}f(x)dx = 1 \\
-P(a \le X \le b) = \int_a^b f(x)dx
+P(X \le t) = \int_{-\infty}^t f(x)dx = F(t) \\
+P(a \le X \le b) = \int_a^b f(x)dx = F(b) - F(a)
 \end{aligned}
 $$
 
