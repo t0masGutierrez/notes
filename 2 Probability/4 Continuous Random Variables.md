@@ -164,7 +164,7 @@ $$
 
 $$
 \begin{aligned}
-f(x) = \frac{e^{-x^2/2}}{\sqrt {2\pi}} \\
+f(x) = \frac{\exp(\frac{-x^2}{2})}{\sqrt {2\pi}} \\
 x = \text{z-score}
 \end{aligned}
 $$

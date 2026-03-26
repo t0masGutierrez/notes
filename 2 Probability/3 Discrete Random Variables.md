@@ -408,9 +408,12 @@ $$
 $$
 \begin{aligned}
 P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!} \\
+\lambda \approx np \\
 X = \text{random variable} \\
 k = \text{number of events within interval} \\
-\lambda = \text{average number of events per interval} 
+\lambda = \text{average number of events per interval} \\
+n = \text{number of trials} \\
+p = \text{probability of success}
 \end{aligned}
 $$
 
