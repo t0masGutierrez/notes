@@ -1,3 +1,44 @@
+### sequentially compact
+
+- for every sequence of sequentially compact set there exists convergent subsequence
+
+---
+### sequentially compact formula
+
+$$
+\begin{aligned}
+\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
+a_n = \text{sequence} \\
+S = \text{set} \\
+a_{n_k} = \text{subsequence} \\
+X = \text{metric space} \\
+L = \text{subsequential limit}
+\end{aligned}
+$$
+
+---
+### totally bounded compactness property
+
+- every sequentially compact set equal totally bounded set
+
+---
+### totally bounded compactness property formula
+
+$$
+\begin{aligned}
+\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \rightarrow \forall \epsilon > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
+a_n = \text{sequence} \\
+a_{n_k} = \text{subsequence} \\
+X = \text{metric space} \\
+L = \text{subsequential limit} \\
+S = \text{totally bounded set} \\
+a_n = \text{sequence} \\
+B = \text{open ball} \\
+x_i = \text{center}
+\end{aligned}
+$$
+
+---
 ### open cover
 
 - collection of open set whose union contain covered set
@@ -36,31 +77,12 @@ S = \text{compact set}
 $$
 
 ---
-### sequentially compact
-
-- for every sequence of sequentially compact set there exists convergent subsequence
-
----
-### sequentially compact formula
-
-$$
-\begin{aligned}
-\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
-a_n = \text{sequence} \\
-S = \text{set} \\
-a_{n_k} = \text{subsequence} \\
-X = \text{metric space} \\
-L = \text{subsequential limit}
-\end{aligned}
-$$
-
----
 ### compactness property
 
-- topologically compact set equal sequentially compact set
+- topologically compact set of metric space equal sequentially compact set
 
 ---
-### compactness property
+### compactness property formula
 
 $$
 \begin{aligned}
@@ -77,7 +99,7 @@ $$
 ---
 ### closed bounded compactness property
 
-- every sequentially compact set equal closed bounded set
+- every compact set of metric space equal closed bounded set
 
 ---
 ### closed bounded compactness property formula
@@ -86,38 +108,19 @@ $$
 \begin{aligned}
 (S' \subset S \subset X ) \\
 \land (S \subset X, \exists x_0 \in X, \exists r > 0: B_r(x_0) \supset S) \\
-\leftrightarrow \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
+\rightarrow \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
+\lor \forall \set{Y_i} \subset X, \exists \{Y_{i_1}, \dots Y_{i_n}\} \subset \{Y_i\}: S \subset \bigcup_{k=1}^n Y_{i_k} \subset X \\
+S' = \text{derived set} \\
+S = \text{compact set} \\
 X = \text{metric space} \\
 x_0 = \text{center} \\
 r = \text{radius} \\
 B = \text{open ball} \\
 a_n = \text{sequence} \\
-S = \text{sequentially compact set} \\
 a_{n_k} = \text{subsequence} \\
-X = \text{metric space} \\
-L = \text{subsequential limit}
-\end{aligned}
-$$
-
----
-### totally bounded compactness property
-
-- every sequentially compact set equal totally bounded set
-
----
-### totally bounded compactness property formula
-
-$$
-\begin{aligned}
-\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \rightarrow \forall \epsilon > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
-a_n = \text{sequence} \\
-a_{n_k} = \text{subsequence} \\
-X = \text{metric space} \\
 L = \text{subsequential limit} \\
-S = \text{totally bounded set} \\
-a_n = \text{sequence} \\
-B = \text{open ball} \\
-x_i = \text{center}
+Y = \text{open set} \\
+\set{Y} = \text{open cover} 
 \end{aligned}
 $$
 
@@ -205,7 +208,8 @@ $$
 ---
 ### finite intersection property
 
-- for every finite subcollection of compact set there exists nonempty intersection implies for every collection of compact set there exists nonempty intersection
+- for every finite subcollection of compact set there exists nonempty intersection
+- for every collection of compact set there exists nonempty intersection
 
 ---
 ### finite intersection property formula
@@ -220,14 +224,14 @@ $$
 ---
 ### infinite limit point property
 
-- infinite subset of compact set contain limit point of compact set
+- for every infinite subset of compact set there exists limit point of compact set
 
 ---
 ### infinite limit point property formula
 
 $$
 \begin{aligned}
-(S \subset K) \land (|S| = \infty) \rightarrow S \subset X, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap S \ne \emptyset \\
+(S \subset K) \land (|S| = \infty) \rightarrow \exists x_0 \in S, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap S \ne \emptyset \\
 K = \text{compact set} \\
 X = \text{metric space} \\
 r = \text{radius} \\
@@ -313,34 +317,19 @@ $$
 ---
 ### bolzano-weierstrass property
 
-- for every bounded sequence of real numbers there exists convergent subsequence
+- for every infinite bounded set of k-dimensional real numbers there exists limit point of k-dimensional real numbers
 
----
+---  
 ### bolzano-weierstrass property formula
 
-$$
-\begin{aligned}
-\forall \set {a_n} \subset \mathbb R, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in \mathbb R:\lim_{k \rightarrow \infty} a_{n_k} = L \\
-a_n = \text{sequence} \\
-a_{n_k} = \text{subsequence} \\
-L = \text{subsequential limit}
-\end{aligned}
-$$
-
----
-### uncountable perfection property
-
-- nonempty perfect set of k-dimensional real numbers equal uncountable set
-
----
-### uncountable perfection property formula
-
-$$
-\begin{aligned}
-S' = S \subset \mathbb R^k \rightarrow (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
-S = \text{perfect set} \\
-S' = \text{derived set} 
-\end{aligned}
+$$  
+\begin{aligned}  
+(S \subset \mathbb R^k) \land (\set {0, 1, 2, 3, \dots, n} \not\sim S) \rightarrow \exists x_0 \in \mathbb R^k, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap \mathbb R^k \ne \emptyset \\  
+S = \text{bounded set} \\  
+r = \text{radius} \\  
+N = \text{neighborhood} \\  
+x_0 = \text{limit point}  
+\end{aligned} 
 $$
 
 ---
@@ -357,53 +346,5 @@ $$
 - start with unit interval $C_0 = [0, 1]$ 
 - remove the open middle third $C_1= [0, \frac{1}{3}] \cup [\frac{2}{3}, 1]$ 
 - repeat the removal for the intersection $\mathcal C = \bigcap_{n=1}^\infty C_n$ 
-
----
-### separated
-
-- every point of 1st subset equal isolated point of 2nd subset and vice versa
-
----
-### separated formula
-
-$$
-\begin{aligned}
-A, B \subset X \rightarrow \bar A \cap B = A \cap \bar B = \emptyset \\
-A, B = \text{separated set} \\
-X = \text{metric space}
-\end{aligned}
-$$
-
----
-### disconnected
-
-- there exists union of separated set
-
----
-### disconnected formula
-
-$$
-\begin{aligned}
-S \subset X \rightarrow S = A \cup B \\
-S = \text{disconnected set} \\
-X = \text{metric space} \\
-A, B = \text{separated set} 
-\end{aligned}
-$$
-
----
-### real connected property
-
-- connected subset of real numbers contain every intermediate real number
-
----
-### real connected property formula
-
-$$
-\begin{aligned}
-(S \subset \mathbb R) \land (x, y \in \mathbb R) \land (x < z < y) \rightarrow z \in \mathbb R \\
-S = \text{connected set}
-\end{aligned}
-$$
 
 ---

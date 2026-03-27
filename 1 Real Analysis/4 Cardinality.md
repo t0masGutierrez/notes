@@ -210,21 +210,6 @@ S = \text{countable set}
 $$
 
 ---
-### max countable
-
-- finite or countable
-
----
-### max countable formula
-
-$$
-\begin{aligned}
-(\{0, 1, 2, 3, \dots, n\} \sim S) \lor (\mathbb N \sim S) \\
-S = \text{max countable set}
-\end{aligned}
-$$
-
----
 ### uncountable
 
 - infinite and uncountable
@@ -247,10 +232,31 @@ $$
 - rationals
 
 ---
+### countable example formula
+
+$$
+\begin{aligned}
+\mathbb N \sim \mathbb N \\
+\mathbb N \sim \mathbb Z \\
+\mathbb N \sim \mathbb Q \\
+\end{aligned}
+$$
+
+---
 ### uncountable example
 
 - irrationals
 - reals
+
+---
+### uncountable example formula
+
+$$
+\begin{aligned}
+(\{0, 1, 2, 3, \dots, n\} \not \sim \mathbb R - \mathbb Q) \land (\mathbb N \not\sim \mathbb R - \mathbb Q) \\
+(\{0, 1, 2, 3, \dots, n\} \not \sim \mathbb R) \land (\mathbb N \not\sim \mathbb R) 
+\end{aligned}
+$$
 
 ---
 ### countable subset property
@@ -308,7 +314,7 @@ $$
 
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots = n) \rightarrow \mathbb N \sim S^n \\
+(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots, S_n) \rightarrow \mathbb N \sim S^n \\
 S = \text{countable set}
 \end{aligned}
 $$

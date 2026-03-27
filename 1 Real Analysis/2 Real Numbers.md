@@ -223,6 +223,22 @@ $$
 $$
 
 ---
+### set ordinality
+
+- trichotomy
+- transitivity
+
+---
+### set ordinality formula
+
+$$
+\begin{aligned}
+x, y \in S \rightarrow (x < y) \lor (x = y) \lor (y < x) \\
+(x, y, z \in S) \land (x < y) \land (y < z) \rightarrow x < z 
+\end{aligned}
+$$
+
+---
 ### field
 
 - set with two binary operations that satisfy the 9 field axioms
@@ -268,26 +284,13 @@ x \cdot 1 = x \\
 $$
 
 ---
-### set ordinality
-
-- trichotomy
-- transitivity
-
----
-### set ordinality formula
-
-$$
-\begin{aligned}
-x, y \in S \rightarrow (x < y) \lor (x = y) \lor (y < x) \\
-(x, y, z \in S) \land (x < y) \land (y < z) \rightarrow x < z 
-\end{aligned}
-$$
-
----
 ### field ordinality
 
 - addition
 - multiplication
+- reciprocal
+- square
+- negative
 
 ---
 ### field ordinality formula
@@ -295,25 +298,10 @@ $$
 $$
 \begin{aligned}
 (x, y, z \in F) \land (x < y) \rightarrow x + z < y + z \\
-(x, y \in F) \land (x < y) \land (z > 0) \rightarrow x \cdot z < y \cdot z
-\end{aligned}
-$$
-
----
-### reverse field ordinality
-
-- square
-- negative
-- reciprocal
-
----
-### reverse field ordinality formula
-
-$$
-\begin{aligned}
-x \ne 0 \rightarrow x^2 > 0 \\
-x > 0 \leftrightarrow -x < 0 \\
-0 < x < y \rightarrow 0 < \frac{1}{y} < \frac{1}{x}
+(x, y \in F) \land (x < y) \land (z > 0) \rightarrow x \cdot z < y \cdot z \\
+0 < x < y \rightarrow 0 < \frac{1}{y} < \frac{1}{x} \\
+x \ne 0 \rightarrow 0 < x^2  \\
+x > 0 \leftrightarrow -x < 0 
 \end{aligned}
 $$
 
@@ -323,7 +311,6 @@ $$
 - equality
 - identity
 - inverse
-- negative
 
 ---
 ### field addition property formula
@@ -332,8 +319,7 @@ $$
 \begin{aligned}
 x + y = x + z \rightarrow y = z \\
 x + y = x \rightarrow y = 0 \\
-x + y = 0 \rightarrow y = -x \\
--(-x) = x
+x + y = 0 \rightarrow y = -x 
 \end{aligned}
 $$
 
@@ -407,7 +393,7 @@ $$
 ---
 ### complex conjugate
 
-- ordered pair of subtractive real numbers
+- ordered pair of real numbers with negative imaginary part
 
 ---
 ### complex conjugate formula
@@ -417,7 +403,7 @@ $$
 \overline z = a - bi \\
 a = \text{Re}(z) \\
 b = \text{Im}(z) \\
-i^2 = 1
+i = \sqrt {-1}
 \end{aligned}
 $$
 

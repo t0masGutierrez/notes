@@ -17,6 +17,7 @@ $$
 - negative
 - multiplication
 - addition
+- absolute addition
 - subtraction
 
 ---
@@ -241,40 +242,6 @@ S' = \text{derived set}
 $$
 
 ---
-### closure property
-
-- derived closure
-- equal closure
-- sub closure
-
----
-### closure property formula
-
-$$
-\begin{aligned}
-\overline S' \subset \overline S \subset X \\
-S' \subset S \subset X \leftrightarrow \overline S = S \\
-(S \subset K) \land (K' \subset K \subset X) \rightarrow \overline S \subset K
-\end{aligned}
-$$
-
----
-### supremum closure property
-
-- there exists supremum of closure
-
----
-### supremum closure property formula
-
-$$
-\begin{aligned}
-S \subset X \rightarrow \exists \sup \overline S \\
-X = \text{metric space} \\
-\overline S = \text{closure}
-\end{aligned}
-$$
-
----
 ### boundary
 
 - intersection of set and complement of set
@@ -337,46 +304,13 @@ $$
 
 $$
 \begin{aligned}
-S \subset X, \forall \epsilon > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
+S \subset X, \forall r > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
 S = \text{totally bounded set} \\
+r = \text{radius} \\
 X = \text{metric space} \\
 a_n = \text{sequence} \\
 B = \text{open ball} \\
 x_i = \text{center}
-\end{aligned}
-$$
-
----
-### totally bounded property
-
-- forward
-- reverse
-- complete
-
----
-### totally bounded property formula
-
-$$
-\begin{aligned}
-S \subset X, \forall \epsilon > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \rightarrow \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \\
-S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\rightarrow \forall \epsilon > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
-S \subset \mathbb R^k, \forall \epsilon > 0, \exists \set {x_i}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \leftrightarrow \exists x_0 \in \mathbb R^k, \exists r > 0: S \subset B_r(x_0)
-\end{aligned}
-$$
-
----
-### cover property
-
-- empty set equal both open set and closed set
-- metric space equal both open set and closed set
-
----
-### cover property formula
-
-$$
-\begin{aligned}
-\forall x \in \emptyset, X, \exists r > 0: N_r(x) \subset \emptyset, X \\
-\emptyset', X' \subset \emptyset, X 
 \end{aligned}
 $$
 
@@ -487,6 +421,76 @@ S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \rightarrow N_r(x)
 S' \subset S \subset X  \rightarrow S' \subset \bigcap_{i} S_i   \\
 S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \rightarrow N_r(x) \subset \bigcap_{i=1}^n S_i \\
 S' \subset S \subset X  \rightarrow S' \subset \bigcup_{i}^n S_i  \\
+\end{aligned}
+$$
+
+---
+### special cover property
+
+- empty set equal both open set and closed set
+- metric space equal both open set and closed set
+
+---
+### special cover property formula
+
+$$
+\begin{aligned}
+\forall x \in \emptyset, X, \exists r > 0: N_r(x) \subset \emptyset, X \\
+\emptyset', X' \subset \emptyset, X 
+\end{aligned}
+$$
+
+---
+### uncountable perfection property
+
+- nonempty perfect set of k-dimensional real numbers equal uncountable set
+
+---
+### uncountable perfection property formula
+
+$$
+\begin{aligned}
+S' = S \subset \mathbb R^k \rightarrow (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
+S = \text{perfect set} \\
+S' = \text{derived set} 
+\end{aligned}
+$$
+
+---
+### closure property
+
+- derived closure
+- equal closure
+- sub closure
+- supremum closure
+
+---
+### closure property formula
+
+$$
+\begin{aligned}
+\overline S' \subset \overline S \subset X \\
+S' \subset S \subset X \leftrightarrow \overline S = S \\
+(S \subset K) \land (K' \subset K \subset X) \rightarrow \overline S \subset K \\
+S \subset X \rightarrow \exists \sup \overline S \in X
+\end{aligned}
+$$
+
+---
+### totally bounded property
+
+- forward
+- reverse
+- complete
+
+---
+### totally bounded property formula
+
+$$
+\begin{aligned}
+S \subset X, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \rightarrow \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \\
+S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\rightarrow \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
+S \subset \mathbb R^k, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_i) \leftrightarrow \exists x_0 \in \mathbb R^k, \exists r > 0: S \subset B_r(x_0)
 \end{aligned}
 $$
 

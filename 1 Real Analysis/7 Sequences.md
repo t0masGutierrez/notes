@@ -98,7 +98,24 @@ $$
 $$
 
 ---
-### complex convergence property
+### limit property
+
+- distance between $n$th term and limit approaches zero as $n$ approaches infinity
+
+---
+### limit property formula
+
+$$
+\begin{aligned}
+\lim_{n \rightarrow \infty} a_n = L \rightarrow \lim_{n \rightarrow \infty} d(a_n, L) = 0 \\
+a_n = \text{term} \\
+L = \text{sequential limit} \\
+d = \text{metric}
+\end{aligned}
+$$
+
+---
+### complex limit property
 
 - addition
 - multiplication
@@ -107,7 +124,7 @@ $$
 - reciprocal
 
 ---
-### complex convergence property formula
+### complex limit property formula
 
 $$
 \begin{aligned}
@@ -120,7 +137,7 @@ $$
 $$
 
 ---
-### vector convergence property
+### vector limit property
 
 - addition
 - multiplication
@@ -128,7 +145,7 @@ $$
 - coordinatewise convergence
 
 ---
-### vector convergence property formula
+### vector limit property formula
 
 $$
 \begin{aligned}
@@ -136,23 +153,6 @@ $$
 (\vec x_n, \vec y_n \in \mathbb R^k) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} \vec y_n = K) \rightarrow \lim_{n \rightarrow \infty} (\vec x_n \cdot \vec y_n) = L \cdot K \\
 (\vec x_n \in \mathbb R^k) \land (a_n \in \mathbb R) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} a_n = K) \rightarrow \lim_{n \rightarrow \infty} (a_n \cdot \vec x_n) = K \cdot L \\
 (\vec a_n = [\alpha_{1n}, \dots, \alpha_{kn}]) \land (L = [\alpha_1, \dots, \alpha_k]) \land (\lim_{n \rightarrow \infty} \vec a_n = L) \leftrightarrow \forall j \le k: \lim_{n \rightarrow \infty} \alpha_{jn} = \alpha_j 
-\end{aligned}
-$$
-
----
-### limit convergence property
-
-- distance between $n$th term and limit approaches zero as $n$ approaches infinity
-
----
-### limit convergence property formula
-
-$$
-\begin{aligned}
-\lim_{n \rightarrow \infty} a_n = L \rightarrow \lim_{n \rightarrow \infty} d(a_n, L) = 0 \\
-a_n = \text{term} \\
-L = \text{sequential limit} \\
-d = \text{metric}
 \end{aligned}
 $$
 
@@ -325,14 +325,14 @@ S = \text{derived set} \\
 $$
 
 ---
-### bounded limit property
+### complete limit property
 
 - membership
 - eventual bound
 - convergence
 
 ---
-### bounded limit property formula
+### complete limit property formula
 
 $$
 \begin{aligned}
