@@ -57,10 +57,10 @@ $$
 
 $$
 \begin{aligned}
-x = y \leftrightarrow \text{d}(x, y) = 0 \\
-x \ne y \rightarrow \text{d}(x, y) > 0 \\
-\text{d}(x, y) = \text{d}(y, x) \\
-\text{d}(x, y) \le \text{d}(x, z) + \text{d}(z, y) 
+x = y \leftrightarrow d(x, y) = 0 \\
+x \ne y \rightarrow d(x, y) > 0 \\
+d(x, y) = d(y, x) \\
+d(x, y) \le d(x, z) + d(z, y) 
 \end{aligned}
 $$
 
@@ -74,9 +74,9 @@ $$
 
 $$
 \begin{aligned}
-B_r(x_0) = \{x \in X |\text{d}(x, x_0) < r\} \\
+B_r(x_0) = \{x \in X |d(x, x_0) < r\} \\
 x = \text{point} \\
-\text{d} = \text{metric} \\
+d = \text{metric} \\
 x_0 = \text{center} \\
 r = \text{radius}
 \end{aligned}
@@ -450,7 +450,7 @@ $$
 
 $$
 \begin{aligned}
-S' = S \subset \mathbb R^k \rightarrow (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
+\emptyset \ne S' = S \subset \mathbb R^k \rightarrow (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
 S = \text{perfect set} \\
 S' = \text{derived set} 
 \end{aligned}
@@ -461,8 +461,9 @@ $$
 
 - derived closure
 - equal closure
+- sup closure
 - sub closure
-- supremum closure
+- union closure
 
 ---
 ### closure property formula
@@ -471,8 +472,9 @@ $$
 \begin{aligned}
 \overline S' \subset \overline S \subset X \\
 S' \subset S \subset X \leftrightarrow \overline S = S \\
-(S \subset K) \land (K' \subset K \subset X) \rightarrow \overline S \subset K \\
-S \subset X \rightarrow \exists \sup \overline S \in X
+S \subset \mathbb R, \exists x_0 \in \mathbb R, \exists r > 0:  S \subset B_r(x_0) \rightarrow \exists \sup S \in \overline S \\ 
+(S \subset K) \land (K' \subset K \subset X) \rightarrow \overline S \subset \overline K = K \\
+\overline {\bigcup_i A_i} = \bigcup_i \overline A_i \\
 \end{aligned}
 $$
 
@@ -489,7 +491,7 @@ $$
 $$
 \begin{aligned}
 S \subset X, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \rightarrow \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \\
-S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\rightarrow \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
+S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\rightarrow  \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
 S \subset \mathbb R^k, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_i) \leftrightarrow \exists x_0 \in \mathbb R^k, \exists r > 0: S \subset B_r(x_0)
 \end{aligned}
 $$
