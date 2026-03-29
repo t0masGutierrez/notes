@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow v_d = \frac{I}{nqA} \\
+\vec v_d = \frac{I}{nqA} \\
 I = \text{electric current} \\
 n = \text{number density} \\
 q = \text{electric charge} \\
@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow J = \frac{I}{A} = nq \overrightarrow v_d \\
+\vec J = \frac{I}{A} = nq \vec v_d \\
 I = \text{electric current} \\
 A = \text{area} \\
 n = \text{number density} \\
@@ -98,7 +98,7 @@ $$
 
 $$
 \begin{aligned}
-\sigma = \frac{\overrightarrow J}{\overrightarrow E} \\
+\sigma = \frac{\vec J}{\vec E} \\
 J = \text{electric current density} \\
 E = \text{electric field}
 \end{aligned}
@@ -113,7 +113,7 @@ $$
 
 $$
 \begin{aligned}
-\rho = \frac{\overrightarrow E}{\overrightarrow J} \\
+\rho = \frac{\vec E}{\vec J} \\
 E = \text{electric field} \\
 J = \text{electric current density}
 \end{aligned}

@@ -110,7 +110,7 @@ $$
 
 $$
 \begin{aligned}
-A = B \leftrightarrow \forall x(x \in A \leftrightarrow x \in B) \\
+A = B \iff \forall x(x \in A \iff x \in B) \\
 \end{aligned}
 $$
 
@@ -166,7 +166,7 @@ $$
 
 $$
 \begin{aligned}
-A \subseteq B \equiv \forall x(x \in A \rightarrow x \in B)
+A \subseteq B \equiv \forall x(x \in A \implies x \in B)
 \end{aligned}
 $$
 
@@ -180,7 +180,7 @@ $$
 
 $$
 \begin{aligned}
-B \supseteq A \equiv \forall x(x \in B \rightarrow x \in A)
+B \supseteq A \equiv \forall x(x \in B \implies x \in A)
 \end{aligned}
 $$
 
@@ -222,7 +222,7 @@ $$
 
 $$
 \begin{aligned}
-B \supset A \equiv \forall x(x \in A \to x \in B) \land \exists y(y \in B \land y \notin A)
+B \supset A \equiv (\forall x \in A: x \in B) \land (\exists y \in B: y \not\in A)
 \end{aligned}
 $$
 
@@ -236,7 +236,7 @@ $$
 
 $$
 \begin{aligned}
-A = B \leftrightarrow A \subseteq B \land B \supseteq A
+A = B \iff A \subseteq B \land B \supseteq A
 \end{aligned}
 $$
 
@@ -304,7 +304,7 @@ $$
 
 $$
 \begin{aligned}
-a = b \leftrightarrow \forall n(a_n = b_n)
+a = b \iff \forall n(a_n = b_n)
 \end{aligned}
 $$
 
@@ -339,7 +339,7 @@ $$
 
 $$
 \begin{aligned}
-A \times B = B \times A \leftrightarrow A = \emptyset \lor B = \emptyset
+A \times B = B \times A \iff A = \emptyset \lor B = \emptyset
 \end{aligned}
 $$
 
@@ -372,7 +372,7 @@ $$
 
 $$
 \begin{aligned}
-\forall(x \in A)P(x) \equiv \forall (x \in A) \to P(x)
+\forall x \in A:P(x) \equiv x \in A \implies P(x)
 \end{aligned}
 $$
 
@@ -386,7 +386,7 @@ $$
 
 $$
 \begin{aligned}
-\exists(x \in A)P(x) \equiv \exists (x \in A) \land P(x)
+\exists x \in A:P(x) \equiv x \in A \land P(x)
 \end{aligned}
 $$
 
@@ -416,8 +416,8 @@ $$
 
 $$
 \begin{aligned}
-\forall (x \in D)P(x) \leftrightarrow T = D \\
-\exists (x \in D)P(x) \leftrightarrow T \ne \emptyset
+\forall (x \in D)P(x) \iff T = D \\
+\exists (x \in D)P(x) \iff T \ne \emptyset
 \end{aligned}
 $$
 

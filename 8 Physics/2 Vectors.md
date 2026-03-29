@@ -22,8 +22,8 @@ output:
 
 $$
 \begin{aligned}
-\hat{i} = \frac{\overrightarrow{A_x}}{A_x} \\ 
-\hat{j} = \frac{\overrightarrow{A_y}}{A_y}
+\hat{i} = \frac{\vec{A_x}}{A_x} \\ 
+\hat{j} = \frac{\vec{A_y}}{A_y}
 \end{aligned}
 $$
 
@@ -49,7 +49,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} = A_x\hat{i} + A_y\hat{j} \\
+\vec{A} = A_x\hat{i} + A_y\hat{j} \\
 A_x = \text{x scalar component} \\
 \hat{i} = \text{x direction} \\
 A_y = \text{y scalar component} \\
@@ -105,7 +105,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} = \overrightarrow{B} \leftrightarrow
+\vec{A} = \vec{B} \iff
 \begin{cases}
 A_x = B_x \\
 A_y = B_y
@@ -129,13 +129,13 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow A + \overrightarrow B = \overrightarrow B + \overrightarrow A \\
-(\overrightarrow A + \overrightarrow B) + \overrightarrow C = \overrightarrow A + (\overrightarrow B + \overrightarrow C) \\
-\overrightarrow A + 0 = \overrightarrow A \\
-\overrightarrow A + (-\overrightarrow A) = 0 \\
-c(\overrightarrow A + \overrightarrow B) = c\overrightarrow A + c\overrightarrow B \\
-1(\overrightarrow A) = \overrightarrow A \\
-0(\overrightarrow A) = 0\end{align*}
+\vec A + \vec B = \vec B + \vec A \\
+(\vec A + \vec B) + \vec C = \vec A + (\vec B + \vec C) \\
+\vec A + 0 = \vec A \\
+\vec A + (-\vec A) = 0 \\
+c(\vec A + \vec B) = c\vec A + c\vec B \\
+1(\vec A) = \vec A \\
+0(\vec A) = 0\end{align*}
 $$
 
 ---
@@ -149,7 +149,7 @@ $$
 
 $$
 \begin{aligned}
-a\overrightarrow{A} = aA_x\hat{i} + aA_y\hat{j} \\
+a\vec{A} = aA_x\hat{i} + aA_y\hat{j} \\
 a = \text{scalar quantity} \\
 A_x \hat i = \text{x vector component} \\
 A_y \hat j = \text{y vector component}
@@ -166,7 +166,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{R} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
+\vec{R} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
 A_x = \text{x scalar component} \\
 \hat i = \text{x direction} \\
 A_y = \text{y scalar component} \\
@@ -200,7 +200,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \cdot \overrightarrow{B} = AB \cos (\theta) \\
+\vec{A} \cdot \vec{B} = AB \cos (\theta) \\
 A = \text{magnitude} \\
 \theta = \text{angle between vectors}
 \end{aligned}
@@ -211,7 +211,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \cdot \overrightarrow{B} = A_xB_x + A_yB_y + A_zB_z \\
+\vec{A} \cdot \vec{B} = A_xB_x + A_yB_y + A_zB_z \\
 A_x = \text{x scalar component} \\
 A_y = \text{y scalar component} \\
 A_z = \text{z scalar component}
@@ -250,7 +250,7 @@ $$
 
 $$
 \begin{aligned}
-|\overrightarrow{A} \times \overrightarrow{B}| = AB \sin (\theta) \\
+|\vec{A} \times \vec{B}| = AB \sin (\theta) \\
 A = \text{magnitude} \\
 \theta = \text{angle between vectors}
 \end{aligned}
@@ -261,7 +261,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \times \overrightarrow{B} = (A_yB_z - A_zB_y)\hat{i} + (A_zB_x - A_xB_z)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \\
+\vec{A} \times \vec{B} = (A_yB_z - A_zB_y)\hat{i} + (A_zB_x - A_xB_z)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \\
 A_x = \text{x scalar component} \\
 \hat i = \text{x direction} \\
 A_y = \text{y scalar component} \\

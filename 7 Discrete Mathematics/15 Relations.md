@@ -8,7 +8,7 @@
 
 $$
 \begin{aligned}
-R \subseteq A \times B \rightarrow (a_i, b_j) \in R \\
+R \subseteq A \times B \implies (a_i, b_j) \in R \\
 i, j = 1, 2, ... n \\
 i, j = \text{index}
 
@@ -53,7 +53,7 @@ $$
 
 $$
 \begin{aligned}
-(a, b) \in R \to (b, a) \in R
+(a, b) \in R \implies (b, a) \in R
 \end{aligned}
 $$
 
@@ -67,7 +67,7 @@ $$
 
 $$
 \begin{aligned}
-(a, b) \in R \land (b, a) \in R \to a = b
+(a, b) \in R \land (b, a) \in R \implies a = b
 \end{aligned}
 $$
 
@@ -81,7 +81,7 @@ $$
 
 $$
 \begin{aligned}
-(a, b) \in R \land (b, c) \in R \to (a, c) \in R
+(a, b) \in R \land (b, c) \in R \implies (a, c) \in R
 \end{aligned}
 $$
 
@@ -95,7 +95,7 @@ $$
 
 $$
 \begin{aligned}
-(a, b) \in P \land (b, c) \in Q \to (a, c) \in P \circ Q
+(a, b) \in P \land (b, c) \in Q \implies (a, c) \in P \circ Q
 \end{aligned}
 $$
 
@@ -123,8 +123,8 @@ $$
 
 $$
 \begin{aligned}
-(a_i, b_j) \in R \to m_{ij} = 1 \\
-(a_i, b_j) \notin R \to m_{ij} = 0 \\
+(a_i, b_j) \in R \implies m_{ij} = 1 \\
+(a_i, b_j) \notin R \implies m_{ij} = 0 \\
 i = \text{row index} \\
 j = \text{column index}
 \end{aligned}
@@ -206,8 +206,8 @@ $$
 $$
 \begin{aligned}
 a R a \\
-a R b \to b R a \\
-a R b \land b R c \to a R c \\
+a R b \implies b R a \\
+a R b \land b R c \implies a R c \\
 \therefore a \sim b
 \end{aligned}
 $$

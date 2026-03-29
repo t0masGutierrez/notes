@@ -7,7 +7,7 @@
 $$
 \begin{aligned}
 P(1) \\
-P(k) \to P(k + 1) \\
+P(k) \implies P(k + 1) \\
 \therefore \forall nP(n)
 \end{aligned}
 $$
@@ -45,7 +45,7 @@ $$
 $$
 \begin{aligned}
 P(1) \\
-P(j) \to P(j + 1) \\
+P(j) \implies P(j + 1) \\
 \therefore \forall nP(n) \\
 j = 1, 2, ... k
 \end{aligned}

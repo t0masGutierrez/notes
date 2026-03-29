@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-b | a \leftrightarrow \exists c(a = bc) \\
+b | a \iff \exists c(a = bc) \\
 a = \text{dividend} \\
 b = \text{divisor} \\
 b|a = \text{b divides a}
@@ -19,7 +19,7 @@ $$
 
 $$
 \begin{aligned}
-b |a \land b |c \to b|(a + c)
+b |a \land b |c \implies b|(a + c)
 \end{aligned}
 $$
 
@@ -28,7 +28,7 @@ $$
 
 $$
 \begin{aligned}
-b|a \to \forall c (b|ac)
+b|a \implies \forall c (b|ac)
 \end{aligned}
 $$
 
@@ -37,7 +37,7 @@ $$
 
 $$
 \begin{aligned}
-b|a \land a|c \to b|c
+b|a \land a|c \implies b|c
 \end{aligned}
 $$
 
@@ -101,7 +101,7 @@ $$
 
 $$
 \begin{aligned}
-a \equiv b (\text{mod} \ m) \leftrightarrow k = m |(a - b) \\
+a \equiv b (\text{mod} \ m) \iff k = m |(a - b) \\
 n = \text{modulus} \\
 k = Z^+
 \end{aligned}

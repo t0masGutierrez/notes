@@ -11,7 +11,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow F = q\overrightarrow v \times \overrightarrow B = qvB \sin(\theta) \\
+\vec F = q\vec v \times \vec B = qvB \sin(\theta) \\
 q = \text{electric charge} \\
 v = \text{velocity} \\
 B = \text{magnetic field} \\
@@ -63,7 +63,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi = \overrightarrow B \cdot \overrightarrow A = BA \cos(\theta) \\
+\Phi = \vec B \cdot \vec A = BA \cos(\theta) \\
 B = \text{magnetic field} \\
 A = \text{area} \\
 \theta = \text{angular position}
@@ -80,7 +80,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi = \oint_{A_1}^{A_2}\overrightarrow B \cdot d\overrightarrow A = 0 \\
+\Phi = \oint_{A_1}^{A_2}\vec B \cdot d\vec A = 0 \\
 B = \text{magnetic field} \\
 A = \text{area}
 \end{aligned}
@@ -96,7 +96,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_c = m \overrightarrow a_{rad} = m\frac{\overrightarrow v_{tan}^2}{R} \\
+\vec F_c = m \vec a_{rad} = m\frac{\vec v_{tan}^2}{R} \\
 m = \text{mass} \\
 a_{rad} = \text{radial acceleration} \\
 v_{tan} = \text{tangential velocity} \\
@@ -166,7 +166,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F = I \overrightarrow L \times \overrightarrow B = ILB \sin(\theta) \\
+\vec F = I \vec L \times \vec B = ILB \sin(\theta) \\
 I = \text{electric current} \\
 L = \text{length} \\
 B = \text{magnetic field} \\
@@ -200,7 +200,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \mu = NI \overrightarrow A \\
+\vec \mu = NI \vec A \\
 N = \text{number of loops} \\
 I = \text{electric current} \\
 A = \text{area}
@@ -212,7 +212,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = 0
+\vec F_{net} = 0
 \end{aligned}
 $$
 
@@ -221,7 +221,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow B = \frac{\mu_0 \overrightarrow \mu}{2\pi r^3} \\
+\vec B = \frac{\mu_0 \vec \mu}{2\pi r^3} \\
 \mu_0 = 4\pi \times 10^{-7} \\
 \mu = \text{magnetic dipole} \\
 r = \text{distance}
@@ -233,7 +233,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \tau = \overrightarrow \mu \times \overrightarrow B = \mu B \sin(\theta) \\
+\vec \tau = \vec \mu \times \vec B = \mu B \sin(\theta) \\
 \mu = \text{magnetic dipole} \\
 B = \text{magnetic field} \\
 \theta = \text{angular position}
@@ -245,7 +245,7 @@ $$
 
 $$
 \begin{aligned}
-U = - \overrightarrow \mu \cdot \overrightarrow B = -\mu B \cos(\theta) \\
+U = - \vec \mu \cdot \vec B = -\mu B \cos(\theta) \\
 \mu = \text{magnetic dipole} \\
 B = \text{magnetic field} \\
 \theta = \text{angular position}

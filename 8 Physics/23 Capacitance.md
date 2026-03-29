@@ -199,7 +199,7 @@ $$
 
 $$
 \begin{aligned}
-\pm \Phi = K\oint_{A_1}^{A_2}\overrightarrow E \cdot d\overrightarrow A = \frac{\pm Q_{enc}}{\epsilon_0} \\
+\pm \Phi = K\oint_{A_1}^{A_2}\vec E \cdot d\vec A = \frac{\pm Q_{enc}}{\epsilon_0} \\
 K = \text{dielectric constant} \\
 E = \text{electric field} \\
 A = \text{area} \\

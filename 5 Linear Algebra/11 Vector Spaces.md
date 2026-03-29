@@ -54,7 +54,7 @@ $$
 c\vec 0 = \vec 0 \\
 0\vec x = \vec 0 \\
 (-1)\vec x = -\vec x \\
-c\vec x = 0 \rightarrow (c = 0) \lor (\vec x = \vec 0)
+c\vec x = 0 \implies (c = 0) \lor (\vec x = \vec 0)
 \end{aligned}
 $$
 

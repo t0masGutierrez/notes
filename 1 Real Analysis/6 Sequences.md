@@ -53,7 +53,7 @@ $$
 
 $$
 \begin{aligned}
-\exists L \in X: \lim_{n \rightarrow \infty}a_n = L \leftrightarrow \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_n, L) < \epsilon \\
+\exists L \in X: \lim_{n \rightarrow \infty}a_n = L \iff \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_n, L) < \epsilon \\
 a_n = \text{term} \\
 L = \text{sequential limit} \\
 d = \text{metric}
@@ -70,7 +70,7 @@ $$
 
 $$
 \begin{aligned}
-\not\exists L \in X: \lim_{n \rightarrow \infty}a_n = L \leftrightarrow \exists \epsilon > 0, \forall N \in \mathbb N, \exists n \ge N: d(a_n, L) \ge \epsilon \\
+\not\exists L \in X: \lim_{n \rightarrow \infty}a_n = L \iff \exists \epsilon > 0, \forall N \in \mathbb N, \exists n \ge N: d(a_n, L) \ge \epsilon \\
 a_n = \text{term} \\
 L = \text{sequential limit} \\
 d = \text{metric}
@@ -90,10 +90,10 @@ $$
 
 $$
 \begin{aligned}
-\lim_{n \rightarrow \infty} a_n = L \leftrightarrow \forall \epsilon> 0, \exists N \in \mathbb N, \forall n \ge N: a_n \in N_{\epsilon}(L) \\
-(\lim_{n \rightarrow \infty} a_n = L) \land (\lim_{n \rightarrow \infty} a_n = L') \rightarrow L = L' \\
-\lim_{n \rightarrow \infty} a_n = L \rightarrow \{a_n\} \subset X, \exists \epsilon > 0: \{a_n\} \subset B_{\epsilon}(L) \\
-(S \subset X) \land (L \in S') \rightarrow \exists \{a_n\} \in S: \lim_{n \rightarrow \infty} a_n = L
+\lim_{n \rightarrow \infty} a_n = L \iff \forall \epsilon> 0, \exists N \in \mathbb N, \forall n \ge N: a_n \in N_{\epsilon}(L) \\
+(\lim_{n \rightarrow \infty} a_n = L) \land (\lim_{n \rightarrow \infty} a_n = L') \implies L = L' \\
+\lim_{n \rightarrow \infty} a_n = L \implies \{a_n\} \subset X, \exists \epsilon > 0: \{a_n\} \subset B_{\epsilon}(L) \\
+(S \subset X) \land (L \in S') \implies \exists \{a_n\} \in S: \lim_{n \rightarrow \infty} a_n = L
 \end{aligned}
 $$
 
@@ -107,7 +107,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{n \rightarrow \infty} a_n = L \rightarrow \lim_{n \rightarrow \infty} d(a_n, L) = 0 \\
+\lim_{n \rightarrow \infty} a_n = L \implies \lim_{n \rightarrow \infty} d(a_n, L) = 0 \\
 a_n = \text{term} \\
 L = \text{sequential limit} \\
 d = \text{metric}
@@ -128,11 +128,11 @@ $$
 
 $$
 \begin{aligned}
-(a_n, b_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \land (\lim_{n \rightarrow \infty}b_n = K) \rightarrow \lim_{n \rightarrow \infty}(a_n + b_n) = L + K \\
-(a_n, b_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \land (\lim_{n \rightarrow \infty}b_n = K) \rightarrow \lim_{n \rightarrow \infty}(a_n \cdot b_n) = L \cdot K \\
-(a_n \in \mathbb C) \land (c \in \mathbb R) \land (\lim_{n \rightarrow \infty}a_n = L) \rightarrow \lim_{n \rightarrow \infty}ca_n = c \cdot L \\
-(a_n \in \mathbb C) \land (c \in \mathbb R) \land (\lim_{n \rightarrow \infty}a_n = L) \rightarrow \lim_{n \rightarrow \infty}(c + a_n) = c + L \\
-(a_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \rightarrow \lim_{n \rightarrow \infty} \frac{1}{a_n} = \frac{1}{L} \\
+(a_n, b_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \land (\lim_{n \rightarrow \infty}b_n = K) \implies \lim_{n \rightarrow \infty}(a_n + b_n) = L + K \\
+(a_n, b_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \land (\lim_{n \rightarrow \infty}b_n = K) \implies \lim_{n \rightarrow \infty}(a_n \cdot b_n) = L \cdot K \\
+(a_n \in \mathbb C) \land (c \in \mathbb R) \land (\lim_{n \rightarrow \infty}a_n = L) \implies \lim_{n \rightarrow \infty}ca_n = c \cdot L \\
+(a_n \in \mathbb C) \land (c \in \mathbb R) \land (\lim_{n \rightarrow \infty}a_n = L) \implies \lim_{n \rightarrow \infty}(c + a_n) = c + L \\
+(a_n \in \mathbb C) \land (\lim_{n \rightarrow \infty}a_n = L) \implies \lim_{n \rightarrow \infty} \frac{1}{a_n} = \frac{1}{L} \\
 \end{aligned}
 $$
 
@@ -149,10 +149,10 @@ $$
 
 $$
 \begin{aligned}
-(\vec x_n, \vec y_n \in \mathbb R^k) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} \vec y_n = K) \rightarrow \lim_{n \rightarrow \infty} (\vec x_n + \vec y_n) = L + K \\
-(\vec x_n, \vec y_n \in \mathbb R^k) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} \vec y_n = K) \rightarrow \lim_{n \rightarrow \infty} (\vec x_n \cdot \vec y_n) = L \cdot K \\
-(\vec x_n \in \mathbb R^k) \land (a_n \in \mathbb R) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} a_n = K) \rightarrow \lim_{n \rightarrow \infty} (a_n \cdot \vec x_n) = K \cdot L \\
-(\vec a_n = [\alpha_{1n}, \dots, \alpha_{kn}]) \land (L = [\alpha_1, \dots, \alpha_k]) \land (\lim_{n \rightarrow \infty} \vec a_n = L) \leftrightarrow \forall j \le k: \lim_{n \rightarrow \infty} \alpha_{jn} = \alpha_j 
+(\vec x_n, \vec y_n \in \mathbb R^k) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} \vec y_n = K) \implies \lim_{n \rightarrow \infty} (\vec x_n + \vec y_n) = L + K \\
+(\vec x_n, \vec y_n \in \mathbb R^k) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} \vec y_n = K) \implies \lim_{n \rightarrow \infty} (\vec x_n \cdot \vec y_n) = L \cdot K \\
+(\vec x_n \in \mathbb R^k) \land (a_n \in \mathbb R) \land (\lim_{n \rightarrow \infty} \vec x_n = L) \land (\lim_{n \rightarrow \infty} a_n = K) \implies \lim_{n \rightarrow \infty} (a_n \cdot \vec x_n) = K \cdot L \\
+(\vec a_n = [\alpha_{1n}, \dots, \alpha_{kn}]) \land (L = [\alpha_1, \dots, \alpha_k]) \land (\lim_{n \rightarrow \infty} \vec a_n = L) \iff \forall j \le k: \lim_{n \rightarrow \infty} \alpha_{jn} = \alpha_j 
 \end{aligned}
 $$
 
@@ -183,7 +183,7 @@ $$
 
 $$
 \begin{aligned}
-S = \{L | \lim_{k\rightarrow \infty} a_{n_k} = L\} \rightarrow S' \subset S \subset X \\
+S = \{L | \lim_{k\rightarrow \infty} a_{n_k} = L\} \implies S' \subset S \subset X \\
 S = \text{closed set} \\
 a_{n_k} = \text{subsequence} \\
 L = \text{subsequential limit} \\
@@ -201,7 +201,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{n \rightarrow \infty} a_n = L \rightarrow \forall \epsilon > 0, \exists K \in \mathbb N, \forall n_k \ge n_K \ge N: d(a_{n_k}, L) < \epsilon
+\lim_{n \rightarrow \infty} a_n = L \implies \forall \epsilon > 0, \exists K \in \mathbb N, \forall n_k \ge n_K \ge N: d(a_{n_k}, L) < \epsilon
 \end{aligned}
 $$
 
@@ -233,8 +233,8 @@ $$
 
 $$
 \begin{aligned}
-\exists L \in X: \lim_{n\rightarrow \infty} a_n = L \rightarrow \{a_n\} = \{_{c}a_n\} \\
-\forall \set{Y_i} \subset X, \exists \{Y_{i_1}, \dots Y_{i_n}\} \subset \{Y_i\}: X \subset \bigcup_{k=1}^n Y_{i_k} \rightarrow \forall \{_{c}a_n\} \subset X, \exists L \in X: \lim_{n\rightarrow \infty} {}_{c}a_n = L \\
+\exists L \in X: \lim_{n\rightarrow \infty} a_n = L \implies \{a_n\} = \{_{c}a_n\} \\
+\forall \set{Y_i} \subset X, \exists \{Y_{i_1}, \dots Y_{i_n}\} \subset \{Y_i\}: X \subset \bigcup_{k=1}^n Y_{i_k} \implies \forall \{_{c}a_n\} \subset X, \exists L \in X: \lim_{n\rightarrow \infty} {}_{c}a_n = L \\
 \forall \{_{c}a_n\} \subset \mathbb R^k, \exists L \in \mathbb R^k: \lim_{n\rightarrow \infty} {}_{c}a_n = L \\
 \end{aligned}
 $$
@@ -267,8 +267,8 @@ $$
 
 $$
 \begin{aligned}
-\{a_n\}^+ \subset \mathbb R \leftrightarrow \forall n \in \mathbb N: a_n \le a_{n+1} \\
-\{a_n\}^- \subset \mathbb R \leftrightarrow \forall n \in \mathbb N: a_n \ge a_{n+1} \\
+\{a_n\}^+ \subset \mathbb R \iff \forall n \in \mathbb N: a_n \le a_{n+1} \\
+\{a_n\}^- \subset \mathbb R \iff \forall n \in \mathbb N: a_n \ge a_{n+1} \\
 \{a_n\}^+ = \text{monotonically increasing sequence} \\
 \{a_n\}^- = \text{monotonically decreasing sequence} 
 \end{aligned}
@@ -284,7 +284,7 @@ $$
 
 $$
 \begin{aligned}
-(\{a_n\} \subset X, \exists L \in X, \exists \epsilon > 0: B_{\epsilon}(L) \supset \{a_n\}) \land (\forall n \in \mathbb N: a_n \ge\le a_{n+1}) \rightarrow \lim_{n \rightarrow \infty} a_n = L \\
+(\{a_n\} \subset X, \exists L \in X, \exists \epsilon > 0: B_{\epsilon}(L) \supset \{a_n\}) \land (\forall n \in \mathbb N: a_n \ge\le a_{n+1}) \implies \lim_{n \rightarrow \infty} a_n = L \\
 \{a_n\} = \text{sequence} \\
 X = \text{metric space} \\
 L = \text{sequential limit} \\
@@ -302,7 +302,7 @@ $$
 
 $$
 \begin{aligned}
-S = \{L \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_k} = L\} \rightarrow  \lim_{n\rightarrow \infty} \sup a_n = \sup S \\
+S = \{L \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_k} = L\} \implies  \lim_{n\rightarrow \infty} \sup a_n = \sup S \\
 S = \text{derived set} \\
 \sup S = \text{limit superior}
 \end{aligned}
@@ -318,7 +318,7 @@ $$
 
 $$
 \begin{aligned}
-S = \{L \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_k} = L\} \rightarrow \lim_{n\rightarrow \infty} \inf a_n = \inf S\\
+S = \{L \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_k} = L\} \implies \lim_{n\rightarrow \infty} \inf a_n = \inf S\\
 S = \text{derived set} \\
 \inf S = \text{limit inferior}
 \end{aligned}
@@ -337,9 +337,9 @@ $$
 $$
 \begin{aligned}
 \sup S, \inf S \in S \\
-L > \sup S \rightarrow \exists N \in \mathbb N, \forall n \ge N: a_n < L \\
-L < \inf S \rightarrow \exists N \in \mathbb N, \forall n \ge N: a_n > L \\
-\lim_{n \rightarrow \infty} a_n = L \leftrightarrow \lim_{n\rightarrow \infty} \sup a_n = \lim_{n\rightarrow \infty} \inf a_n = L
+L > \sup S \implies \exists N \in \mathbb N, \forall n \ge N: a_n < L \\
+L < \inf S \implies \exists N \in \mathbb N, \forall n \ge N: a_n > L \\
+\lim_{n \rightarrow \infty} a_n = L \iff \lim_{n\rightarrow \infty} \sup a_n = \lim_{n\rightarrow \infty} \inf a_n = L
 \end{aligned}
 $$
 
@@ -362,14 +362,14 @@ $$
 0 \quad p < q \\
 \infty \quad p > q \\
 \end{cases} \\
-p > 0 \rightarrow \lim_{n \rightarrow \infty} p^{1/n} = 1 \\
-x \in \mathbb R \rightarrow \lim_{n \rightarrow \infty} x^{n} = \begin{cases} 
+p > 0 \implies \lim_{n \rightarrow \infty} p^{1/n} = 1 \\
+x \in \mathbb R \implies \lim_{n \rightarrow \infty} x^{n} = \begin{cases} 
 0 \quad |x| < 1 \\
 \infty \quad x > 1 \\
 \end{cases} \\ 
 \lim_{n \rightarrow \infty} (1+\frac{x}{n})^n = e^x \\
-a > 1 \rightarrow \lim_{n \rightarrow \infty} \frac{n^k}{a^n} = 0 \\
-p > 0 \rightarrow \lim_{n \rightarrow \infty} \frac{\log n}{n^p} = 0
+a > 1 \implies \lim_{n \rightarrow \infty} \frac{n^k}{a^n} = 0 \\
+p > 0 \implies \lim_{n \rightarrow \infty} \frac{\log n}{n^p} = 0
 \end{aligned}
 $$
 

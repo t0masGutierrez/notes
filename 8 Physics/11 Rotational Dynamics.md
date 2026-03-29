@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow \tau = \overrightarrow r \times \overrightarrow F = rF \sin(\theta) \\
+\vec \tau = \vec r \times \vec F = rF \sin(\theta) \\
 r = \text{radius} \\
 F = \text{force} \\
 \theta = \text{angle between vectors}
@@ -52,7 +52,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \tau_{net} = I \overrightarrow \alpha \\
+\vec \tau_{net} = I \vec \alpha \\
 I = \text{moment of inertia} \\
 \alpha = \text{angular acceleration}
 \end{aligned}
@@ -71,7 +71,7 @@ $$
 
 $$
 \begin{aligned}
-W = \overrightarrow \tau \cdot d \overrightarrow \theta = \tau \Delta \theta \cos(\phi) \\
+W = \vec \tau \cdot d \vec \theta = \tau \Delta \theta \cos(\phi) \\
 \tau = \text{torque} \\
 \theta = \text{angular position} \\
 \phi = \text{angle between vectors}
@@ -83,7 +83,7 @@ $$
 
 $$
 \begin{aligned}
-W = \sum_i \tau_i \Delta \theta_i = \int_{\theta_1}^{\theta_2} \overrightarrow \tau \cdot d \overrightarrow \theta \\
+W = \sum_i \tau_i \Delta \theta_i = \int_{\theta_1}^{\theta_2} \vec \tau \cdot d \vec \theta \\
 \tau = \text{torque} \\
 \theta = \text{angular position}
 \end{aligned}
@@ -115,8 +115,8 @@ $$
 
 $$
 \begin{aligned}
-W_{net} = \overrightarrow \tau_{net} \cdot d \overrightarrow \theta = I\frac{d \overrightarrow \omega}{dt} \cdot d \overrightarrow \theta = I\overrightarrow \omega \cdot d \overrightarrow \omega \\
-W_{net} = I \int_{\omega_1}^{\omega_2} \overrightarrow \omega \cdot d \overrightarrow \omega = \frac{1}{2}I\omega^2 \\
+W_{net} = \vec \tau_{net} \cdot d \vec \theta = I\frac{d \vec \omega}{dt} \cdot d \vec \theta = I\vec \omega \cdot d \vec \omega \\
+W_{net} = I \int_{\omega_1}^{\omega_2} \vec \omega \cdot d \vec \omega = \frac{1}{2}I\omega^2 \\
 \tau = \text{torque} \\
 \theta = \text{angular position} \\
 I = \text{moment of inertia} \\
@@ -244,7 +244,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow L = \overrightarrow r \times \overrightarrow p = I \overrightarrow \omega \\
+\vec L = \vec r \times \vec p = I \vec \omega \\
 r = \text{radius} \\
 p = \text{momentum} \\
 I = \text{moment of inertia} \\
@@ -267,7 +267,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \tau_{net} = \frac{d\overrightarrow L}{dt} \\
+\vec \tau_{net} = \frac{d\vec L}{dt} \\
 L = \text{angular momentum} \\
 t = \text{time}
 \end{aligned}
@@ -282,7 +282,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow H = \sum \tau_{avg} \Delta t = \int_{t_1}^{t_2} \overrightarrow \tau \cdot d \overrightarrow t \\
+\vec H = \sum \tau_{avg} \Delta t = \int_{t_1}^{t_2} \vec \tau \cdot d \vec t \\
 \tau_{avg} = \text{average torque} \\
 t = \text{time} \\
 \tau_{net} = \text{net torque}
@@ -299,7 +299,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow H = \Delta \overrightarrow L = I \Delta \overrightarrow \omega \\
+\vec H = \Delta \vec L = I \Delta \vec \omega \\
 L = \text{angular momentum} \\
 I = \text{moment of inertia} \\
 \omega = \text{angular velocity}
@@ -316,7 +316,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow L_i = \overrightarrow L_f \\
+\vec L_i = \vec L_f \\
 \end{aligned}
 $$
 
@@ -357,8 +357,8 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = 0 \\
-\overrightarrow a = 0
+\vec F_{net} = 0 \\
+\vec a = 0
 \end{aligned}
 $$
 
@@ -372,8 +372,8 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \tau_{net} = 0 \\
-\overrightarrow \alpha = 0
+\vec \tau_{net} = 0 \\
+\vec \alpha = 0
 \end{aligned}
 $$
 

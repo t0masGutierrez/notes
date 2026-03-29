@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-x \in \mathbb R \rightarrow |x| \ge 0
+x \in \mathbb R \implies |x| \ge 0
 \end{aligned}
 $$
 
@@ -57,8 +57,8 @@ $$
 
 $$
 \begin{aligned}
-x = y \leftrightarrow d(x, y) = 0 \\
-x \ne y \rightarrow d(x, y) > 0 \\
+x = y \iff d(x, y) = 0 \\
+x \ne y \implies d(x, y) > 0 \\
 d(x, y) = d(y, x) \\
 d(x, y) \le d(x, z) + d(z, y) 
 \end{aligned}
@@ -324,7 +324,7 @@ $$
 
 $$
 \begin{aligned}
-(a, b) = S \subset X \rightarrow S' = [a, b] \\
+(a, b) = S \subset X \implies S' = [a, b] \\
 S = \text{interval} \\
 S' = \text{derived set} \\
 X = \text{metric space}
@@ -341,7 +341,7 @@ $$
 
 $$
 \begin{aligned}
-\{0, 1, \dots, n\} \not\sim S \subset X \rightarrow \forall r > 0, \forall x_0 \in S': |N_r(x_0) \setminus \{x_0\} \cap S| = \infty \\
+\{0, 1, \dots, n\} \not\sim S \subset X \implies \forall r > 0, \forall x_0 \in S': |N_r(x_0) \setminus \{x_0\} \cap S| = \infty \\
 S = \text{infinite set} \\
 X = \text{metric space} \\
 r = \text{radius} \\
@@ -360,7 +360,7 @@ $$
 
 $$
 \begin{aligned}
-\{0, 1, \dots, n\} \sim S \subset X \rightarrow \forall r > 0, \forall x \in S: N_r(x) \setminus \{x\} \cap S = \{x\} \\
+\{0, 1, \dots, n\} \sim S \subset X \implies \forall r > 0, \forall x \in S: N_r(x) \setminus \{x\} \cap S = \{x\} \\
 S = \text{finite set} \\
 X = \text{metric space} \\
 r = \text{radius} \\
@@ -395,8 +395,8 @@ $$
 
 $$
 \begin{aligned}
-S' \subset S \subset X \leftrightarrow \forall x \in S^c, \exists r > 0: N_r(x) \subset S^c \\
-S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \leftrightarrow (S')^c \subset S^c \subset X \\
+S' \subset S \subset X \iff \forall x \in S^c, \exists r > 0: N_r(x) \subset S^c \\
+S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \iff (S')^c \subset S^c \subset X \\
 S' = \text{derived set} \\
 c = \text{complement} \\
 r = \text{radius} \\
@@ -417,10 +417,10 @@ $$
 
 $$
 \begin{aligned}
-S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \rightarrow N_r(x) \subset \bigcup_{i} S_i \\
-S' \subset S \subset X  \rightarrow S' \subset \bigcap_{i} S_i   \\
-S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \rightarrow N_r(x) \subset \bigcap_{i=1}^n S_i \\
-S' \subset S \subset X  \rightarrow S' \subset \bigcup_{i}^n S_i  \\
+S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \implies N_r(x) \subset \bigcup_{i} S_i \\
+S' \subset S \subset X  \implies S' \subset \bigcap_{i} S_i   \\
+S \subset X, \forall x \in S, \exists r > 0: N_r(x) \subset S \implies N_r(x) \subset \bigcap_{i=1}^n S_i \\
+S' \subset S \subset X  \implies S' \subset \bigcup_{i}^n S_i  \\
 \end{aligned}
 $$
 
@@ -450,7 +450,7 @@ $$
 
 $$
 \begin{aligned}
-\emptyset \ne S' = S \subset \mathbb R^k \rightarrow (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
+\emptyset \ne S' = S \subset \mathbb R^k \implies (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
 S = \text{perfect set} \\
 S' = \text{derived set} 
 \end{aligned}
@@ -471,9 +471,9 @@ $$
 $$
 \begin{aligned}
 \overline S' \subset \overline S \subset X \\
-S' \subset S \subset X \leftrightarrow \overline S = S \\
-S \subset \mathbb R, \exists x_0 \in \mathbb R, \exists r > 0:  S \subset B_r(x_0) \rightarrow \exists \sup S \in \overline S \\ 
-(S \subset K) \land (K' \subset K \subset X) \rightarrow \overline S \subset \overline K = K \\
+S' \subset S \subset X \iff \overline S = S \\
+S \subset \mathbb R, \exists x_0 \in \mathbb R, \exists r > 0:  S \subset B_r(x_0) \implies \exists \sup S \in \overline S \\ 
+(S \subset K) \land (K' \subset K \subset X) \implies \overline S \subset \overline K = K \\
 \overline {\bigcup_i A_i} = \bigcup_i \overline A_i \\
 \end{aligned}
 $$
@@ -490,9 +490,9 @@ $$
 
 $$
 \begin{aligned}
-S \subset X, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \rightarrow \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \\
-S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\rightarrow  \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
-S \subset \mathbb R^k, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_i) \leftrightarrow \exists x_0 \in \mathbb R^k, \exists r > 0: S \subset B_r(x_0)
+S \subset X, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \implies \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \\
+S \subset X, \exists x_0 \in X, \exists r > 0: S \subset B_r(x_0) \not\implies  \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_i) \\
+S \subset \mathbb R^k, \forall r > 0, \exists \set {x_i}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_i) \iff \exists x_0 \in \mathbb R^k, \exists r > 0: S \subset B_r(x_0)
 \end{aligned}
 $$
 

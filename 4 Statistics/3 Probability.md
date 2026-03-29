@@ -18,7 +18,7 @@
 $$
 \begin{aligned}
 0 \le P(A) \le 1 \\
-A \cap B = \emptyset \rightarrow P(A \cup B) = P(A) + P(B) \\
+A \cap B = \emptyset \implies P(A \cup B) = P(A) + P(B) \\
 P(\Omega) = 1
 \end{aligned}
 $$

@@ -12,7 +12,7 @@
 
 $$
 \begin{aligned}
-\lambda \leftrightarrow \exists\vec x: A\vec x = \lambda \vec x \\
+\lambda \iff \exists\vec x: A\vec x = \lambda \vec x \\
 \vec x \ne 0 \\
 \lambda = \text{eigenvalue} \\
 \vec x = \text{eigenvector} \\
@@ -30,7 +30,7 @@ $$
 
 $$
 \begin{aligned}
-\vec x \leftrightarrow A\vec x = \lambda \vec x \\
+\vec x \iff A\vec x = \lambda \vec x \\
 \vec x \ne 0 \\
 \lambda = \text{eigenvalue} \\
 \vec x = \text{eigenvector} \\
@@ -105,7 +105,7 @@ $$
 
 $$
 \begin{aligned}
-\vec x \ne 0 \leftrightarrow |A - \lambda I| = 0 \\
+\vec x \ne 0 \iff |A - \lambda I| = 0 \\
 \vec x = \text{eigenvector} \\
 \lambda = \text{eigenvalue} \\
 I = \text{identity matrix} \\
@@ -148,7 +148,7 @@ $$
 
 $$
 \begin{aligned}
-D = P^{-1}AP \leftrightarrow A = PDP^{-1} \\
+D = P^{-1}AP \iff A = PDP^{-1} \\
 |A| = n \times n \\
 \text{det}(P) \ne 0 \\
 P = \text{eigenmatrix} \\
@@ -175,7 +175,7 @@ $$
 
 $$
 \begin{aligned}
-A \sim D \leftrightarrow \exists P: D = P^{-1}AP \\
+A \sim D \iff \exists P: D = P^{-1}AP \\
 |A| = n \times n \\
 \text{det}(P) \ne 0 \\
 P = \text{eigenmatrix} \\
@@ -244,7 +244,7 @@ $$
 
 $$
 \begin{aligned}
-k = n \leftrightarrow \exists P \\
+k = n \iff \exists P \\
 \text{det}(P) \ne 0 \\
 k = \text{geometric multiplicity} \\
 n = \text{number of rows} \\

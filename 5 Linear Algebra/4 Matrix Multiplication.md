@@ -58,7 +58,7 @@ $$
 
 $$
 \begin{aligned}
-(|A| = m \times n) \land (|B| = n \times p) \rightarrow |AB| = m \times p \\
+(|A| = m \times n) \land (|B| = n \times p) \implies |AB| = m \times p \\
 A = \text{matrix} \\
 m = \text{number of A rows} \\
 n = \text{number of A columns} \\

@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-\omega_1, \omega_2 \subset \Omega \rightarrow T_1 \ne T_2 \\
+\omega_1, \omega_2 \subset \Omega \implies T_1 \ne T_2 \\
 \omega = \text{sample} \\
 T = \text{sample statistic}
 \end{aligned}

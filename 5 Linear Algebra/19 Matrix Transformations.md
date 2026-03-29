@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \land (B = \vec b_1, \dots, \vec b_n) \rightarrow L(c_1\vec b_1 + \dots c_n\vec b_n) = \vec w \\
+(L: \mathcal V \rightarrow \mathcal W) \land (B = \vec b_1, \dots, \vec b_n) \implies L(c_1\vec b_1 + \dots c_n\vec b_n) = \vec w \\
 L = \text{linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -29,7 +29,7 @@ $$
 
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal W) \land (B = \vec b_1, \dots, \vec b_n) \land (C = \vec c_1, \dots \vec c_m) \rightarrow [\vec w]_C = A_{BC} [\vec v]_B \\
+(L : \mathcal V \rightarrow \mathcal W) \land (B = \vec b_1, \dots, \vec b_n) \land (C = \vec c_1, \dots \vec c_m) \implies [\vec w]_C = A_{BC} [\vec v]_B \\
 \dim (\mathcal V) = n \\
 \dim (\mathcal W) = m \\
 |A_{BC}| = m \times n \\
@@ -62,7 +62,7 @@ $$
 
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal W) \land ([\vec v]_D = P_{BD}[\vec v]_B) \land ([\vec v]_E = Q_{CE}[\vec v]_C) \rightarrow A_{DE} = Q_{CE}A_{BC}P_{BD}^{-1} \\
+(L : \mathcal V \rightarrow \mathcal W) \land ([\vec v]_D = P_{BD}[\vec v]_B) \land ([\vec v]_E = Q_{CE}[\vec v]_C) \implies A_{DE} = Q_{CE}A_{BC}P_{BD}^{-1} \\
 L = \text{linear transformation} \\
 \mathcal V  = \text{domain} \\
 \mathcal W  = \text{codomain} \\
@@ -86,7 +86,7 @@ $$
 
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal V) \land ([\vec v]_D = A_{DD}[\vec v]_D) \land ([\vec v]_C = A_{CC}[\vec v]_C) \land ([\vec v]_C = P_{DC}[\vec v]_D) \rightarrow A_{CC} \sim A_{DD} \\
+(L : \mathcal V \rightarrow \mathcal V) \land ([\vec v]_D = A_{DD}[\vec v]_D) \land ([\vec v]_C = A_{CC}[\vec v]_C) \land ([\vec v]_C = P_{DC}[\vec v]_D) \implies A_{CC} \sim A_{DD} \\
 A_{CC} =  P_{DC}A_{DD} P_{DC}^{-1} \\
 A_{DD} =  P_{DC}^{-1}A_{CC}P_{DC} \\
 L = \text{linear transformation} \\
@@ -108,8 +108,8 @@ $$
 
 $$
 \begin{aligned}
-(L_1 : \mathcal V_1 \rightarrow \mathcal V_2) \land (L_2 : \mathcal V_2 \rightarrow \mathcal V_3) \rightarrow L_2 \circ L_1 : \mathcal V_1 \rightarrow \mathcal V_3 \\
-([\vec v_2]_C = A_{BC}[\vec v_1]_B) \land ([\vec v_3]_D = A_{CD}[\vec v_2]_C) \rightarrow A_{BD} = A_{CD}A_{BC} \\
+(L_1 : \mathcal V_1 \rightarrow \mathcal V_2) \land (L_2 : \mathcal V_2 \rightarrow \mathcal V_3) \implies L_2 \circ L_1 : \mathcal V_1 \rightarrow \mathcal V_3 \\
+([\vec v_2]_C = A_{BC}[\vec v_1]_B) \land ([\vec v_3]_D = A_{CD}[\vec v_2]_C) \implies A_{BD} = A_{CD}A_{BC} \\
 L = \text{linear transformation} \\
 \mathcal V = \text{vector space} \\
 \vec v = \text{vector} \\

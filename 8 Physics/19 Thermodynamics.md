@@ -20,7 +20,7 @@
 
 $$
 \begin{aligned}
-T_a = T_b \land T_b = T_c \rightarrow T_a = T_c \\
+T_a = T_b \land T_b = T_c \implies T_a = T_c \\
 \sum_i Q_i = 0 \\
 T = \text{temperature}
 \end{aligned}
@@ -39,7 +39,7 @@ $$
 
 $$
 \begin{aligned}
-W = \sum_i p_i \Delta V_i = \int_{V_1}^{V_2} \overrightarrow p \cdot d \overrightarrow V \\
+W = \sum_i p_i \Delta V_i = \int_{V_1}^{V_2} \vec p \cdot d \vec V \\
 p = \text{pressure} \\
 V = \text{volume}
 \end{aligned}
@@ -301,7 +301,7 @@ $$
 
 $$
 \begin{aligned}
-T_a < T_b \rightarrow T_a + Q = T_b \\
+T_a < T_b \implies T_a + Q = T_b \\
 T = \text{temperature} \\
 Q = \text{heat}
 \end{aligned}

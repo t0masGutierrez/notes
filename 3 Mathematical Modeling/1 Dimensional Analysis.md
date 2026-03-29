@@ -25,7 +25,7 @@
 
 $$
 \begin{aligned}
-[q] = \prod_{i=1}^m D_i^{a_i} \leftrightarrow \Delta_q = [a_1, \dots, a_m] \in \mathbb R^m \\
+[q] = \prod_{i=1}^m D_i^{a_i} \iff \Delta_q = [a_1, \dots, a_m] \in \mathbb R^m \\
 q = \text{quantity} \\ 
 D = \text{dimension} \\
 a = \text{dimensional exponent}
@@ -79,7 +79,7 @@ $$
 
 $$
 \begin{aligned}
-[p \pm q] \in D \leftrightarrow [p] = [q] \\
+[p \pm q] \in D \iff [p] = [q] \\
 [p \cdot q] = [p] \cdot [q] \\
 [\frac{p}{q}] = \frac{[p]}{[q]} \\
 [q^k] = [q]^k \\
@@ -117,7 +117,7 @@ $$
 
 $$
 \begin{aligned}
-[q] = 1 \leftrightarrow \Delta_q = 0 \\
+[q] = 1 \iff \Delta_q = 0 \\
 q = \text{pure number}
 \end{aligned}
 $$
@@ -165,7 +165,7 @@ $$
 
 $$
 \begin{aligned}
-q_1 = f(q_2, \dots, q_n) \rightarrow q_1' = f'(q_2', \dots, q_n')
+q_1 = f(q_2, \dots, q_n) \implies q_1' = f'(q_2', \dots, q_n')
 \end{aligned}
 $$
 
@@ -220,7 +220,7 @@ $$
 $$
 \begin{aligned}
 q_1 = f(q_2, \dots, q_n) \sim \pi_1 = \phi (\pi_2, \dots, \pi_{n-m-1}) \\
-[\pi] = 1 \leftrightarrow \Delta_\pi = \sum_{i=1}^n b_i\Delta_{q_i} = A\vec b = 0 \\
+[\pi] = 1 \iff \Delta_\pi = \sum_{i=1}^n b_i\Delta_{q_i} = A\vec b = 0 \\
 A = [\Delta q_1, \dots, \Delta q_n] \in \mathcal M_{mn} \\
 \vec b = [b_1, \dots, b_n] \in \mathbb R^n \\
 q = \text{quantity} \\

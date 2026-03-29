@@ -32,7 +32,7 @@
 
 $$
 \begin{aligned}
-\forall(p \le \sqrt n) \ (p \nmid n) \to n \in P \\
+\forall(p \le \sqrt n) \ (p \nmid n) \implies n \in P \\
 p = \text{prime number} \\
 n = \text{integer} \\
 P = \{2, 3, 5, 6, 9, 13, 17, 19, 23, 29, ... \infty\}
@@ -73,7 +73,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{x \to \infty} \frac{\pi (x)}{\frac{x}{\ln (x)}}  = 1\\
+\lim_{x \implies \infty} \frac{\pi (x)}{\frac{x}{\ln (x)}}  = 1\\
 \pi (x) = \text{prime counting function}
 \end{aligned}
 $$

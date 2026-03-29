@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-\mathcal W \le \mathcal V \leftrightarrow (\mathcal W  \subseteq \mathcal V) \land (\vec w_1 + \vec w_2 \in \mathcal W) \land (c\vec w \in \mathcal W) \land (\mathcal W \ne \emptyset) \\
+\mathcal W \le \mathcal V \iff (\mathcal W  \subseteq \mathcal V) \land (\vec w_1 + \vec w_2 \in \mathcal W) \land (c\vec w \in \mathcal W) \land (\mathcal W \ne \emptyset) \\
 \mathcal W = \text{subspace} \\
 \mathcal V = \text{vector space} \\
 \vec w = \text{vector} \\
@@ -39,7 +39,7 @@ $$
 
 $$
 \begin{aligned}
-\mathcal W \le \mathcal V \leftrightarrow (\vec w_1 + \vec w_2 \in \mathcal V) \land (c\vec w \in \mathcal V) \land (\exists \vec 0_{\mathcal V} \in \mathcal W) \\
+\mathcal W \le \mathcal V \iff (\vec w_1 + \vec w_2 \in \mathcal V) \land (c\vec w \in \mathcal V) \land (\exists \vec 0_{\mathcal V} \in \mathcal W) \\
 \mathcal W = \text{subspace} \\
 \mathcal V = \text{vector space} \\
 \vec w = \text{vector} \\
@@ -73,7 +73,7 @@ $$
 
 $$
 \begin{aligned}
-\mathcal W_1, \mathcal W_2 \in \mathcal W \rightarrow (\mathcal W_1 \cap \mathcal W_2) \in \mathcal W \\
+\mathcal W_1, \mathcal W_2 \in \mathcal W \implies (\mathcal W_1 \cap \mathcal W_2) \in \mathcal W \\
 \mathcal W = \text{subspace}
 \end{aligned}
 $$
@@ -88,7 +88,7 @@ $$
 
 $$
 \begin{aligned}
-\mathcal W \le\mathcal V \leftrightarrow \vec 0 \in \mathcal W \\
+\mathcal W \le\mathcal V \iff \vec 0 \in \mathcal W \\
 \mathcal W = \text{subspace} \\
 \mathcal V = \text{vector space} 
 \end{aligned}
@@ -104,7 +104,7 @@ $$
 
 $$
 \begin{aligned}
-\vec w_1, \dots , \vec w_n \in \mathcal W \rightarrow \sum_{i=1}^k c_i \vec w_i \in \mathcal W \\
+\vec w_1, \dots , \vec w_n \in \mathcal W \implies \sum_{i=1}^k c_i \vec w_i \in \mathcal W \\
 \vec w = \text{vector} \\
 \mathcal W = \text{subspace} \\
 c = \text{scalar}
@@ -136,7 +136,7 @@ $$
 
 $$
 \begin{aligned}
-A \in \mathcal M_n \rightarrow E_{\lambda} \le \mathbb R^n \\
+A \in \mathcal M_n \implies E_{\lambda} \le \mathbb R^n \\
 A = \text{matrix} \\
 \lambda = \text{eigenvalue} \\
 E_{\lambda} = \text{eigenspace} 

@@ -43,22 +43,6 @@ $$
 
 - valid argument form prove argument validity
 ---
-### modus ponens
-
-- hypothesis and conditional prove conclusion
-
----
-### modus ponens formula
-
-$$
-\begin{aligned}
-p \\
-p \to q \\
-\therefore q 
-\end{aligned}
-$$
-
----
 ### fallacy
 
 - invalid argument based on contingency rather than tautology
@@ -74,7 +58,7 @@ $$
 $$
 \begin{aligned}
 q \\
-p \to q \\
+p \implies q \\
 \therefore p
 \end{aligned}
 $$
@@ -90,7 +74,7 @@ $$
 $$
 \begin{aligned}
 \neg p \\
-p \to q \\
+p \implies q \\
 \therefore \neg q
 \end{aligned}
 $$
@@ -109,20 +93,4 @@ $$
 ### predicate rule of inference
 
 - valid argument form prove argument validity
----
-### universal modus tollens
-
-- proposition instance and general conditional prove conclusion instance
-
----
-### universal modus tollens formula
-
-$$
-\begin{aligned}
-\neg Q(a) \\
-\forall x(P(x) \to Q(x) \\
-\therefore \neg P(a)
-\end{aligned}
-$$
-
 ---

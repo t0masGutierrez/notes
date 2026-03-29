@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} \\
+\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} \\
 x = \text{x position} \\
 y = \text{y position} \\
 z = \text{z position} \\
@@ -23,7 +23,7 @@ $$
 
 $$
 \begin{aligned}
-\Delta \overrightarrow{r} = \overrightarrow{r} - \overrightarrow{r}_0 \\
+\Delta \vec{r} = \vec{r} - \vec{r}_0 \\
 r = \text{position}
 \end{aligned}
 $$
@@ -38,7 +38,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{v} = \frac{d\overrightarrow{r}}{dt} =
+\vec{v} = \frac{d\vec{r}}{dt} =
 \begin{cases}
 v_x = \frac{dx}{dt} \\
 v_y = \frac{dy}{dt} \\
@@ -60,7 +60,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{a} = \frac{d\overrightarrow{v}}{dt} =
+\vec{a} = \frac{d\vec{v}}{dt} =
 \begin{cases}
 a_x = \frac{d^2x}{dt^2} \\
 a_y = \frac{d^2y}{dt^2} \\

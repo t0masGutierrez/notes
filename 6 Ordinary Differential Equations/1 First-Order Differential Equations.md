@@ -256,8 +256,8 @@ $$
 
 $$
 \begin{aligned}
-f(t) = \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial t}}{N} \rightarrow \mu(t) = \exp(\int f(t)dt) \\
-f(y) = \frac{\frac{\partial N}{\partial t} - \frac{\partial M}{\partial y}}{M} \rightarrow \mu(y) = \exp(\int f(y)dy) \\
+f(t) = \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial t}}{N} \implies \mu(t) = \exp(\int f(t)dt) \\
+f(y) = \frac{\frac{\partial N}{\partial t} - \frac{\partial M}{\partial y}}{M} \implies \mu(y) = \exp(\int f(y)dy) \\
 \end{aligned}
 $$
 

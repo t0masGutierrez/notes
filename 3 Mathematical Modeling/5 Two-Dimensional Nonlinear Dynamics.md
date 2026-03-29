@@ -132,9 +132,9 @@ $$
 
 $$
 \begin{aligned}
-\lambda_1, \lambda_2 < 0 \rightarrow \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) = v_* \\
-(\lambda_1 > 0) \land (\lambda_2 < 0) \rightarrow  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
-\lambda_1, \lambda_2 > 0 \rightarrow  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda_1, \lambda_2 < 0 \implies \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) = v_* \\
+(\lambda_1 > 0) \land (\lambda_2 < 0) \implies  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda_1, \lambda_2 > 0 \implies  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
 \end{aligned}
 $$
 
@@ -163,7 +163,7 @@ $$
 
 $$
 \begin{aligned}
-U = \{v|\forall t \ge 0: v(t + P) = v(t)\} \rightarrow \exists v_* \in U \\
+U = \{v|\forall t \ge 0: v(t + P) = v(t)\} \implies \exists v_* \in U \\
 U = \text{range} \\
 v = \text{solution} \\
 t = \text{time} \\
@@ -185,7 +185,7 @@ $$
 \land (R \subset \mathbb R^2, \exists v_0 \in \mathbb R^2, \exists (r > 0) \in \mathbb R: B_r(v_0) \supset R) \\
 \land (\forall x \in R: f(x) \ne 0) \\
 \land (\partial R \le 0) \\
-\rightarrow \exists v \in R, \forall t \ge 0: v(t + P) = v(t) \\
+\implies \exists v \in R, \forall t \ge 0: v(t + P) = v(t) \\
 R = \text{compact set} \\
 R' = \text{derived set} \\
 f = \text{velocity} \\
@@ -205,7 +205,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{dE}{dt}(v_*) = 0 \rightarrow \exists\epsilon > 0, \forall v \in N_{\epsilon}(v_*), \forall t \ge 0: v(t + P) = v(t) \\
+\frac{dE}{dt}(v_*) = 0 \implies \exists\epsilon > 0, \forall v \in N_{\epsilon}(v_*), \forall t \ge 0: v(t + P) = v(t) \\
 E = \text{first integral} \\
 v = \text{solution} \\
 t = \text{time} \\
@@ -225,7 +225,7 @@ $$
 
 $$
 \begin{aligned}
-\Delta h \rightarrow \Delta (h \times u_*)
+\Delta h \implies \Delta (h \times u_*)
 \end{aligned}
 $$
 
@@ -240,10 +240,10 @@ $$
 
 $$
 \begin{aligned}
-h \le 0 \rightarrow f'(0) > 0 \\
-h > 0 \rightarrow f'(0) < 0 \\
-h > 0 \rightarrow f'(\sqrt h) < 0 \\
-h > 0 \rightarrow f'(-\sqrt h) > 0 \\
+h \le 0 \implies f'(0) > 0 \\
+h > 0 \implies f'(0) < 0 \\
+h > 0 \implies f'(\sqrt h) < 0 \\
+h > 0 \implies f'(-\sqrt h) > 0 \\
 \end{aligned}
 $$
 

@@ -10,7 +10,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow B = (\frac{\mu_0}{4\pi})\frac{q\overrightarrow v \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{qv \sin(\theta)}{r^2}\\
+\vec B = (\frac{\mu_0}{4\pi})\frac{q\vec v \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{qv \sin(\theta)}{r^2}\\
 \mu_0 = 4\pi \times 10^{-7} \\
 q = \text{electric charge} \\
 v = \text{velocity} \\
@@ -29,7 +29,7 @@ $$
 
 $$
 \begin{aligned}
-d \overrightarrow B = (\frac{\mu_0}{4\pi})\frac{Id\overrightarrow L \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{IdL \sin(\theta)}{r^2}\\
+d \vec B = (\frac{\mu_0}{4\pi})\frac{Id\vec L \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{IdL \sin(\theta)}{r^2}\\
 \mu_0 = 4\pi \times 10^{-7} \\
 I = \text{electric current} \\
 L = \text{length} \\
@@ -148,7 +148,7 @@ $$
 
 $$
 \begin{aligned}
-\oint_{L_1}^{L_2} \overrightarrow B \cdot d\overrightarrow L = \mu_0 I_{enc} \\
+\oint_{L_1}^{L_2} \vec B \cdot d\vec L = \mu_0 I_{enc} \\
 B = \text{magnetic field} \\
 L = \text{length} \\
 \mu_0 = 4\pi \times 10^{-7} \\
@@ -238,7 +238,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow B = \overrightarrow B_0 ( 1 + \chi_m) \\
+\vec B = \vec B_0 ( 1 + \chi_m) \\
 B = \text{magnetic field} \\
 \chi_m = \text{magnetic susceptibility}
 \end{aligned}
@@ -254,7 +254,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow B = \overrightarrow B_0 ( 1 + \chi_m) \\
+\vec B = \vec B_0 ( 1 + \chi_m) \\
 B = \text{magnetic field} \\
 \chi_m = \text{magnetic susceptibility}
 \end{aligned}
@@ -270,7 +270,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow B = \overrightarrow B_0 + \mu_0 \overrightarrow M \\
+\vec B = \vec B_0 + \mu_0 \vec M \\
 B = \text{magnetic field} \\
 \mu_0 = 4\pi \times 10^{-7} \\
 M = \text{magnetization}
@@ -287,7 +287,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow M = \frac{\overrightarrow \mu}{V} \\
+\vec M = \frac{\vec \mu}{V} \\
 \mu = \text{magnetic dipole} \\
 V = \text{volume}
 \end{aligned}
@@ -317,7 +317,7 @@ $$
 
 $$
 \begin{aligned}
-K_m = \frac{\overrightarrow B}{\overrightarrow B_0} = \frac{\mu}{\mu_0} \\
+K_m = \frac{\vec B}{\vec B_0} = \frac{\mu}{\mu_0} \\
 B = \text{magnetic field} \\
 \mu = \text{permeability}
 \end{aligned}

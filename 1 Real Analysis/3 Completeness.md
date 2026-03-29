@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{aligned}
-(S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u) \land (\exists u' \in \mathbb R: u' < u \rightarrow \exists x \in S: x > u') \rightarrow u = \sup S \\
+(S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u) \land (\exists u' \in \mathbb R: u' < u \implies \exists x \in S: x > u') \implies u = \sup S \\
 u = \text{supremum} \\
 \end{aligned}
 $$
@@ -84,7 +84,7 @@ $$
 
 $$
 \begin{aligned}
-(S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x) \land (\exists w' \in \mathbb R: w' > w \rightarrow \exists x \in S: x < w') \rightarrow w = \inf S \\
+(S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x) \land (\exists w' \in \mathbb R: w' > w \implies \exists x \in S: x < w') \implies w = \inf S \\
 w = \text{infimum} \\
 \end{aligned}
 $$
@@ -100,8 +100,8 @@ $$
 
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \rightarrow \exists \sup S \in \mathbb R \\
-S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \rightarrow \exists \inf S \in \mathbb R \\
+S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \implies \exists \sup S \in \mathbb R \\
+S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \implies \exists \inf S \in \mathbb R \\
 u = \text{upper bound} \\
 w = \text{lower bound} 
 \end{aligned}
@@ -118,8 +118,8 @@ $$
 
 $$
 \begin{aligned}
-S \subset \mathbb R, \forall \epsilon > 0, \exists x \in S: x > u - \epsilon \rightarrow u = \sup S \\
-S_2 \subset S_1 \subset \mathbb R \rightarrow \sup S_2 \le \sup S_1 \\
+S \subset \mathbb R, \forall \epsilon > 0, \exists x \in S: x > u - \epsilon \implies u = \sup S \\
+S_2 \subset S_1 \subset \mathbb R \implies \sup S_2 \le \sup S_1 \\
 \end{aligned}
 $$
 
@@ -177,7 +177,7 @@ $$
 
 $$
 \begin{aligned}
-(x, y \in \mathbb R) \land (x < y) \rightarrow \exists q \in \mathbb Q: x < q < y
+(x, y \in \mathbb R) \land (x < y) \implies \exists q \in \mathbb Q: x < q < y
 \end{aligned}
 $$
 

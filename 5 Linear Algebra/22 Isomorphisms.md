@@ -8,7 +8,7 @@
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \leftrightarrow (\forall \vec v_1, \vec v_2 \in \mathcal V: L(\vec v_1) = L(\vec v_2) \rightarrow \vec v_1 = \vec v_2) \land (\forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w) \\
+(L: \mathcal V \rightarrow \mathcal W) \iff (\forall \vec v_1, \vec v_2 \in \mathcal V: L(\vec v_1) = L(\vec v_2) \implies \vec v_1 = \vec v_2) \land (\forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w) \\
 L = \text{bijective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -27,7 +27,7 @@ $$
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \leftrightarrow \forall \vec w \in \mathcal W, \exists! \vec v \in \mathcal V: L(\vec v) = \vec w \\
+(L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec w \in \mathcal W, \exists! \vec v \in \mathcal V: L(\vec v) = \vec w \\
 L = \text{isomorphism} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{aligned}
-(\exists L^{-1}: \mathcal W \rightarrow \mathcal V) \leftrightarrow (\forall \vec v \in \mathcal V: (L^{-1} \circ L)(\vec v) = \vec v) \land (\forall \vec w \in \mathcal W: (L \circ L^{-1})(\vec w) = \vec w) \\
+(\exists L^{-1}: \mathcal W \rightarrow \mathcal V) \iff (\forall \vec v \in \mathcal V: (L^{-1} \circ L)(\vec v) = \vec v) \land (\forall \vec w \in \mathcal W: (L \circ L^{-1})(\vec w) = \vec w) \\
 L: \mathcal V \rightarrow \mathcal W \\
 L = \text{linear transformation} \\
 L^{-1} = \text{inverse linear transformation} \\
@@ -65,7 +65,7 @@ $$
 
 $$
 \begin{aligned}
-L = \text{isomorphism} \leftrightarrow \exists L^{-1} \\
+L = \text{isomorphism} \iff \exists L^{-1} \\
 L: \mathcal V \rightarrow \mathcal W \\
 L = \text{linear transformation} \\
 L^{-1} = \text{inverse linear transformation} \\
@@ -83,7 +83,7 @@ $$
 
 $$
 \begin{aligned}
-L = \text{isomorphism} \leftrightarrow \det (A_{BC}) \ne 0 \\
+L = \text{isomorphism} \iff \det (A_{BC}) \ne 0 \\
 L: \mathcal V \rightarrow \mathcal W \\
 |A| = n \times n \\
 L = \text{linear transformation} \\
@@ -102,8 +102,8 @@ $$
 
 $$
 \begin{aligned}
-(L = \text{bijection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \rightarrow \text{rank}(L(T) \subseteq \mathcal W) = n \\
-(L = \text{bijection}) \land (\text{span}(S \subseteq \mathcal V) = \mathcal V) \rightarrow \text{span}(L(S) \subseteq \mathcal W) = \mathcal W \\
+(L = \text{bijection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \implies \text{rank}(L(T) \subseteq \mathcal W) = n \\
+(L = \text{bijection}) \land (\text{span}(S \subseteq \mathcal V) = \mathcal V) \implies \text{span}(L(S) \subseteq \mathcal W) = \mathcal W \\
 \end{aligned}
 $$
 
@@ -117,7 +117,7 @@ $$
 
 $$
 \begin{aligned}
-\mathcal V \cong \mathcal W \leftrightarrow \exists L: \mathcal V \rightarrow \mathcal W \\
+\mathcal V \cong \mathcal W \iff \exists L: \mathcal V \rightarrow \mathcal W \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
 L = \text{isomorphism} \\
@@ -134,7 +134,7 @@ $$
 
 $$
 \begin{aligned}
-\mathcal V \cong \mathcal W \leftrightarrow \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \\
+\mathcal V \cong \mathcal W \iff \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} 
 \end{aligned}
@@ -150,7 +150,7 @@ $$
 
 $$
 \begin{aligned}
-\dim(\mathcal V) = n \rightarrow \mathcal V \cong \mathbb R^n \\
+\dim(\mathcal V) = n \implies \mathcal V \cong \mathbb R^n \\
 \mathcal V = \text{vector space} \\
 n = \text{dimension} \\
 \end{aligned}
@@ -168,10 +168,10 @@ $$
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \land (L_1: \mathcal V \rightarrow \mathbb R^n) \land ([\vec w]_C = A_{BC}[\vec v]_B)\rightarrow L^{-1}_1(\ker \ A_{BC})= \ker(L) \subseteq \mathcal V \\
-(L: \mathcal V \rightarrow \mathcal W) \land (L_2: \mathcal W \rightarrow \mathbb R^m) \land ([\vec w]_C = A_{BC}[\vec v]_B)\rightarrow L^{-1}_2(\text{range} \ A_{BC})= \text{range}(L) \subseteq \mathcal W \\
-(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\rightarrow \dim(\ker \ A_{BC}) = \dim(\ker  \ L) \\
-(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\rightarrow \dim(\text{range} \ A_{BC}) = \dim(\text{range} \ L) \\
+(L: \mathcal V \rightarrow \mathcal W) \land (L_1: \mathcal V \rightarrow \mathbb R^n) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies L^{-1}_1(\ker \ A_{BC})= \ker(L) \subseteq \mathcal V \\
+(L: \mathcal V \rightarrow \mathcal W) \land (L_2: \mathcal W \rightarrow \mathbb R^m) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies L^{-1}_2(\text{range} \ A_{BC})= \text{range}(L) \subseteq \mathcal W \\
+(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies \dim(\ker \ A_{BC}) = \dim(\ker  \ L) \\
+(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies \dim(\text{range} \ A_{BC}) = \dim(\text{range} \ L) \\
 \end{aligned}
 $$
 

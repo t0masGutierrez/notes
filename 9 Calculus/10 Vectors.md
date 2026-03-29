@@ -16,8 +16,8 @@
 
 $$
 \begin{aligned}
-\hat{i} = \frac{\overrightarrow{A_x}}{A_x} \\ 
-\hat{j} = \frac{\overrightarrow{A_y}}{A_y}
+\hat{i} = \frac{\vec{A_x}}{A_x} \\ 
+\hat{j} = \frac{\vec{A_y}}{A_y}
 \end{aligned}
 $$
 
@@ -43,7 +43,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} = A_x\hat{i} + A_y\hat{j} \\
+\vec{A} = A_x\hat{i} + A_y\hat{j} \\
 A_x = \text{x scalar component} \\
 \hat{i} = \text{x direction} \\
 A_y = \text{y scalar component} \\
@@ -99,7 +99,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} = \overrightarrow{B} \leftrightarrow
+\vec{A} = \vec{B} \iff
 \begin{cases}
 A_x = B_x \\
 A_y = B_y
@@ -123,13 +123,13 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow A + \overrightarrow B = \overrightarrow B + \overrightarrow A \\
-(\overrightarrow A + \overrightarrow B) + \overrightarrow C = \overrightarrow A + (\overrightarrow B + \overrightarrow C) \\
-\overrightarrow A + 0 = \overrightarrow A \\
-\overrightarrow A + (-\overrightarrow A) = 0 \\
-c(\overrightarrow A + \overrightarrow B) = c\overrightarrow A + c\overrightarrow B \\
-1(\overrightarrow A) = \overrightarrow A \\
-0(\overrightarrow A) = 0\end{align*}
+\vec A + \vec B = \vec B + \vec A \\
+(\vec A + \vec B) + \vec C = \vec A + (\vec B + \vec C) \\
+\vec A + 0 = \vec A \\
+\vec A + (-\vec A) = 0 \\
+c(\vec A + \vec B) = c\vec A + c\vec B \\
+1(\vec A) = \vec A \\
+0(\vec A) = 0\end{align*}
 $$
 
 ---
@@ -143,7 +143,7 @@ $$
 
 $$
 \begin{aligned}
-a\overrightarrow{A} = aA_x\hat{i} + aA_y\hat{j} \\
+a\vec{A} = aA_x\hat{i} + aA_y\hat{j} \\
 a = \text{scalar quantity} \\
 A_x \hat i = \text{x vector component} \\
 A_y \hat j = \text{y vector component}
@@ -160,7 +160,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{R} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
+\vec{R} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
 A_x = \text{x scalar component} \\
 \hat i = \text{x direction} \\
 A_y = \text{y scalar component} \\
@@ -194,7 +194,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \cdot \overrightarrow{B} = AB \cos (\theta) \\
+\vec{A} \cdot \vec{B} = AB \cos (\theta) \\
 A = \text{magnitude} \\
 \theta = \text{angle between vectors}
 \end{aligned}
@@ -205,7 +205,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \cdot \overrightarrow{B} = A_xB_x + A_yB_y + A_zB_z \\
+\vec{A} \cdot \vec{B} = A_xB_x + A_yB_y + A_zB_z \\
 A_x = \text{x scalar component} \\
 A_y = \text{y scalar component} \\
 A_z = \text{z scalar component}
@@ -234,7 +234,7 @@ $$
 
 $$
 \begin{aligned}
-|\overrightarrow{A} \times \overrightarrow{B}| = AB \sin (\theta) \\
+|\vec{A} \times \vec{B}| = AB \sin (\theta) \\
 A = \text{magnitude} \\
 \theta = \text{angle between vectors}
 \end{aligned}
@@ -245,7 +245,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow{A} \times \overrightarrow{B} = (A_yB_z - A_zB_y)\hat{i} - (A_xB_z - A_zB_x)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \\
+\vec{A} \times \vec{B} = (A_yB_z - A_zB_y)\hat{i} - (A_xB_z - A_zB_x)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \\
 A_x = \text{x scalar component} \\
 \hat i = \text{x direction} \\
 A_y = \text{y scalar component} \\
@@ -278,7 +278,7 @@ $$
 
 $$
 \begin{aligned}
-V = \overrightarrow{C} \cdot (\overrightarrow{A} \times \overrightarrow{B}) = \overrightarrow C\begin{vmatrix}
+V = \vec{C} \cdot (\vec{A} \times \vec{B}) = \vec C\begin{vmatrix}
 \hat i & \hat j & \hat k \\
 A_x & A_y & A_z \\
 B_x & B_y & B_z
@@ -292,28 +292,28 @@ $$
 ---
 ### parallel projection vector
 
-- parallel projection of $\overrightarrow A$ onto $\overrightarrow B$ equal vector component of $\overrightarrow A$ parallel $\overrightarrow B$ 
+- parallel projection of $\vec A$ onto $\vec B$ equal vector component of $\vec A$ parallel $\vec B$ 
 
 ---
 ### parallel projection vector formula
 
 $$
 \begin{aligned}
-\text{proj}_{\overrightarrow B}(\overrightarrow A\parallel) = (\frac{\overrightarrow A \cdot \overrightarrow B}{B^2}) \cdot \overrightarrow B
+\text{proj}_{\vec B}(\vec A\parallel) = (\frac{\vec A \cdot \vec B}{B^2}) \cdot \vec B
 \end{aligned}
 $$
 
 ---
 ### perpendicular projection vector
 
-- perpendicular projection of $\overrightarrow A$ onto $\overrightarrow B$ equal vector component of $\overrightarrow A$ perpendicular $\overrightarrow B$ 
+- perpendicular projection of $\vec A$ onto $\vec B$ equal vector component of $\vec A$ perpendicular $\vec B$ 
 
 ---
 ### perpendicular projection vector formula
 
 $$
 \begin{aligned}
-\text{proj}_{\overrightarrow B}(\overrightarrow A\perp) = \overrightarrow A - (\frac{\overrightarrow A \cdot \overrightarrow B}{B^2}) \cdot \overrightarrow B
+\text{proj}_{\vec B}(\vec A\perp) = \vec A - (\frac{\vec A \cdot \vec B}{B^2}) \cdot \vec B
 \end{aligned}
 $$
 
@@ -348,7 +348,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow v = \overrightarrow{P_0P} = \langle x - x_0, y - y_0, z - z_0 \rangle = \langle a, b, c \rangle \\
+\vec v = \vec{P_0P} = \langle x - x_0, y - y_0, z - z_0 \rangle = \langle a, b, c \rangle \\
 a = \text{x scalar component} \\
 b = \text{y scalar component} \\
 c = \text{z scalar component}
@@ -365,10 +365,10 @@ $$
 $$
 \begin{aligned}
 \langle x, y, z \rangle = \langle x_0, y_0, z_0 \rangle + t \langle a, b, c \rangle \\
-\overrightarrow r = \langle x, y, z \rangle \\
-\overrightarrow r_0 = \langle x_0, y_0, z_0 \rangle \\
+\vec r = \langle x, y, z \rangle \\
+\vec r_0 = \langle x_0, y_0, z_0 \rangle \\
 t = \text{parameter} \\
-\overrightarrow v = \langle a, b, c \rangle
+\vec v = \langle a, b, c \rangle
 \end{aligned}
 $$
 
@@ -400,7 +400,7 @@ $$
 
 $$
 \begin{aligned}
-\cos(\theta) = \frac{\overrightarrow v_1 \cdot \overrightarrow v_2}{v_1v_2} \\
+\cos(\theta) = \frac{\vec v_1 \cdot \vec v_2}{v_1v_2} \\
 \end{aligned}
 $$
 
@@ -413,7 +413,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow v = \overrightarrow{P_0P} \perp = \overrightarrow{P_0P_1} \times \overrightarrow{P_0P_2} = \langle a, b, c \rangle \\
+\vec v = \vec{P_0P} \perp = \vec{P_0P_1} \times \vec{P_0P_2} = \langle a, b, c \rangle \\
 a = \text{x scalar component} \\
 b = \text{y scalar component} \\
 c = \text{z scalar component}
@@ -429,7 +429,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow v \cdot (\overrightarrow r - \overrightarrow r_0) = 0
+\vec v \cdot (\vec r - \vec r_0) = 0
 \end{aligned}
 $$
 
@@ -469,7 +469,7 @@ $$
 
 $$
 \begin{aligned}
-d = \frac{|\overrightarrow v \times \overrightarrow {P_0P}|}{v}
+d = \frac{|\vec v \times \vec {P_0P}|}{v}
 \end{aligned}
 $$
 

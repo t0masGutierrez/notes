@@ -52,7 +52,7 @@ $$
 
 $$
 \begin{aligned}
-(\forall n \in \mathbb N: I_n = [a_n, b_n] \subset \mathbb R) \land (\lim_{n \rightarrow \infty}b_n - a_n = 0) \rightarrow \exists x \in \mathbb R, \forall n \in \mathbb N: \bigcap_{n=1}^\infty I_n = \{x\} \\
+(\forall n \in \mathbb N: I_n = [a_n, b_n] \subset \mathbb R) \land (\lim_{n \rightarrow \infty}b_n - a_n = 0) \implies \exists x \in \mathbb R, \forall n \in \mathbb N: \bigcap_{n=1}^\infty I_n = \{x\} \\
 I_n = \text{nested interval} \\
 \end{aligned}
 $$
@@ -115,7 +115,7 @@ $$
 
 $$
 \begin{aligned}
-\# A = \# B \leftrightarrow f: A \rightarrow B, \forall b \in B, \exists !a \in A: f(a) = b \\
+\# A = \# B \iff f: A \rightarrow B, \forall b \in B, \exists !a \in A: f(a) = b \\
 \# = \text{cardinality}
 \end{aligned}
 $$
@@ -160,7 +160,7 @@ $$
 
 $$
 \begin{aligned}
-(\{0, 1,\dots, n\} \sim S) \land (S_1, \dots, S_n) \rightarrow \# \bigcup_{i=1}^n S_i = \sum_{i=1}^n \# S_i - \# \bigcap_{i=1}^n S_i \\
+(\{0, 1,\dots, n\} \sim S) \land (S_1, \dots, S_n) \implies \# \bigcup_{i=1}^n S_i = \sum_{i=1}^n \# S_i - \# \bigcap_{i=1}^n S_i \\
 \end{aligned}
 $$
 
@@ -268,7 +268,7 @@ $$
 
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_1 \subset S) \rightarrow \mathbb N \sim S_1 \\
+(\mathbb N \sim S) \land (S_1 \subset S) \implies \mathbb N \sim S_1 \\
 S = \text{countable set} \\
 S_1 = \text{countable set}
 \end{aligned}
@@ -284,7 +284,7 @@ $$
 
 $$
 \begin{aligned}
-\mathbb N \sim S \rightarrow \{0, 1, 2, 3, \dots, n\} \not\sim S \\
+\mathbb N \sim S \implies \{0, 1, 2, 3, \dots, n\} \not\sim S \\
 S = \text{countable set} 
 \end{aligned}
 $$
@@ -299,7 +299,7 @@ $$
 
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots = \aleph_0) \rightarrow \mathbb N \sim \bigcup_{n=1}^\infty S_n\\
+(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots = \aleph_0) \implies \mathbb N \sim \bigcup_{n=1}^\infty S_n\\
 S = \text{countable set}
 \end{aligned}
 $$
@@ -314,7 +314,7 @@ $$
 
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots, S_n) \rightarrow \mathbb N \sim S^n \\
+(\mathbb N \sim S) \land (S_1, S_2, S_3, \dots, S_n) \implies \mathbb N \sim S^n \\
 S = \text{countable set}
 \end{aligned}
 $$
@@ -329,7 +329,7 @@ $$
 
 $$
 \begin{aligned}
-[0, 1] = \{x \in \mathbb R| 0 \le x \le 1\} \rightarrow \mathbb N \not\sim [0, 1]
+[0, 1] = \{x \in \mathbb R| 0 \le x \le 1\} \implies \mathbb N \not\sim [0, 1]
 \end{aligned}
 $$
 
@@ -343,7 +343,7 @@ $$
 
 $$
 \begin{aligned}
-(f: A \rightarrow B) \land (\mathbb N \sim A) \rightarrow \mathbb N \sim f(A) \\
+(f: A \rightarrow B) \land (\mathbb N \sim A) \implies \mathbb N \sim f(A) \\
 f = \text{function} \\
 A = \text{domain} \\
 B = \text{codomain} 
@@ -360,7 +360,7 @@ $$
 
 $$
 \begin{aligned}
-(f: A \rightarrow B) \land (\mathbb N \not\sim A) \rightarrow \mathbb N \not\sim B \\
+(f: A \rightarrow B) \land (\mathbb N \not\sim A) \implies \mathbb N \not\sim B \\
 f = \text{injection} \\
 A = \text{domain} \\
 B = \text{codomain} 
@@ -377,7 +377,7 @@ $$
 
 $$
 \begin{aligned}
-(f: A \rightarrow B) \land (\mathbb N \not\sim B) \rightarrow \mathbb N \not\sim A \\
+(f: A \rightarrow B) \land (\mathbb N \not\sim B) \implies \mathbb N \not\sim A \\
 f = \text{surjection} \\
 A = \text{domain} \\
 B = \text{codomain} 

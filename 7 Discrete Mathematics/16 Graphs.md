@@ -359,7 +359,7 @@ $$
 
 $$
 \begin{aligned}
-e \in F \leftrightarrow (v_1, v_2) \in W \\
+e \in F \iff (v_1, v_2) \in W \\
 H = (W, F) \\
 G = (V, E)
 \end{aligned}

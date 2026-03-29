@@ -8,7 +8,7 @@
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \leftrightarrow \forall \vec v_1, \vec v_2 \in \mathcal V: L(\vec v_1) = L(\vec v_2) \rightarrow \vec v_1 = \vec v_2 \\
+(L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec v_1, \vec v_2 \in \mathcal V: L(\vec v_1) = L(\vec v_2) \implies \vec v_1 = \vec v_2 \\
 L = \text{injective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -27,7 +27,7 @@ $$
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \leftrightarrow \forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w \\
+(L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w \\
 L = \text{surjective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -47,8 +47,8 @@ $$
 
 $$
 \begin{aligned}
-L = \text{injection} \leftrightarrow (\text{ker}(L) = \{\vec 0_{\mathcal V}\}) \lor (\text{dim(ker} \ L) = 0) \\
-L = \text{surjection} \leftrightarrow (\text{range}(L) = \mathcal W) \lor (\text{dim(range} \ L) = \dim(\mathcal W) \ne \infty) \\
+L = \text{injection} \iff (\text{ker}(L) = \{\vec 0_{\mathcal V}\}) \lor (\text{dim(ker} \ L) = 0) \\
+L = \text{surjection} \iff (\text{range}(L) = \mathcal W) \lor (\text{dim(range} \ L) = \dim(\mathcal W) \ne \infty) \\
 \end{aligned}
 $$
 
@@ -62,7 +62,7 @@ $$
 
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \land (\dim(\mathcal V) = \dim(\mathcal W) \ne \infty) \rightarrow L = \text{injection} \leftrightarrow L = \text{surjection} \\
+(L: \mathcal V \rightarrow \mathcal W) \land (\dim(\mathcal V) = \dim(\mathcal W) \ne \infty) \implies L = \text{injection} \iff L = \text{surjection} \\
 L = \text{linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space}
@@ -80,8 +80,8 @@ $$
 
 $$
 \begin{aligned}
-(L = \text{injection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \rightarrow \text{rank}(L(T) \subseteq \mathcal W) = n \\
-(L = \text{surjection}) \land (\text{span}(S \subseteq \mathcal V) = \mathcal V) \rightarrow \text{span}(L(S) \subseteq \mathcal W) = \mathcal W \\
+(L = \text{injection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \implies \text{rank}(L(T) \subseteq \mathcal W) = n \\
+(L = \text{surjection}) \land (\text{span}(S \subseteq \mathcal V) = \mathcal V) \implies \text{span}(L(S) \subseteq \mathcal W) = \mathcal W \\
 \end{aligned}
 $$
 

@@ -14,8 +14,8 @@
 
 $$
 \begin{aligned}
-\overrightarrow E(x, t) = E_0 \cos(kx \mp \omega t) \ \hat j \\
-\overrightarrow B(x, t) = B_0 \cos(kx \mp \omega t) \ \hat k \\
+\vec E(x, t) = E_0 \cos(kx \mp \omega t) \ \hat j \\
+\vec B(x, t) = B_0 \cos(kx \mp \omega t) \ \hat k \\
 E = \text{electric field} \\
 B = \text{magnetic field} \\
 k = \text{wave number} \\
@@ -142,7 +142,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow S = \frac{\overrightarrow E \times \overrightarrow B}{\mu_0} \\
+\vec S = \frac{\vec E \times \vec B}{\mu_0} \\
 E = \text{electric field} \\
 B = \text{magnetic field} \\
 \mu_0 = 4\pi \times 10^{-7}
@@ -246,8 +246,8 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow E(x, t) = -2E_0\sin(kx)\sin(\omega t) \ \hat j \\
-\overrightarrow B(x, t) = -2B_0\cos(kx)\cos(\omega t) \ \hat k \\
+\vec E(x, t) = -2E_0\sin(kx)\sin(\omega t) \ \hat j \\
+\vec B(x, t) = -2B_0\cos(kx)\cos(\omega t) \ \hat k \\
 E = \text{electric field} \\
 B = \text{magnetic field} \\
 k = \text{wave number} \\

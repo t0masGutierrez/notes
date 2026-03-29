@@ -115,12 +115,12 @@ $$
 ---
 ### right handed limit formula
 
-- $x\rightarrow n^+$  = as *x* approaches from values above *n*
+- $x\implies n^+$  = as *x* approaches from values above *n*
 
 ---
 ### left handed limit formula
 
-- $x\rightarrow n^-$ = as *x* approaches from values below *n*
+- $x\implies n^-$ = as *x* approaches from values below *n*
 
 ---
 ### unbounded limit

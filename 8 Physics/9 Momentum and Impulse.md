@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow p = m\overrightarrow v \\
+\vec p = m\vec v \\
 m = \text{mass} \\ 
 v = \text{velocity}
 \end{aligned}
@@ -23,7 +23,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = \frac{d\overrightarrow p}{dt} =
+\vec F_{net} = \frac{d\vec p}{dt} =
 \begin{cases}
 F_x = p_x \\
 F_y = p_y
@@ -44,7 +44,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow J = \sum F_{avg} \Delta t = \int_{t_1}^{t_2} \overrightarrow F_{net} \cdot d \overrightarrow t \\
+\vec J = \sum F_{avg} \Delta t = \int_{t_1}^{t_2} \vec F_{net} \cdot d \vec t \\
 F_{avg} = \text{average force} \\
 F_{net} = \text{net force} \\
 t = \text{time}
@@ -61,7 +61,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow J = \Delta \overrightarrow p = m \Delta \overrightarrow v \\
+\vec J = \Delta \vec p = m \Delta \vec v \\
 p = \text{momentum} \\
 m = \text{mass} \\
 v = \text{velocity}
@@ -84,7 +84,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow p_i = \overrightarrow p_f \\
+\vec p_i = \vec p_f \\
 p = \text{momentum}
 \end{aligned}
 $$
@@ -128,7 +128,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow r_{cm} = \frac{\sum_i m_i \overrightarrow r_i}{M} \\
+\vec r_{cm} = \frac{\sum_i m_i \vec r_i}{M} \\
 m = \text{mass} \\
 r = \text{position} \\
 M = \text{system mass}
@@ -145,8 +145,8 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow a_{cm} = \frac{\sum_i m_i \overrightarrow a_i}{M} \\
-\overrightarrow F = M\overrightarrow a_{cm} \\
+\vec a_{cm} = \frac{\sum_i m_i \vec a_i}{M} \\
+\vec F = M\vec a_{cm} \\
 m = \text{point mass} \\
 a = \text{acceleration} \\
 M = \text{system mass}
@@ -163,8 +163,8 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow v_{cm} = \frac{\sum_i m_i \overrightarrow v_i}{M} \\
-\overrightarrow p = M\overrightarrow v_{cm} \\
+\vec v_{cm} = \frac{\sum_i m_i \vec v_i}{M} \\
+\vec p = M\vec v_{cm} \\
 m = \text{point mass} \\
 v = \text{velocity} \\
 M = \text{system mass}

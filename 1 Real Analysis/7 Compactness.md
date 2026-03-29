@@ -26,7 +26,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \rightarrow \forall \epsilon > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
+\forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \implies \forall \epsilon > 0, \exists \set {a_i}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_i) \\
 a_n = \text{sequence} \\
 a_{n_k} = \text{subsequence} \\
 X = \text{metric space} \\
@@ -87,7 +87,7 @@ $$
 $$
 \begin{aligned}
 \forall \set{Y_i} \subset X, \exists \{Y_{i_1}, \dots Y_{i_n}\} \subset \{Y_i\}: S \subset \bigcup_{k=1}^n Y_{i_k} \subset X \\
-\leftrightarrow \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
+\iff \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
 S = \text{compact set} \\
 Y = \text{open set} \\
 \set{Y} = \text{open cover} \\
@@ -108,7 +108,7 @@ $$
 \begin{aligned}
 (S' \subset S \subset X ) \\
 \land (S \subset X, \exists x_0 \in X, \exists r > 0: B_r(x_0) \supset S) \\
-\rightarrow \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
+\implies \forall \set {a_n} \subset S \subset X, \exists \set {a_{n_k}} \subset \set {a_n}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_k} = L \\
 \lor \forall \set{Y_i} \subset X, \exists \{Y_{i_1}, \dots Y_{i_n}\} \subset \{Y_i\}: S \subset \bigcup_{k=1}^n Y_{i_k} \subset X \\
 S' = \text{derived set} \\
 S = \text{compact set} \\
@@ -153,7 +153,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \rightarrow S' \subset S \\
+\forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \implies S' \subset S \\
 Y = \text{open set} \\
 \set{Y} = \text{open cover} \\
 I, J = \text{index set} \\
@@ -173,7 +173,7 @@ $$
 
 $$
 \begin{aligned}
-S' \subset S \subset K \rightarrow \forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \\
+S' \subset S \subset K \implies \forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \\
 S' = \text{derived set} \\
 S = \text{closed set} \\
 K = \text{compact set} \\
@@ -194,7 +194,7 @@ $$
 
 $$
 \begin{aligned}
-(S' \subset S \subset X) \land (\forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: K \subset \bigcup_{j=1}^n Y_{i_j} \subset X) \rightarrow S \cap K \subset \bigcup_{j=1}^n Y_{i_j} \\
+(S' \subset S \subset X) \land (\forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: K \subset \bigcup_{j=1}^n Y_{i_j} \subset X) \implies S \cap K \subset \bigcup_{j=1}^n Y_{i_j} \\
 S' = \text{derived set} \\
 S = \text{closed set} \\
 K = \text{compact set} \\
@@ -216,7 +216,7 @@ $$
 
 $$
 \begin{aligned}
-\bigcap_{j=1}^n S_{i_j} \ne \emptyset \rightarrow \bigcap _{i} S_i \ne \emptyset \\
+\bigcap_{j=1}^n S_{i_j} \ne \emptyset \implies \bigcap _{i} S_i \ne \emptyset \\
 S = \text{compact set} 
 \end{aligned}
 $$
@@ -231,7 +231,7 @@ $$
 
 $$
 \begin{aligned}
-(S \subset K) \land (|S| = \infty) \rightarrow \exists x_0 \in S, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap S \ne \emptyset \\
+(S \subset K) \land (|S| = \infty) \implies \exists x_0 \in S, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap S \ne \emptyset \\
 K = \text{compact set} \\
 X = \text{metric space} \\
 r = \text{radius} \\
@@ -250,7 +250,7 @@ $$
 
 $$
 \begin{aligned}
-(\{I_n\} \in \mathbb R) \land (\forall n \in \mathbb N: I_n \subset I_{n+1}) \rightarrow \bigcap_{n=1}^\infty I_n \ne \emptyset \\
+(\{I_n\} \in \mathbb R) \land (\forall n \in \mathbb N: I_n \subset I_{n+1}) \implies \bigcap_{n=1}^\infty I_n \ne \emptyset \\
 I = \text{interval}
 \end{aligned}
 $$
@@ -265,7 +265,7 @@ $$
 
 $$
 \begin{aligned}
-(\{I_n\} \in \mathbb R) \land (\forall n \in \mathbb N: I_n \subset I_{n+1}) \rightarrow \bigcap_{n=1}^\infty I_n \ne \emptyset \\
+(\{I_n\} \in \mathbb R) \land (\forall n \in \mathbb N: I_n \subset I_{n+1}) \implies \bigcap_{n=1}^\infty I_n \ne \emptyset \\
 I = \text{k-cell}
 \end{aligned}
 $$
@@ -301,7 +301,7 @@ $$
 \begin{aligned}
 (S' \subset S \subset X ) \\
 \land (S \subset X, \exists x_0 \in X, \exists r > 0: B_r(x_0) \supset S) \\
-\leftrightarrow \forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \\
+\iff \forall \set{Y_i}_{i\in I} \subset X, \exists \{Y_{i_j}\}_{j=1}^n \subset \{Y_i\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_j} \subset X \\
 S = \text{compact set} \\
 S' = \text{derived set} \\
 X = \text{metric space} \\
@@ -324,7 +324,7 @@ $$
 
 $$  
 \begin{aligned}  
-(S \subset \mathbb R^k) \land (\set {0, 1, 2, 3, \dots, n} \not\sim S) \rightarrow \exists x_0 \in \mathbb R^k, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap \mathbb R^k \ne \emptyset \\  
+(S \subset \mathbb R^k) \land (\set {0, 1, 2, 3, \dots, n} \not\sim S) \implies \exists x_0 \in \mathbb R^k, \forall r > 0: N_r(x_0) \setminus \{x_0\} \cap \mathbb R^k \ne \emptyset \\  
 S = \text{bounded set} \\  
 r = \text{radius} \\  
 N = \text{neighborhood} \\  

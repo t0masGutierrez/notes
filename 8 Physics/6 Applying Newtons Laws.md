@@ -15,7 +15,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow F_f = \mu \overrightarrow F_N \\
+\vec F_f = \mu \vec F_N \\
 \mu = \text{friction coefficient} \\
 F_N = \text{normal force}
 \end{aligned}
@@ -31,7 +31,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{fs} \le \mu_s \overrightarrow F_N \\
+\vec F_{fs} \le \mu_s \vec F_N \\
 \mu_s = \text{static friction coefficient} \\
 F_N = \text{normal force}
 \end{aligned}
@@ -47,7 +47,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{fk} \le \mu_k \overrightarrow F_N \\
+\vec F_{fk} \le \mu_k \vec F_N \\
 \mu_k = \text{kinetic friction coefficient} \\
 F_N = \text{normal force}
 \end{aligned}
@@ -63,7 +63,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_c = m \overrightarrow a_{rad} = m\frac{\overrightarrow v_{tan}^2}{r} \\
+\vec F_c = m \vec a_{rad} = m\frac{\vec v_{tan}^2}{r} \\
 m = \text{mass} \\
 a_{rad} = \text{radial acceleration} \\
 v_{tan} = \text{tangential velocity} \\

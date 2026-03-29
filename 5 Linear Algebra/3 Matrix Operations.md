@@ -29,7 +29,7 @@ $$
 
 $$
 \begin{aligned}
-A = B \leftrightarrow \forall (1 \le i \le m)(1 \le j \le n): (a_{ij} = b_{ij}) \land (|A| = |B|) \\
+A = B \iff \forall (1 \le i \le m)(1 \le j \le n): (a_{ij} = b_{ij}) \land (|A| = |B|) \\
 A, B = \text{matrix} \\
 a, b = \text{entry} \\
 i = \text{row index} \\
@@ -90,7 +90,7 @@ D = \begin{bmatrix}
 d_{11} & 0 & 0 \\
 0 & d_{22} & 0 \\
 0 & 0 & d_{33} 
-\end{bmatrix} \leftrightarrow \forall (i \ne j): d_{ij} = 0 \\
+\end{bmatrix} \iff \forall (i \ne j): d_{ij} = 0 \\
 |D| = 3 \times 3 \\
 d = \text{entry} \\
 i = \text{row index} \\
@@ -112,7 +112,7 @@ I = \begin{bmatrix}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1 
-\end{bmatrix} \leftrightarrow \forall (i \ne j): (a_{ij} = 0) \land \forall (i = j): (a_{ij} = 1) \\
+\end{bmatrix} \iff \forall (i \ne j): (a_{ij} = 0) \land \forall (i = j): (a_{ij} = 1) \\
 |I| = 3 \times 3 \\
 i = \text{row index} \\
 j = \text{column index}
@@ -133,7 +133,7 @@ U = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 0 & a_{22} & a_{23} \\
 0 & 0 & a_{33} 
-\end{bmatrix} \leftrightarrow \forall (i > j): a_{ij} = 0 \\
+\end{bmatrix} \iff \forall (i > j): a_{ij} = 0 \\
 |U| = 3 \times 3 \\
 a = \text{entry} \\
 i = \text{row index} \\
@@ -155,7 +155,7 @@ L = \begin{bmatrix}
 a_{11} & 0 & 0 \\
 a_{21} & a_{22} & 0 \\
 a_{31} & a_{32} & a_{33} \\
-\end{bmatrix} \leftrightarrow \forall (i < j): a_{ij} = 0 \\
+\end{bmatrix} \iff \forall (i < j): a_{ij} = 0 \\
 |L| = 3 \times 3 \\
 a = \text{entry} \\
 i = \text{row index} \\
@@ -305,13 +305,13 @@ A = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23}\\
 a_{31} & a_{32} & a_{33} \\
-\end{bmatrix} \rightarrow A^T = \begin{bmatrix}
+\end{bmatrix} \implies A^T = \begin{bmatrix}
 a_{11} & a_{21} & a_{31} \\
 a_{12} & a_{22} & a_{32} \\
 a_{13} & a_{23} & a_{33}
 \end{bmatrix} \\
-m \times n \rightarrow n \times m \\
-a_{ij} \rightarrow a_{ji} \\
+m \times n \implies n \times m \\
+a_{ij} \implies a_{ji} \\
 a = \text{entry} \\
 T = \text{transposition}
 \end{aligned}
@@ -378,8 +378,8 @@ $$
 
 $$
 \begin{aligned}
-A \in \mathcal M_{nn} \rightarrow A + A^T = (A + A^T)^T \\
-A \in \mathcal M_{nn} \rightarrow A - A^T = -(A - A^T)^T
+A \in \mathcal M_{nn} \implies A + A^T = (A + A^T)^T \\
+A \in \mathcal M_{nn} \implies A - A^T = -(A - A^T)^T
 \end{aligned}
 $$
 

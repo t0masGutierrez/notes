@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{aligned}
-P = \overrightarrow F \cdot \overrightarrow v \\
+P = \vec F \cdot \vec v \\
 F = \text{force} \\
 v = \text{velocity}
 \end{aligned}
@@ -106,7 +106,7 @@ $$
 
 $$
 \begin{aligned}
-\Delta I^n \rightarrow \Delta \beta = 10n \\
+\Delta I^n \implies \Delta \beta = 10n \\
 I = \text{sound intensity} \\
 \beta = \text{sound intensity level}
 \end{aligned}

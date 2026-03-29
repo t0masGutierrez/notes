@@ -23,7 +23,7 @@ $$
 
 $$
 \begin{aligned}
-(\text{Span}(S) = \mathcal V) \land (|S| \ne \infty) \land(\text{Rank}(T) = n) \rightarrow (|T| \ne \infty) \land (|T| \le |S|) \\
+(\text{Span}(S) = \mathcal V) \land (|S| \ne \infty) \land(\text{Rank}(T) = n) \implies (|T| \ne \infty) \land (|T| \le |S|) \\
 S, T \subseteq \mathcal V \\
 S, T = \text{subset} \\
 \mathcal V = \text{vector space} \\
@@ -42,7 +42,7 @@ $$
 
 $$
 \begin{aligned}
-(\text{Span}(B_1, B_2) = \mathcal V) \land (\text{Rank}(B_1, B_2) = n) \land (|B_1| \ne \infty) \rightarrow |B_1| = |B_2| \\
+(\text{Span}(B_1, B_2) = \mathcal V) \land (\text{Rank}(B_1, B_2) = n) \land (|B_1| \ne \infty) \implies |B_1| = |B_2| \\
 B = \text{basis} \\
 \mathcal V = \text{vector space} \\
 n = \text{number of columns} \\
@@ -112,9 +112,9 @@ $$
 
 $$
 \begin{aligned}
-|S| < \dim(\mathcal V) \rightarrow \text{Span}(S) = \mathcal V \\
-|T| > \dim(\mathcal V) \rightarrow \text{Rank}(T) = n \\
-(|S| = \dim\mathcal V) \lor (|T| = \dim\mathcal V) \leftrightarrow (S = B) \lor (T = B) \\
+|S| < \dim(\mathcal V) \implies \text{Span}(S) = \mathcal V \\
+|T| > \dim(\mathcal V) \implies \text{Rank}(T) = n \\
+(|S| = \dim\mathcal V) \lor (|T| = \dim\mathcal V) \iff (S = B) \lor (T = B) \\
 S, T \subseteq \mathcal V
 \end{aligned}
 $$
@@ -129,8 +129,8 @@ $$
 
 $$
 \begin{aligned}
-\mathcal W \le \mathcal V \rightarrow \dim(\mathcal W) \le \dim (\mathcal V) \\
-\dim(\mathcal W) = \dim (\mathcal V) \leftrightarrow \mathcal W = \mathcal V
+\mathcal W \le \mathcal V \implies \dim(\mathcal W) \le \dim (\mathcal V) \\
+\dim(\mathcal W) = \dim (\mathcal V) \iff \mathcal W = \mathcal V
 \end{aligned}
 $$
 
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{aligned}
-A = PDP^{-1} \rightarrow B = \{\vec x | A\vec x = \lambda \vec x \} \\
+A = PDP^{-1} \implies B = \{\vec x | A\vec x = \lambda \vec x \} \\
 A = \text{matrix} \\
 P = \text{eigenmatrix} \\
 P^{-1} = \text{inverse eigenmatrix} \\

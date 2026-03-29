@@ -42,7 +42,7 @@ $$
 \begin{aligned}
 \vec x \cdot \vec y = \vec y \cdot \vec x \\
 \vec x \cdot \vec x = \| \vec x \|^2 \ge 0 \\ 
-\vec x \cdot \vec x = \vec 0 \leftrightarrow \vec x = \vec 0 \\ 
+\vec x \cdot \vec x = \vec 0 \iff \vec x = \vec 0 \\ 
 c(\vec x \cdot \vec y) = (c\vec x) \cdot \vec y = \vec x \cdot (c\vec y) \\
 \vec x \cdot (\vec y + \vec z) = (\vec x \cdot \vec y) + (\vec x \cdot \vec z) \\
 (\vec x + \vec y) \cdot \vec z = (\vec x \cdot \vec z) + (\vec y \cdot \vec z)
@@ -127,11 +127,11 @@ $$
 
 $$
 \begin{aligned}
-0 \le \theta \le 90 \leftrightarrow \vec x \cdot \vec y > 0 \\
-\theta = 90 \leftrightarrow \vec x \cdot \vec y = 0 \\
-90 \le \theta \le 180 \leftrightarrow \vec x \cdot \vec y < 0 \\
-\vec x \parallel \vec y \leftrightarrow \vec x \cdot \vec y = \pm (||\vec x ||)(||\vec y ||) \\
-\vec x \perp \vec y \leftrightarrow \vec x \cdot \vec y = 0
+0 \le \theta \le 90 \iff \vec x \cdot \vec y > 0 \\
+\theta = 90 \iff \vec x \cdot \vec y = 0 \\
+90 \le \theta \le 180 \iff \vec x \cdot \vec y < 0 \\
+\vec x \parallel \vec y \iff \vec x \cdot \vec y = \pm (||\vec x ||)(||\vec y ||) \\
+\vec x \perp \vec y \iff \vec x \cdot \vec y = 0
 \end{aligned}
 $$
 
@@ -145,7 +145,7 @@ $$
 
 $$
 \begin{aligned}
-\forall i, j \in \{1, ..., k\}: i \ne j \rightarrow \vec x_i \cdot \vec x_j = 0 \\
+\forall i, j \in \{1, ..., k\}: i \ne j \implies \vec x_i \cdot \vec x_j = 0 \\
 i = \text{row index} \\
 j = \text{column index} \\
 k = \text{number of vectors} \\

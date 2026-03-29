@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-W = \overrightarrow F \cdot  d\overrightarrow r = F \Delta r \cos(\theta) \\
+W = \vec F \cdot  d\vec r = F \Delta r \cos(\theta) \\
 F = \text{force} \\
 r = \text{position} \\
 \theta = \text{angle between vectors}
@@ -18,7 +18,7 @@ $$
 
 $$
 \begin{aligned}
-W = \sum_i F_i \Delta r_i = \int_{r_1}^{r_2} \overrightarrow F \cdot d \overrightarrow r \\
+W = \sum_i F_i \Delta r_i = \int_{r_1}^{r_2} \vec F \cdot d \vec r \\
 F = \text{force} \\
 r = \text{position}
 \end{aligned}
@@ -55,7 +55,7 @@ $$
 
 $$
 \begin{aligned}
-W = k\int_{x_1}^{x_2} \overrightarrow x \cdot d \overrightarrow x = \frac{1}{2}kx^2 \\
+W = k\int_{x_1}^{x_2} \vec x \cdot d \vec x = \frac{1}{2}kx^2 \\
 k = \text{spring constant} \\
 x = \text{position}
 \end{aligned}
@@ -86,8 +86,8 @@ $$
 
 $$
 \begin{aligned}
-W_{net} = \overrightarrow F_{net} \cdot d \overrightarrow r = m\frac{d \overrightarrow v}{dt} \cdot d \overrightarrow r = m\overrightarrow v \cdot d \overrightarrow v \\
-W_{net} = m\int_{v_1}^{v_2} \overrightarrow v \cdot d \overrightarrow v = \frac{1}{2}m v^2 \\
+W_{net} = \vec F_{net} \cdot d \vec r = m\frac{d \vec v}{dt} \cdot d \vec r = m\vec v \cdot d \vec v \\
+W_{net} = m\int_{v_1}^{v_2} \vec v \cdot d \vec v = \frac{1}{2}m v^2 \\
 F = \text{force} \\
 r = \text{position} \\
 m = \text{mass} \\
@@ -137,7 +137,7 @@ $$
 
 $$
 \begin{aligned}
-P = \overrightarrow F \cdot \overrightarrow v \\
+P = \vec F \cdot \vec v \\
 F = \text{force} \\
 v = \text{velocity}
 \end{aligned}

@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-W = \overrightarrow F \cdot d \overrightarrow r = F \Delta r \cos(\theta) \\
+W = \vec F \cdot d \vec r = F \Delta r \cos(\theta) \\
 F = \text{force} \\
 r = \text{position} \\
 \theta = \text{angular position}
@@ -18,7 +18,7 @@ $$
 
 $$
 \begin{aligned}
-W = \sum_i F_i \Delta r_i = \int_{r_1}^{r_2} \overrightarrow F \cdot d \overrightarrow r \\
+W = \sum_i F_i \Delta r_i = \int_{r_1}^{r_2} \vec F \cdot d \vec r \\
 F = \text{force} \\
 r = \text{position}
 \end{aligned}
@@ -40,7 +40,7 @@ $$
 
 $$
 \begin{aligned}
-U = \int_{r_2}^{r_1} \overrightarrow F_{cons} \cdot d \overrightarrow r \\
+U = \int_{r_2}^{r_1} \vec F_{cons} \cdot d \vec r \\
 F_{cons} = \text{conservative force} \\
 r = \text{position}
 \end{aligned}

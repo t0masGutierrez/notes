@@ -21,7 +21,7 @@ $$
 
 $$
 \begin{aligned}
-(x, y) \in R \subset X \times Y \rightarrow xRy
+(x, y) \in R \subset X \times Y \implies xRy
 \end{aligned}
 $$
 
@@ -37,9 +37,9 @@ $$
 
 $$
 \begin{aligned}
-(R \subset S \times S) \land (x \in S) \rightarrow x \sim x \\
-(R \subset S \times S) \land (x, y \in S) \land (x \sim y) \rightarrow y \sim x \\
-(R \subset S \times S) \land (x, y, z \in S) \land (x \sim y) \land (y \sim z) \rightarrow x \sim z 
+(R \subset S \times S) \land (x \in S) \implies x \sim x \\
+(R \subset S \times S) \land (x, y \in S) \land (x \sim y) \implies y \sim x \\
+(R \subset S \times S) \land (x, y, z \in S) \land (x \sim y) \land (y \sim z) \implies x \sim z 
 \end{aligned}
 $$
 
@@ -83,7 +83,7 @@ $$
 
 $$
 \begin{aligned}
-f: A \rightarrow B, \forall a \in A, \forall b \in B: f(a_1) = f(a_2) \rightarrow a_1 = a_2
+f: A \rightarrow B, \forall a \in A, \forall b \in B: f(a_1) = f(a_2) \implies a_1 = a_2
 \end{aligned}
 $$
 

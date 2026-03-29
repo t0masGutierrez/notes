@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-(X = x) \sim (\mu, \sigma) \rightarrow (Y = y) \sim (\mu', \sigma ') \\
+(X = x) \sim (\mu, \sigma) \implies (Y = y) \sim (\mu', \sigma ') \\
 X = \text{random variable} \\
 x = \text{real number} \\
 Y = \text{standardized random variable} \\

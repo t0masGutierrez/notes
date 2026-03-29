@@ -126,9 +126,9 @@ $$
 
 $$
 \begin{aligned}
-f \in \mathbb C \rightarrow f(t, x, \epsilon) \in C^{\omega} \\
-x \in \mathbb C \rightarrow f(t, x, \epsilon) \in C^{\omega} \\
-i \ge 1 \rightarrow  f(t, x_i, \epsilon) \in C^{\omega} \\
+f \in \mathbb C \implies f(t, x, \epsilon) \in C^{\omega} \\
+x \in \mathbb C \implies f(t, x, \epsilon) \in C^{\omega} \\
+i \ge 1 \implies  f(t, x_i, \epsilon) \in C^{\omega} \\
 (+), (\cdot), (\circ), (\frac{df}{dx}), (\int dfdx) \in C^{\omega} 
 \end{aligned}
 $$
@@ -161,7 +161,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{\epsilon \rightarrow 0} |\frac{f(\epsilon)}{\epsilon^r}| \le C \rightarrow f(\epsilon) \le O(\epsilon^r) \\
+\lim_{\epsilon \rightarrow 0} |\frac{f(\epsilon)}{\epsilon^r}| \le C \implies f(\epsilon) \le O(\epsilon^r) \\
 f = \text{perturbed equation} \\
 \epsilon = \text{parameter} \\
 C = \text{constant} \\
@@ -179,7 +179,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{\epsilon \rightarrow 0} \frac{f(\epsilon)}{\epsilon^r} = 0 \rightarrow f(\epsilon) \ll o(\epsilon^r) \\
+\lim_{\epsilon \rightarrow 0} \frac{f(\epsilon)}{\epsilon^r} = 0 \implies f(\epsilon) \ll o(\epsilon^r) \\
 f = \text{perturbed equation} \\
 \epsilon = \text{parameter} \\
 o = \text{order} 
@@ -232,7 +232,7 @@ $$
 
 $$
 \begin{aligned}
-(C^{\omega} \ni F(x_0, 0) = 0) \land (\frac{\partial F}{\partial x}(x_0, 0) \ne 0) \rightarrow \exists! x(\epsilon) \in C^{\omega} \\
+(C^{\omega} \ni F(x_0, 0) = 0) \land (\frac{\partial F}{\partial x}(x_0, 0) \ne 0) \implies \exists! x(\epsilon) \in C^{\omega} \\
 C^{\omega} = \text{analyticity} \\
 F = \text{algebraic equation} \\
 x = \text{solution} \\
@@ -250,7 +250,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial F}{\partial x}(x_0, 0) \ne 0 \rightarrow x(\epsilon) = \sum_{n=0}^{\infty} x_n\epsilon^n \\
+\frac{\partial F}{\partial x}(x_0, 0) \ne 0 \implies x(\epsilon) = \sum_{n=0}^{\infty} x_n\epsilon^n \\
 x = \text{solution} \\
 \epsilon = \text{parameter} 
 \end{aligned}
@@ -266,7 +266,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{\partial F}{\partial x}(x_0, 0)= 0 \rightarrow x(\delta) = \sum_{n =0}^{\infty} x_n\delta^n \\
+\frac{\partial F}{\partial x}(x_0, 0)= 0 \implies x(\delta) = \sum_{n =0}^{\infty} x_n\delta^n \\
 \delta = \epsilon^{1/m} \\
 x = \text{solution} \\
 \epsilon = \text{parameter}  \\
@@ -303,7 +303,7 @@ $$
 
 $$
 \begin{aligned}
-F(0, u_0, 0) \in C^{\omega} \rightarrow \exists! u(t, \epsilon) \in C^{\omega} \\
+F(0, u_0, 0) \in C^{\omega} \implies \exists! u(t, \epsilon) \in C^{\omega} \\
 F = \text{regular differential equation} \\
 C^{\omega} = \text{analyticity} \\
 u(t, \epsilon) = \text{solution} \\
@@ -321,7 +321,7 @@ $$
 
 $$
 \begin{aligned}
-f_1(t) \in \text{span}\set{\cos t, \sin t} \rightarrow x_1(t) = t(A \cos \omega t + B \sin \omega t) \\
+f_1(t) \in \text{span}\set{\cos t, \sin t} \implies x_1(t) = t(A \cos \omega t + B \sin \omega t) \\
 f_1(t) = x_1'' + x_1 
 \end{aligned}
 $$
@@ -363,7 +363,7 @@ $$
 
 $$
 \begin{aligned}
-\epsilon = 0 \rightarrow \phi(x)y' = f(x) \land y_{out}(x) = C \\
+\epsilon = 0 \implies \phi(x)y' = f(x) \land y_{out}(x) = C \\
 \epsilon y'' + \phi(x)y' = f(x) \\
 \epsilon = \text{parameter} \\
 y = \text{solution} 
@@ -381,7 +381,7 @@ $$
 
 $$
 \begin{aligned}
-\tau = \frac{x}{\delta} \rightarrow \frac{1}{\delta}(\frac{d^2y}{d\tau^2} + \phi(x)\frac{dy}{d\tau}) = f(x) \\
+\tau = \frac{x}{\delta} \implies \frac{1}{\delta}(\frac{d^2y}{d\tau^2} + \phi(x)\frac{dy}{d\tau}) = f(x) \\
 \epsilon y'' + \phi(x)y' = f(x) \\
 \delta = \epsilon^n \\ 
 \epsilon = \text{parameter} \\

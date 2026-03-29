@@ -214,7 +214,7 @@ $$
 
 $$
 \begin{aligned}
-(L_1: \mathcal V_1 \rightarrow \mathcal V_2) \land (L_2: \mathcal V_2 \rightarrow \mathcal V_3) \rightarrow L_2 \circ L_1 : \mathcal V_1 \rightarrow \mathcal V_3 \\
+(L_1: \mathcal V_1 \rightarrow \mathcal V_2) \land (L_2: \mathcal V_2 \rightarrow \mathcal V_3) \implies L_2 \circ L_1 : \mathcal V_1 \rightarrow \mathcal V_3 \\
 (L_2 \circ L_1)(\vec v) = L_2(L_1(\vec v))
 \end{aligned}
 $$
@@ -230,8 +230,8 @@ $$
 
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal V' \le \mathcal V) \rightarrow L(\mathcal V') = \{L(\vec v) | \vec v \in \mathcal V'\} \le \mathcal W \\
-(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \rightarrow L^{-1}(\mathcal W') = \{\vec v | L(\vec v) \in \mathcal W'\} \le \mathcal V
+(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal V' \le \mathcal V) \implies L(\mathcal V') = \{L(\vec v) | \vec v \in \mathcal V'\} \le \mathcal W \\
+(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \implies L^{-1}(\mathcal W') = \{\vec v | L(\vec v) \in \mathcal W'\} \le \mathcal V
 \end{aligned}
 $$
 

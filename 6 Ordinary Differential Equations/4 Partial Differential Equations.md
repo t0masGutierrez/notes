@@ -43,7 +43,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{X''(x)}{X(x)} = \frac{T'(t)}{kT(t)} = -\lambda \rightarrow \begin{cases} X''(x) + \lambda X(x) = 0 \\
+\frac{X''(x)}{X(x)} = \frac{T'(t)}{kT(t)} = -\lambda \implies \begin{cases} X''(x) + \lambda X(x) = 0 \\
 T'(t) + \lambda kT(t) = 0 \\
 \end{cases} \\
 x = \text{space} \\

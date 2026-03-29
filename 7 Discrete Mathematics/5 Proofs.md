@@ -52,7 +52,7 @@
 
 $$
 \begin{aligned}
-p_1 \lor p_2 \lor ... \lor p_n \to q
+p_1 \lor p_2 \lor ... \lor p_n \implies q
 \end{aligned}
 $$
 
@@ -66,7 +66,7 @@ $$
 
 $$
 \begin{aligned}
-(p_1 \to q) \land (p_2 \to q) \land ... \land (p_n \to q)
+(p_1 \implies q) \land (p_2 \implies q) \land ... \land (p_n \implies q)
 \end{aligned}
 $$
 

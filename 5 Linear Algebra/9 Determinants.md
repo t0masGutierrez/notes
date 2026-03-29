@@ -9,7 +9,7 @@ $$
 \begin{aligned}
 A = \begin{bmatrix} 
 a_{11}
-\end{bmatrix} \rightarrow 
+\end{bmatrix} \implies 
 |A| = a_{11} \\
 A = \text{matrix} \\
 a = \text{entry} \\
@@ -30,7 +30,7 @@ $$
 A = \begin{bmatrix} 
 a_{11} & a_{12} \\
 a_{21} & a_{22}
-\end{bmatrix} \rightarrow 
+\end{bmatrix} \implies 
 |A| = a_{11}a_{22} - a_{12}a_{21} \\
 A = \text{matrix} \\
 a = \text{entry} \\
@@ -52,7 +52,7 @@ A = \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33}
-\end{bmatrix} \rightarrow 
+\end{bmatrix} \implies 
 |A| = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} \\
 A = \text{matrix} \\
 a = \text{entry} \\
@@ -223,7 +223,7 @@ $$
 
 $$
 \begin{aligned}
-A \in \mathcal U \rightarrow |A| = a_{11}a_{22} \dots a_{nn} \\
+A \in \mathcal U \implies |A| = a_{11}a_{22} \dots a_{nn} \\
 a = \text{entry}
 \end{aligned}
 $$
@@ -240,7 +240,7 @@ $$
 
 $$
 \begin{aligned}
-B = R_k( \dots R_1(A)\dots ) \in \mathcal U \rightarrow |A| = \frac{1}{c}|B| \\
+B = R_k( \dots R_1(A)\dots ) \in \mathcal U \implies |A| = \frac{1}{c}|B| \\
 R = \text{row operation} \\
 A = \text{matrix} \\
 |A| = \text{determinant} \\
@@ -264,7 +264,7 @@ $$
 
 $$
 \begin{aligned}
-\text{det}(A) \ne 0 \leftrightarrow |A| \ne 0 \\
+\text{det}(A) \ne 0 \iff |A| \ne 0 \\
 A = \text{matrix} \\
 \end{aligned}
 $$
@@ -279,7 +279,7 @@ $$
 
 $$
 \begin{aligned}
-\text{rank}(A) = n \leftrightarrow |A| \ne 0 \\
+\text{rank}(A) = n \iff |A| \ne 0 \\
 A = \text{matrix} \\
 n = \text{number of rows} \\
 n = \text{number of columns}

@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} \\
+\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k} \\
 x = \text{x position} \\
 y = \text{y position} \\
 z = \text{z position} \\
@@ -22,14 +22,14 @@ $$
 ---
 ### limit
 
-- $\overrightarrow r(t)$ behavior as *t* approaches value
+- $\vec r(t)$ behavior as *t* approaches value
 
 ---
 ### limit formula
 
 $$
 \begin{aligned}
-\lim_{t \to n} \overrightarrow r(t) = \lim_{t \to n} x(t) \hat i + \lim_{t \to n} y(t) \hat j + \lim_{t \to n} z(t) \hat k
+\lim_{t \to n} \vec r(t) = \lim_{t \to n} x(t) \hat i + \lim_{t \to n} y(t) \hat j + \lim_{t \to n} z(t) \hat k
 \end{aligned}
 $$
 
@@ -45,9 +45,9 @@ $$
 
 $$
 \begin{aligned}
-\lim_{t \to n} \overrightarrow r(t) = \overrightarrow r(n) \\
-\lim_{t \to n^-} \overrightarrow r(t) = \lim_{t \to n^+}  \overrightarrow r(t) \\
-\lim_{t \to n} \overrightarrow r(t) \ne \pm \infty
+\lim_{t \to n} \vec r(t) = \vec r(n) \\
+\lim_{t \to n^-} \vec r(t) = \lim_{t \to n^+}  \vec r(t) \\
+\lim_{t \to n} \vec r(t) \ne \pm \infty
 \end{aligned}
 $$
 
@@ -61,7 +61,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow r \ '(n) = \lim_{t \to n} \frac{\overrightarrow r(t) - \overrightarrow r(n)}{t - n}
+\vec r \ '(n) = \lim_{t \to n} \frac{\vec r(t) - \vec r(n)}{t - n}
 \end{aligned}
 $$
 
@@ -74,7 +74,7 @@ $$
 
 $$
 \begin{aligned}
-\frac{d}{dt}\overrightarrow r(t) = \lim_{\Delta t \to 0} \frac{\overrightarrow r(t + \Delta t) - \overrightarrow r(n)}{\Delta t}
+\frac{d}{dt}\vec r(t) = \lim_{\Delta t \to 0} \frac{\vec r(t + \Delta t) - \vec r(n)}{\Delta t}
 \end{aligned}
 $$
 
@@ -100,8 +100,8 @@ $$
 
 $$
 \begin{aligned}
-\int_a^b \overrightarrow r(t)dt = \overrightarrow R(b) - \overrightarrow R(a) \\
-\int_a^b \overrightarrow r(t)dt = \hat i \int_a^b x(t)dt + \hat j \int_a^b y(t)dt + \hat k \int_a^b z(t)dt
+\int_a^b \vec r(t)dt = \vec R(b) - \vec R(a) \\
+\int_a^b \vec r(t)dt = \hat i \int_a^b x(t)dt + \hat j \int_a^b y(t)dt + \hat k \int_a^b z(t)dt
 \end{aligned}
 $$
 
@@ -130,7 +130,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow T(t) = \frac{\overrightarrow r \ '(t)}{r'(t)}
+\vec T(t) = \frac{\vec r \ '(t)}{r'(t)}
 \end{aligned}
 $$
 
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow N(t) = \frac{\overrightarrow T \ '(t)}{T'(t)}
+\vec N(t) = \frac{\vec T \ '(t)}{T'(t)}
 \end{aligned}
 $$
 
@@ -158,7 +158,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow B(t) = \overrightarrow T(t) \times \overrightarrow N(t) 
+\vec B(t) = \vec T(t) \times \vec N(t) 
 \end{aligned}
 $$
 
@@ -186,7 +186,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow a(t) = a_T \overrightarrow T + a_N \overrightarrow N 
+\vec a(t) = a_T \vec T + a_N \vec N 
 \end{aligned}
 $$
 
@@ -195,7 +195,7 @@ $$
 
 $$
 \begin{aligned}
-a_T = \frac{\overrightarrow r \ '(t) \cdot \overrightarrow r \ ''(t)}{r'(t)}
+a_T = \frac{\vec r \ '(t) \cdot \vec r \ ''(t)}{r'(t)}
 \end{aligned}
 $$
 
@@ -218,7 +218,7 @@ $$
 
 $$
 \begin{aligned}
-r(t) = \int_a^t \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2 + (\frac{dz}{dt})^2}dt = \int_a^t \overrightarrow r \ '(u)du
+r(t) = \int_a^t \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2 + (\frac{dz}{dt})^2}dt = \int_a^t \vec r \ '(u)du
 \end{aligned}
 $$
 

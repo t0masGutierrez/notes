@@ -111,7 +111,7 @@
 
 $$
 \begin{aligned}
-\overrightarrow F_e = k\frac{|q_1q_2|}{r^2} \hat r \\
+\vec F_e = k\frac{|q_1q_2|}{r^2} \hat r \\
 k = \frac{1}{4\pi \epsilon_0} \\
 q = \text{electric charge} \\
 r = \text{distance} \\
@@ -138,7 +138,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow E = k\frac{|Q|}{r^2}\hat r = \frac{\overrightarrow F_e}{q} \\
+\vec E = k\frac{|Q|}{r^2}\hat r = \frac{\vec F_e}{q} \\
 k = 9.0 \times 10^9 \\
 Q = \text{source electric charge} \\
 r = \text{distance} \\
@@ -178,7 +178,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow p = q\overrightarrow d \\
+\vec p = q\vec d \\
 q = \text{electric charge} \\
 d = \text{distance}
 \end{aligned}
@@ -193,7 +193,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = 0
+\vec F_{net} = 0
 \end{aligned}
 $$
 
@@ -206,7 +206,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow E = \frac{\overrightarrow p}{2\pi \epsilon_0r^3} \\
+\vec E = \frac{\vec p}{2\pi \epsilon_0r^3} \\
 p = \text{electric dipole} \\
 q = \text{electric charge} \\
 \epsilon_0 = 8.85 \times 10^{-12} \\
@@ -223,7 +223,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow \tau = \overrightarrow p \times \overrightarrow E  = pE \sin(\theta) \\
+\vec \tau = \vec p \times \vec E  = pE \sin(\theta) \\
 p = \text{electric dipole} \\
 E = \text{electric field} \\
 \theta = \text{angular position}
@@ -246,7 +246,7 @@ $$
 
 $$
 \begin{aligned}
-U = -\overrightarrow p \cdot \overrightarrow E  = -pE \cos(\theta) \\
+U = -\vec p \cdot \vec E  = -pE \cos(\theta) \\
 p = \text{electric dipole} \\
 E = \text{electric field} \\
 \theta = \text{angular position}

@@ -22,7 +22,7 @@ $$
 
 $$
 \begin{aligned}
-[\vec w ]_B = [c_1, \dots, c_k] \rightarrow \vec w = c_1 \vec x_1 + \dots + c_n \vec x_n \\
+[\vec w ]_B = [c_1, \dots, c_k] \implies \vec w = c_1 \vec x_1 + \dots + c_n \vec x_n \\
 \vec w, \vec x = \text{vector} \\
 B = \text{basis} \\
 c = \text{coordinate}
@@ -63,7 +63,7 @@ $$
 
 $$
 \begin{aligned}
-B| \vec v \rightarrow I| [\vec v]_B \\
+B| \vec v \implies I| [\vec v]_B \\
 B = \text{basis} \\
 \vec v = \text{vector} \\
 I = \text{identity matrix} \\
@@ -107,7 +107,7 @@ $$
 
 $$
 \begin{aligned}
-C|B \rightarrow I | P_{BC} \\
+C|B \implies I | P_{BC} \\
 C = \text{2nd basis} \\
 B = \text{1st basis} \\
 I = \text{identity matrix} \\
@@ -125,7 +125,7 @@ $$
 
 $$
 \begin{aligned}
-P_{BC} \leftrightarrow (B, C \in \mathcal V) \land (\forall \vec v \in \mathcal V: [\vec v]_C = P_{BC}[\vec v]_B) \\
+P_{BC} \iff (B, C \in \mathcal V) \land (\forall \vec v \in \mathcal V: [\vec v]_C = P_{BC}[\vec v]_B) \\
 B, C = \text{basis} \\
 \mathcal V = \text{vector space} \\
 \vec v = \text{vector} \\
@@ -144,7 +144,7 @@ $$
 
 $$
 \begin{aligned}
-(B, C, D \in \mathcal V) \land ([\vec v]_C = P_{BC}[\vec v]_B) \land ([\vec v]_D = Q_{CD}[\vec v]_C) \rightarrow ([\vec v]_D = Q_{CD}P_{BC}[\vec v]_B) \\
+(B, C, D \in \mathcal V) \land ([\vec v]_C = P_{BC}[\vec v]_B) \land ([\vec v]_D = Q_{CD}[\vec v]_C) \implies ([\vec v]_D = Q_{CD}P_{BC}[\vec v]_B) \\
 B, C, D = \text{basis} \\
 [\vec v]_B, [\vec v]_C, [\vec v]_D = \text{coordinatization} \\
 \mathcal V = \text{vector space} \\
@@ -163,7 +163,7 @@ $$
 
 $$
 \begin{aligned}
-(B, C \in \mathcal V) \land ([\vec v]_C = P_{BC}[\vec v]_B) \rightarrow (|P| \ne 0) \land ([\vec v]_B = P_{BC}^{-1}[\vec v]_C) \\
+(B, C \in \mathcal V) \land ([\vec v]_C = P_{BC}[\vec v]_B) \implies (|P| \ne 0) \land ([\vec v]_B = P_{BC}^{-1}[\vec v]_C) \\
 B, C = \text{basis} \\
 \mathcal V = \text{vector space} \\
 [\vec v]_B, [\vec v]_C = \text{coordinatization} \\

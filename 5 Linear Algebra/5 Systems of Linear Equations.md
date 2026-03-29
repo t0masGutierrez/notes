@@ -243,7 +243,7 @@ $$
 
 $$
 \begin{aligned}
-\langle i\rangle \rightarrow c\langle i\rangle  \\
+\langle i\rangle \implies c\langle i\rangle  \\
 i = \text{row index} \\
 c = \text{scalar}
 \end{aligned}
@@ -259,7 +259,7 @@ $$
 
 $$
 \begin{aligned}
-\langle i\rangle \rightarrow \langle i\rangle + c\langle j\rangle \\
+\langle i\rangle \implies \langle i\rangle + c\langle j\rangle \\
 i, j = \text{row index} \\
 c = \text{scalar}
 \end{aligned}
@@ -275,7 +275,7 @@ $$
 
 $$
 \begin{aligned}
-\langle i \rangle \leftrightarrow \langle j \rangle \\
+\langle i \rangle \iff \langle j \rangle \\
 i, j = \text{row index}
 ### \end{aligned}
 

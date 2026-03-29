@@ -9,9 +9,9 @@
 
 $$
 \begin{aligned}
-S = \emptyset \rightarrow |S| \not\in S \\ 
-S = \emptyset \rightarrow x_n \not \in x_{n+1} \\
-S = \emptyset \rightarrow \infty \not \in S \\
+S = \emptyset \implies |S| \not\in S \\ 
+S = \emptyset \implies x_n \not \in x_{n+1} \\
+S = \emptyset \implies \infty \not \in S \\
 \end{aligned}
 $$
 
@@ -43,9 +43,9 @@ $$
 $$
 \begin{aligned}
 0 \in \mathbb N \\
-S(n) = n + 1 \rightarrow \forall n \in \mathbb N: S(n) \in \mathbb N \\
-S(n) = S(m) \rightarrow n = m \\
-(K \subset \mathbb N) \land (0 \in K) \land (\forall n \in K: S(n) \in K) \rightarrow K = \mathbb N
+S(n) = n + 1 \implies \forall n \in \mathbb N: S(n) \in \mathbb N \\
+S(n) = S(m) \implies n = m \\
+(K \subset \mathbb N) \land (0 \in K) \land (\forall n \in K: S(n) \in K) \implies K = \mathbb N
 \end{aligned}
 $$
 
@@ -126,7 +126,7 @@ $$
 
 $$
 \begin{aligned}
-(m, n) \sim (m', n') \leftrightarrow m + n' = m' + n \\
+(m, n) \sim (m', n') \iff m + n' = m' + n \\
 [(m, n)] = \{(m', n') \in \mathbb N \times \mathbb N |(m, n) \sim (m', n')\} \\
 \mathbb Z = \{[(m, n)] | (m, n) \in \mathbb N \times \mathbb N\}
 \end{aligned}
@@ -188,7 +188,7 @@ $$
 
 $$
 \begin{aligned}
-(p, q) \sim (p', q') \leftrightarrow pq' = qp' \\
+(p, q) \sim (p', q') \iff pq' = qp' \\
 [(p, q)] = \{(p', q') \in \mathbb Z \times \mathbb Z |(p, q) \sim (p', q')\} \\
 \mathbb Q = \{[(p, q)] | (p, q) \in \mathbb Z \times \mathbb Z\}
 \end{aligned}
@@ -233,8 +233,8 @@ $$
 
 $$
 \begin{aligned}
-x, y \in S \rightarrow (x < y) \lor (x = y) \lor (y < x) \\
-(x, y, z \in S) \land (x < y) \land (y < z) \rightarrow x < z 
+x, y \in S \implies (x < y) \lor (x = y) \lor (y < x) \\
+(x, y, z \in S) \land (x < y) \land (y < z) \implies x < z 
 \end{aligned}
 $$
 
@@ -297,11 +297,11 @@ $$
 
 $$
 \begin{aligned}
-(x, y, z \in F) \land (x < y) \rightarrow x + z < y + z \\
-(x, y \in F) \land (x < y) \land (z > 0) \rightarrow x \cdot z < y \cdot z \\
-0 < x < y \rightarrow 0 < \frac{1}{y} < \frac{1}{x} \\
-x \ne 0 \rightarrow 0 < x^2  \\
-x > 0 \leftrightarrow -x < 0 
+(x, y, z \in F) \land (x < y) \implies x + z < y + z \\
+(x, y \in F) \land (x < y) \land (z > 0) \implies x \cdot z < y \cdot z \\
+0 < x < y \implies 0 < \frac{1}{y} < \frac{1}{x} \\
+x \ne 0 \implies 0 < x^2  \\
+x > 0 \iff -x < 0 
 \end{aligned}
 $$
 
@@ -317,9 +317,9 @@ $$
 
 $$
 \begin{aligned}
-x + y = x + z \rightarrow y = z \\
-x + y = x \rightarrow y = 0 \\
-x + y = 0 \rightarrow y = -x 
+x + y = x + z \implies y = z \\
+x + y = x \implies y = 0 \\
+x + y = 0 \implies y = -x 
 \end{aligned}
 $$
 
@@ -341,13 +341,13 @@ $$
 $$
 \begin{aligned}
 0 \cdot x = 0 \\
-(x \ne 0) \land (y \ne 0) \rightarrow x \cdot y \ne 0 \\
+(x \ne 0) \land (y \ne 0) \implies x \cdot y \ne 0 \\
 (-x) \cdot y = -(x \cdot y) = x \cdot (-y) \\
 (-x) \cdot (-y) = x \cdot y \\
-(x \ne 0) \land (x \cdot y = x \cdot z) \rightarrow y = z \\
-(x \ne 0) \land (x \cdot y = x) \rightarrow y = 1 \\
-(x \ne 0) \land (x \cdot y = 1) \rightarrow y = \frac{1}{x} \\
-x \ne 0 \rightarrow \frac{1}{1/x} = x \\
+(x \ne 0) \land (x \cdot y = x \cdot z) \implies y = z \\
+(x \ne 0) \land (x \cdot y = x) \implies y = 1 \\
+(x \ne 0) \land (x \cdot y = 1) \implies y = \frac{1}{x} \\
+x \ne 0 \implies \frac{1}{1/x} = x \\
 \end{aligned}
 $$
 
@@ -382,7 +382,7 @@ $$
 
 $$
 \begin{aligned}
-|z| > 0 \leftrightarrow z \ne 0 \\
+|z| > 0 \iff z \ne 0 \\
 |\overline z| = |z| \\
 |zw| = (|z|)(|w|) \\
 |z + w| \le |z| + |w| \\
@@ -425,7 +425,7 @@ $$
 \overline {z \cdot w} = \overline z \cdot \overline w \\ 
 z + \overline z = \text{Re}(z) \\
 z - \overline z = \text{Im}(z) \\
-z \cdot \overline z \in \mathbb R^+ \leftrightarrow z \ne 0
+z \cdot \overline z \in \mathbb R^+ \iff z \ne 0
 \end{aligned}
 $$
 

@@ -65,7 +65,7 @@ $$
 
 $$
 \begin{aligned}
-f : \{0, 1\}^n \to \{0, 1\} \\
+f : \{0, 1\}^n \rightarrow \{0, 1\} \\
 n = \text{number of variables}
 \end{aligned}
 $$

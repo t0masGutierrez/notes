@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-U = \int_{r_2}^{r_1} \overrightarrow F_{cons} \cdot d \overrightarrow r \\
+U = \int_{r_2}^{r_1} \vec F_{cons} \cdot d \vec r \\
 F_{cons} = \text{conservative force} \\
 r = \text{position}
 \end{aligned}

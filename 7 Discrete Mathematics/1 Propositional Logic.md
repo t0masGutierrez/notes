@@ -49,8 +49,6 @@
 ### conditional
 
 - if p then q
-- p = hypothesis
-- q = conclusion
 ---
 ### inverse
 
@@ -82,8 +80,8 @@ $$
 1 = \neg \\
 2 = \land \\
 3 = \lor \\
-4 = \rightarrow \\
-5 = \leftrightarrow \\
+4 = \implies \\
+5 = \iff \\
 \end{aligned}
 $$
 
@@ -118,15 +116,15 @@ $$
 ---
 ### logical equivalence
 
-- propositions that satisfy the requirements of tautology
+- tautological proposition
 ---
 ### conditional logical equivalence
 
-- conditionals that satisfy the requirements of tautology
+- tautological conditional
 ---
 ### biconditional logical equivalence
 
-- biconditionals that satisfy the requirements of tautology
+- tautological biconditional
 ---
 ### satisfiable
 
@@ -145,9 +143,9 @@ $$
 ---
 ### construct truth table
 
-- number of truth table rows equal 2ⁿ where n equal the number of propositional variables
-- alternate every 2ⁿ⁻¹ rows between 0s and 1s for the 1st propositional variable
-- alternate every 2ⁿ⁻² rows between 0s and 1s for the 2nd propositional variable
+- number of truth table rows equal $2^n$ where $n$ equal the number of propositional variables
+- alternate every $2^{n-1}$ rows between 0s and 1s for the 1st propositional variable
+- alternate every $2^{n-1}$ rows between 0s and 1s for the 2nd propositional variable
 - continue pattern for all propositional variables
 
 ---

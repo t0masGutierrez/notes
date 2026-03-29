@@ -248,7 +248,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow p = \gamma m \overrightarrow v \\
+\vec p = \gamma m \vec v \\
 \gamma = \text{lorentz factor} \\
 m = \text{mass} \\
 v = \text{velocity}

@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-\Phi = \overrightarrow B \cdot \overrightarrow A = BA \cos(\theta) \\
+\Phi = \vec B \cdot \vec A = BA \cos(\theta) \\
 B = \text{magnetic field} \\
 A = \text{area} \\
 \theta = \text{angular position}
@@ -29,7 +29,7 @@ $$
 
 $$
 \begin{aligned}
-\epsilon = N\frac{-d\Phi}{dt} = N\frac{-d}{dt} \int_{A_1}^{A_2} \overrightarrow B \cdot d\overrightarrow A \\
+\epsilon = N\frac{-d\Phi}{dt} = N\frac{-d}{dt} \int_{A_1}^{A_2} \vec B \cdot d\vec A \\
 N = \text{number of loops} \\
 \Phi = \text{magnetic flux} \\
 t = \text{time} \\
@@ -84,7 +84,7 @@ $$
 
 $$
 \begin{aligned}
-\epsilon = \oint_{L_1}^{L_2} (\overrightarrow v \times \overrightarrow B) \cdot d\overrightarrow L \\
+\epsilon = \oint_{L_1}^{L_2} (\vec v \times \vec B) \cdot d\vec L \\
 v = \text{velocity} \\
 B = \text{magnetic field} \\
 L = \text{length}
@@ -100,7 +100,7 @@ $$
 
 $$
 \begin{aligned}
-\oint_{L_1}^{L_2} \overrightarrow E \cdot d \overrightarrow L = 0 \\
+\oint_{L_1}^{L_2} \vec E \cdot d \vec L = 0 \\
 E = \text{electric field} \\
 L = \text{length}
 \end{aligned}
@@ -115,7 +115,7 @@ $$
 
 $$
 \begin{aligned}
-\oint_{L_1}^{L_2} \overrightarrow E \cdot d \overrightarrow L = \frac{-d\Phi}{dt} \\
+\oint_{L_1}^{L_2} \vec E \cdot d \vec L = \frac{-d\Phi}{dt} \\
 E = \text{electric field} \\
 L = \text{length} \\
 \Phi = \text{magnetic flux}
@@ -147,7 +147,7 @@ $$
 
 $$
 \begin{aligned}
-I_c = \int_{A_1}^{A_2} \overrightarrow J \cdot d \overrightarrow A \\
+I_c = \int_{A_1}^{A_2} \vec J \cdot d \vec A \\
 J = \text{electric current density} \\
 A = \text{area}
 \end{aligned}
@@ -178,7 +178,7 @@ $$
 
 $$
 \begin{aligned}
-\oint_{L_1}^{L_2} \overrightarrow B \cdot d\overrightarrow L = \mu_0 (I_c + I
+\oint_{L_1}^{L_2} \vec B \cdot d\vec L = \mu_0 (I_c + I
 _d)_{enc} \\
 B = \text{magnetic field} \\
 L = \text{length} \\
@@ -200,10 +200,10 @@ $$
 
 $$
 \begin{aligned}
-\oint_{A_1}^{A_2}\overrightarrow E \cdot d\overrightarrow A = \frac{Q_{enc}}{\epsilon_0} \\
-\oint_{A_1}^{A_2}\overrightarrow B \cdot d\overrightarrow A = 0 \\
-\oint_{L_1}^{L_2} \overrightarrow E \cdot d \overrightarrow L = \frac{-d\Phi_B}{dt} \\
-\oint_{L_1}^{L_2} \overrightarrow B \cdot d\overrightarrow L = \mu_0 (I_c + \epsilon_0 \frac{d\Phi_E}{dt})_{enc} \\
+\oint_{A_1}^{A_2}\vec E \cdot d\vec A = \frac{Q_{enc}}{\epsilon_0} \\
+\oint_{A_1}^{A_2}\vec B \cdot d\vec A = 0 \\
+\oint_{L_1}^{L_2} \vec E \cdot d \vec L = \frac{-d\Phi_B}{dt} \\
+\oint_{L_1}^{L_2} \vec B \cdot d\vec L = \mu_0 (I_c + \epsilon_0 \frac{d\Phi_E}{dt})_{enc} \\
 \end{aligned}
 $$
 
@@ -217,7 +217,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = q(\overrightarrow E + \overrightarrow v \times \overrightarrow B) \\
+\vec F_{net} = q(\vec E + \vec v \times \vec B) \\
 q = \text{electric charge} \\
 E = \text{electric field} \\
 v = \text{velocity} \\

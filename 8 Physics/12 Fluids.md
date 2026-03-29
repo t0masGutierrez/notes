@@ -282,7 +282,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_d = \frac{1}{2}\rho A \overrightarrow v^2C_d \\
+\vec F_d = \frac{1}{2}\rho A \vec v^2C_d \\
 \rho = \text{density} \\
 A = \text{area} \\
 v = \text{velocity} \\
@@ -300,7 +300,7 @@ $$
 
 $$
 \begin{aligned}
-m \overrightarrow g = \overrightarrow F_d \rightarrow \overrightarrow v = \sqrt{\frac{2m \overrightarrow g}{\rho C_dA}} \\
+m \vec g = \vec F_d \implies \vec v = \sqrt{\frac{2m \vec g}{\rho C_dA}} \\
 m = \text{mass} \\
 g = \text{9.8} \\
 F_d = \text{drag force} \\

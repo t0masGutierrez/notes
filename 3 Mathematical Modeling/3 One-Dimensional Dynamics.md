@@ -54,8 +54,8 @@ $$
 $$
 \begin{aligned}
 \forall u_0 \in \mathbb R, \exists t \in (T_0, T_1): u(t) \in D = \{u \in \mathbb R| \exists \frac{du}{dt}\} \\
-(t \le T_0) \lor (t \ge T_1) \rightarrow u(t) \not\in D = \{u \in \mathbb R|\exists \frac{du}{dt}\} \\
-u_0 \ne \hat u_0 \rightarrow \forall t \in (T_0, T_1): u(t) \ne \hat u(t)
+(t \le T_0) \lor (t \ge T_1) \implies u(t) \not\in D = \{u \in \mathbb R|\exists \frac{du}{dt}\} \\
+u_0 \ne \hat u_0 \implies \forall t \in (T_0, T_1): u(t) \ne \hat u(t)
 \end{aligned}
 $$
 
@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{aligned}
-\forall t \ge 0: u(t) = u_* \leftrightarrow f(u_*) = 0 \\
+\forall t \ge 0: u(t) = u_* \iff f(u_*) = 0 \\
 u = \text{solution} \\
 t = \text{time} \\
 u_* = \text{equilibrium point}
@@ -86,9 +86,9 @@ $$
 
 $$
 \begin{aligned}
-f(u_0) > 0 \rightarrow \forall t: f(u) > 0 \\
-f(u_0) = 0 \rightarrow \forall t: f(u) = 0 \\
-f(u_0) < 0 \rightarrow \forall t: f(u) < 0 \\
+f(u_0) > 0 \implies \forall t: f(u) > 0 \\
+f(u_0) = 0 \implies \forall t: f(u) = 0 \\
+f(u_0) < 0 \implies \forall t: f(u) < 0 \\
 \end{aligned}
 $$
 
@@ -118,7 +118,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \rightarrow u(t) \in N_{\epsilon}(u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) \\
 \land \forall u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) = u_* \\
 u_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -138,7 +138,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \rightarrow u(t) \in N_{\epsilon}(u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_0 \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) \\
 \land \exists u_0 \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 u_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -177,8 +177,8 @@ $$
 
 $$
 \begin{aligned}
-f'(u_*) < 0 \rightarrow \lim_{t \rightarrow \infty} u(t) = u_* \\
-f'(u_*) > 0 \rightarrow \lim_{t \rightarrow \infty} u(t) \ne u_* \\
+f'(u_*) < 0 \implies \lim_{t \rightarrow \infty} u(t) = u_* \\
+f'(u_*) > 0 \implies \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 \end{aligned}
 $$
 
@@ -192,7 +192,7 @@ $$
 
 $$
 \begin{aligned}
-\Delta h \rightarrow \Delta (h \times u_*)
+\Delta h \implies \Delta (h \times u_*)
 \end{aligned}
 $$
 
@@ -207,10 +207,10 @@ $$
 
 $$
 \begin{aligned}
-h \le 0 \rightarrow f'(0) > 0 \\
-h > 0 \rightarrow f'(0) < 0 \\
-h > 0 \rightarrow f'(\sqrt h) > 0 \\
-h > 0 \rightarrow f'(-\sqrt h) > 0 \\
+h \le 0 \implies f'(0) > 0 \\
+h > 0 \implies f'(0) < 0 \\
+h > 0 \implies f'(\sqrt h) > 0 \\
+h > 0 \implies f'(-\sqrt h) > 0 \\
 \end{aligned}
 $$
 

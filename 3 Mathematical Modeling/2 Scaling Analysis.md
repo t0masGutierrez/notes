@@ -43,7 +43,7 @@ $$
 
 $$
 \begin{aligned}
-(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \rightarrow \bar D = \{(\bar t, \bar y) \in [-1, 1] \times [-1, 1]| p_1 \le \bar t \le p_2, q_1 \le \bar y \le q_2\} \\
+(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar D = \{(\bar t, \bar y) \in [-1, 1] \times [-1, 1]| p_1 \le \bar t \le p_2, q_1 \le \bar y \le q_2\} \\
 \bar y = \frac{1}{b}f(a \bar t, c_1, \dots, c_N) = \bar f(\bar t, a, b, c_1, \dots, c_n) \\
 p_1, p_2, q_1, q_2 \in \mathbb Z \\
 [a] = [\bar t] \\
@@ -81,7 +81,7 @@ $$
 
 $$
 \begin{aligned}
-(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \rightarrow\frac{d^k \bar y}{d \bar t^k} = (\frac{a^k}{b})(\frac{d^k y}{d t^k}) \\
+(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies\frac{d^k \bar y}{d \bar t^k} = (\frac{a^k}{b})(\frac{d^k y}{d t^k}) \\
 \bar t, \bar y = \text{variable} \\
 a, b = \text{scaling factor} 
 \end{aligned}
@@ -112,8 +112,8 @@ $$
 
 $$
 \begin{aligned}
-(a = \prod_{i=1}^n c_i^{\alpha_i}) \land ([a] = [t]) \leftrightarrow \Delta_a = A \alpha = \Delta_t \\
-(b = \prod_{i=1}^n c_i^{\beta_i}) \land ([b] = [y]) \leftrightarrow \Delta_b = A \beta = \Delta_y \\
+(a = \prod_{i=1}^n c_i^{\alpha_i}) \land ([a] = [t]) \iff \Delta_a = A \alpha = \Delta_t \\
+(b = \prod_{i=1}^n c_i^{\beta_i}) \land ([b] = [y]) \iff \Delta_b = A \beta = \Delta_y \\
 A = [\Delta_{c_1}, \dots, \Delta_{c_n}] \in \mathcal M_{m\le n} \\
 \vec \alpha = [\alpha_1, \dots, \alpha_n] \\
 \vec \beta = [\beta_1, \dots, \beta_n] \\
@@ -134,7 +134,7 @@ $$
 
 $$
 \begin{aligned}
-(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \rightarrow \bar y = \phi(\bar t, \mu_1, \dots, \mu_m) \\
+(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar y = \phi(\bar t, \mu_1, \dots, \mu_m) \\
 [\mu] = 1 \\
 t, y, = \text{variable} \\
 a, b = \text{scaling factor} \\

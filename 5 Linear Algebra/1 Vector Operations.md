@@ -46,7 +46,7 @@ $$
 
 $$
 \begin{aligned}
-\vec x = \vec y \leftrightarrow [x_1, ..., x_n] = [y_1, ..., y_n] \\
+\vec x = \vec y \iff [x_1, ..., x_n] = [y_1, ..., y_n] \\
 \vec x, \vec y = \text{vector} \\
 x, y = \text{coordinate}
 \end{aligned}
@@ -130,10 +130,10 @@ $$
 
 $$
 \begin{aligned}
-c > 1 \rightarrow (+\Delta) ||\vec x || \\
-0 < c < 1 \rightarrow (-\Delta) ||\vec x || \\
-c < 0 \rightarrow (-)||\vec x|| \\
-|c| \rightarrow ||c\vec x ||
+c > 1 \implies (+\Delta) ||\vec x || \\
+0 < c < 1 \implies (-\Delta) ||\vec x || \\
+c < 0 \implies (-)||\vec x|| \\
+|c| \implies ||c\vec x ||
 \end{aligned}
 $$
 
@@ -147,7 +147,7 @@ $$
 
 $$
 \begin{aligned}
-\vec x \parallel \vec y \leftrightarrow \exists c: \vec x = c\vec y \\
+\vec x \parallel \vec y \iff \exists c: \vec x = c\vec y \\
 \vec x, \vec y = \text{vector} \\
 c = \text{scalar}
 \end{aligned}
@@ -163,7 +163,7 @@ $$
 
 $$
 \begin{aligned}
-c\vec x = \vec 0 \rightarrow (c = 0) \lor (\vec x = \vec 0)
+c\vec x = \vec 0 \implies (c = 0) \lor (\vec x = \vec 0)
 \end{aligned}
 $$
 

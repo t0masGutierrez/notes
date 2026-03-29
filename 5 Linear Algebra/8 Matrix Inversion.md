@@ -28,7 +28,7 @@ I = \begin{bmatrix}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
 0 & 0 & 1 
-\end{bmatrix} \leftrightarrow \forall (i \ne j): (a_{ij} = 0) \land \forall (i = j): (a_{ij} = 1) \\
+\end{bmatrix} \iff \forall (i \ne j): (a_{ij} = 0) \land \forall (i = j): (a_{ij} = 1) \\
 i = \text{row index} \\
 j = \text{column index}
 \end{aligned}
@@ -54,7 +54,7 @@ $$
 
 $$
 \begin{aligned}
-(AB=I) \land (AC=I) \rightarrow B=C \\
+(AB=I) \land (AC=I) \implies B=C \\
 A = \text{matrix} \\
 B, C = \text{inverse matrix} \\
 I = \text{identity matrix}
@@ -119,7 +119,7 @@ $$
 
 $$
 \begin{aligned}
-A|I \rightarrow I|A^{-1} \\
+A|I \implies I|A^{-1} \\
 A = \text{matrix} \\
 I = \text{identity matrix} \\
 A^{-1} = \text{inverse matrix}
@@ -136,7 +136,7 @@ $$
 
 $$
 \begin{aligned}
-\exists A^{-1} \leftrightarrow \text{rank}(A)= n \\
+\exists A^{-1} \iff \text{rank}(A)= n \\
 A^{-1} = \text{inverse matrix} \\
 A = \text{matrix} \\
 n = \text{number of columns}

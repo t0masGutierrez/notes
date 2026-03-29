@@ -234,9 +234,9 @@ $$
 
 $$
 \begin{aligned}
-(a, b] \rightarrow \int_a^b f(x)dx = \lim_{c \rightarrow b^-} \int_a^c f(x)dx \\
-[a, b) \rightarrow \int_a^b f(x)dx = \lim_{c \rightarrow a^+} \int_c^b f(x)dx \\
-\exists c[a, b] \rightarrow \int_a^b f(x)dx = \lim_{c \rightarrow b^-} \int_a^c f(x)dx + \lim_{c \rightarrow a^+} \int_c^b f(x)dx
+(a, b] \implies \int_a^b f(x)dx = \lim_{c \rightarrow b^-} \int_a^c f(x)dx \\
+[a, b) \implies \int_a^b f(x)dx = \lim_{c \rightarrow a^+} \int_c^b f(x)dx \\
+\exists c[a, b] \implies \int_a^b f(x)dx = \lim_{c \rightarrow b^-} \int_a^c f(x)dx + \lim_{c \rightarrow a^+} \int_c^b f(x)dx
 \end{aligned}
 $$
 

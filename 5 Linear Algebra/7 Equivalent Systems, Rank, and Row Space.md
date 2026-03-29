@@ -23,7 +23,7 @@
 
 $$
 \begin{aligned}
-\langle i\rangle \rightarrow (\frac{1}{c})\langle i\rangle  \\
+\langle i\rangle \implies (\frac{1}{c})\langle i\rangle  \\
 i = \text{row index} \\
 c = \text{scalar}
 \end{aligned}
@@ -39,7 +39,7 @@ $$
 
 $$
 \begin{aligned}
-\langle i\rangle \rightarrow \langle i\rangle - c\langle j\rangle \\
+\langle i\rangle \implies \langle i\rangle - c\langle j\rangle \\
 i, j = \text{row index} \\
 c = \text{scalar}
 \end{aligned}
@@ -55,7 +55,7 @@ $$
 
 $$
 \begin{aligned}
-\langle j \rangle \leftrightarrow \langle i \rangle \\
+\langle j \rangle \iff \langle i \rangle \\
 i, j = \text{row index} \\
 \end{aligned}
 $$
@@ -71,8 +71,8 @@ $$
 
 $$
 \begin{aligned}
-C \sim D \rightarrow D \sim C \\
-(C \sim D) \land (D \sim E) \rightarrow C \sim E
+C \sim D \implies D \sim C \\
+(C \sim D) \land (D \sim E) \implies C \sim E
 \end{aligned}
 $$
 
@@ -86,7 +86,7 @@ $$
 
 $$
 \begin{aligned}
-C|D \sim A|B \rightarrow CX = D \sim AX=B \\
+C|D \sim A|B \implies CX = D \sim AX=B \\
 A, C = \text{coefficient matrix} \\
 D, B = \text{constant matrix} \\
 X = \text{variable matrix}
@@ -103,7 +103,7 @@ $$
 
 $$
 \begin{aligned}
- A \sim B \leftrightarrow \text{RREF}(A) = \text{RREF}(B) \\
+ A \sim B \iff \text{RREF}(A) = \text{RREF}(B) \\
  A, B = \text{matrix} \\
  \text{RREF} = \text{reduced row echelon form}
 \end{aligned}
@@ -132,7 +132,7 @@ $$
 
 $$
 \begin{aligned}
-\exists y \in \text{RREF}(A | \vec x) \rightarrow \vec x \in \text{Row}(A) \\
+\exists y \in \text{RREF}(A | \vec x) \implies \vec x \in \text{Row}(A) \\
 y = \text{solution} \\
  \text{RREF} = \text{reduced row echelon form} \\
 A = \text{coefficient matrix} \\
@@ -169,8 +169,8 @@ $$
 
 $$
 \begin{aligned}
-(a \in \text{Row}P) \land (\forall p \in P: p \in \text{Row}Q) \rightarrow a \in \text{Row}(Q) \\
-A \sim B \rightarrow \text{Row}(A) = \text{Row}(B)
+(a \in \text{Row}P) \land (\forall p \in P: p \in \text{Row}Q) \implies a \in \text{Row}(Q) \\
+A \sim B \implies \text{Row}(A) = \text{Row}(B)
 \end{aligned}
 $$
 

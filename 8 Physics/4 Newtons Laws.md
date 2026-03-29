@@ -49,7 +49,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = \sum_i \overrightarrow F_i \\
+\vec F_{net} = \sum_i \vec F_i \\
 F = \text{force}
 \end{aligned}
 $$
@@ -112,7 +112,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = 0 \rightarrow \frac{d\overrightarrow v}{dt} = 0 \\
+\vec F_{net} = 0 \implies \frac{d\vec v}{dt} = 0 \\
 F = \text{force} \\
 v = \text{velocity} \\
 t = \text{time}
@@ -129,7 +129,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{net} = m\overrightarrow a =
+\vec F_{net} = m\vec a =
 \begin{cases}
 F_x = ma_x \\
 F_y = ma_y
@@ -152,7 +152,7 @@ $$
 
 $$
 \begin{aligned}
-\overrightarrow F_{AB} = -\overrightarrow F_{BA} \\
+\vec F_{AB} = -\vec F_{BA} \\
 F = \text{force}
 \end{aligned}
 $$

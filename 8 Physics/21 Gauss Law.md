@@ -6,7 +6,7 @@
 
 $$
 \begin{aligned}
-\Phi = \overrightarrow E \cdot \overrightarrow A = EA \cos(\theta) \\
+\Phi = \vec E \cdot \vec A = EA \cos(\theta) \\
 E = \text{electric field} \\
 A = \text{area} \\
 \theta = \text{angular position}
@@ -24,7 +24,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi = \int_{A_1}^{A_2}\overrightarrow E \cdot d\overrightarrow A \\
+\Phi = \int_{A_1}^{A_2}\vec E \cdot d\vec A \\
 E = \text{electric field} \\
 A = \text{area}
 \end{aligned}
@@ -40,7 +40,7 @@ $$
 
 $$
 \begin{aligned}
-\Phi = \oint_{A_1}^{A_2} \overrightarrow E \cdot d\overrightarrow A \\
+\Phi = \oint_{A_1}^{A_2} \vec E \cdot d\vec A \\
 E = \text{electric field} \\
 A = \text{area}
 \end{aligned}
@@ -62,7 +62,7 @@ $$
 
 $$
 \begin{aligned}
-\pm \Phi = \oint_{A_1}^{A_2}\overrightarrow E \cdot d\overrightarrow A = \frac{\pm Q_{enc}}{\epsilon_0} \\
+\pm \Phi = \oint_{A_1}^{A_2}\vec E \cdot d\vec A = \frac{\pm Q_{enc}}{\epsilon_0} \\
 E = \text{electric field} \\
 A = \text{area} \\
 Q = \text{electric charge} \\

@@ -230,9 +230,9 @@ $$
 
 $$
 \begin{aligned}
-b(t) = \exp(ct) \rightarrow y_p = A\exp(ct) \\
-b(t) = \sin ct \lor \cos ct \rightarrow y_p = A_0\cos(ct) + A_1\sin(ct) \\
-b(t) = P_n(t) \rightarrow y_p = A_0 + A_1t + \dots + A_nt^n \\
+b(t) = \exp(ct) \implies y_p = A\exp(ct) \\
+b(t) = \sin ct \lor \cos ct \implies y_p = A_0\cos(ct) + A_1\sin(ct) \\
+b(t) = P_n(t) \implies y_p = A_0 + A_1t + \dots + A_nt^n \\
 \end{aligned}
 $$
 

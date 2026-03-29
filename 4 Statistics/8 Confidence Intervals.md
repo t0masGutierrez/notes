@@ -126,9 +126,9 @@ $$
 
 $$
 \begin{aligned}
-T < c^*_{\leftarrow} \rightarrow \text{reject} \\
-T > |c^*_2| \rightarrow \text{reject} \\
-T > c^*_{\rightarrow} \rightarrow \text{reject} \\
+T < c^*_{\leftarrow} \implies \text{reject} \\
+T > |c^*_2| \implies \text{reject} \\
+T > c^*_{\rightarrow} \implies \text{reject} \\
 \end{aligned}
 $$
 

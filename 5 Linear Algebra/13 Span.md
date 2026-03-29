@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-\vec v = c_1\vec v_1 + \dots + c_k\vec v_k \leftrightarrow \exists S' \subset S \subset \mathcal V \\
+\vec v = c_1\vec v_1 + \dots + c_k\vec v_k \iff \exists S' \subset S \subset \mathcal V \\
 S' = \{\vec v_1, \dots , \vec v_k\} \\
 S\prime = \text{finite subset} \\
 S = \text{infinite subset} \\
@@ -89,7 +89,7 @@ $$
 \begin{aligned}
 S \subseteq \text{Span}(S) \\
 \text{Span}(S) \le \mathcal V \\
-(S \subseteq \mathcal W) \land (\mathcal W \le \mathcal V) \rightarrow \text{Span}(S) \subseteq \mathcal W \\
+(S \subseteq \mathcal W) \land (\mathcal W \le \mathcal V) \implies \text{Span}(S) \subseteq \mathcal W \\
 \text{Span}(S) = \bigcap \{\mathcal W \le \mathcal V| S \subseteq \mathcal W \}
 \end{aligned}
 $$
@@ -104,7 +104,7 @@ $$
 
 $$
 \begin{aligned}
-(S_1, S_2 \subseteq \mathcal V) \land (S_1 \subseteq S_2) \rightarrow \text{Span}(S_1) \subseteq \text{Span}(S_2) \\
+(S_1, S_2 \subseteq \mathcal V) \land (S_1 \subseteq S_2) \implies \text{Span}(S_1) \subseteq \text{Span}(S_2) \\
 S = \text{subset} \\
 \mathcal V = \text{vector space} \\
 \end{aligned}
@@ -120,7 +120,7 @@ $$
 
 $$
 \begin{aligned}
-S = \set{\vec a_1, \dots, \vec a_n} \rightarrow \text{Row}(A) = \text{Span}(S) \\
+S = \set{\vec a_1, \dots, \vec a_n} \implies \text{Row}(A) = \text{Span}(S) \\
 \vec a = \text{row vector}
 \end{aligned}
 $$

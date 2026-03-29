@@ -7,7 +7,7 @@
 
 $$
 \begin{aligned}
-f: A \to B \\
+f: A \rightarrow B \\
 f(a) = b
 \end{aligned}
 $$
@@ -47,7 +47,7 @@ $$
 
 $$
 \begin{aligned}
-f = g \leftrightarrow \forall a \forall b [f(a) = g(b)]
+f = g \iff \forall a, \forall b: f(a) = g(b)
 \end{aligned}
 $$
 
@@ -62,7 +62,7 @@ $$
 
 $$
 \begin{aligned}
-\forall a \forall b [f(a) = f(b) \to a = b]
+\forall a, \forall b: f(a) = f(b) \implies a = b
 \end{aligned}
 $$
 
@@ -76,8 +76,8 @@ $$
 
 $$
 \begin{aligned}
-\forall a \forall b (a < b) \to f(a) \le f(b) \\
-\forall a \forall b (a > b) \to f(a) \ge f(b)
+\forall a, \forall b: a < b \implies f(a) \le f(b) \\
+\forall a,\forall b: a > b \implies f(a) \ge f(b)
 \end{aligned}
 $$
 
@@ -92,7 +92,7 @@ $$
 
 $$
 \begin{aligned}
-\forall b \exists a [f(a) = b]
+\forall b, \exists a: f(a) = b
 \end{aligned}
 $$
 
@@ -107,7 +107,7 @@ $$
 
 $$
 \begin{aligned}
-\forall b \exists !a[f(a) = b]
+\forall b, \exists !a: f(a) = b
 \end{aligned}
 $$
 
@@ -141,8 +141,8 @@ $$
 
 $$
 \begin{aligned}
-\forall (a \in A)(f^{-1} \circ f)(a) = f^{-1}(b) = a \\
-\forall (b \in B)(f \circ f^{-1})(b) = f(a) = b
+\forall a \in A: (f^{-1} \circ f)(a) = f^{-1}(b) = a \\
+\forall b \in B:(f \circ f^{-1})(b) = f(a) = b
 \end{aligned}
 $$
 

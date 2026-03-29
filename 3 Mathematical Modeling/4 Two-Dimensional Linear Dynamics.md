@@ -58,8 +58,8 @@ $$
 $$
 \begin{aligned}
 \forall (x_0, y_0) \in \mathbb R, \exists t \in (T_0, T_1): (x, y)(t) \in D = \{(x, y) \in \mathbb R| \exists! (\frac{dx}{dt}, \frac{dy}{dt})\} \\
-(t \le T_0) \lor (t \ge T_1) \rightarrow (x, y)(t) \not\in D = \{(x, y) \in \mathbb R| \exists! (\frac{dx}{dt}, \frac{dy}{dt})\} \\
-(x_0, y_0) \ne (\hat x_0, \hat y_0) \rightarrow \forall t \in (T_0, T_1): (x, y)(t) \ne (\hat x, \hat y)(t)
+(t \le T_0) \lor (t \ge T_1) \implies (x, y)(t) \not\in D = \{(x, y) \in \mathbb R| \exists! (\frac{dx}{dt}, \frac{dy}{dt})\} \\
+(x_0, y_0) \ne (\hat x_0, \hat y_0) \implies \forall t \in (T_0, T_1): (x, y)(t) \ne (\hat x, \hat y)(t)
 \end{aligned}
 $$
 
@@ -138,8 +138,8 @@ $$
 
 $$
 \begin{aligned}
-\forall (x, y) \in D: \frac{dE}{dt}(x, y)(t) = 0 \rightarrow E(x, y)(t) = C \\
-\frac{\partial}{\partial x}(\phi f) = \frac{\partial}{\partial y}(-\phi g) \rightarrow (\frac{\partial E}{\partial x} = -\phi g) \land (\frac{\partial E}{\partial y} = \phi f) \\
+\forall (x, y) \in D: \frac{dE}{dt}(x, y)(t) = 0 \implies E(x, y)(t) = C \\
+\frac{\partial}{\partial x}(\phi f) = \frac{\partial}{\partial y}(-\phi g) \implies (\frac{\partial E}{\partial x} = -\phi g) \land (\frac{\partial E}{\partial y} = \phi f) \\
 x, y = \text{solution} \\
 t = \text{time} \\
 D = \text{domain} \\
@@ -159,7 +159,7 @@ $$
 
 $$
 \begin{aligned}
-\forall t \ge 0: (x, y)(t) = (x_*, y_*) \leftrightarrow f(x_*, y_*) = g(x_*, y_*) = 0 \\
+\forall t \ge 0: (x, y)(t) = (x_*, y_*) \iff f(x_*, y_*) = g(x_*, y_*) = 0 \\
 x, y = \text{solution} \\
 t = \text{time} \\
 x_*, y_* = \text{equilibrium point} 
@@ -192,7 +192,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
 \land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -212,7 +212,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
 \land \exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -267,7 +267,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
 \land \forall x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -287,7 +287,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \rightarrow (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_0, y_0) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
 \land \exists x_0, y_0 \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_0, y_0 = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -344,7 +344,7 @@ $$
 
 $$
 \begin{aligned}
-(\frac{dx}{dt} = ax + by) \land (\frac{dy}{dt} = cx + dy) \rightarrow \frac{dv}{dt} = Av \\
+(\frac{dx}{dt} = ax + by) \land (\frac{dy}{dt} = cx + dy) \implies \frac{dv}{dt} = Av \\
 A = \begin{bmatrix} 
 a & b \\
 c & d \\
@@ -366,7 +366,7 @@ $$
 
 $$
 \begin{aligned}
-\det(A) \ne 0 \rightarrow \#v_* = 1 \\
+\det(A) \ne 0 \implies \#v_* = 1 \\
 A = \text{coefficient matrix} \\
 v_* = \text{equilibrium point}
 \end{aligned}
@@ -382,7 +382,7 @@ $$
 
 $$
 \begin{aligned}
-\det(A) = 0 \rightarrow \#v_* = \infty \\
+\det(A) = 0 \implies \#v_* = \infty \\
 A = \text{coefficient matrix} \\
 v_* = \text{equilibrium point}
 \end{aligned}
@@ -423,9 +423,9 @@ $$
 
 $$
 \begin{aligned}
-\lambda_1, \lambda_2 < 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
-(\lambda_1 > 0) \land (\lambda_2 < 0) \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
-\lambda_1, \lambda_2 > 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* 
+\lambda_1, \lambda_2 < 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
+(\lambda_1 > 0) \land (\lambda_2 < 0) \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda_1, \lambda_2 > 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* 
 \end{aligned}
 $$
 
@@ -438,8 +438,8 @@ $$
 
 $$
 \begin{aligned}
-\hat u_1 \ne \hat u_2 \rightarrow v(t) = e^{\lambda t}(C_1\hat u_1 + C_2\hat u_2) \\
-\hat u_1 = \hat u_2 \rightarrow v(t) = C_1 e^{\lambda t}\hat u + C_2e^{\lambda t}(\hat ut + \hat w) \land (A - \lambda I)\hat w = \hat u \\
+\hat u_1 \ne \hat u_2 \implies v(t) = e^{\lambda t}(C_1\hat u_1 + C_2\hat u_2) \\
+\hat u_1 = \hat u_2 \implies v(t) = C_1 e^{\lambda t}\hat u + C_2e^{\lambda t}(\hat ut + \hat w) \land (A - \lambda I)\hat w = \hat u \\
 v = [x, y] \\
 A = \begin{bmatrix} 
 a & b \\
@@ -466,8 +466,8 @@ $$
 
 $$
 \begin{aligned}
-\lambda < 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
-\lambda > 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda < 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
+\lambda > 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
 \end{aligned}
 $$
 
@@ -481,7 +481,7 @@ $$
 $$
 \begin{aligned}
 v(t) = C_1e^{\alpha t}(\gamma \cos\beta t - \lambda \sin\beta t) + C_2e^{\alpha t}(\gamma \cos\beta t + \lambda \sin\beta t) \\
-\alpha = 0 \rightarrow v(t) = v_0 (\cos\beta t + \frac{A \sin \beta t}{\beta}) \\
+\alpha = 0 \implies v(t) = v_0 (\cos\beta t + \frac{A \sin \beta t}{\beta}) \\
 v = \text{solution} \\
 t = \text{time} \\
 \alpha = \text{real eigenvalue part} \\
@@ -505,9 +505,9 @@ $$
 
 $$
 \begin{aligned}
-\alpha < 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
-\alpha = 0 \rightarrow \exists v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
-\alpha > 0 \rightarrow \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* 
+\alpha < 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) = v_* \\
+\alpha = 0 \implies \exists v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\alpha > 0 \implies \forall v_0 \in \mathbb R^2: \lim_{t \rightarrow \infty} v(t) \ne v_* 
 \end{aligned}
 $$
 
