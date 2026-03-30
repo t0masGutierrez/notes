@@ -28,9 +28,9 @@ $$
 \begin{aligned}
 \lim_{x \rightarrow x_0} f(x) = L \iff \forall \set{a_n} \in S: \lim_{n\rightarrow \infty} a_n = x_0 \implies \lim_{n\rightarrow \infty} f(a_n) = L \\
 f: S \subset X \rightarrow Y \\
+x_0 = \text{sequential limit} \\
 L = \text{limit} \\
 \set{a_n} = \text{sequence} \\
-x_0 = \text{sequential limit} \\
 X, Y = \text{metric space} 
 \end{aligned}
 $$
@@ -67,7 +67,7 @@ $$
 - double range subset
 - double inverse range subset
 - range union
-- inverse complement
+- inverse range complement
 
 ---
 ### set property formula
@@ -76,8 +76,8 @@ $$
 \begin{aligned}
 (f: A \subset X \rightarrow Y) \implies f(A) = \set{f(x) \in Y| x \in A} \\
 (f: X \rightarrow B \subset Y) \implies f^{-1}(B) = \set{x \in X| f(x) \in B} \\
-A \subset A' \implies f(A') \subset f(A) \\
-B \subset B' \implies f^{-1}(B') \subset f^{-1}(B) \\
+A' \subset A \implies f(A') \subset f(A) \\
+B' \subset B \implies f^{-1}(B') \subset f^{-1}(B) \\
 A \subset f^{-1}\circ f(A) \\
 f\circ f^{-1}(B) \subset B \\
 f(\bigcup_i A_i) = \bigcup_i f(A_i) \\
@@ -99,8 +99,8 @@ $$
 f: S \subset X \rightarrow Y \\
 d = \text{metric} \\
 x_0 = \text{continuous point} \\
-X, Y = \text{metric space} \\
-f = \text{continuous function}
+f = \text{continuous function} \\
+X, Y = \text{metric space} 
 \end{aligned}
 $$
 
@@ -110,7 +110,7 @@ $$
 - continuous function at input point approaches continuous function at limit point as input point approaches limit point
 
 ---
-### limit continuity formula
+### limit continuity property formula
 
 $$
 \begin{aligned}
@@ -132,7 +132,7 @@ $$
 
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \iff S \subset Y, \forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S \\
+\lim_{x\rightarrow x_0}f(x) = f(x_0) \iff \forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S \\
 \implies \forall x \in f^{-1}(S), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(S) \\
 f:  X \rightarrow S \subset Y \\
 x_0 = \text{limit point} \\
@@ -174,10 +174,10 @@ $$
 
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(f(x)) = g(f(x_0)) \implies \lim_{x\rightarrow x_0}(f \circ g)(x) = (f \circ g)(x_0) \\
+\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(f(x)) = g(f(x_0)) \implies \lim_{x\rightarrow x_0}(g \circ f)(x) = (f \circ g)(x_0) \\
 f: X \rightarrow Y \\
 g: Y \rightarrow Z \\
-f \circ g: X \rightarrow Z \\
+g \circ f: X \rightarrow Z \\
 x_0 = \text{limit point} \\
 f, g = \text{continuous function} \\
 X, Y, Z = \text{metric space} 
@@ -207,7 +207,7 @@ $$
 ---
 ### vector continuity property
 
-- continuous vector equal coordinatewise continuity of function
+- continuous vector equal coordinatewise continuous function
 
 ---
 ### vector continuity property formula
@@ -217,8 +217,28 @@ $$
 \forall i \le k: \lim_{x\rightarrow x_0}f_i(x) = f_i(x_0) \\
 \vec f:X \rightarrow \mathbb R^k = [f_1(x), \dots, f_k(x)] \\
 x_0 = \text{limit point} \\
-\vec f = \text{continuous vector} \\
+f = \text{continuous function} \\
 X, Y = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### compact continuity property
+
+- continuous function of compact domain equal compact range
+
+---
+### compact continuity property formula
+
+$$
+\begin{aligned}
+\forall \set{A_i}_{i\in I} \subset Y, \exists \{A_{i_j}\}_{j=1}^n \subset \{A_i\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_j} \subset Y \\
+f: X \rightarrow Y \\
+A = \text{open set} \\
+\set{A} = \text{open cover} \\
+I, J = \text{index set} \\
+f = \text{continuous function} \\
+X, f(X) = \text{compact set}
 \end{aligned}
 $$
 
@@ -240,26 +260,6 @@ X = \text{metric space}
 $$
 
 ---
-### compact continuity property
-
-- continuous function of compact domain equal compact range
-
----
-### compact continuity property formula
-
-$$
-\begin{aligned}
-\forall \set{A_i}_{i\in I} \subset Y, \exists \{A_{i_j}\}_{j=1}^n \subset \{A_i\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_j} \subset Y \\
-f: X \rightarrow Y \\
-f = \text{continuous function} \\
-X, f(X) = \text{compact set} \\
-A = \text{open set} \\
-\set{A} = \text{open cover} \\
-I, J = \text{index set}
-\end{aligned}
-$$
-
----
 ### closed bounded continuity property
 
 - continuous function of compact domain equal closed bounded range of k-dimensional real numbers and bounded function of k-dimensional real numbers
@@ -270,29 +270,30 @@ $$
 
 $$
 \begin{aligned}
-f(X)' \subset f(X) \subset \mathbb R^k \land \exists M \in \mathbb R: |\vec f(X)| \\
+f(X)' \subset f(X) \subset \mathbb R^k \land \exists M \in \mathbb R: |f(X)| \le M \\
 f: X \rightarrow \mathbb R^k \\
 f = \text{continuous function} \\
 f = \text{bounded function} \\
+f(x_0) = \text{minimum} \\
+f(x_1) = \text{maximum} \\
 X = \text{compact set} \\
 f(X) = \text{closed bounded set} 
 \end{aligned}
 $$
 
 ---
-### complete continuity property
+### extreme continuity property
 
 - for every continuous function of compact domain there exists supremum and infimum
 - continuous bounded function of noncompact domain equal incomplete function of real numbers
 
 ---
-### complete continuity property formula
+### extreme continuity property formula
 
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \implies \exists \sup f(X), \inf f(X) \in  Y \\
+\exists \sup f(X), \inf f(X) \in  Y: \inf f(X) \le f(X) \le \sup f(X) \\
 f: X \rightarrow Y \\
-x_0 = \text{limit point} \\
 f = \text{continuous function} \\
 X = \text{compact set} \\
 Y = \text{metric space} \\
@@ -311,9 +312,9 @@ $$
 \begin{aligned}
 \forall f(x), \exists f^{-1}(y): \lim_{y\rightarrow y_0}f^{-1}(y) = f^{-1}(y_0) \\
 f: X \rightarrow Y \\
-y_0 = \text{limit point} \\
 f = \text{injective function} \\
 f, f^{-1} = \text{continuous function} \\
+y_0 = \text{limit point} \\
 X = \text{compact set} \\
 Y = \text{metric space}
 \end{aligned}
@@ -322,7 +323,7 @@ $$
 ---
 ### homeomorphism 
 
-- bijective continuous function with continuous inverse function equal homeomorphism
+- bijective continuous function with continuous inverse function
 
 ---
 ### homeomorphism formula
@@ -437,9 +438,10 @@ $$
 \begin{aligned}
 \not\exists A, B \in Y: f(X) = A \cup B \\
 f: X \rightarrow Y \\
+A, B = \text{separated set} \\
+Y = \text{metric space} \\
 f = \text{continuous function} \\
-X, f(X) = \text{connected set} \\
-Y = \text{metric space} 
+X, f(X) = \text{connected set} 
 \end{aligned}
 $$
 
@@ -453,26 +455,25 @@ $$
 
 $$
 \begin{aligned}
-S \subset \mathbb R, \forall x, y \in S: x < y \rightarrow [x, y] \subset S \\
+S \subset \mathbb R, \forall x, y \in S: x < y \implies [x, y] \subset S \\
 S = \text{connected set}
 \end{aligned}
 $$
 
 ---
-### intermediate value property
+### intermediate connected property
 
 - continuous function on interval contain every intermediate value on interval
 
 ---
-### intermediate value property formula
+### intermediate connected property formula
 
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = f(c) \\
+f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = f(c) \\
 f: [a, b] \rightarrow Y \\
-x_0 = \text{limit point} \\
-Y = \text{metric space} \\
-f = \text{continuous function}
+f = \text{continuous function} \\
+Y = \text{metric space} 
 \end{aligned}
 $$
 
@@ -528,8 +529,8 @@ $$
 x_0, x_1 = \text{coordinate} \\
 S  = \text{connected set} \\
 \gamma = \text{continuous function} \\
-X = \text{metric space} \\
-A, B = \text{separated set}
+A, B = \text{separated set} \\
+X = \text{metric space} 
 \end{aligned}
 $$
 
