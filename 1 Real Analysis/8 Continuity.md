@@ -243,17 +243,34 @@ X, f(X) = \text{compact set}
 $$
 
 ---
-### bounded
+### locally bounded
 
-- every point of bounded function within finite distance
+- every domain of locally bounded function within finite distance
 
 ---
-### bounded formula
+### locally bounded formula
 
 $$
 \begin{aligned}
-\exists M \in \mathbb R, \forall x \in S: |\vec f(x)| \le M \\
-\vec f: S \subset X \rightarrow \mathbb R^k \\
+\forall x_0 \in X, \exists \epsilon > 0, \exists M \in \mathbb R: d(x, x_0) < \epsilon \implies f(x) \le M \\
+f: S \subset X \rightarrow \mathbb R \\
+f = \text{locally bounded function} \\
+X = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### globally bounded
+
+- every codomain of bounded function within finite distance
+
+---
+### globally bounded formula
+
+$$
+\begin{aligned}
+\exists M \in \mathbb R, \forall x \in S: |f(x)| \le M \\
+f: S \subset X \rightarrow \mathbb R \\
 f = \text{bounded function} \\
 X = \text{metric space} 
 \end{aligned}
@@ -412,7 +429,7 @@ $$
 ---
 ### disconnected
 
-- there exists union of separated set
+- there exists union of nonempty separated set
 
 ---
 ### disconnected formula

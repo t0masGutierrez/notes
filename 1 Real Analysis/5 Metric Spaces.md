@@ -17,7 +17,8 @@ $$
 - negative
 - multiplication
 - addition
-- absolute addition
+- subtraction
+- absolute subtraction
 - subtraction
 
 ---
@@ -28,7 +29,8 @@ $$
 |-x| = |x| \\
 |x \cdot y| = (|x|)(|y|) \\
 |x + y| \le |x| + |y| \\
-||x| + |y|| \le |x - y| \\
+|x - y| \le |x| + |y| \\
+||x| - |y|| \le |x - y| \\
 |x - y| \le |x| + |y| \\
 \end{aligned}
 $$
