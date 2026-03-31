@@ -88,7 +88,7 @@ $$
 ---
 ### continuity
 
-- for every epsilon distance between continuous function at point there exists delta distance between input at point
+- for every epsilon distance between point of continuous function there exists delta distance between input point
 
 ---
 ### continuity formula
@@ -252,7 +252,7 @@ $$
 
 $$
 \begin{aligned}
-\forall x_0 \in X, \exists \epsilon > 0, \exists M \in \mathbb R: d(x, x_0) < \epsilon \implies f(x) \le M \\
+\forall x_0 \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_0) < \delta \implies |f(x)| \le M \\
 f: S \subset X \rightarrow \mathbb R \\
 f = \text{locally bounded function} \\
 X = \text{metric space} 
@@ -373,7 +373,7 @@ $$
 ---
 ### uniform continuity
 
-- for every epsilon distance between continuous function at every point there exists delta distance between every point
+- for every epsilon distance between every point of continuous function there exists delta distance between every input point
 
 ---
 ### uniform continuity formula

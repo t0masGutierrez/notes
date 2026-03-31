@@ -7,8 +7,8 @@
 
 $$
 \begin{aligned}
-\vec x + \vec y \in \mathcal V \\
-c \vec x \in \mathcal V
+\vec x, \vec y \in \mathcal V \implies \vec x + \vec y \in \mathcal V \\
+\vec x \in \mathcal V \implies c \vec x \in \mathcal V
 \end{aligned}
 $$
 

@@ -12,11 +12,11 @@
 
 $$
 \begin{aligned}
-\lambda \iff \exists\vec x: A\vec x = \lambda \vec x \\
+\lambda \iff A\vec x = \lambda \vec x \\
 \vec x \ne 0 \\
 \lambda = \text{eigenvalue} \\
 \vec x = \text{eigenvector} \\
-A = \text{square matrix}
+A = \text{matrix}
 \end{aligned}
 $$
 
@@ -30,7 +30,7 @@ $$
 
 $$
 \begin{aligned}
-\vec x \iff A\vec x = \lambda \vec x \\
+\vec x \iff (A - \lambda I)\vec x = 0 \\
 \vec x \ne 0 \\
 \lambda = \text{eigenvalue} \\
 \vec x = \text{eigenvector} \\
