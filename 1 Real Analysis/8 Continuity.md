@@ -291,8 +291,6 @@ f(X)' \subset f(X) \subset \mathbb R^k \land \exists M \in \mathbb R: |f(X)| \le
 f: X \rightarrow \mathbb R^k \\
 f = \text{continuous function} \\
 f = \text{bounded function} \\
-f(x_0) = \text{minimum} \\
-f(x_1) = \text{maximum} \\
 X = \text{compact set} \\
 f(X) = \text{closed bounded set} 
 \end{aligned}
