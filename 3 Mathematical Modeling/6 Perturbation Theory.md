@@ -207,7 +207,11 @@ $$
 ---
 ### regular algebraic equation
 
-- series solution equal solution of algebraic equation
+- solve 0th order variable
+- substitute series solution into variable
+- collect coefficients of ith order epsilon
+- solve 1st order variable
+- ith order variable equal coefficient of ith order epsilon 
 ---
 ### regular algebraic equation formula
 
@@ -223,12 +227,12 @@ x = \text{solution} \\
 $$
 
 ---
-### algebraic property
+### regular algebraic property
 
 - for every regular, analytic algebraic equation there exists unique analytic solution
 
 ---
-### algebraic property formula
+### regular algebraic property formula
 
 $$
 \begin{aligned}
@@ -294,12 +298,12 @@ u(t, \epsilon ) = \text{solution} \\
 $$
 
 ---
-### differential property
+### regular differential property
 
 - for every regular, analytic differential equation there exists unique analytic solution
 
 ---
-### differential property formula
+### regular differential property formula
 
 $$
 \begin{aligned}
@@ -330,14 +334,14 @@ $$
 ### poincare-lindstedt
 
 - rescale time
-- solve initial condition
+- solve 0th order variable
 - expand frequency in powers of epsilon
 - expand solution in powers of epsilon
-- substitute series solution
-- collect coefficients of epsilon powers
-- solve 1st order solution
-- eliminate secularity with 1st frequency order such that coefficient of resonant term equal zero
-- repeat for every $n$th order epsilon
+- substitute series solution into variable
+- collect coefficients of ith order epsilon
+- solve 1st order variable
+- eliminate secularity with 1st order frequency such that coefficient of resonant term equal zero
+- ith order variable equal coefficient of ith order epsilon
 - approximate periodic solution of nonlinear differential equation
 
 ---
@@ -350,6 +354,32 @@ x''(t) + x(t) = \epsilon f(t, x, x'') \\
 \tau = \omega(\epsilon)t \\
 \omega(\epsilon) = \sum_{n=1}^{\infty} \omega_n\epsilon^n \\
 x(t) = \sum_{n=1}^{\infty} x_n(\tau)\epsilon^n
+\end{aligned}
+$$
+
+---
+### singular algebraic equation
+
+- solve regular algebraic equation
+- change of variable
+- substitute change of variable
+- solve epsilon exponent such that two dominant term equal exponent
+- divide leading coefficient and remaining epsilon order equal epsilon order of series solution
+- solve regular algebraic equation
+- inverse change of variable
+---
+### singular algebraic equation formula
+
+$$
+\begin{aligned}
+F(x, \epsilon) = 0 \\
+x(\epsilon = 0) = x_0 \\
+0 \le \epsilon \ll 1 \\
+x = \epsilon^{-n}y \\
+F = \text{regular algebraic equation} \\
+x = \text{solution} \\
+y = \text{change of variable} \\
+\epsilon = \text{parameter}
 \end{aligned}
 $$
 

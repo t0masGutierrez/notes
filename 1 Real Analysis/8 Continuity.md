@@ -252,7 +252,7 @@ $$
 
 $$
 \begin{aligned}
-\forall x_0 \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_0) < \delta \implies |f(x)| \le M \\
+\forall x_0 \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_0) < \delta \implies \forall x \in S: |f(x)| \le M \\
 f: S \subset X \rightarrow \mathbb R \\
 f = \text{locally bounded function} \\
 X = \text{metric space} 
@@ -378,7 +378,7 @@ $$
 
 $$
 \begin{aligned}
-\forall \epsilon > 0, \forall x_1, x_2 \in S: d(x_1, x_2) < \delta \implies d(f(x_1), f(x_2)) < \epsilon \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_1, x_2 \in S: d(x_1, x_2) < \delta \implies d(f(x_1), f(x_2)) < \epsilon \\
 f: S \subset X \rightarrow Y \\
 x_1, x_2 = \text{continuous point} \\
 f = \text{continuous function} \\
