@@ -6,7 +6,7 @@ SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9]
 LITERAL_HASH_PATTERN = re.compile(r"(?<!\\)#")
 
 def sanitize_math_text(text):
-    text = SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\1}", text)
+    text = SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\g<1>}", text)
     return LITERAL_HASH_PATTERN.sub(r"\\#", text)
 
 def sanitize_inline_math(line):
