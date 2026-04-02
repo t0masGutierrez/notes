@@ -5,17 +5,14 @@ import re
 INLINE_MATH_PATTERN = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
 SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9{])")
 
-
 def sanitize_math_text(text):
     return SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\g<1>}", text)
-
 
 def sanitize_inline_math(line):
     return INLINE_MATH_PATTERN.sub(
         lambda match: f"${sanitize_math_text(match.group(1))}$",
         line,
     )
-
 
 def is_heading_candidate(line):
     stripped = line.strip()
