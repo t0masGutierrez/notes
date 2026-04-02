@@ -1,13 +1,11 @@
 ### sampling variability
-
 - different samples from the same population have different sample statistics
 
 ---
 ### sampling variability formula
-
 $$
 \begin{aligned}
-\omega_1, \omega_2 \subset \Omega \implies T_1 \ne T_2 \\
+\omega_{1}, \omega_{2} \subset \Omega \implies T_{1} \ne T_{2} \\
 \omega = \text{sample} \\
 T = \text{sample statistic}
 \end{aligned}
@@ -15,15 +13,13 @@ $$
 
 ---
 ### sampling distribution
-
 - probability distribution of sample statistic across all possible samples of the same size
 
 ---
 ### sampling distribution formula
-
 $$
 \begin{aligned}
-T \sim (\mu_T, \sigma_T) \\
+T \sim (\mu_{T}, \sigma_{T}) \\
 T = \text{sample statistic} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation}
@@ -32,12 +28,10 @@ $$
 
 ---
 ### standard error
-
 - standard deviation of sampling distribution
 
 ---
 ### mean standard error formula
-
 $$
 \begin{aligned}
 SE(\bar X) = \frac{\sigma}{\sqrt n} \\
@@ -48,7 +42,6 @@ $$
 
 ---
 ### proportion standard error formula
-
 $$
 \begin{aligned}
 SE(\hat p) = \sqrt{\frac{p(1-p)}{n}} \\
@@ -59,12 +52,10 @@ $$
 
 ---
 ### law of large numbers
-
 - sample statistic approaches population parameter as sample size approaches infinity
 
 ---
 ### law of large numbers formula
-
 $$
 \begin{aligned}
 \lim_{n \rightarrow \infty} T = \mathcal T \\
@@ -76,12 +67,10 @@ $$
 
 ---
 ### central limit theorem
-
 - sampling distribution approaches normal distribution as sample size approaches infinity regardless of the population distribution
 
 ---
 ### central limit theorem formula
-
 $$
 \begin{aligned}
 \lim_{n\rightarrow \infty} T \sim N(\mu, \frac{\sigma}{\sqrt n}) \\
@@ -94,12 +83,10 @@ $$
 
 ---
 ### individual z-score
-
 - number of standard deviations from the mean
 
 ---
 ### individual mean z-score formula
-
 $$
 \begin{aligned}
 z = \frac{X - \mu}{\sigma} \\
@@ -111,7 +98,6 @@ $$
 
 ---
 ### individual proportion z-score formula
-
 $$
 \begin{aligned}
 z = \frac{\hat p - p}{\sigma} \\
@@ -123,12 +109,10 @@ $$
 
 ---
 ### sample z-score
-
 - number of standard deviations from the sample mean
 
 ---
 ### sample mean z-score formula
-
 $$
 \begin{aligned}
 z = \frac{\bar X - \mu}{SE(\bar X)} \\
@@ -140,7 +124,6 @@ $$
 
 ---
 ### sample proportion z-score formula
-
 $$
 \begin{aligned}
 z = \frac{\hat p - p}{SE(\hat p)} \\

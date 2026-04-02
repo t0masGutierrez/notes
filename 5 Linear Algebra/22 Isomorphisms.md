@@ -1,14 +1,12 @@
 ### bijective linear transformation
-
 - every element of codomain map to 1 element of domain
 - one to one and onto
 
 ---
 ### bijective linear transformation formula
-
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \iff (\forall \vec v_1, \vec v_2 \in \mathcal V: L(\vec v_1) = L(\vec v_2) \implies \vec v_1 = \vec v_2) \land (\forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w) \\
+(L: \mathcal V \rightarrow \mathcal W) \iff (\forall \vec v_{1}, \vec v_{2} \in \mathcal V: L(\vec v_{1}) = L(\vec v_{2}) \implies \vec v_{1} = \vec v_{2}) \land (\forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w) \\
 L = \text{bijective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -19,12 +17,10 @@ $$
 
 ---
 ### isomorphism
-
 - bijective linear transformation
 
 ---
 ### isomorphism formula
-
 $$
 \begin{aligned}
 (L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec w \in \mathcal W, \exists! \vec v \in \mathcal V: L(\vec v) = \vec w \\
@@ -38,12 +34,10 @@ $$
 
 ---
 ### inverse linear transformation
-
 - composition of linear transformation and inverse linear transformation equal preimage vector
 
 ---
 ### inverse linear transformation formula
-
 $$
 \begin{aligned}
 (\exists L^{-1}: \mathcal W \rightarrow \mathcal V) \iff (\forall \vec v \in \mathcal V: (L^{-1} \circ L)(\vec v) = \vec v) \land (\forall \vec w \in \mathcal W: (L \circ L^{-1})(\vec w) = \vec w) \\
@@ -57,12 +51,10 @@ $$
 
 ---
 ### inverse isomorphism property
-
 - for every isomorphism there exists inverse linear transformation
 
 ---
 ### inverse isomorphism property formula
-
 $$
 \begin{aligned}
 L = \text{isomorphism} \iff \exists L^{-1} \\
@@ -75,12 +67,10 @@ $$
 
 ---
 ### matrix isomorphism property
-
 - for every isomorphism there exists nonsingular square matrix transformation
 
 ---
 ### matrix isomorphism property formula
-
 $$
 \begin{aligned}
 L = \text{isomorphism} \iff \det (A_{BC}) \ne 0 \\
@@ -93,13 +83,11 @@ $$
 
 ---
 ### spanning independence property
-
 - independent bijective preimage equal linearly independent image
 - spanning bijective preimage equal spanning image
 
 ---
 ### spanning independence property
-
 $$
 \begin{aligned}
 (L = \text{bijection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \implies \text{rank}(L(T) \subseteq \mathcal W) = n \\
@@ -109,12 +97,10 @@ $$
 
 ---
 ### isomorphic vector space
-
 - there exists isomorphism between both vector space
 
 ---
 ### isomorphic vector space formula
-
 $$
 \begin{aligned}
 \mathcal V \cong \mathcal W \iff \exists L: \mathcal V \rightarrow \mathcal W \\
@@ -126,12 +112,10 @@ $$
 
 ---
 ### isomorphic dimension property
-
 - equal dimension between isomorphic vector space
 
 ---
 ### isomorphic dimension property formula
-
 $$
 \begin{aligned}
 \mathcal V \cong \mathcal W \iff \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \\
@@ -142,12 +126,10 @@ $$
 
 ---
 ### isomorphic n-dimensional property
-
 - n-dimensional vector space isomorphic with n-dimensional real numbers
 
 ---
 ### isomorphic n-dimensional property formula
-
 $$
 \begin{aligned}
 \dim(\mathcal V) = n \implies \mathcal V \cong \mathbb R^n \\
@@ -158,26 +140,23 @@ $$
 
 ---
 ### isomorphic preservation property
-
 - vectors of matrix transformation kernel equal vectors of linear transformation kernel
 - vectors of matrix transformation range equal vectors of linear transformation range
 - dimension of matrix transformation kernel equal dimension of linear transformation kernel 
 - dimension of matrix transformation range equal dimension of linear transformation range
 ---
 ### isomorphic preservation property formula
-
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \land (L_1: \mathcal V \rightarrow \mathbb R^n) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies L^{-1}_1(\ker \ A_{BC})= \ker(L) \subseteq \mathcal V \\
-(L: \mathcal V \rightarrow \mathcal W) \land (L_2: \mathcal W \rightarrow \mathbb R^m) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies L^{-1}_2(\text{range} \ A_{BC})= \text{range}(L) \subseteq \mathcal W \\
-(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies \dim(\ker \ A_{BC}) = \dim(\ker  \ L) \\
-(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_C = A_{BC}[\vec v]_B)\implies \dim(\text{range} \ A_{BC}) = \dim(\text{range} \ L) \\
+(L: \mathcal V \rightarrow \mathcal W) \land (L_{1}: \mathcal V \rightarrow \mathbb R^n) \land ([\vec w]_{C} = A_{BC}[\vec v]_{B})\implies L^{-1}_{1}(\ker \ A_{BC})= \ker(L) \subseteq \mathcal V \\
+(L: \mathcal V \rightarrow \mathcal W) \land (L_{2}: \mathcal W \rightarrow \mathbb R^m) \land ([\vec w]_{C} = A_{BC}[\vec v]_{B})\implies L^{-1}_{2}(\text{range} \ A_{BC})= \text{range}(L) \subseteq \mathcal W \\
+(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_{C} = A_{BC}[\vec v]_{B})\implies \dim(\ker \ A_{BC}) = \dim(\ker  \ L) \\
+(L: \mathcal V \rightarrow \mathcal W) \land ([\vec w]_{C} = A_{BC}[\vec v]_{B})\implies \dim(\text{range} \ A_{BC}) = \dim(\text{range} \ L) \\
 \end{aligned}
 $$
 
 ---
 ### summary
-
 - one to one
 - onto
 - isomorphism

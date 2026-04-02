@@ -31,4 +31,3 @@ mass energy equivalence factors
 power conversion factors
 
 greek alphabet
-![[8 Physics/Images/greek alphabet.png]]

@@ -1,10 +1,8 @@
 ### 1x1 determinant
-
 - linear transformation of the length of line
 
 ---
 ### 1x1 determinant formula
-
 $$
 \begin{aligned}
 A = \begin{bmatrix} 
@@ -19,12 +17,10 @@ $$
 
 ---
 ### 2x2 determinant
-
 - linear transformation of the area of parallelogram
 
 ---
 ### 2x2 determinant formula
-
 $$
 \begin{aligned}
 A = \begin{bmatrix} 
@@ -40,12 +36,10 @@ $$
 
 ---
 ### 3x3 determinant
-
 - linear transformation of the volume of parallelepiped
 
 ---
 ### 3x3 determinant formula
-
 $$
 \begin{aligned}
 A = \begin{bmatrix} 
@@ -62,12 +56,10 @@ $$
 
 ---
 ### nxn determinant
-
 - linear transformation of the size of shape
 
 ---
 ### nxn determinant formula
-
 $$
 \begin{aligned}
 |A| = \text{det}(A) \\
@@ -77,12 +69,10 @@ $$
 
 ---
 ### submatrix
-
 - matrix formed by deleting all entries of the ith row and jth column 
 
 ---
 ### submatrix formula
-
 $$
 \begin{aligned}
 A_{ij} = A - (a_{i*} + a_{*j}) \\
@@ -95,12 +85,10 @@ $$
 
 ---
 ### minor
-
 - determinant of submatrix
 
 ---
 ### minor formula
-
 $$
 \begin{aligned}
 |A_{ij}| = \text{det}(A_{ij}) \\
@@ -110,12 +98,10 @@ $$
 
 ---
 ### number of minors
-
 - for every entry of matrix there exists minor
 
 ---
 ### number of minors formula
-
 $$
 \begin{aligned}
 N = n^2 \\
@@ -126,12 +112,10 @@ $$
 
 ---
 ### cofactor
-
 - minor multiplication with $\pm 1$ depending on the parity of exponent
 
 ---
 ### cofactor formula
-
 $$
 \begin{aligned}
 \mathcal A_{ij} = (-1)^{i+j}|A_{ij}| \\
@@ -143,12 +127,10 @@ $$
 
 ---
 ### nxn determinant
-
 - cofactor expansion along row or column of square matrix
 
 ---
 ### nxn determinant formula
-
 $$
 \begin{aligned}
 |A| = a_{i1}\mathcal A_{i1} + a_{i2}\mathcal A_{i2} + \dots + a_{in}\mathcal A_{in} \\
@@ -166,16 +148,14 @@ $$
 
 ---
 ###  type I row operation on determinant
-
 - determinant scaling
 
 ---
 ### type I row operation on determinant formula
-
 $$
 \begin{aligned}
-|R_1(A)| = c|A| \\
-R_1 = \text{type I row operation} \\
+|R_{1}(A)| = c|A| \\
+R_{1} = \text{type I row operation} \\
 c = \text{scalar} \\
 |A| = \text{determinant}
 \end{aligned}
@@ -183,44 +163,38 @@ $$
 
 ---
 ### type II row operation on determinant
-
 - determinant equality
 
 ---
 ### type II row operation on determinant formula
-
 $$
 \begin{aligned}
-|R_2(A)| = |A| \\
-R_2 = \text{type II row operation} \\
+|R_{2}(A)| = |A| \\
+R_{2} = \text{type II row operation} \\
 |A| = \text{determinant}
 \end{aligned}
 $$
 
 ---
 ### type III row operation on determinant
-
 - determinant negation
 
 ---
 ### type III row operation on determinant formula
-
 $$
 \begin{aligned}
-|R_3(A)| = -|A| \\
-R_3 = \text{type III row operation} \\
+|R_{3}(A)| = -|A| \\
+R_{3} = \text{type III row operation} \\
 |A| = \text{determinant}
 \end{aligned}
 $$
 
 ---
 ### upper triangular matrix determinant
-
 - determinant of upper triangular matrix equal product of entries along the main diagonal
 
 ---
 ### upper triangular matrix determinant formula
-
 $$
 \begin{aligned}
 A \in \mathcal U \implies |A| = a_{11}a_{22} \dots a_{nn} \\
@@ -230,17 +204,15 @@ $$
 
 ---
 ### determinant via gaussian elimination
-
 - perform gaussian elimination until square matrix equal upper triangular matrix
 - determinant of upper triangular matrix equal product of entries along the main diagonal
 - determinant division with scalar
 
 ---
 ### determinant via gaussian elimination formula
-
 $$
 \begin{aligned}
-B = R_k( \dots R_1(A)\dots ) \in \mathcal U \implies |A| = \frac{1}{c}|B| \\
+B = R_{k}( \dots R_{1}(A)\dots ) \in \mathcal U \implies |A| = \frac{1}{c}|B| \\
 R = \text{row operation} \\
 A = \text{matrix} \\
 |A| = \text{determinant} \\
@@ -250,18 +222,15 @@ $$
 
 ---
 ### zero determinant
-
 - zero row or zero column
 - identical row or identical column
 
 ---
 ### singularity property
-
 - nonsingular if and only if nonzero determinant
 
 ---
 ### singularity property formula
-
 $$
 \begin{aligned}
 \text{det}(A) \ne 0 \iff |A| \ne 0 \\
@@ -271,12 +240,10 @@ $$
 
 ---
 ### rank property
-
 - rank equal size of square matrix if and only if nonzero determinant
 
 ---
 ### rank property formula
-
 $$
 \begin{aligned}
 \text{rank}(A) = n \iff |A| \ne 0 \\
@@ -288,7 +255,6 @@ $$
 
 ---
 ### singularity summary
-
 - nonsingular
 - rank equal size of square matrix
 - nonzero determinant
@@ -297,12 +263,10 @@ $$
 - there exists unique solution for heterogeneous system
 ---
 ### identity matrix determinant
-
 - product of 1's along the main diagonal
 
 ---
 ### identity matrix determinant formula
-
 $$
 \begin{aligned}
 |I| = 1
@@ -311,12 +275,10 @@ $$
 
 ---
 ### scalar multiplication determinant
-
 - determinant of scalar quantity multiplication with square matrix
 
 ---
 ### scalar multiplication determinant formula
-
 $$
 \begin{align}
 |cA| = c^n|A| \\
@@ -329,12 +291,10 @@ $$
 
 ---
 ### matrix multiplication determinant
-
 - determinant multiplication with determinant
 
 ---
 ### matrix multiplication determinant formula
-
 $$
 \begin{aligned}
 |AB| = (|A|)(|B|) \\
@@ -345,12 +305,10 @@ $$
 
 ---
 ### matrix inversion determinant
-
 - reciprocal of determinant
 
 ---
 ### matrix inversion determinant formula
-
 $$
 \begin{aligned}
 |A^{-1}| = \frac{1}{|A|} \\
@@ -362,30 +320,26 @@ $$
 
 ---
 ### matrix transposition determinant
-
 - identity
 - multiple identity
 - transpositive
 
 ---
 ### matrix transposition determinant formula
-
 $$
 \begin{aligned}
 |R(I)| = |(R(I))^T| \\
-|R_k( \dots R_1(I)\dots )| = |(R_k( \dots R_1(I)\dots ))^T| \\
+|R_{k}( \dots R_{1}(I)\dots )| = |(R_{k}( \dots R_{1}(I)\dots ))^T| \\
 |R(B)| = |(R(B))^T| \\
 \end{aligned}
 $$
 
 ---
 ### symmetric determinant
-
 - determinant of square matrix equal determinant of transposed square matrix
 
 ---
 ### symmetric determinant formula
-
 $$
 \begin{aligned}
 |A| = |A^T| \\

@@ -1,14 +1,11 @@
 ### periodic motion
-
 - motion that repeats itself at regular time intervals
 ---
 ### period
-
 - time between 1 revolution
 
 ---
 ### period formula
-
 $$
 \begin{aligned}
 T = \frac{\text{seconds}}{\text{1 revolution}}
@@ -17,12 +14,10 @@ $$
 
 ---
 ### oscillation frequency
-
 - number of revolutions per time
 
 ---
 ### oscillation frequency formula
-
 $$
 \begin{aligned}
 f = \frac{1}{T} \\
@@ -32,12 +27,10 @@ $$
 
 ---
 ### angular frequency
-
 - number of phases per time 
 
 ---
 ### angular frequency formula
-
 $$
 \begin{aligned}
 \omega = 2\pi f \\
@@ -47,11 +40,9 @@ $$
 
 ---
 ### simple harmonic motion
-
 - periodic motion where object oscillate about equilibrium with restoring force directly proportional displacement
 ---
 ### simple harmonic motion formula
-
 $$
 \begin{aligned}
 x(t) = A \cos(\omega t + \phi) \\
@@ -66,22 +57,18 @@ $$
 
 ---
 ### amplitude
-
 - maximum displacement of medium from equilibrium
 
 ---
 ### phase angle
-
 - temporal difference of simple harmonic motion
 ---
 ### maximum simple harmonic motion
-
 - maximum displacement where $x = \pm A$ 
 - maximum velocity where $x = 0$ 
 - maximum acceleration where $x = \pm A$ 
 ---
 ### maximum simple harmonic motion formula
-
 $$
 \begin{aligned}
 x_{max} = A \\
@@ -94,11 +81,9 @@ $$
 
 ---
 ### simple harmonic motion energy
-
 - constant oscillation between potential energy and kinetic energy
 ---
 ### simple harmonic motion energy formula
-
 $$
 \begin{aligned}
 E = K + U = \frac{1}{2}kA^2 \\
@@ -111,30 +96,24 @@ $$
 
 ---
 ### energy diagram
-
 - energy as function of position
 ---
 ### turning point
-
 - point where potential energy approaches total mechanical energy and turns around
 
 ---
 ### equilibrium point
-
 - local extrema point where zero force acting on system
 ---
 ### equilibrium stability
-
 - stable equilibrium point equal minimum where changes return position 
 - unstable equilibrium point equal maximum where changes do not return position
 
 ---
 ### spring mass
-
 - restoring force by spring on mass directly proportional displacement
 ---
 ### angular frequency formula
-
 $$
 \begin{aligned}
 \omega = \sqrt{\frac{k}{m}} \\
@@ -145,11 +124,9 @@ $$
 
 ---
 ### simple pendulum
-
 - point mass swinging on string under the force of gravity
 ---
 ### angular frequency formula
-
 $$
 \begin{aligned}
 \omega = \sqrt{\frac{g}{L}} \\
@@ -160,11 +137,9 @@ $$
 
 ---
 ### physical pendulum
-
 - distribution of mass swinging about axis of rotation under the force of gravity
 ---
 ### angular frequency formula
-
 $$
 \begin{aligned}
 \omega = \sqrt{\frac{mgL}{I}} \\
@@ -177,15 +152,13 @@ $$
 
 ---
 ### damped oscillation
-
 - decreasing periodic motion by subtracting energy via damping force
 ---
 ### damped oscillation formula
-
 $$
 \begin{aligned}
 m \frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = 0 \\
-x(t) = A_0(e^{-bt/2m}\cos(\omega t + \phi) \\
+x(t) = A_{0}(e^{-bt/2m}\cos(\omega t + \phi) \\
 \omega = \sqrt{(\frac{k}{m}) - (\frac{b}{2m})^2} \\
 m = \text{mass} \\
 x = \text{position} \\
@@ -199,35 +172,30 @@ $$
 
 ---
 ### under damped oscillation
-
 - slow decrease of periodic motion
 - $b^2 < 4mk$ 
 
 ---
 ### critically damped oscillation
-
 - fast decrease of non periodic motion
 - $b^2 = 4mk$ 
 
 ---
 ### over damped oscillation
-
 - slow decrease of non periodic motion
 - $b^2 > 4mk$ 
 
 ---
 ### driven oscillation
-
 - increasing periodic motion by adding energy via driving force
 
 ---
 ### driven oscillation formula
-
 $$
 \begin{aligned}
-m \frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = F_0 \cos(\omega t + \phi) \\
-x(t) = A_0\cos(\omega t + \phi) \\
-A_0 = \frac{F_0}{\sqrt{m^2\omega^2 - mk + b^2\omega^2}} \\
+m \frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = F_{0} \cos(\omega t + \phi) \\
+x(t) = A_{0}\cos(\omega t + \phi) \\
+A_{0} = \frac{F_{0}}{\sqrt{m^2\omega^2 - mk + b^2\omega^2}} \\
 m = \text{mass} \\
 x = \text{position} \\
 t = \text{time} \\

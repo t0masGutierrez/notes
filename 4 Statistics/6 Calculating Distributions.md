@@ -1,10 +1,8 @@
 ### standardization
-
 - convert from random variable to standardized random variable
 
 ---
 ### standardization formula
-
 $$
 \begin{aligned}
 (X = x) \sim (\mu, \sigma) \implies (Y = y) \sim (\mu', \sigma ') \\
@@ -17,12 +15,10 @@ $$
 
 ---
 ### normal
-
 - probability as function of mean and standard deviation
 
 ---
 ### normal formula
-
 $$
 \begin{aligned}
 X \sim N(x, \mu, \sigma) = P(X \le x) \\
@@ -37,12 +33,10 @@ $$
 
 ---
 ### inverse normal
-
 - value of random variable as function of cumulative distribution function
 
 ---
 ### inverse normal formula
-
 $$
 \begin{aligned}
 x= N^{-1}(c, \mu, \sigma, \text{tail}) \\
@@ -55,12 +49,10 @@ $$
 
 ---
 ### z-score
-
 - number of standard deviations from the mean
 
 ---
 ### z-score formula
-
 $$
 \begin{aligned}
 z = \frac{X - \mu}{\sigma} \\
@@ -72,12 +64,10 @@ $$
 
 ---
 ### standard normal
-
 - probability as function of z-score
 
 ---
 ### standard normal formula
-
 $$
 \begin{aligned}
 Z \sim N(x, 0, 1) = P(Z \le z) \\
@@ -90,12 +80,10 @@ $$
 
 ---
 ### inverse standard normal
-
 - z-score as function of cumulative distribution function
 
 ---
 ### inverse standard normal formula
-
 $$
 \begin{aligned}
 z = N^{-1}(c, 0, 1, \text{tail}) \\
@@ -106,12 +94,10 @@ $$
 
 ---
 ### t-score
-
 - number of standard errors from the mean
 
 ---
 ### t-score formula
-
 $$
 \begin{aligned}
 t = \frac{\bar X - \mu}{s/\sqrt n} \\
@@ -123,12 +109,10 @@ $$
 
 ---
 ### student
-
 - probability as function of t-score
 
 ---
 ### student formula
-
 $$
 \begin{aligned}
 T \sim S(t, \text{d}) = P(T \le t) \\
@@ -142,12 +126,10 @@ $$
 
 ---
 ### inverse student
-
 - t-score as function of cumulative distribution function
 
 ---
 ### inverse student formula
-
 $$
 \begin{aligned}
 t = S^{-1}(c, \text{d}) \\
@@ -158,12 +140,10 @@ $$
 
 ---
 ### chi-square-score
-
 - ratio between sample variance and population variance
 
 ---
 ### chi-square-score formula
-
 $$
 \begin{aligned}
 \chi^2 = \frac{(n-1)s^2}{\sigma^2} \\
@@ -175,12 +155,10 @@ $$
 
 ---
 ### chi-square
-
 - probability as function of $\chi^2$-statistic
 
 ---
 ### chi-square formula
-
 $$
 \begin{aligned}
 X \sim \chi^2(x, \text{d}) = P(X \ge x) \\
@@ -191,12 +169,10 @@ $$
 
 ---
 ### F-score
-
 - ratio between group mean square and error mean square
 
 ---
 ### F-score formula
-
 $$
 \begin{aligned}
 F = \frac{MS_{\text{group}}}{MS_{\text{error}}} \\
@@ -206,17 +182,15 @@ $$
 
 ---
 ### F
-
 - probability as function of F-statistic
 
 ---
 ### F formula
-
 $$
 \begin{aligned}
-U \sim \chi^2(f, \text{d}_1, \text{d}_2) = P(U \le u) \\
-V \sim \chi^2(v, \text{d}_1, \text{d}_2) = P(V \le v) \\
-F = \frac{U/\text{d}_1}{V/\text{d}_2} \\
+U \sim \chi^2(f, \text{d}_{1}, \text{d}_{2}) = P(U \le u) \\
+V \sim \chi^2(v, \text{d}_{1}, \text{d}_{2}) = P(V \le v) \\
+F = \frac{U/\text{d}_{1}}{V/\text{d}_{2}} \\
 u, v = \text{F-statistic} \\
 \text{d} = \text{degrees of freedom} 
 \end{aligned}

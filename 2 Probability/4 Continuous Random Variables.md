@@ -1,10 +1,8 @@
 ### random variable
-
 - function of sample space outcome equal real number
 
 ---
 ### random variable formula
-
 $$
 \begin{aligned}
 X: \Omega \rightarrow \mathbb R \\
@@ -18,12 +16,10 @@ $$
 
 ---
 ### continuous random variable
-
 - random variable whose values are uncountable
 
 ---
 ### continuous random variable formula
-
 $$
 \begin{aligned}
 (\{0, 1, 2, 3, \dots, n\} \not\sim X) \land (\mathbb N \not\sim X) \\
@@ -33,29 +29,25 @@ $$
 
 ---
 ### continuous probability density function
-
 - probability as function of continuous random variable
 
 ---
 ### continuous PDF probability formula
-
 $$
 \begin{aligned}
 P(X = x) = 0 \\
 P(X) = \int_{-\infty}^{\infty}f(x)dx = 1 \\
 P(X \le t) = \int_{-\infty}^t f(x)dx = F(t) \\
-P(a \le X \le b) = \int_a^b f(x)dx = F(b) - F(a)
+P(a \le X \le b) = \int_{a}^b f(x)dx = F(b) - F(a)
 \end{aligned}
 $$
 
 ---
 ### expectation
-
 - mean of random variable
 
 ---
 ### expectation formula
-
 $$
 \begin{aligned}
 E[X] =  \int_{-\infty}^{\infty} xf(x)dx \\
@@ -66,12 +58,10 @@ $$
 
 ---
 ### variation
-
 - variance of random variable around mean
 
 ---
 ### variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = E[X^2] - (E[X])^2 = E[(X - E[X])^2] \\
@@ -82,12 +72,10 @@ $$
 
 ---
 ### uniform probability density function
-
 - probability as function of equally likely events
 
 ---
 ### uniform PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{1}{b-a} \\
@@ -98,7 +86,6 @@ $$
 
 ---
 ### uniform PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \frac{a+b}{2} \\
@@ -109,7 +96,6 @@ $$
 
 ---
 ### uniform PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = {\frac{(b-a)^2}{12}} \\
@@ -120,12 +106,10 @@ $$
 
 ---
 ### normal probability density function
-
 - probability as function of normal random variable
 
 ---
 ### normal PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\exp(\frac{-(x - \mu)^2}{2\sigma^2})}{\sigma\sqrt {2\pi}} \\
@@ -136,7 +120,6 @@ $$
 
 ---
 ### normal PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \mu \\
@@ -146,7 +129,6 @@ $$
 
 ---
 ### normal PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \sigma^2 \\
@@ -156,12 +138,10 @@ $$
 
 ---
 ### standard normal probability density function
-
 - probability as function of normal z-score
 
 ---
 ### standard normal PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\exp(\frac{-x^2}{2})}{\sqrt {2\pi}} \\
@@ -171,7 +151,6 @@ $$
 
 ---
 ### standard normal PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = 0 
@@ -180,7 +159,6 @@ $$
 
 ---
 ### standard normal PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = 1
@@ -189,12 +167,10 @@ $$
 
 ---
 ### exponential probability density function
-
 - probability as function of the amount of time until next event
 
 ---
 ### exponential PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \lambda e^{-\lambda x} \\
@@ -205,7 +181,6 @@ $$
 
 ---
 ### exponential PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \frac{1}{\lambda} \\
@@ -215,7 +190,6 @@ $$
 
 ---
 ### exponential PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{1}{\lambda^2} \\
@@ -225,16 +199,14 @@ $$
 
 ---
 ### gamma probability density function
-
 - probability as function of the amount of time until $r$th event
 
 ---
 ### gamma PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\lambda^r e^{-\lambda x}x^{r-1}}{\Gamma(r)} \\
-\Gamma(r) = \int_0^{\infty}e^{-x}x^{r-1}dx \\
+\Gamma(r) = \int_{0}^{\infty}e^{-x}x^{r-1}dx \\
 \lambda = \text{average number of events per time} \\
 r = \text{event number} \\
 x = \text{time} \\
@@ -244,7 +216,6 @@ $$
 
 ---
 ### gamma PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \frac{r}{\lambda} \\
@@ -255,7 +226,6 @@ $$
 
 ---
 ### gamma PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{r}{\lambda^2} \\
@@ -266,16 +236,14 @@ $$
 
 ---
 ### beta probability density function
-
 - probability as function of unit interval
 
 ---
 ### beta PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{x^{r-1}(1-x)^{k-1}}{\beta(r, k)} \\
-\beta(r, k) = \int_0^1 x^{r-1}(1-x)^{k-1}dx \\
+\beta(r, k) = \int_{0}^1 x^{r-1}(1-x)^{k-1}dx \\
 x = \text{unit number} \\
 r, k = \text{parameter} \\
 \beta = \text{beta} 
@@ -284,7 +252,6 @@ $$
 
 ---
 ### beta PDF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \frac{r}{r+k} \\
@@ -294,7 +261,6 @@ $$
 
 ---
 ### beta PDF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{rk}{(r + k)^2(r + k + 1)} \\

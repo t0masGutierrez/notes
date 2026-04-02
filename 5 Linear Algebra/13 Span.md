@@ -1,14 +1,12 @@
 ### finite linear combination
-
 - linear combination of finite number of vectors
 
 ---
 ### finite linear combination formula
-
 $$
 \begin{aligned}
-\vec v = c_1\vec v_1 + \dots + c_k\vec v_k \iff \exists S' \subset S \subset \mathcal V \\
-S' = \{\vec v_1, \dots , \vec v_k\} \\
+\vec v = c_{1}\vec v_{1} + \dots + c_{k}\vec v_{k} \iff \exists S' \subset S \subset \mathcal V \\
+S' = \{\vec v_{1}, \dots , \vec v_{k}\} \\
 S\prime = \text{finite subset} \\
 S = \text{infinite subset} \\
 \mathcal V = \text{vector space} \\
@@ -19,16 +17,14 @@ $$
 
 ---
 ### span
-
 - set of all possible finite linear combinations of the vectors of subset
 - smallest subspace of vector space with every vector of subset
 
 ---
 ### span formula
-
 $$
 \begin{aligned}
-\text{Span}(S) = \{\sum_{i=1}^n c_i\vec v_i | c \in \mathbb R, \vec v \in S\} \\
+\text{Span}(S) = \{\sum_{i=1}^n c_{i}\vec v_{i} | c \in \mathbb R, \vec v \in S\} \\
 S = \text{subset} \\
 n = \text{dimension} \\
 c = \text{scalar} \\
@@ -38,23 +34,20 @@ $$
 
 ---
 ### terminology
-
 - if span of subset equal vector space then vector space spanned by subset
 - if span of subset equal vector space then subset spans vector space
 
 ---
 ### span example
-
 - standard unit vector
 - standard unit polynomial
 - standard unit matrix
 
 ---
 ### span example formula
-
 $$
 \begin{aligned}
-\text{Span}(\{\vec e_1, \dots , \vec e_n\}) = \mathbb R^n \\
+\text{Span}(\{\vec e_{1}, \dots , \vec e_{n}\}) = \mathbb R^n \\
 \text{Span}(\{1, x, x^2, \dots , x^n\}) = \mathcal P\\
 \text{Span}(\psi_{ij}) = \mathcal M_{mn} \\
 \end{aligned}
@@ -62,12 +55,10 @@ $$
 
 ---
 ### empty span
-
 - span of empty set
 
 ---
 ### empty span formula
-
 $$
 \begin{aligned}
 \text{Span}(\emptyset) = \{\vec 0\}
@@ -76,7 +67,6 @@ $$
 
 ---
 ### span property
-
 - subset
 - subspace
 - subset subspace
@@ -84,7 +74,6 @@ $$
 
 ---
 ### span property formula
-
 $$
 \begin{aligned}
 S \subseteq \text{Span}(S) \\
@@ -96,15 +85,13 @@ $$
 
 ---
 ### span subset property
-
 - span of subset equal subset of span
 
 ---
 ### span subset property formula
-
 $$
 \begin{aligned}
-(S_1, S_2 \subseteq \mathcal V) \land (S_1 \subseteq S_2) \implies \text{Span}(S_1) \subseteq \text{Span}(S_2) \\
+(S_{1}, S_{2} \subseteq \mathcal V) \land (S_{1} \subseteq S_{2}) \implies \text{Span}(S_{1}) \subseteq \text{Span}(S_{2}) \\
 S = \text{subset} \\
 \mathcal V = \text{vector space} \\
 \end{aligned}
@@ -112,22 +99,19 @@ $$
 
 ---
 ### row space
-
 - set of all possible finite linear combinations of the rows of matrix equal the span of the set of rows of matrix
 
 ---
 ### row space formula
-
 $$
 \begin{aligned}
-S = \set{\vec a_1, \dots, \vec a_n} \implies \text{Row}(A) = \text{Span}(S) \\
+S = \set{\vec a_{1}, \dots, \vec a_{n}} \implies \text{Row}(A) = \text{Span}(S) \\
 \vec a = \text{row vector}
 \end{aligned}
 $$
 
 ---
 ### span test
-
 - generate augmented matrix whose columns equal the vectors of set and whose constant matrix equal the possible member of span
 - form the reduced row echelon of the system
 - if consistent system then member of span
@@ -135,7 +119,6 @@ $$
 
 ---
 ### span simplification
-
 - generate matrix whose rows equal the vectors of subset
 - form the reduced row echelon of the system
 - nonzero rows of RREF equal the simple vectors of subset

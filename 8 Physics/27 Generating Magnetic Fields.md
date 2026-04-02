@@ -1,17 +1,14 @@
 ### magnetism
-
 - exertion of force by flowing electric charge
 ---
 ### generating magnetic field via point
-
 - electric current carrying point generate magnetic field
 ---
 ### generating magnetic field via point formula
-
 $$
 \begin{aligned}
-\vec B = (\frac{\mu_0}{4\pi})\frac{q\vec v \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{qv \sin(\theta)}{r^2}\\
-\mu_0 = 4\pi \times 10^{-7} \\
+\vec B = (\frac{\mu_{0}}{4\pi})\frac{q\vec v \times \hat r}{r^2} = (\frac{\mu_{0}}{4\pi})\frac{qv \sin(\theta)}{r^2}\\
+\mu_{0} = 4\pi \times 10^{-7} \\
 q = \text{electric charge} \\
 v = \text{velocity} \\
 \hat r = \text{direction} \\
@@ -22,15 +19,13 @@ $$
 
 ---
 ### biot savart law
-
 - electric current carrying conductor generate magnetic field
 ---
 ### biot savart formula
-
 $$
 \begin{aligned}
-d \vec B = (\frac{\mu_0}{4\pi})\frac{Id\vec L \times \hat r}{r^2} = (\frac{\mu_0}{4\pi})\frac{IdL \sin(\theta)}{r^2}\\
-\mu_0 = 4\pi \times 10^{-7} \\
+d \vec B = (\frac{\mu_{0}}{4\pi})\frac{Id\vec L \times \hat r}{r^2} = (\frac{\mu_{0}}{4\pi})\frac{IdL \sin(\theta)}{r^2}\\
+\mu_{0} = 4\pi \times 10^{-7} \\
 I = \text{electric current} \\
 L = \text{length} \\
 \hat r = \text{direction} \\
@@ -41,15 +36,13 @@ $$
 
 ---
 ### generating magnetic field via line
-
 - electric current carrying line generate magnetic field
 ---
 ### generating magnetic field via line formula
-
 $$
 \begin{aligned}
 B = \frac{\mu_0I}{2\pi r} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 I = \text{electric current} \\
 r = \text{distance}
 \end{aligned}
@@ -57,15 +50,13 @@ $$
 
 ---
 ### generating magnetic field via loop
-
 - electric current carrying loop generate magnetic field along central axis of loop
 ---
 ### generating magnetic field via loop formula
-
 $$
 \begin{aligned}
-B_y = \frac{\mu_0 NI R^2}{2(y^2 + R^2)^{3/2}} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+B_{y} = \frac{\mu_{0} NI R^2}{2(y^2 + R^2)^{3/2}} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 N = \text{number of loops} \\
 I = \text{electric current} \\
 R = \text{radius} \\
@@ -75,15 +66,13 @@ $$
 
 ---
 ### generating magnetic field via coil
-
 - electric current carrying coil generate magnetic field from center of coil
 ---
 ### generating magnetic field via coil formula
-
 $$
 \begin{aligned}
-B = \frac{\mu_0 NI}{2R} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+B = \frac{\mu_{0} NI}{2R} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 N = \text{number of loops} \\
 I = \text{electric current} \\
 r = \text{radius}
@@ -92,15 +81,13 @@ $$
 
 ---
 ### generating magnetic field via solenoid
-
 - electric current carrying solenoid generate uniform inner magnetic field
 ---
 ### generating magnetic field via solenoid
-
 $$
 \begin{aligned}
-B = \mu_0 nI \\
-\mu_0 = 4\pi \times 10^{-7} \\
+B = \mu_{0} nI \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 n = \text{number density} \\
 I = \text{electric current}
 \end{aligned}
@@ -108,12 +95,10 @@ $$
 
 ---
 ### number density
-
 - measure of loop compactness
 
 ---
 ### number density formula
-
 $$
 \begin{aligned}
 n = \frac{N}{L} \\
@@ -124,15 +109,13 @@ $$
 
 ---
 ### generating magnetic field via toroid
-
 - electric current carrying toroid generate non uniform inner magnetic field
 ---
 ### generating magnetic field via toroid formula
-
 $$
 \begin{aligned}
-B = \frac{\mu_0 NI}{2\pi R} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+B = \frac{\mu_{0} NI}{2\pi R} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 N = \text{number of loops} \\
 I = \text{electric current} \\
 R = \text{radius}
@@ -141,24 +124,21 @@ $$
 
 ---
 ### amperes law
-
 - magnetic field around amperian loop directly proportional net electric current inside amperian loop
 ---
 ### amperes formula
-
 $$
 \begin{aligned}
-\oint_{L_1}^{L_2} \vec B \cdot d\vec L = \mu_0 I_{enc} \\
+\oint_{L_{1}}^{L_{2}} \vec B \cdot d\vec L = \mu_{0} I_{enc} \\
 B = \text{magnetic field} \\
 L = \text{length} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 I = \text{electric current}
 \end{aligned}
 $$
 
 ---
 ### calculate amperes law
-
 - identify amperian loop
 - compute vector components of magnetic field parallel length
 - uniform electric current density equal total electric current 
@@ -168,20 +148,17 @@ $$
 
 ---
 ### amperian loop
-
 - imaginary closed loop with symmetrical electric current distribution
 
 ---
 ### symmetrical electric current distribution
-
 - circle
 ---
 ### symmetrical electric current distribution formula
-
 $$
 \begin{aligned}
 B = \frac{\mu_0I_{enc}}{L} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 I = \text{electric current} \\
 L = \text{length}
 \end{aligned}
@@ -189,15 +166,13 @@ $$
 
 ---
 ### circular electric current distribution
-
 - electric current distribution along circle
 ---
 ### circular electric current distribution formula
-
 $$
 \begin{aligned}
 B = \frac{\mu_0I_{enc}}{2\pi r} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 I = \text{electric current} \\
 r = \text{distance}
 \end{aligned}
@@ -205,11 +180,9 @@ $$
 
 ---
 ### electric current density
-
 - measure of electric current compactness
 ---
 ### electric current density formula
-
 $$
 \begin{aligned}
 dI = J \ dA \\
@@ -220,71 +193,61 @@ $$
 
 ---
 ### conductor shell
-
 - electric current inside circular conductor equal electric current density
 - electric current outside circular conductor equal total electric current
 ---
 ### magnetic
-
 - material capable of undergoing magnetization via external magnetic field
 
 ---
 ### diamagnetic
-
 - weak internal magnetic field decrease external magnetic field
 - temporary magnetic dipole
 ---
 ### generating diamagnetic field formula
-
 $$
 \begin{aligned}
-\vec B = \vec B_0 ( 1 + \chi_m) \\
+\vec B = \vec B_{0} ( 1 + \chi_{m}) \\
 B = \text{magnetic field} \\
-\chi_m = \text{magnetic susceptibility}
+\chi_{m} = \text{magnetic susceptibility}
 \end{aligned}
 $$
 
 ---
 ### paramagnetic
-
 - weak internal magnetic field increase external magnetic field
 - temporary magnetic dipole
 ---
 ### generating paramagnetic field formula
-
 $$
 \begin{aligned}
-\vec B = \vec B_0 ( 1 + \chi_m) \\
+\vec B = \vec B_{0} ( 1 + \chi_{m}) \\
 B = \text{magnetic field} \\
-\chi_m = \text{magnetic susceptibility}
+\chi_{m} = \text{magnetic susceptibility}
 \end{aligned}
 $$
 
 ---
 ### ferromagnetic
-
 - strong internal magnetic field increase external magnetic field
 - permanent magnetic dipole
 ---
 ### generating ferromagnetic field formula
-
 $$
 \begin{aligned}
-\vec B = \vec B_0 + \mu_0 \vec M \\
+\vec B = \vec B_{0} + \mu_{0} \vec M \\
 B = \text{magnetic field} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 M = \text{magnetization}
 \end{aligned}
 $$
 
 ---
 ### magnetization
-
 - separation of magnetic pole via external magnetic field thereby inducing magnetic dipole
 
 ---
 ### magnetization formula
-
 $$
 \begin{aligned}
 \vec M = \frac{\vec \mu}{V} \\
@@ -295,29 +258,25 @@ $$
 
 ---
 ### magnetic susceptibility
-
 - difference between relative permeability and unity
 ---
 ### magnetic susceptibility formula
-
 $$
 \begin{aligned}
-\chi_m = K_m - 1 \\
-K_m = \text{relative permeability}
+\chi_{m} = K_{m} - 1 \\
+K_{m} = \text{relative permeability}
 \end{aligned}
 $$
 
 ---
 ### relative permeability
-
 - ratio between magnetic and non magnetic
 
 ---
 ### relative permeability formula
-
 $$
 \begin{aligned}
-K_m = \frac{\vec B}{\vec B_0} = \frac{\mu}{\mu_0} \\
+K_{m} = \frac{\vec B}{\vec B_{0}} = \frac{\mu}{\mu_{0}} \\
 B = \text{magnetic field} \\
 \mu = \text{permeability}
 \end{aligned}

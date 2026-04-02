@@ -1,15 +1,13 @@
 ### epsilon-delta limit
-
 - function approaches limit as input point approaches limit point
 
 ---
 ### epsilon-delta limit formula
-
 $$
 \begin{aligned}
-\lim_{x \rightarrow x_0} f(x) = L \iff \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_0) < \delta \implies d(f(x), L) < \epsilon \\
+\lim_{x \rightarrow x_{0}} f(x) = L \iff \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), L) < \epsilon \\
 f: S \subset X \rightarrow Y \\
-x_0 = \text{limit point} \\
+x_{0} = \text{limit point} \\
 L = \text{limit} \\
 d = \text{metric} \\
 X, Y = \text{metric space} 
@@ -18,26 +16,23 @@ $$
 
 ---
 ### sequential limit
-
 - function approaches limit as input term approaches sequential limit
 
 ---
 ### sequential limit formula
-
 $$
 \begin{aligned}
-\lim_{x \rightarrow x_0} f(x) = L \iff \forall \set{a_n} \in S: \lim_{n\rightarrow \infty} a_n = x_0 \implies \lim_{n\rightarrow \infty} f(a_n) = L \\
+\lim_{x \rightarrow x_{0}} f(x) = L \iff \forall \set{a_{n}} \in S: \lim_{n\rightarrow \infty} a_{n} = x_{0} \implies \lim_{n\rightarrow \infty} f(a_{n}) = L \\
 f: S \subset X \rightarrow Y \\
-x_0 = \text{sequential limit} \\
+x_{0} = \text{sequential limit} \\
 L = \text{limit} \\
-\set{a_n} = \text{sequence} \\
+\set{a_{n}} = \text{sequence} \\
 X, Y = \text{metric space} 
 \end{aligned}
 $$
 
 ---
 ### limit property
-
 - unique
 - addition
 - subtraction
@@ -46,20 +41,18 @@ $$
 
 ---
 ### limit property formula
-
 $$
 \begin{aligned}
-(\lim_{x \rightarrow x_0} f(x) = L) \land (\lim_{x \rightarrow x_0} f(x) = K) \implies L = K \\
-(\lim_{x \rightarrow x_0} f(x) = L) \land (\lim_{x \rightarrow x_0} g(x) = K) \implies \lim_{x \rightarrow x_0} (f+g)(x) = L + K \\
-(\lim_{x \rightarrow x_0} f(x) = L) \land (\lim_{x \rightarrow x_0} g(x) = K) \implies \lim_{x \rightarrow x_0} (f-g)(x) = L - K \\
-(\lim_{x \rightarrow x_0} f(x) = L) \land (\lim_{x \rightarrow x_0} g(x) = K) \implies \lim_{x \rightarrow x_0} (f \cdot g)(x) = L \cdot K \\
-(\lim_{x \rightarrow x_0} f(x) = L) \land (\lim_{x \rightarrow x_0} g(x) = K \ne 0) \implies \lim_{x \rightarrow x_0} (\frac{f}{g})(x) = \frac{L}{K}
+(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} f(x) = K) \implies L = K \\
+(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f+g)(x) = L + K \\
+(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f-g)(x) = L - K \\
+(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f \cdot g)(x) = L \cdot K \\
+(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K \ne 0) \implies \lim_{x \rightarrow x_{0}} (\frac{f}{g})(x) = \frac{L}{K}
 \end{aligned}
 $$
 
 ---
 ### set property
-
 - range
 - inverse range
 - range subset
@@ -71,7 +64,6 @@ $$
 
 ---
 ### set property formula
-
 $$
 \begin{aligned}
 (f: A \subset X \rightarrow Y) \implies f(A) = \set{f(x) \in Y| x \in A} \\
@@ -80,25 +72,23 @@ A' \subset A \implies f(A') \subset f(A) \\
 B' \subset B \implies f^{-1}(B') \subset f^{-1}(B) \\
 A \subset f^{-1}\circ f(A) \\
 f\circ f^{-1}(B) \subset B \\
-f(\bigcup_i A_i) = \bigcup_i f(A_i) \\
+f(\bigcup_{i} A_{i}) = \bigcup_{i} f(A_{i}) \\
 f^{-1}(B^c) = f^{-1}(B)^c 
 \end{aligned}
 $$
 
 ---
 ### continuity
-
 - for every epsilon distance between point of continuous function there exists delta distance between input point
 
 ---
 ### continuity formula
-
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_0) < \delta \implies d(f(x), f(x_0)) < \epsilon \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
 f: S \subset X \rightarrow Y \\
 d = \text{metric} \\
-x_0 = \text{continuous point} \\
+x_{0} = \text{continuous point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -106,17 +96,15 @@ $$
 
 ---
 ### limit continuity property
-
 - continuous function at input point approaches continuous function at limit point as input point approaches limit point
 
 ---
 ### limit continuity property formula
-
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \\
 f: X \rightarrow Y \\
-x_0 = \text{limit point} \\
+x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -124,18 +112,16 @@ $$
 
 ---
 ### open inverse continuity property
-
 - inverse continuous function of codomain open set equal domain open set
 
 ---
 ### open inverse continuity property formula
-
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \iff \forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \iff \forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S \\
 \implies \forall x \in f^{-1}(S), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(S) \\
 f:  X \rightarrow S \subset Y \\
-x_0 = \text{limit point} \\
+x_{0} = \text{limit point} \\
 x, y = \text{interior point} \\
 f = \text{continuous function} \\
 N = \text{neighborhood} \\
@@ -146,17 +132,15 @@ $$
 
 ---
 ### closed inverse continuity property
-
 - inverse continuous function of codomain closed set equal domain closed set
 
 ---
 ### closed inverse continuity property formula
-
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \iff S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \iff S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
 f:  X \rightarrow S \subset Y \\
-x_0 = \text{limit point} \\
+x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
 S, f^{-1}(S) = \text{closed set} \\
 S', f^{-1}(S)' = \text{derived set} \\
@@ -166,19 +150,17 @@ $$
 
 ---
 ### composite continuity property
-
 - composition of continuous function equal continuous function
 
 ---
 ### composite continuity property formula
-
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(f(x)) = g(f(x_0)) \implies \lim_{x\rightarrow x_0}(g \circ f)(x) = (f \circ g)(x_0) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(f(x)) = g(f(x_{0})) \implies \lim_{x\rightarrow x_{0}}(g \circ f)(x) = (f \circ g)(x_{0}) \\
 f: X \rightarrow Y \\
 g: Y \rightarrow Z \\
 g \circ f: X \rightarrow Z \\
-x_0 = \text{limit point} \\
+x_{0} = \text{limit point} \\
 f, g = \text{continuous function} \\
 X, Y, Z = \text{metric space} 
 \end{aligned}
@@ -186,7 +168,6 @@ $$
 
 ---
 ### operation continuity property
-
 - addition
 - subtraction
 - multiplication
@@ -194,29 +175,26 @@ $$
 
 ---
 ### operation continuity property
-
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(x) = g(x_0) \implies \lim_{x\rightarrow x_0}(f+g)(x) = (f+g)(x_0) \\
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(x) = g(x_0) \implies \lim_{x\rightarrow x_0}(f-g)(x) = (f-g)(x_0) \\
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(x) = g(x_0) \implies \lim_{x\rightarrow x_0}(f\cdot g)(x) = (f\cdot g)(x_0) \\
-\lim_{x\rightarrow x_0}f(x) = f(x_0) \land \lim_{x\rightarrow x_0}g(x) = g(x_0) \ne 0 \implies \lim_{x\rightarrow x_0}(\frac{f}{g})(x) = (\frac{f}{g})(x_0) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f+g)(x) = (f+g)(x_{0}) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f-g)(x) = (f-g)(x_{0}) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f\cdot g)(x) = (f\cdot g)(x_{0}) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \ne 0 \implies \lim_{x\rightarrow x_{0}}(\frac{f}{g})(x) = (\frac{f}{g})(x_{0}) \\
 \end{aligned}
 $$
 
 ---
 ### vector continuity property
-
 - continuous vector equal coordinatewise continuous function
 
 ---
 ### vector continuity property formula
-
 $$
 \begin{aligned}
-\forall i \le k: \lim_{x\rightarrow x_0}f_i(x) = f_i(x_0) \\
-\vec f:X \rightarrow \mathbb R^k = [f_1(x), \dots, f_k(x)] \\
-x_0 = \text{limit point} \\
+\forall i \le k: \lim_{x\rightarrow x_{0}}f_{i}(x) = f_{i}(x_{0}) \\
+\vec f:X \rightarrow \mathbb R^k = [f_{1}(x), \dots, f_{k}(x)] \\
+x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -224,15 +202,13 @@ $$
 
 ---
 ### compact continuity property
-
 - continuous function of compact domain equal compact range
 
 ---
 ### compact continuity property formula
-
 $$
 \begin{aligned}
-\forall \set{A_i}_{i\in I} \subset Y, \exists \{A_{i_j}\}_{j=1}^n \subset \{A_i\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_j} \subset Y \\
+\forall \set{A_{i}}_{i\in I} \subset Y, \exists \{A_{i_{j}}\}_{j=1}^n \subset \{A_{i}\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_{j}} \subset Y \\
 f: X \rightarrow Y \\
 A = \text{open set} \\
 \set{A} = \text{open cover} \\
@@ -244,15 +220,13 @@ $$
 
 ---
 ### locally bounded
-
 - every domain of locally bounded function within finite distance
 
 ---
 ### locally bounded formula
-
 $$
 \begin{aligned}
-\forall x_0 \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_0) < \delta \implies \forall x \in S: |f(x)| \le M \\
+\forall x_{0} \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_{0}) < \delta \implies \forall x \in S: |f(x)| \le M \\
 f: S \subset X \rightarrow \mathbb R \\
 f = \text{locally bounded function} \\
 X = \text{metric space} 
@@ -261,12 +235,10 @@ $$
 
 ---
 ### globally bounded
-
 - every codomain of bounded function within finite distance
 
 ---
 ### globally bounded formula
-
 $$
 \begin{aligned}
 \exists M \in \mathbb R, \forall x \in S: |f(x)| \le M \\
@@ -278,13 +250,11 @@ $$
 
 ---
 ### closed bounded continuity property
-
 - continuous function of compact domain equal closed bounded range of k-dimensional real numbers and bounded function of k-dimensional real numbers
 - continuous function of noncompact domain equal unbounded function of real numbers
 
 ---
 ### closed bounded continuity property formula
-
 $$
 \begin{aligned}
 f(X)' \subset f(X) \subset \mathbb R^k \land \exists M \in \mathbb R: |f(X)| \le M \\
@@ -298,13 +268,11 @@ $$
 
 ---
 ### extreme continuity property
-
 - for every continuous function of compact domain there exists supremum and infimum
 - continuous bounded function of noncompact domain equal incomplete function of real numbers
 
 ---
 ### extreme continuity property formula
-
 $$
 \begin{aligned}
 \exists \sup f(X), \inf f(X) \in  Y: \inf f(X) \le f(X) \le \sup f(X) \\
@@ -317,19 +285,17 @@ $$
 
 ---
 ### compact inverse continuity property
-
 - for every injective continuous function of compact domain there exists inverse continuous function
 
 ---
 ### compact inverse continuity property formula
-
 $$
 \begin{aligned}
-\forall f(x), \exists f^{-1}(y): \lim_{y\rightarrow y_0}f^{-1}(y) = f^{-1}(y_0) \\
+\forall f(x), \exists f^{-1}(y): \lim_{y\rightarrow y_{0}}f^{-1}(y) = f^{-1}(y_{0}) \\
 f: X \rightarrow Y \\
 f = \text{injective function} \\
 f, f^{-1} = \text{continuous function} \\
-y_0 = \text{limit point} \\
+y_{0} = \text{limit point} \\
 X = \text{compact set} \\
 Y = \text{metric space}
 \end{aligned}
@@ -337,12 +303,10 @@ $$
 
 ---
 ### homeomorphism 
-
 - bijective continuous function with continuous inverse function
 
 ---
 ### homeomorphism formula
-
 $$
 \begin{aligned}
 f: X \rightarrow Y, X \simeq Y \\
@@ -353,12 +317,10 @@ $$
 
 ---
 ### compact homeomorphism property
-
 - bijective continuous function with compact domain equal homeomorphism
 
 ---
 ### compact homeomorphism property formula
-
 $$
 \begin{aligned}
 f: X \rightarrow Y, X \simeq Y \\
@@ -370,17 +332,15 @@ $$
 
 ---
 ### uniform continuity
-
 - for every epsilon distance between every point of continuous function there exists delta distance between every input point
 
 ---
 ### uniform continuity formula
-
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x_1, x_2 \in S: d(x_1, x_2) < \delta \implies d(f(x_1), f(x_2)) < \epsilon \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
 f: S \subset X \rightarrow Y \\
-x_1, x_2 = \text{continuous point} \\
+x_{1}, x_{2} = \text{continuous point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -388,20 +348,18 @@ $$
 
 ---
 ### compact uniform continuity property
-
 - continuous function of compact domain equal uniformly continuous function
 - continuous bounded function of unbounded noncompact set of real numbers equal nonuniform continuous function
 
 ---
 ### compact uniform continuity property formula
-
 $$
 \begin{aligned}
-\forall \epsilon > 0, \forall x_1, x_2 \in S: d(x_1, x_2) < \delta \implies d(f(x_1), f(x_2)) < \epsilon \\
+\forall \epsilon > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
 f: X \rightarrow Y \\
 f = \text{continuous function} \\
 f = \text{uniformly continuous function} \\
-x_1, x_2 = \text{continuous point} \\
+x_{1}, x_{2} = \text{continuous point} \\
 X = \text{compact set} \\
 Y = \text{metric space} 
 \end{aligned}
@@ -409,12 +367,10 @@ $$
 
 ---
 ### separated
-
 - every point of 1st subset equal isolated point of 2nd subset and vice versa
 
 ---
 ### separated formula
-
 $$
 \begin{aligned}
 A, B \subset X \implies \overline A \cap B = A \cap \overline B = \emptyset \\
@@ -426,12 +382,10 @@ $$
 
 ---
 ### disconnected
-
 - there exists union of nonempty separated set
 
 ---
 ### disconnected formula
-
 $$
 \begin{aligned}
 \exists A, B \in X: S = A \cup B \\
@@ -443,12 +397,10 @@ $$
 
 ---
 ### continuous connected property
-
 - continuous function of connected set equal connected set
 
 ---
 ### continuous connected property formula
-
 $$
 \begin{aligned}
 \not\exists A, B \in Y: f(X) = A \cup B \\
@@ -462,12 +414,10 @@ $$
 
 ---
 ### real connected property
-
 - connected set of real numbers contain every intermediate real number of set
 
 ---
 ### real connected property formula
-
 $$
 \begin{aligned}
 S \subset \mathbb R, \forall x, y \in S: x < y \implies [x, y] \subset S \\
@@ -477,12 +427,10 @@ $$
 
 ---
 ### intermediate connected property
-
 - continuous function on interval contain every intermediate value on interval
 
 ---
 ### intermediate connected property formula
-
 $$
 \begin{aligned}
 f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = f(c) \\
@@ -494,35 +442,31 @@ $$
 
 ---
 ### path
-
 - continuous function connecting coordinate
 
 ---
 ### path formula
-
 $$
 \begin{aligned}
-\gamma(0) = x_0 \land \gamma(1) = x_1 \\
+\gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
 \gamma: [0, 1] \rightarrow X \\
 \gamma = \text{continuous function} \\
-x_0, x_1 = \text{coordinate} \\
+x_{0}, x_{1} = \text{coordinate} \\
 X = \text{metric space} 
 \end{aligned} 
 $$
 
 ---
 ### path connected
-
 - for every coordinate of path connected set there exists continuous function connecting coordinate
 
 ---
 ### path connected formula
-
 $$
 \begin{aligned}
-\forall x_0, x_1 \in S: \gamma(0) = x_0 \land \gamma(1) = x_1 \\
+\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
 \gamma: [0, 1] \rightarrow S \subset X \\
-x_0, x_1 = \text{coordinate} \\
+x_{0}, x_{1} = \text{coordinate} \\
 S  = \text{path connected set} \\
 \gamma = \text{continuous function} \\
 X = \text{metric space} 
@@ -531,17 +475,15 @@ $$
 
 ---
 ### path connected property
-
 - path connected set equal connected set
 
 ---
 ### path connected property formula
-
 $$
 \begin{aligned}
-\forall x_0, x_1 \in S: \gamma(0) = x_0 \land \gamma(1) = x_1 \implies \not\exists A, B \in X: S = A \cup B \\
+\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \implies \not\exists A, B \in X: S = A \cup B \\
 \gamma: [0, 1] \rightarrow S \subset X \\
-x_0, x_1 = \text{coordinate} \\
+x_{0}, x_{1} = \text{coordinate} \\
 S  = \text{connected set} \\
 \gamma = \text{continuous function} \\
 A, B = \text{separated set} \\

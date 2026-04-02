@@ -1,5 +1,4 @@
 ### free body diagram
-
 - draw body as the origin of coordinate system
 - sketch all forces acting on the body as vectors
 - resolve all vectors into scalar components
@@ -8,62 +7,54 @@
 - non equilibrium equal $\sum F = ma$ 
 ---
 ### friction force
-
 - resistive force by surface on object
 ---
 ### friction force formula
-
 $$
 \begin{aligned}
-\vec F_f = \mu \vec F_N \\
+\vec F_{f} = \mu \vec F_{N} \\
 \mu = \text{friction coefficient} \\
-F_N = \text{normal force}
+F_{N} = \text{normal force}
 \end{aligned}
 $$
 
 ---
 ### static friction
-
 - friction that acts on stationary objects
 
 ---
 ### static friction force formula
-
 $$
 \begin{aligned}
-\vec F_{fs} \le \mu_s \vec F_N \\
-\mu_s = \text{static friction coefficient} \\
-F_N = \text{normal force}
+\vec F_{fs} \le \mu_{s} \vec F_{N} \\
+\mu_{s} = \text{static friction coefficient} \\
+F_{N} = \text{normal force}
 \end{aligned}
 $$
 
 ---
 ### kinetic friction
-
 - friction that acts on sliding objects
 
 ---
 ### kinetic friction force formula
-
 $$
 \begin{aligned}
-\vec F_{fk} \le \mu_k \vec F_N \\
-\mu_k = \text{kinetic friction coefficient} \\
-F_N = \text{normal force}
+\vec F_{fk} \le \mu_{k} \vec F_{N} \\
+\mu_{k} = \text{kinetic friction coefficient} \\
+F_{N} = \text{normal force}
 \end{aligned}
 $$
 
 ---
 ### centripetal force
-
 - center seeking force causing uniform circular motion
 
 ---
 ### centripetal force formula
-
 $$
 \begin{aligned}
-\vec F_c = m \vec a_{rad} = m\frac{\vec v_{tan}^2}{r} \\
+\vec F_{c} = m \vec a_{rad} = m\frac{\vec v_{tan}^2}{r} \\
 m = \text{mass} \\
 a_{rad} = \text{radial acceleration} \\
 v_{tan} = \text{tangential velocity} \\
@@ -73,11 +64,9 @@ $$
 
 ---
 ### ideal bank curve
-
 - centripetal force equal normal force
 ---
 ### ideal bank curve velocity formula
-
 $$
 \begin{aligned}
 v_{eq} = \sqrt{rg \tan(\theta)} \\
@@ -89,13 +78,11 @@ $$
 
 ---
 ### non ideal bank curve
-
 - minimum velocity before sliding inward equal centripetal force subtraction with friction force
 - maximum velocity before sliding outward equal centripetal force addition with friction force
 
 ---
 ### non ideal bank curve velocity formula
-
 $$
 \begin{aligned}
 v_{min} = \sqrt{\frac{rg(\tan\theta - \mu)}{1 + \mu \tan \theta}} \\
@@ -109,12 +96,10 @@ $$
 
 ---
 ### inertial force
-
 - fictitious force without physical origin
 
 ---
 ### inertial force example
-
 - centrifugal force
 - coriolis force
 - acceleration force

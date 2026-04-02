@@ -1,10 +1,8 @@
 ### random variable
-
 - function of sample space outcome equal real number
 
 ---
 ### random variable formula
-
 $$
 \begin{aligned}
 X: \Omega \rightarrow \mathbb R \\
@@ -18,12 +16,10 @@ $$
 
 ---
 ### discrete random variable
-
 - random variable whose values are max countable
 
 ---
 ### discrete random variable formula
-
 $$
 \begin{aligned}
 (\{0, 1, 2, 3, \dots, n\} \sim X) \lor (\mathbb N \sim X) \\
@@ -33,29 +29,25 @@ $$
 
 ---
 ### discrete probability mass function
-
 - probability as function of discrete random variable
 
 ---
 ### discrete PMF probability formula
-
 $$
 \begin{aligned}
-P(X) = \sum_i P(X = x_i) = 1 \\
+P(X) = \sum_{i} P(X = x_{i}) = 1 \\
 P(X = x) = P(X \le x) - P(X \le x-1) \\
-P(a \le X \le b) = \sum_{i=a}^b P(X = x_i) \\ 
-P(X \le x) = \sum_{x_i\le x} P(X = x_i) 
+P(a \le X \le b) = \sum_{i=a}^b P(X = x_{i}) \\ 
+P(X \le x) = \sum_{x_{i}\le x} P(X = x_{i}) 
 \end{aligned}
 $$
 
 ---
 ### cumulative distribution function
-
 - cumulative probability as function of random variable
 
 ---
 ### cumulative distribution function formula
-
 $$
 \begin{aligned}
 F(x) = P(X \le x) \\
@@ -66,15 +58,13 @@ $$
 
 ---
 ### expectation
-
 - mean of random variable
 
 ---
 ### expectation formula
-
 $$
 \begin{aligned}
-E[X] = \sum_i x_iP(X=x_i) \\
+E[X] = \sum_{i} x_iP(X=x_{i}) \\
 x = \text{real number} \\
 X = \text{random variable}
 \end{aligned}
@@ -82,12 +72,10 @@ $$
 
 ---
 ### variation
-
 - variance of random variable around mean
 
 ---
 ### variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = E[X^2] - (E[X])^2 = E[(X - E[X])^2] \\
@@ -98,29 +86,25 @@ $$
 
 ---
 ### expectation property
-
 - linearity
 - function
 
 ---
 ### expectation property formula
-
 $$
 \begin{aligned}
 E[aX + b] = aE[X] + b \\
-E[g(X)] = \sum_i g(x_i)P(X=x_i) \\
+E[g(X)] = \sum_{i} g(x_{i})P(X=x_{i}) \\
 \end{aligned}
 $$
 
 ---
 ### variation property
-
 - addition
 - multiplication
 
 ---
 ### variation property formula
-
 $$
 \begin{aligned}
 \text{Var}(X + c) = \text{Var}(X) \\
@@ -130,18 +114,15 @@ $$
 
 ---
 ### bernoulli probability mass function
-
 - probability as function of single trial with two outcomes
 
 ---
 ### bernoulli PMF assumptions
-
 - single trial
 - two outcomes
 
 ---
 ### bernoulli PMF probability formula
-
 $$
 \begin{aligned}
 P(X = k) = \begin{pmatrix} 1 \\ k \end{pmatrix} p^kq^{1-k} \\
@@ -154,7 +135,6 @@ $$
 
 ---
 ### bernoulli PMF expectation formula
-
 $$
 \begin{aligned}
 E[X] = p \\
@@ -165,7 +145,6 @@ $$
 
 ---
 ### bernoulli PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = pq \\
@@ -177,12 +156,10 @@ $$
 
 ---
 ### binomial probability mass function
-
 - probability as function of the number of successes
 
 ---
 ### binomial PMF assumptions
-
 - two outcomes
 - fixed number of trials
 - constant probability of success
@@ -190,7 +167,6 @@ $$
 
 ---
 ### binomial PMF probability formula
-
 $$
 \begin{aligned}
 P(X = k) = \begin{pmatrix} n \\ k \end{pmatrix}p^kq^{n-k} \\
@@ -204,7 +180,6 @@ $$
 
 ---
 ### binomial PMF expectation formula
-
 $$
 \begin{aligned}
 E[X] = np \\
@@ -216,7 +191,6 @@ $$
 
 ---
 ### binomial PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = npq \\
@@ -229,13 +203,11 @@ $$
 
 ---
 ### geometric probability mass function
-
 - probability as function of the number of trials until 1st success
 - probability as function of the number of failures before 1st success
 
 ---
 ### geometric PMF assumptions
-
 - two outcomes
 - random number of trials
 - constant probability of success
@@ -243,26 +215,24 @@ $$
 
 ---
 ### geometric PMF probability formula
-
 $$
 \begin{aligned}
-P(X_1 = k_1) =  \begin{pmatrix} k-1 \\ 0 \end{pmatrix} pq^{k-1} \\
-P(X_2 = k_2) = \begin{pmatrix} k \\ 0 \end{pmatrix} pq^{k} \\
+P(X_{1} = k_{1}) =  \begin{pmatrix} k-1 \\ 0 \end{pmatrix} pq^{k-1} \\
+P(X_{2} = k_{2}) = \begin{pmatrix} k \\ 0 \end{pmatrix} pq^{k} \\
 X = \text{random variable} \\
 p = \text{probability of success} \\
 q = \text{probability of failure} \\
-k_1 = \text{number of trials until 1st success} \\
-k_2 = \text{number of failures before 1st success}
+k_{1} = \text{number of trials until 1st success} \\
+k_{2} = \text{number of failures before 1st success}
 \end{aligned}
 $$
 
 ---
 ### geometric PMF expectation formula
-
 $$
 \begin{aligned}
-E[X_1] = \frac{1}{p} \\
-E[X_2] = \frac{q}{p} \\
+E[X_{1}] = \frac{1}{p} \\
+E[X_{2}] = \frac{q}{p} \\
 X = \text{random variable} \\
 p = \text{probability of success} \\
 q = \text{probability of failure}
@@ -271,7 +241,6 @@ $$
 
 ---
 ### geometric PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{q}{p^2} \\
@@ -283,13 +252,11 @@ $$
 
 ---
 ### negative binomial probability mass function
-
 - probability as function of the number of trials until $r$th success
 - probability as function of the number of failures before $r$th success
 
 ---
 ### negative binomial PMF assumptions
-
 - two outcomes
 - random number of trials
 - constant probability of success
@@ -297,14 +264,13 @@ $$
 
 ---
 ### negative binomial PMF probability formula
-
 $$
 \begin{aligned}
-P(X_1 = k_1) = \begin{pmatrix} k-1 \\ r - 1 \end{pmatrix} p^rq^{k-r} \\
-P(X_2 = k_2) = \begin{pmatrix} k+r-1 \\ r - 1 \end{pmatrix} p^rq^k \\
+P(X_{1} = k_{1}) = \begin{pmatrix} k-1 \\ r - 1 \end{pmatrix} p^rq^{k-r} \\
+P(X_{2} = k_{2}) = \begin{pmatrix} k+r-1 \\ r - 1 \end{pmatrix} p^rq^k \\
 X = \text{random variable} \\
-k_1 = \text{number of trials until rth success} \\
-k_2 = \text{number of failures before rth success} \\
+k_{1} = \text{number of trials until rth success} \\
+k_{2} = \text{number of failures before rth success} \\
 r = \text{success number} \\
 p = \text{probability of success} \\
 q = \text{probability of failure} 
@@ -313,11 +279,10 @@ $$
 
 ---
 ### negative binomial PMF expectation formula
-
 $$
 \begin{aligned}
-E[X_1] = \frac{r}{p} \\ 
-E[X_2] = \frac{rq}{p} \\
+E[X_{1}] = \frac{r}{p} \\ 
+E[X_{2}] = \frac{rq}{p} \\
 r = \text{success number} \\
 p = \text{probability of success} \\
 q = \text{probability of failure} 
@@ -326,7 +291,6 @@ $$
 
 ---
 ### negative binomial PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{rq}{p^2} \\
@@ -338,19 +302,16 @@ $$
 
 ---
 ### hypergeometric probability mass function
-
 - probability as function of the number of items drawn from the group of interest
 
 ---
 ### hypergeometric PMF assumptions
-
 - finite population
 - variable probability of success
 - dependent trials
 
 ---
 ### hypergeometric PMF probability formula
-
 $$
 \begin{aligned}
 P(X = k) = \frac{\begin{pmatrix} K \\ k \end{pmatrix}\begin{pmatrix} N-K \\ n-k \end{pmatrix}}{\begin{pmatrix} N \\ n \end{pmatrix}} \\
@@ -364,7 +325,6 @@ $$
 
 ---
 ### hypergeometric PMF expectation formula 
-
 $$
 \begin{aligned}
 E[X] = \frac{nK}{N} \\
@@ -377,7 +337,6 @@ $$
 
 ---
 ### hypergeometric PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = (\frac{nK}{N})(1 - \frac{K}{N})(\frac{N-n}{N-1}) \\
@@ -390,13 +349,11 @@ $$
 
 ---
 ### poisson probability mass function
-
 - probability as function of the number of events within interval
 - approximate binomial PMF with small probability of success and large number of trials
 
 ---
 ### poisson PMF assumptions
-
 - fixed interval
 - constant average number of events per interval
 - independent events 
@@ -404,7 +361,6 @@ $$
 
 ---
 ### poisson PMF probability formula
-
 $$
 \begin{aligned}
 P(X = k) = \frac{e^{-\lambda}\lambda^k}{k!} \\
@@ -419,7 +375,6 @@ $$
 
 ---
 ### poisson PMF expectation formula
-
 $$
 \begin{aligned}
 E[X] = \lambda \\
@@ -430,7 +385,6 @@ $$
 
 ---
 ### poisson PMF variation formula
-
 $$
 \begin{aligned}
 \text{Var}(X) = \lambda \\

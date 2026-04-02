@@ -1,10 +1,8 @@
 ### tree
-
 - tree if and only if there exists unique simple path between any two vertices
 
 ---
 ### tree formula
-
 $$
 \begin{aligned}
 |E| = n - 1 \\
@@ -15,11 +13,9 @@ $$
 
 ---
 ### tree graph
-
 - graph that may not contain loops, multiple edges, cycles, or disconnections
 ---
 ### tree graph formula
-
 $$
 \begin{aligned}
 \forall a(a, a) \notin R \\
@@ -31,65 +27,52 @@ $$
 
 ---
 ### forest graph
-
 - collection of disjoint trees
 ---
 ### root tree graph
-
 - tree graph where single vertex acts as the root and every edge direct away from root
 ---
 ### parent vertex
-
 - vertex directly above children vertices
 
 ---
 ### child vertex
-
 - vertices directly below parent vertex
 
 ---
 ### ancestor 
-
 - vertices indirectly above parent vertex including grandparent vertices
 
 ---
 ### descendent
-
 - vertices indirectly below parent vertex including grandchildren vertices
 
 ---
 ### leaf vertex
-
 - vertex with zero children vertices
 
 ---
 ### internal vertex
-
 - vertex with non zero children vertices
 
 ---
 ### subtree
-
 - subgraph of tree graph from vertex and its descendent(s)
 
 ---
 ### order root tree
-
 - root tree where the children of internal vertex order from left to right
 
 ---
 ### N-ary tree
-
 - root tree where every internal vertex has $\le N$ children vertices
 
 ---
 ### full N-ary tree
-
 - root tree where every interval vertex has *N* children vertices
 
 ---
 ### full N-ary tree formula
-
 $$
 \begin{aligned}
 n \rightarrow i = \frac{n - 1}{N} \land l = \frac{(n + 1)(N - 1)}{N} \\
@@ -104,32 +87,26 @@ $$
 
 ---
 ### binary tree
-
 - root tree where every internal vertex has 2 children vertices
 ---
 ### vertex level
-
 - length of path from root vertex
 
 ---
 ### tree height
-
 - maximum vertex level
 
 ---
 ### tree height upper bound
-
 - if N-ary tree of height *h* then there exists $N^h$ leaves
 
 ---
 ### balance N-ary tree
-
 - all leaves of height *h* or $h - 1$ 
 
 ---
 ### tree height theorem
-
-- if N-ary tree of height *h* and *l* leaves then $h \ge \lceil log_N (l) \rceil$ 
-- if full balance N-ary tree of height *h* and *l* leaves then $h = \lceil log_N (l) \rceil$ 
+- if N-ary tree of height *h* and *l* leaves then $h \ge \lceil log_{N} (l) \rceil$ 
+- if full balance N-ary tree of height *h* and *l* leaves then $h = \lceil log_{N} (l) \rceil$ 
 
 ---

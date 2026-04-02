@@ -1,5 +1,4 @@
 ### integral rules
-
 $$
 \begin{aligned}
 \int du = u + c \\
@@ -9,7 +8,7 @@ $$
 \int \frac{du}{u} = \ln|u| + c \\
 \int e^udu = e^u + c \\
 \int a^u du = \frac{a^u}{\ln(a)} + c \\
-\int \log_a(u)du = \frac{u\ln(u) - u}{\ln(a)} + c \\
+\int \log_{a}(u)du = \frac{u\ln(u) - u}{\ln(a)} + c \\
 \int \sin(u)du = -\cos(u) + c \\
 \int \cos(u)du = \sin(u) + c \\
 \int \tan(u)du = -\ln(\cos u) + c \\
@@ -28,7 +27,6 @@ $$
 
 ---
 ### fitting integral rules
-
 - binomial expansion
 - trigonometric identity
 - pythagorean conjugate
@@ -37,7 +35,6 @@ $$
 
 ---
 ### binomial expansion
-
 - $(a + b)^0 = 1$ 
 - $(a + b)^1 = a + b$ 
 - $(a + b)^2 = a^2 + 2ab + b^2$ 
@@ -47,7 +44,6 @@ $$
 
 ---
 ### trigonometric identify
-
 - $\sin(a \pm b) = \sin(a)\cos(b) \pm \cos(a)\sin(b)$ 
 - $\cos(a \pm b) = \cos(a)\cos(b) \mp \sin(a)\sin(b)$ 
 - $\tan(a \pm b) = \frac{\tan(a) \pm \tan(b)}{1 \mp \tan(a)\tan(b)}$ 
@@ -69,19 +65,16 @@ $$
 
 ---
 ### pythagorean conjugate
-
 - addition or subtraction with trigonometric function
 - $\cos^2(\theta) + \sin^2(\theta) = 1$ 
 
 ---
 ### square completion
-
 - incomplete quadratic function
 - $x^2 + bx + (\frac{b}{2})^2 - (\frac{b}{2})^2 + c$ 
 
 ---
 ### long division
-
 - numerator degree $\ge$ denominator degree
 - $n^{th}$ dividend division with $n^{th}$ divisor term equal $n^{th}$ quotient term
 - $n^{th}$ quotient term multiplication with divisor
@@ -89,20 +82,17 @@ $$
 
 ---
 ### area of region between two curves
-
 - if $f(x)$ and $g(x)$ continuous on $[a, b]$ and $g(x) ≤ f(x)$ then area of region between two curves equal difference of area between $f(x)$ and $g(x)$
 ---
 ### area of region between two curves formula
-
 $$
 \begin{aligned}
-A = \int_a^b [f(x) - g(x)] dx \\
+A = \int_{a}^b [f(x) - g(x)] dx \\
 \end{aligned}
 $$
 
 ---
 ### calculate area of region between two curves
-
 - find points of intersection by equating both functions and factoring
 - if >2 points of intersection then sum multiple integrals
 - identify order of subtrahends by graphing both functions
@@ -110,47 +100,39 @@ $$
 - simplify difference before integration
 ---
 ### solid of revolution
-
 - three dimensional solid from the rotation of function about axis of revolution
 
 ---
 ### disk volume
-
 - perpendicular rectangle revolve about axis of revolution
 ---
 ### disk method
-
 - approximate solid of revolution as infinite disks
 ---
 ### disk method formula
-
 $$
 \begin{aligned}
-V = \pi \int_a^b R(x)^2dx \\
+V = \pi \int_{a}^b R(x)^2dx \\
 R(x) = \text{distance from axis of revolution}
 \end{aligned}
 $$
 
 ---
 ### disk method axis of revolution
-
 - if horizontal axis of revolution then $dx$ equal variable of integration
 - if vertical axis of revolution then $dy$ equal variable of integration
 - if non coordinate axis of revolution then area of region between two curves  
 ---
 ### washer volume
-
 - perpendicular rectangle revolve about hollow axis of revolution
 ---
 ### washer method
-
 - approximate solid of revolution as infinite washers
 ---
 ### washer method formula
-
 $$
 \begin{aligned}
-V = \pi \int_a^b [R(x)^2 - r(x)^2]dx \\
+V = \pi \int_{a}^b [R(x)^2 - r(x)^2]dx \\
 R(x) = \text{big radius} \\
 r(x) = \text{small radius} \\
 \end{aligned}
@@ -158,70 +140,59 @@ $$
 
 ---
 ### shell volume
-
 - parallel rectangle revolve about hollow axis of revolution
 ---
 ### shell method
-
 - approximate solid of revolution as infinite cylindrical shells
 ---
 ### shell formula
-
 $$
 \begin{aligned}
-V = 2\pi \int_a^b R(x)f(x)dx \\
+V = 2\pi \int_{a}^b R(x)f(x)dx \\
 R(x) = \text{distance from the axis of revolution} \\
 \end{aligned}
 $$
 
 ---
 ### shell method axis of revolution
-
 - if horizontal axis of revolution then $dy$ equal variable of integration
 - if vertical axis of revolution then $dx$ equal variable of integration
 - if non coordinate axis of revolution then area of region between two curves but right top function subtraction with left bottom function
 ---
 ### disk method versus shell method
-
 - if horizontal axis of revolution then disk method
 - if vertical axis of revolution then shell method
 ---
 ### arc length
-
 - distance between two points along arc
 ---
 ### arc length formula
-
 $$
 \begin{aligned}
-s = \int_a^b \sqrt{1 + (\frac{dy}{dx})^2}dx
+s = \int_{a}^b \sqrt{1 + (\frac{dy}{dx})^2}dx
 \end{aligned}
 $$
 
 ---
 ### calculate arc length
-
 - differentiate function
 - square derivative
 - simplify radicand
 
 ---
 ### surface of revolution
-
 - two dimensional surface from the rotation of function about axis of revolution
 ---
 ### surface area formula
-
 $$
 \begin{aligned}
-S(x) = 2\pi \int_a^b R(x) \sqrt{1 + (\frac{dy}{dx})^2}dx \\
-S(y) = 2\pi \int_a^b R(y) \sqrt{1 + (\frac{dx}{dy})^2}dy
+S(x) = 2\pi \int_{a}^b R(x) \sqrt{1 + (\frac{dy}{dx})^2}dx \\
+S(y) = 2\pi \int_{a}^b R(y) \sqrt{1 + (\frac{dx}{dy})^2}dy
 \end{aligned}
 $$
 
 ---
 ### calculate surface area
-
 - if horizontal axis of revolution then $y = R(x)$ 
 - if vertical axis of revolution then $x = R(y)$ 
 

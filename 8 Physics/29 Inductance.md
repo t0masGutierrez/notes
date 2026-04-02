@@ -1,17 +1,14 @@
 ### inductance
-
 - effectiveness of inducing emf due to changing electric current
 
 ---
 ### mutual inductance
-
 - effectiveness of inducing emf between two conductors due to changing electric current
 ---
 ### mutual inductance formula
-
 $$
 \begin{aligned}
-M = \frac{N_1\Phi_{12}}{i_2} = \frac{N_2\Phi_{21}}{i_1} \\
+M = \frac{N_{1}\Phi_{12}}{i_{2}} = \frac{N_{2}\Phi_{21}}{i_{1}} \\
 N = \text{number of loops} \\
 \Phi = \text{magnetic flux} \\
 i = \text{electric current}
@@ -20,15 +17,13 @@ $$
 
 ---
 ### mutual inductance emf
-
 - mutually induced emf between two conductors due to changing electric current
 
 ---
 ### mutual inductance emf formula
-
 $$
 \begin{aligned}
-\epsilon_2 = -M\frac{di_1}{dt} \\
+\epsilon_{2} = -M\frac{di_{1}}{dt} \\
 M = \text{mutual inductance} \\
 i = \text{electric current} \\
 t =\text{time} 
@@ -37,11 +32,9 @@ $$
 
 ---
 ### self inductance
-
 - effectiveness of inducing emf on self due to changing electric current
 ---
 ### self inductance formula
-
 $$
 \begin{aligned}
 L = \frac{N\Phi}{i} \\
@@ -53,11 +46,10 @@ $$
 
 ---
 ### solenoid self inductance formula
-
 $$
 \begin{aligned}
-L = \frac{\mu_0 N^2A}{L'} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+L = \frac{\mu_{0} N^2A}{L'} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 N = \text{number of loops} \\
 A = \text{area} \\
 L' = \text{length}
@@ -66,11 +58,10 @@ $$
 
 ---
 ### toroid self inductance formula
-
 $$
 \begin{aligned}
 L = \frac{\mu_0N^2A}{2\pi R} \\
-\mu_0 = 4\pi \times 10^{-7} \\
+\mu_{0} = 4\pi \times 10^{-7} \\
 N = \text{number of loops} \\
 A = \text{area} \\
 R = \text{radius}
@@ -79,11 +70,9 @@ $$
 
 ---
 ### self inductance emf
-
 - self induced emf due to changing electric current
 ---
 ### self inductance emf formula
-
 $$
 \begin{aligned}
 \epsilon = -L\frac{di}{dt} \\
@@ -95,14 +84,12 @@ $$
 
 ---
 ### inductor
-
 - electric component designed to oppose changing electric current
 ---
 ### inductor formula
-
 $$
 \begin{aligned}
-v_L = L\frac{di}{dt} \\
+v_{L} = L\frac{di}{dt} \\
 L = \text{self inductance} \\
 i = \text{electric current} \\
 t = \text{time}
@@ -111,12 +98,10 @@ $$
 
 ---
 ### kirchhoffs loop rule
-
 - sum of voltage around loop must equal zero
 - conservation of energy
 ---
 ### kirchhoffs loop formula
-
 $$
 \begin{aligned}
 \sum V = 0 \\
@@ -126,7 +111,6 @@ $$
 
 ---
 ### calculate kirchhoffs loop rule
-
 - identify loop
 - choose direction of travel
 - for every loop apply kirchhoffs loop rule
@@ -134,11 +118,9 @@ $$
 
 ---
 ### magnetic potential energy
-
 - energy of position inside inductor
 ---
 ### magnetic potential energy formula
-
 $$
 \begin{aligned}
 U = \frac{LI^2}{2} \\
@@ -149,58 +131,48 @@ $$
 
 ---
 ### energy density
-
 - measure of magnetic potential energy compactness
 
 ---
 ### energy density formula
-
 $$
 \begin{aligned}
-u = \frac{B^2}{2\mu_0} \\
+u = \frac{B^2}{2\mu_{0}} \\
 B = \text{magnetic field} \\
-\mu_0 = 4 \pi \times 10^{-7}
+\mu_{0} = 4 \pi \times 10^{-7}
 \end{aligned}
 $$
 
 ---
 ### RL electric circuit
-
 - electric circuit with resistance and self inductance
 ---
 ### calculate RL electric circuit
-
 - increasing equal connect emf
 - decreasing equal disconnect emf
 
 ---
 ### increasing inductor
-
 - positive terminal of inductor input electric current
 ---
 ### calculate increasing inductor
-
 - initial inductor equal open switch therefore zero electric current
 - final inductor equal closed switch therefore maximum electric current
 
 ---
 ### decreasing inductor
-
 - positive terminal of inductor output electric current
 ---
 ### calculate decreasing inductor
-
 - initial inductor equal closed switch therefore maximum electric current
 - final inductor equal open switch therefore zero electric current
 
 ---
 ### time constant
-
 - measure of increasing time
 
 ---
 ### time constant formula
-
 $$
 \begin{aligned}
 \tau = \frac{L}{R} \\
@@ -211,17 +183,14 @@ $$
 
 ---
 ### calculate time constant
-
 - small time constant equal faster increasing
 - large time constant equal slower increasing
 
 ---
 ### increasing electric current
-
 - electric current through increasing inductor as function of time
 ---
 ### increasing electric current formula
-
 $$
 \begin{aligned}
 i(t) = \frac{V}{R}(1 - e^{-Rt/L}) = I(1 - e^{-t/\tau}) \\
@@ -236,11 +205,9 @@ $$
 
 ---
 ### decreasing electric current
-
 - electric current through decreasing inductor as function of time
 ---
 ### decreasing electric current formula
-
 $$
 \begin{aligned}
 i(t) = I(e^{-t/\tau}) \\
@@ -252,20 +219,16 @@ $$
 
 ---
 ### LC electric circuit
-
 - electric circuit with self inductance and capacitance
 ---
 ### calculate LC electric circuit
-
 - oscillating energy between capacitor electric field and inductor magnetic field
 
 ---
 ### LC potential energy
-
 - energy of position inside LC electric circuit
 ---
 ### LC potential energy formula
-
 $$
 \begin{aligned}
 U = \frac{q^2}{2C} + \frac{Li^2}{2} = \frac{Q^2}{2C} = \frac{LI^2}{2} \\
@@ -278,17 +241,14 @@ $$
 
 ---
 ### calculate LC potential energy
-
 - increasing electric energy equal decreasing magnetic energy
 - maximum magnetic energy equal zero electric energy
 
 ---
 ### simple harmonic motion
-
 - periodic motion where object oscillate about equilibrium with restoring force directly proportional displacement
 ---
 ### simple harmonic motion formula
-
 $$
 \begin{aligned}
 x(t) = A \cos(\omega t + \phi) \\
@@ -306,7 +266,6 @@ $$
 
 ---
 ### calculate simple harmonic motion
-
 - potential energy equal electric energy
 - kinetic energy equal magnetic energy
 - position equal electric charge
@@ -316,11 +275,9 @@ $$
 
 ---
 ### LC harmonic motion
-
 - periodic motion where energy oscillate about equilibrium with restoring force directly proportional displacement
 ---
 ### LC harmonic motion formula
-
 $$
 \begin{aligned}
 q(t) = Q\cos(\omega t + \phi) \\
@@ -338,26 +295,21 @@ $$
 
 ---
 ### calculate LC harmonic motion
-
 - maximum initial electric charge and zero initial electric current equal zero phase angle 
 - zero initial electric charge and minimum initial electric current equal $\pi/2$ phase angle
 
 ---
 ### RLC electric circuit
-
 - electric circuit with resistance, self inductance, and capacitance
 ---
 ### calculate RLC electric circuit
-
 - damped oscillating energy between capacitor electric field and inductor magnetic field
 
 ---
 ### damped oscillation
-
 - decreasing harmonic motion by subtracting energy via damping force
 ---
 ### damped oscillation formula
-
 $$
 \begin{aligned}
 x(t) = A(e^{-bt/2m})\cos(\omega t + \phi) \\
@@ -374,11 +326,9 @@ $$
 
 ---
 ### damped RLC oscillation
-
 - decreasing LC harmonic motion by subtracting energy via resistance
 ---
 ### damped RLC oscillation formula
-
 $$
 \begin{aligned}
 q(t) = Q(e^{-Rt/2L})\cos(\omega t + \phi) \\

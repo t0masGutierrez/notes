@@ -1,9 +1,7 @@
 ### logarithm function
-
 - exponent as function of product
 ---
 ### logarithm property
-
 $$
 \begin{aligned}
 \log(1) = 0 \\
@@ -16,7 +14,6 @@ $$
 
 ---
 ### natural logarithm property
-
 $$
 \begin{aligned}
 \ln(e^x) = x \\
@@ -27,7 +24,6 @@ $$
 
 ---
 ### natural logarithm derivative
-
 $$
 \begin{aligned}
 \frac{d}{dx} \ln(u) = \frac{du}{u} \\
@@ -38,7 +34,6 @@ $$
 
 ---
 ### natural logarithm integral
-
 $$
 \begin{aligned}
 \int \frac{du}{u} = \ln(u) + c \\
@@ -49,11 +44,9 @@ $$
 
 ---
 ### exponential function
-
 - product as function of exponent
 ---
 ### exponential property
-
 $$
 \begin{aligned}
 n^0 = 1 \\
@@ -68,7 +61,6 @@ $$
 
 ---
 ### natural exponential property
-
 $$
 \begin{aligned}
 e^{\ln(x)} = x \\
@@ -79,7 +71,6 @@ $$
 
 ---
 ### natural exponential derivative
-
 $$
 \begin{aligned}
 \frac{d}{dx} e^u = e^u du \\
@@ -90,7 +81,6 @@ $$
 
 ---
 ### natural exponential integral
-
 $$
 \begin{aligned}
 \int e^u du = e^u + c \\
@@ -101,33 +91,28 @@ $$
 
 ---
 ### logarithm equation
-
 - rewrite expression in terms of exponential argument by performing inverse operation of logarithm function
 
 ---
 ### exponential equation
-
 - rewrite expression in terms of logarithm argument by performing inverse operation of exponential function
 
 ---
 ### inverse property
-
 $$
 \begin{aligned}
-a^{\log_x(x)} = x \\
-x = \log_a(y) \to y = a^x \\
-\log_a(a^x) = x
+a^{\log_{x}(x)} = x \\
+x = \log_{a}(y) \to y = a^x \\
+\log_{a}(a^x) = x
 \end{aligned}
 $$
 
 ---
 ### function of different base
-
 - if function of different base then solve equation by performing inverse operation of function
 
 ---
 ### base exponential formula
-
 $$
 \begin{aligned}
 a^x = e^{x \ln(a)}
@@ -136,43 +121,38 @@ $$
 
 ---
 ### base logarithm formula
-
 $$
 \begin{aligned}
-\log_a(x) = \frac{\ln(x)}{\ln(a)}
+\log_{a}(x) = \frac{\ln(x)}{\ln(a)}
 \end{aligned}
 $$
 
 ---
 ### different base derivative rules
-
 $$
 \begin{aligned}
 \frac{d}{dx}a^u = \ln(a)a^u \frac{du}{dx} \\
-\frac{d}{dx}\log_a(u) = \frac{1}{\ln(a)u} \frac{du}{dx}
+\frac{d}{dx}\log_{a}(u) = \frac{1}{\ln(a)u} \frac{du}{dx}
 \end{aligned}
 $$
 
 ---
 ### different base integral rules
-
 $$
 \begin{aligned}
 \int a^u du = \frac{a^u}{\ln(a)} + c \\
-\int \log_a(u) du = \frac{\ln(u)}{\ln(a)} + c
+\int \log_{a}(u) du = \frac{\ln(u)}{\ln(a)} + c
 \end{aligned}
 $$
 
 ---
 ### logarithm differentiation
-
 - natural logarithm both sides of equation
 - differentiate both sides of equation
 - isolate $f'(x)$ by multiplying derivative with $f(x)$
 
 ---
 ### logarithm differentiation formula
-
 $$
 \begin{aligned}
 y = u^{g(x)} \to \ln(y) = g(x) \ln(u)
@@ -181,12 +161,10 @@ $$
 
 ---
 ### inverse trigonometric function
-
 - input trigonometric ratio
 - output angle
 ---
 ### inverse trigonometric formula
-
 $$
 \begin{aligned}
 y = \arcsin(x) \\
@@ -196,7 +174,6 @@ $$
 
 ---
 ### inverse trigonometric derivative rules
-
 $$
 \begin{aligned}
 \frac{d}{dx}\arcsin(u) = \frac{u'}{\sqrt{1 - u^2}} \\
@@ -210,7 +187,6 @@ $$
 
 ---
 ### inverse trigonometric integral rules
-
 $$
 \begin{aligned}
 \int \frac{du}{\sqrt{a^2 - u^2}} = \arcsin(\frac{u}{a}) + c \\
@@ -221,11 +197,9 @@ $$
 
 ---
 ### hyperbolic function
-
 - trigonometric functions except unit hyperbola instead of unit circle
 ---
 ### hyperbolic formula
-
 $$
 \begin{aligned}
 \sinh(u) = \frac{e^u - e^{-u}}{2} \\
@@ -239,7 +213,6 @@ $$
 
 ---
 ### hyperbolic graph
-
 - sinh
 - cosh
 - tanh
@@ -248,7 +221,6 @@ $$
 - coth
 ---
 ### hyperbolic derivative rules
-
 $$
 \begin{aligned}
 \frac{d}{dx}\sinh(u) = \cosh(u)u' \\
@@ -262,7 +234,6 @@ $$
 
 ---
 ### hyperbolic integral rules
-
 $$
 \begin{aligned}
 \int \cosh(u)du = \sinh(u) + c \\
@@ -276,19 +247,16 @@ $$
 
 ---
 ### hyperbolic identity
-
 - pythagorean
 - sum difference
 - 2nd power
 - double angle
 ---
 ### inverse hyperbolic function
-
 - inverse trigonometric functions except unit hyperbola instead of unit circle
 
 ---
 ### inverse hyperbolic formula
-
 $$
 \begin{aligned}
 \text{arcsinh}(u) = \ln(u + \sqrt{u^2 + 1}) \\
@@ -302,7 +270,6 @@ $$
 
 ---
 ### inverse hyperbolic graph
-
 - inverse hyperbolic sine
 - inverse hyperbolic cosine
 - inverse hyperbolic tangent
@@ -311,7 +278,6 @@ $$
 - inverse hyperbolic cotangent
 ---
 ### inverse hyperbolic derivative rules
-
 $$
 \begin{aligned}
 \frac{d}{dx}\text{arcsinh}(u) = \frac{u'}{\sqrt{u^2 + 1}} \\
@@ -325,7 +291,6 @@ $$
 
 ---
 ### inverse hyperbolic integral rules
-
 $$
 \begin{aligned}
 \int \frac{du}{\sqrt{a^2 \pm u^2}} = \ln(u + \sqrt{a^2 \pm u^2}) + c \\

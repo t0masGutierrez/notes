@@ -1,10 +1,8 @@
 ### rectangular equation
-
 - $f(x)$ in terms of *x* 
 
 ---
 ### rectangular equation formula
-
 $$
 \begin{aligned}
 y = f(x) \\
@@ -15,12 +13,10 @@ $$
 
 ---
 ### parametric equation
-
 - $(x, y)$ in terms of *t* 
 
 ---
 ### parametric equation
-
 $$
 \begin{aligned}
 x = f(t) \\
@@ -33,34 +29,28 @@ $$
 
 ---
 ### deparameterization
-
 - parametric conversion rectangular
 
 ---
 ### calculate deparameterization
-
 - solve $x = f(t)$ for *t* in terms of *x* 
 - substitute *t* into $y = g(t)$ 
 
 ---
 ### parameterization
-
 - rectangular conversion parametric
 
 ---
 ### calculate parameterization
-
 - solve $t = f(x)$ for *x*
 - substitute *t* into $y = g(t)$ 
 
 ---
 ### derivative
-
 - slope of secant segment as $\Delta x$ approaches zero
 
 ---
 ### parametric derivative formula
-
 $$
 \begin{aligned}
 \frac{dy}{dx} = \frac{g'(t)}{f'(t)}
@@ -69,54 +59,46 @@ $$
 
 ---
 ### definite integration
-
 - operation of finding the area under curve between two limits of integration
 
 ---
 ### parametric definite integral formula
-
 $$
 \begin{aligned}
-\int_{t_1}^{t_2} ydt = \int_{t_1}^{t_2} g(t)f'(t) dt
+\int_{t_{1}}^{t_{2}} ydt = \int_{t_{1}}^{t_{2}} g(t)f'(t) dt
 \end{aligned}
 $$
 
 ---
 ### arc length
-
 - distance between endpoints along arc
 
 ---
 ### parametric arc length formula
-
 $$
 \begin{aligned}
-\int_{t_1}^{t_2} \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt
+\int_{t_{1}}^{t_{2}} \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt
 \end{aligned}
 $$
 
 ---
 ### surface area
-
 - two dimensional surface from the rotation of function about axis of revolution
 
 ---
 ### parametric surface area formula
-
 $$
 \begin{aligned}
-y = 2\pi \int_{t_1}^{t_2} g(t) \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt \\
-x = 2\pi \int_{t_1}^{t_2} f(t) \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt
+y = 2\pi \int_{t_{1}}^{t_{2}} g(t) \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt \\
+x = 2\pi \int_{t_{1}}^{t_{2}} f(t) \sqrt{(\frac{dx}{dt})^2 + (\frac{dy}{dt})^2}dt
 \end{aligned}
 $$
 
 ---
 ### polar coordinate system
-
 - represent coordinate $(x, y)$ with distance and angle
 ---
 ### polar coordinate formula
-
 $$
 \begin{aligned}
 (r, \theta) = (r, \theta + 2\pi n) \\
@@ -127,11 +109,9 @@ $$
 
 ---
 ### coordinate system conversion
-
 - distance equal *x* axis and angle between vectors equal *y* axis
 ---
 ### polar conversion rectangular formula
-
 $$
 \begin{aligned}
 x = r\cos(\theta) \\
@@ -142,7 +122,6 @@ $$
 
 ---
 ### rectangular conversion polar formula
-
 $$
 \begin{aligned}
 \theta = \arctan(\frac{y}{x}) \\
@@ -152,28 +131,23 @@ $$
 
 ---
 ### polar curve
-
 - limacons
 - roses
 - circles
 - lemniscates
 ---
 ### graph polar curve
-
 - graph $r = f(\theta)$ as rectangular coordinate where $r = y$ and $\theta = x$ 
 ---
 ### polar symmetry
-
 - if both $(r, \theta)$ and $(r, -\theta)$ on polar curve then polar curve symmetric about x axis
 - if both $(r, \theta)$ and $(r, \pi + \theta) = (-r, \theta)$ on polar curve then polar curve symmetric about origin
 - if both $(r, \theta)$ and $(r, \pi - \theta) = (-r, -\theta)$ on polar curve then polar curve symmetric about y axis
 ---
 ### derivative
-
 - slope of secant segment as $\Delta x$ approaches zero
 ---
 ### polar derivative formula
-
 $$
 \begin{aligned}
 \frac{dy}{dx} = \frac{f'(\theta)\sin(\theta) + f(\theta)\cos(\theta)}{f'(\theta)\cos(\theta) - f(\theta)\sin(\theta)}
@@ -182,43 +156,37 @@ $$
 
 ---
 ### definite integration
-
 - operation of finding the area under curve between two limits of integration
 ---
 ### polar definite integral formula
-
 $$
 \begin{aligned}
-\frac{1}{2}\int_{\theta_1}^{\theta_2} [R^2 - r^2]d\theta
+\frac{1}{2}\int_{\theta_{1}}^{\theta_{2}} [R^2 - r^2]d\theta
 \end{aligned}
 $$
 
 ---
 ### arc length
-
 - distance between endpoints along arc
 
 ---
 ### polar arc length formula
-
 $$
 \begin{aligned}
-\int_{\theta_1}^{\theta_2} \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta
+\int_{\theta_{1}}^{\theta_{2}} \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta
 \end{aligned}
 $$
 
 ---
 ### surface of revolution
-
 - two dimensional surface from the rotation of function about axis of revolution
 
 ---
 ### polar surface area formula
-
 $$
 \begin{aligned}
-y = 2\pi \int_{\theta_1}^{\theta_2} r\sin(\theta) \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta \\
-x = 2\pi \int_{\theta_1}^{\theta_2} r\cos(\theta) \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta \\
+y = 2\pi \int_{\theta_{1}}^{\theta_{2}} r\sin(\theta) \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta \\
+x = 2\pi \int_{\theta_{1}}^{\theta_{2}} r\cos(\theta) \sqrt{r^2 + (\frac{dr}{d\theta})^2}d\theta \\
 \end{aligned}
 $$
 

@@ -1,10 +1,8 @@
 ### vector space
-
 - nonempty set thats closed under vector addition and scalar multiplication
 
 ---
 ### vector space formula
-
 $$
 \begin{aligned}
 \vec x, \vec y \in \mathcal V \implies \vec x + \vec y \in \mathcal V \\
@@ -14,7 +12,6 @@ $$
 
 ---
 ### vector space addition property
-
 - commutative
 - associative
 - identity
@@ -25,7 +22,6 @@ $$
 
 ---
 ### vector space addition property formula
-
 $$
 \begin{aligned}
 \vec x + \vec y = \vec y + \vec x \\
@@ -41,14 +37,12 @@ $$
 
 ---
 ### vector space property
-
 - zero vector
 - scalar zero
 - scalar zero vector
 
 ---
 ### vector space property formula
-
 $$
 \begin{aligned}
 c\vec 0 = \vec 0 \\
@@ -60,12 +54,10 @@ $$
 
 ---
 ### trivial vector space
-
 - smallest possible vector space whose single element equal zero
 
 ---
 ### trivial vector space formula
-
 $$
 \begin{aligned}
 \mathcal V = \{\vec 0\}
@@ -74,7 +66,6 @@ $$
 
 ---
 ### vector space example
-
 - real numbers
 - $n$-dimensional real numbers
 - $m \times n$ matrices
@@ -82,24 +73,21 @@ $$
 
 ---
 ### vector space example formula
-
 $$
 \begin{aligned}
 \mathbb R \\
 \mathbb R^n \\
 \mathcal M_{mn} \\
-\mathcal P_n 
+\mathcal P_{n} 
 \end{aligned}
 $$
 
 ---
 ### abstract vector space
-
 - set thats closed under vector addition and scalar multiplication but whose vector space operations are irregular
 
 ---
 ### abstract vector space formula
-
 $$
 \begin{aligned}
 \vec x \oplus \vec y \in \mathcal V \\

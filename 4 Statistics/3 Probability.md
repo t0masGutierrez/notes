@@ -1,20 +1,16 @@
 ### sample space
-
 - set of all possible outcomes
 
 ---
 ### event
-
 - subset of sample space
 
 ---
 ### probability
-
 - likelihood event will occur
 
 ---
 ### probability formula
-
 $$
 \begin{aligned}
 0 \le P(A) \le 1 \\
@@ -25,12 +21,10 @@ $$
 
 ---
 ### frequentist probability
-
 - relative frequency
 
 ---
 ### frequentist probability formula
-
 $$
 \begin{aligned}
 P(A) = \lim_{n \to \infty} \frac{m}{n} \\
@@ -41,12 +35,10 @@ $$
 
 ---
 ### classical probability
-
 - equally likely outcomes
 
 ---
 ### classical probability formula
-
 $$
 \begin{aligned}
 P(A) = \frac{\text{m}}{\text{n}} \\
@@ -57,12 +49,10 @@ $$
 
 ---
 ### complimentary probability
-
 - likelihood event will not occur
 
 ---
 ### complimentary probability formula
-
 $$
 \begin{aligned}
 P(A') = 1 - P(A)
@@ -71,12 +61,10 @@ $$
 
 ---
 ### conditional probability
-
 - likelihood event A will occur given event B already occur
 
 ---
 ### conditional probability formula
-
 $$
 \begin{aligned}
 P(A | B) = \frac{P(A \cap B)}{P(B)}
@@ -85,18 +73,15 @@ $$
 
 ---
 ### independent event
-
 - event B outcome not dependent upon event A outcome
 - with replacement
 
 ---
 ### independent multiplication rule
-
 - likelihood event A and event B will occur given event B independent event A
 
 ---
 ### independent multiplication formula
-
 $$
 \begin{aligned}
 P(A \cap B) = P(A) P(B)
@@ -105,18 +90,15 @@ $$
 
 ---
 ### dependent event
-
 - event B outcome dependent upon event A outcome
 - without replacement
 
 ---
 ### dependent multiplication rule
-
 - likelihood event A and event B will occur given event B dependent event A
 
 ---
 ### dependent multiplication formula
-
 $$
 \begin{aligned}
 P(A \cap B) = P(A) P(B | A)
@@ -125,17 +107,14 @@ $$
 
 ---
 ### disjoint event
-
 - two events cannot occur at same time
 
 ---
 ### disjoint addition rule
-
 - likelihood event A or event B will occur given event B mutually exclusive event A
 
 ---
 ### disjoint addition formula
-
 $$
 \begin{aligned}
 P(A \cup B) = P(A) + P(B)
@@ -144,17 +123,14 @@ $$
 
 ---
 ### joint event
-
 - two events can occur at same time
 
 ---
 ### joint addition rule
-
 - likelihood event A or event B will occur given event B mutually inclusive event A
 
 ---
 ### joint addition formula
-
 $$
 \begin{aligned}
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
@@ -163,30 +139,24 @@ $$
 
 ---
 ### multiplication rule
-
 - independent or dependent
 
 ---
 ### addition rule
-
 - disjoint or joint
 
 ---
 ### tree diagram
-
 - probability distribution of two or more dependent categorical variables
 ---
 ### venn diagram
-
 - frequency distribution of two or more dependent categorical variables
 ---
 ### bayes theorem
-
 - method of updating probability of hypothesis based on evidence
 
 ---
 ### bayes formula
-
 $$
 \begin{aligned}
 P(A|B) = \frac{P(A)P(B|A)}{P(B)} \\
@@ -197,15 +167,13 @@ $$
 
 ---
 ### law of total probability
-
 - partition event into sum of possible cases
 
 ---
 ### law of total probability formula
-
 $$
 \begin{aligned}
-P(A) = \sum_{i=1}^n P(A|B_i)P(B_i) \\
+P(A) = \sum_{i=1}^n P(A|B_{i})P(B_{i}) \\
 A = \text{hypothesis} \\
 B = \text{condition}
 \end{aligned}
@@ -213,15 +181,13 @@ $$
 
 ---
 ### permutation
-
 - number of ways to arrange objects with order
 
 ---
 ### permutation formula
-
 $$
 \begin{aligned}
-_nP_k = \frac{n!}{(n-k)!} = k!\begin{pmatrix} n \\ k \end{pmatrix}\\
+_nP_{k} = \frac{n!}{(n-k)!} = k!\begin{pmatrix} n \\ k \end{pmatrix}\\
 n = \text{number of objects} \\
 k = \text{number of arrangements}
 \end{aligned}
@@ -229,12 +195,10 @@ $$
 
 ---
 ### combination
-
 - number of ways to arrange objects without order
 
 ---
 ### combination formula
-
 $$
 \begin{aligned}
 \begin{pmatrix} n \\ k \end{pmatrix} = \frac{n!}{k!(n-k)!} \\

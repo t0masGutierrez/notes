@@ -1,11 +1,9 @@
 ### basis
-
 - spanning
 - linearly independent
 
 ---
 ### basis formula
-
 $$
 \begin{aligned}
 \text{Span}(B) = \mathcal V \\
@@ -15,12 +13,10 @@ $$
 
 ---
 ### spanning independence property
-
 - size of linearly independent set less or equal size of spanning set
 
 ---
 ### spanning independence property formula
-
 $$
 \begin{aligned}
 (\text{Span}(S) = \mathcal V) \land (|S| \ne \infty) \land(\text{Rank}(T) = n) \implies (|T| \ne \infty) \land (|T| \le |S|) \\
@@ -34,15 +30,13 @@ $$
 
 ---
 ### basis equality property
-
 - all bases share the same number of elements
 
 ---
 ### basis equality property formula
-
 $$
 \begin{aligned}
-(\text{Span}(B_1, B_2) = \mathcal V) \land (\text{Rank}(B_1, B_2) = n) \land (|B_1| \ne \infty) \implies |B_1| = |B_2| \\
+(\text{Span}(B_{1}, B_{2}) = \mathcal V) \land (\text{Rank}(B_{1}, B_{2}) = n) \land (|B_{1}| \ne \infty) \implies |B_{1}| = |B_{2}| \\
 B = \text{basis} \\
 \mathcal V = \text{vector space} \\
 n = \text{number of columns} \\
@@ -53,12 +47,10 @@ $$
 
 ---
 ### dimension
-
 - number of elements of basis
 
 ---
 ### dimension formula
-
 $$
 \begin{aligned}
 \dim(\mathcal V) = |B| \\
@@ -70,30 +62,26 @@ $$
 
 ---
 ### dimension example
-
 - $\mathbb R^n$ 
-- $\mathcal P_n$ 
+- $\mathcal P_{n}$ 
 - $\mathcal M_{mn}$ 
 
 ---
 ### dimension example formula
-
 $$
 \begin{aligned}
 \dim(\mathbb R^n) = n \\
-\dim(\mathcal P_n) = n+1 \\
+\dim(\mathcal P_{n}) = n+1 \\
 \dim(\mathcal M_{mn}) = mn \\
 \end{aligned}
 $$
 
 ---
 ### trivial dimension
-
 - empty set equal basis of trivial vector space
 
 ---
 ### trivial dimension formula
-
 $$
 \begin{aligned}
 \dim(\{\vec 0\}) = 0
@@ -102,14 +90,12 @@ $$
 
 ---
 ### dimension property
-
 - size of spanning set 
 - size of linearly independent set 
 - size of basis
 
 ---
 ### dimension property formula
-
 $$
 \begin{aligned}
 |S| < \dim(\mathcal V) \implies \text{Span}(S) = \mathcal V \\
@@ -121,12 +107,10 @@ $$
 
 ---
 ### subspace dimension property
-
 - dimension of subspace less or equal dimension of vector space
 
 ---
 ### subspace dimension property formula
-
 $$
 \begin{aligned}
 \mathcal W \le \mathcal V \implies \dim(\mathcal W) \le \dim (\mathcal V) \\
@@ -136,12 +120,10 @@ $$
 
 ---
 ### diagonalization basis property
-
 - every set of fundamental eigenvectors via diagonalization equal basis of $n$-dimensional real numbers
 
 ---
 ### diagonalization basis property formula
-
 $$
 \begin{aligned}
 A = PDP^{-1} \implies B = \{\vec x | A\vec x = \lambda \vec x \} \\

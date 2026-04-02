@@ -1,38 +1,32 @@
 ### scalar
-
 - quantity with magnitude
 
 ---
 ### vector
-
 - quantity with both magnitude and direction
 
 ---
 ### unit vector
-
 - vector with magnitude of 1 that specify direction without scaling
 ---
 ### unit vector formula
-
 $$
 \begin{aligned}
-\hat{i} = \frac{\vec{A_x}}{A_x} \\ 
-\hat{j} = \frac{\vec{A_y}}{A_y}
+\hat{i} = \frac{\vec{A_{x}}}{A_{x}} \\ 
+\hat{j} = \frac{\vec{A_{y}}}{A_{y}}
 \end{aligned}
 $$
 
 ---
 ### component
-
 - horizontal change equal *x* component
 - vertical change equal *y* component
 ---
 ### scalar component formula
-
 $$
 \begin{aligned}
-A_x = A \cos (\theta) \\
-A_y = A \sin (\theta) \\
+A_{x} = A \cos (\theta) \\
+A_{y} = A \sin (\theta) \\
 A = \text{magnitude} \\
 \theta = \text{direction}
 \end{aligned}
@@ -40,76 +34,67 @@ $$
 
 ---
 ### vector component formula
-
 $$
 \begin{aligned}
-\vec{A} = A_x\hat{i} + A_y\hat{j} \\
-A_x = \text{x scalar component} \\
+\vec{A} = A_{x}\hat{i} + A_{y}\hat{j} \\
+A_{x} = \text{x scalar component} \\
 \hat{i} = \text{x direction} \\
-A_y = \text{y scalar component} \\
+A_{y} = \text{y scalar component} \\
 \hat{j} = \text{y direction}
 \end{aligned}
 $$
 
 ---
 ### magnitude
-
 - distance from origin
 
 ---
 ### magnitude formula
-
 $$
 \begin{aligned}
-A = \sqrt{A_x^2 + A_y^2} \\
-A_x = \text{x scalar component} \\
-A_y = \text{y scalar component}
+A = \sqrt{A_{x}^2 + A_{y}^2} \\
+A_{x} = \text{x scalar component} \\
+A_{y} = \text{y scalar component}
 \end{aligned}
 $$
 
 ---
 ### direction
-
 - counterclockwise angle between axis and vector
 - left right up down
 
 ---
 ### direction formula
-
 $$
 \begin{aligned}
-\theta = \arctan (\frac{A_y}{A_x}) \\
-A_x = \text{x scalar component} \\
-A_y = \text{y scalar component}
+\theta = \arctan (\frac{A_{y}}{A_{x}}) \\
+A_{x} = \text{x scalar component} \\
+A_{y} = \text{y scalar component}
 \end{aligned}
 $$
 
 ---
 ### inverse tangent range
-
-- $[\frac{-\pi}{2} \le \theta \le \frac{\pi}{2}] = [-90 \le \theta \le 90] = Q_1 \lor Q_4$  
-- if $A_x < 0$ then 180 addition with direction
+- $[\frac{-\pi}{2} \le \theta \le \frac{\pi}{2}] = [-90 \le \theta \le 90] = Q_{1} \lor Q_{4}$  
+- if $A_{x} < 0$ then 180 addition with direction
 ---
 ### vector equality
-
 - if $A \ne B$ then unequal magnitude or unequal direction
 
 ---
 ### vector equality formula
-
 $$
 \begin{aligned}
 \vec{A} = \vec{B} \iff
 \begin{cases}
-A_x = B_x \\
-A_y = B_y
+A_{x} = B_{x} \\
+A_{y} = B_{y}
 \end{cases}
 \end{aligned}
 $$
 
 ---
 ### vector property
-
 - commutative
 - associative
 - additive identity
@@ -120,7 +105,6 @@ $$
 
 ---
 ### vector property formula
-
 $$
 \begin{aligned}
 \vec A + \vec B = \vec B + \vec A \\
@@ -129,69 +113,61 @@ $$
 \vec A + (-\vec A) = 0 \\
 c(\vec A + \vec B) = c\vec A + c\vec B \\
 1(\vec A) = \vec A \\
-0(\vec A) = 0\end{align*}
+0(\vec A) = 0
+\end{aligned}
 $$
 
 ---
 ### scalar multiplication
-
 - scalar quantity multiplication with vector component
 - if negative scalar quantity then 180 addition with direction or negate vector component
 
 ---
 ### scalar multiplication formula
-
 $$
 \begin{aligned}
-a\vec{A} = aA_x\hat{i} + aA_y\hat{j} \\
+a\vec{A} = aA_{x}\hat{i} + aA_{y}\hat{j} \\
 a = \text{scalar quantity} \\
-A_x \hat i = \text{x vector component} \\
-A_y \hat j = \text{y vector component}
+A_{x} \hat i = \text{x vector component} \\
+A_{y} \hat j = \text{y vector component}
 \end{aligned}
 $$
 
 ---
 ### vector addition
-
 - vector *A* components addition with corresponding vector *B* components equal resultant vector *R* 
 
 ---
 ### vector addition formula
-
 $$
 \begin{aligned}
-\vec{R} = (A_x + B_x)\hat{i} + (A_y + B_y)\hat{j} \\
-A_x = \text{x scalar component} \\
+\vec{R} = (A_{x} + B_{x})\hat{i} + (A_{y} + B_{y})\hat{j} \\
+A_{x} = \text{x scalar component} \\
 \hat i = \text{x direction} \\
-A_y = \text{y scalar component} \\
+A_{y} = \text{y scalar component} \\
 \hat j = \text{y direction} \\
 \end{aligned}
 $$
 
 ---
 ### graphical vector addition
-
 - vector *B* starts where vector *A* ends
 - vector sum *C* equal diagonal from where vector *A* starts to where vector *B* ends
 ---
 ### parallelogram vector addition
-
 - both vectors start at the same origin
 - construct two parallel vectors
 - vector sum *C* equal diagonal from origin to where parallel vectors intersect
 ---
 ### graphical vector subtraction
-
 - antiparallel vector *B* starts where vector *A* ends
 - vector sum equal diagonal from where vector *A* starts to where antiparallel vector *B* ends
 ---
 ### dot product
-
 - scalar quantity of similarity between two vectors
 - aka scalar product
 ---
 ### dot product formula
-
 $$
 \begin{aligned}
 \vec{A} \cdot \vec{B} = AB \cos (\theta) \\
@@ -202,19 +178,17 @@ $$
 
 ---
 ### dot product formula
-
 $$
 \begin{aligned}
-\vec{A} \cdot \vec{B} = A_xB_x + A_yB_y + A_zB_z \\
-A_x = \text{x scalar component} \\
-A_y = \text{y scalar component} \\
-A_z = \text{z scalar component}
+\vec{A} \cdot \vec{B} = A_xB_{x} + A_yB_{y} + A_zB_{z} \\
+A_{x} = \text{x scalar component} \\
+A_{y} = \text{y scalar component} \\
+A_{z} = \text{z scalar component}
 \end{aligned}
 $$
 
 ---
 ### unit vector dot product formula
-
 $$
 \begin{aligned}
 \hat{i} \cdot \hat{j} = \hat{j} \cdot \hat{k} = \hat{k} \cdot \hat{i} = 0 \\
@@ -226,12 +200,10 @@ $$
 
 ---
 ### cross product
-
 - vector quantity of dissimilarity between two vectors
 - aka vector product
 ---
 ### cross product formula
-
 $$
 \begin{aligned}
 |\vec{A} \times \vec{B}| = AB \sin (\theta) \\
@@ -242,22 +214,20 @@ $$
 
 ---
 ### cross product formula
-
 $$
 \begin{aligned}
-\vec{A} \times \vec{B} = (A_yB_z - A_zB_y)\hat{i} - (A_xB_z - A_zB_x)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \\
-A_x = \text{x scalar component} \\
+\vec{A} \times \vec{B} = (A_yB_{z} - A_zB_{y})\hat{i} - (A_xB_{z} - A_zB_{x})\hat{j} + (A_xB_{y} - A_yB_{x})\hat{k} \\
+A_{x} = \text{x scalar component} \\
 \hat i = \text{x direction} \\
-A_y = \text{y scalar component} \\
+A_{y} = \text{y scalar component} \\
 \hat j = \text{y direction} \\
-A_z = \text{z scalar component} \\
+A_{z} = \text{z scalar component} \\
 \hat k = \text{z direction}
 \end{aligned}
 $$
 
 ---
 ### unit vector cross product formula
-
 $$
 \begin{aligned}
 \hat{i} \times \hat{j} = \hat{k} \\
@@ -271,32 +241,28 @@ $$
 
 ---
 ### triple scalar product
-
 - scalar quantity of parallelogram volume between three vectors
 ---
 ### scalar triple product formula
-
 $$
 \begin{aligned}
 V = \vec{C} \cdot (\vec{A} \times \vec{B}) = \vec C\begin{vmatrix}
 \hat i & \hat j & \hat k \\
-A_x & A_y & A_z \\
-B_x & B_y & B_z
+A_{x} & A_{y} & A_{z} \\
+B_{x} & B_{y} & B_{z}
 \end{vmatrix} \\
-A_x = \text{x scalar component} \\
-B_y = \text{y scalar component} \\
-C_z =  \text{z scalar component}
+A_{x} = \text{x scalar component} \\
+B_{y} = \text{y scalar component} \\
+C_{z} =  \text{z scalar component}
 \end{aligned}
 $$
 
 ---
 ### parallel projection vector
-
 - parallel projection of $\vec A$ onto $\vec B$ equal vector component of $\vec A$ parallel $\vec B$ 
 
 ---
 ### parallel projection vector formula
-
 $$
 \begin{aligned}
 \text{proj}_{\vec B}(\vec A\parallel) = (\frac{\vec A \cdot \vec B}{B^2}) \cdot \vec B
@@ -305,12 +271,10 @@ $$
 
 ---
 ### perpendicular projection vector
-
 - perpendicular projection of $\vec A$ onto $\vec B$ equal vector component of $\vec A$ perpendicular $\vec B$ 
 
 ---
 ### perpendicular projection vector formula
-
 $$
 \begin{aligned}
 \text{proj}_{\vec B}(\vec A\perp) = \vec A - (\frac{\vec A \cdot \vec B}{B^2}) \cdot \vec B
@@ -319,36 +283,31 @@ $$
 
 ---
 ### 3d coordinate system
-
 - x dimension
 - y dimension
 - z dimension
 ---
 ### linear direction angle
-
 - angle between lines
 
 ---
 ### linear direction angle formula
-
 $$
 \begin{aligned}
-\cos(\alpha) = \frac{v_x}{v} \\
-\cos(\beta) = \frac{v_y}{v} \\
-\cos(\gamma) = \frac{v_z}{v} 
+\cos(\alpha) = \frac{v_{x}}{v} \\
+\cos(\beta) = \frac{v_{y}}{v} \\
+\cos(\gamma) = \frac{v_{z}}{v} 
 \end{aligned}
 $$
 
 ---
 ### linear direction vector
-
 - vector parallel line
 ---
 ### linear direction vector formula
-
 $$
 \begin{aligned}
-\vec v = \vec{P_0P} = \langle x - x_0, y - y_0, z - z_0 \rangle = \langle a, b, c \rangle \\
+\vec v = \vec{P_0P} = \langle x - x_{0}, y - y_{0}, z - z_{0} \rangle = \langle a, b, c \rangle \\
 a = \text{x scalar component} \\
 b = \text{y scalar component} \\
 c = \text{z scalar component}
@@ -357,16 +316,14 @@ $$
 
 ---
 ### vector equation of 3d line
-
 - for all parameters there exists distinct position vector that corresponds with point on line
 ---
 ### vector formula of 3d line
-
 $$
 \begin{aligned}
-\langle x, y, z \rangle = \langle x_0, y_0, z_0 \rangle + t \langle a, b, c \rangle \\
+\langle x, y, z \rangle = \langle x_{0}, y_{0}, z_{0} \rangle + t \langle a, b, c \rangle \\
 \vec r = \langle x, y, z \rangle \\
-\vec r_0 = \langle x_0, y_0, z_0 \rangle \\
+\vec r_{0} = \langle x_{0}, y_{0}, z_{0} \rangle \\
 t = \text{parameter} \\
 \vec v = \langle a, b, c \rangle
 \end{aligned}
@@ -374,16 +331,14 @@ $$
 
 ---
 ### parametric equation of 3d line
-
 - for all parameters there exists distinct position vector that corresponds with point on line
 ---
 ### parametric equation of 3d line
-
 $$
 \begin{aligned}
-x = x_0 + at \\
-y = y_0 + bt \\
-z = z_0 + ct \\
+x = x_{0} + at \\
+y = y_{0} + bt \\
+z = z_{0} + ct \\
 x = \text{x scalar component} \\
 y = \text{y scalar component} \\
 z = \text{z scalar component}
@@ -392,28 +347,24 @@ $$
 
 ---
 ### planar direction angle
-
 - angle between planes
 
 ---
 ### planar direction angle formula
-
 $$
 \begin{aligned}
-\cos(\theta) = \frac{\vec v_1 \cdot \vec v_2}{v_1v_2} \\
+\cos(\theta) = \frac{\vec v_{1} \cdot \vec v_{2}}{v_1v_{2}} \\
 \end{aligned}
 $$
 
 ---
 ### planar direction vector
-
 - vector perpendicular plane
 ---
 ### planar direction vector formula
-
 $$
 \begin{aligned}
-\vec v = \vec{P_0P} \perp = \vec{P_0P_1} \times \vec{P_0P_2} = \langle a, b, c \rangle \\
+\vec v = \vec{P_0P} \perp = \vec{P_0P_{1}} \times \vec{P_0P_{2}} = \langle a, b, c \rangle \\
 a = \text{x scalar component} \\
 b = \text{y scalar component} \\
 c = \text{z scalar component}
@@ -422,51 +373,42 @@ $$
 
 ---
 ### vector equation of 3d plane
-
 - for all directions there exists distinct position vector that corresponds with point on plane
 ---
 ### vector formula of 3d plane
-
 $$
 \begin{aligned}
-\vec v \cdot (\vec r - \vec r_0) = 0
+\vec v \cdot (\vec r - \vec r_{0}) = 0
 \end{aligned}
 $$
 
 ---
 ### scalar equation of 3d plane
-
 - for all directions there exists distinct position vector that corresponds with point on plane
 
 ---
 ### scalar formula of 3d plane
-
 $$
 \begin{aligned}
-a(x - x_0) + b(y - y_0) + c(z - z_0) = 0
+a(x - x_{0}) + b(y - y_{0}) + c(z - z_{0}) = 0
 \end{aligned}
 $$
 
 ---
 ### parallel plane
-
 - scalar multiple of direction vector
 ---
 ### perpendicular plane
-
 - dot product of direction vector equal zero
 ---
 ### intersecting plane
-
 - intersection equal 3d line
 ---
 ### linear distance
-
 - length between point and line
 
 ---
 ### linear distance formula
-
 $$
 \begin{aligned}
 d = \frac{|\vec v \times \vec {P_0P}|}{v}
@@ -475,15 +417,13 @@ $$
 
 ---
 ### planar distance
-
 - length between point and plane
 
 ---
 ### planar distance formula
-
 $$
 \begin{aligned}
-d = \frac{|c_2 - c_1|}{v}
+d = \frac{|c_{2} - c_{1}|}{v}
 \end{aligned}
 $$
 

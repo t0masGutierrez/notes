@@ -1,10 +1,8 @@
 ### random variable
-
 - function of sample space outcome equal real number
 
 ---
 ### random variable formula
-
 $$
 \begin{aligned}
 X: \Omega \rightarrow \mathbb R \\
@@ -18,12 +16,10 @@ $$
 
 ---
 ### continuous random variable
-
 - random variable whose values are uncountable
 
 ---
 ### continuous random variable formula
-
 $$
 \begin{aligned}
 (\{0, 1, 2, 3, \dots, n\} \not\sim X) \land (\mathbb N \not\sim X) \\
@@ -33,23 +29,20 @@ $$
 
 ---
 ### continuous probability density function
-
 - probability as function of continuous random variable
 
 ---
 ### continuous PDF probability formula
-
 $$
 \begin{aligned}
 P(X=x) = 0 \\
 P(X) = \int_{-\infty}^{\infty}f(x)dx = 1 \\
-P(a \le X \le b) = \int_a^b f(x)dx
+P(a \le X \le b) = \int_{a}^b f(x)dx
 \end{aligned}
 $$
 
 ---
 ### continuous PDF mean formula
-
 $$
 \begin{aligned}
 \mu = \int_{-\infty}^{\infty} xf(x)dx
@@ -58,7 +51,6 @@ $$
 
 ---
 ### continuous PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sqrt{\int_{-\infty}^{\infty} (x - \mu)^2f(x)dx}
@@ -67,12 +59,10 @@ $$
 
 ---
 ### uniform probability density function
-
 - probability as function of equally likely events
 
 ---
 ### uniform PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{1}{b-a} \\
@@ -83,7 +73,6 @@ $$
 
 ---
 ### uniform PDF mean formula
-
 $$
 \begin{aligned}
 \mu = \frac{a+b}{2} \\
@@ -94,7 +83,6 @@ $$
 
 ---
 ### uniform PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sqrt{\frac{(b-a)^2}{12}} \\
@@ -105,12 +93,10 @@ $$
 
 ---
 ### normal probability density function
-
 - probability as function of mean and standard deviation
 
 ---
 ### normal PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\exp(\frac{-(x - \mu)^2}{2\sigma^2})}{\sigma\sqrt {2\pi}} \\
@@ -121,7 +107,6 @@ $$
 
 ---
 ### normal PDF mean formula
-
 $$
 \begin{aligned}
 \mu = \mu \\
@@ -131,7 +116,6 @@ $$
 
 ---
 ### normal PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sigma \\
@@ -141,12 +125,10 @@ $$
 
 ---
 ### standard normal probability density function
-
 - probability as function of z-score
 
 ---
 ### standard normal PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{e^{-x^2/2}}{\sqrt {2\pi}} \\
@@ -156,7 +138,6 @@ $$
 
 ---
 ### standard normal PDF mean formula
-
 $$
 \begin{aligned}
 \mu = 0 
@@ -165,7 +146,6 @@ $$
 
 ---
 ### standard  normal PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = 1
@@ -174,12 +154,10 @@ $$
 
 ---
 ### exponential probability density function
-
 - probability as function of the amount of time between events
 
 ---
 ### exponential PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \lambda e^{-\lambda x} \\
@@ -190,7 +168,6 @@ $$
 
 ---
 ### exponential PDF mean formula
-
 $$
 \begin{aligned}
 \mu = \frac{1}{\lambda} \\
@@ -200,7 +177,6 @@ $$
 
 ---
 ### exponential PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \frac{1}{\lambda} \\
@@ -210,16 +186,14 @@ $$
 
 ---
 ### gamma probability density function
-
 - probability as function of waiting time until the $\alpha$th event
 
 ---
 ### gamma PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\lambda e^{-\lambda x}(\lambda x)^{\alpha-1}}{\Gamma(\alpha)} \\
-\Gamma(\alpha) = \int_0^{\infty}e^{-x}x^{\alpha-1}dx \\
+\Gamma(\alpha) = \int_{0}^{\infty}e^{-x}x^{\alpha-1}dx \\
 \lambda = \text{average number of events per time} \\
 x = \text{amount of time between events} \\
 \Gamma = \text{gamma} \\
@@ -229,7 +203,6 @@ $$
 
 ---
 ### gamma PDF mean formula
-
 $$
 \begin{aligned}
 \mu = \frac{\alpha}{\lambda} \\
@@ -240,7 +213,6 @@ $$
 
 ---
 ### gamma PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sqrt \frac{\alpha}{\lambda^2} \\
@@ -251,12 +223,10 @@ $$
 
 ---
 ### t probability density function
-
 - probability as function of t-statistic
 
 ---
 ### t PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{\Gamma(\frac{d+1}{2})}{ \Gamma(\frac{d}{2})\sqrt{d\pi}}(1+\frac{x^2}{d})^{-(d+1)/2} \\
@@ -270,7 +240,6 @@ $$
 
 ---
 ### t PDF mean formula
-
 $$
 \begin{aligned}
 \mu = 0
@@ -279,7 +248,6 @@ $$
 
 ---
 ### t PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sqrt \frac{d}{d-2} \\
@@ -291,12 +259,10 @@ $$
 
 ---
 ### chi-square probability density function
-
 - probability as function of $\chi^2$-statistic
 
 ---
 ### chi-square PDF probability formula
-
 $$
 \begin{aligned}
 f(x) = \frac{x^{d/2 - 1}e^{-x/2}}{2^{d/2}\Gamma(\frac{d}{2})} \\
@@ -310,7 +276,6 @@ $$
 
 ---
 ### chi-square PDF mean formula
-
 $$
 \begin{aligned}
 \mu = d = n - 1 \\
@@ -321,7 +286,6 @@ $$
 
 ---
 ### chi-square PDF standard deviation formula
-
 $$
 \begin{aligned}
 \sigma = \sqrt {2d} = \sqrt {2(n-1)} \\
@@ -332,17 +296,15 @@ $$
 
 ---
 ### F probability density function
-
 - probability as function of F-statistic
 
 ---
 ### F PDF probability formula
-
 $$
 \begin{aligned}
-f(x) = \frac{x^{0.5d_1 - 1}\Gamma(\frac{d_1+d_2}{2})(\frac{d_1}{d_2})^{0.5d_1}  
+f(x) = \frac{x^{0.5d_{1} - 1}\Gamma(\frac{d_{1}+d_{2}}{2})(\frac{d_{1}}{d_{2}})^{0.5d_{1}}  
 }
-{\Gamma(\frac{d_1}{2})\Gamma(\frac{d_2}{2})(1 + \frac{d_1}{d_2}x)^{\frac{-d_1-d_2}{2}}} \\
+{\Gamma(\frac{d_{1}}{2})\Gamma(\frac{d_{2}}{2})(1 + \frac{d_{1}}{d_{2}}x)^{\frac{-d_{1}-d_{2}}{2}}} \\
 d = n - 1 \\
 x = \text{F-statistic} \\
 \Gamma = \text{gamma} \\
@@ -353,10 +315,9 @@ $$
 
 ---
 ### F PDF mean formula
-
 $$
 \begin{aligned}
-\mu = \frac{d_2}{d_2 - 2} \\
+\mu = \frac{d_{2}}{d_{2} - 2} \\
 d = n - 1 \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 
@@ -365,10 +326,9 @@ $$
 
 ---
 ### F PDF standard deviation formula
-
 $$
 \begin{aligned}
-\sigma = \sqrt {\frac{2d_2^2(d_1+d_2 - 2)}{d_1(d_2 - 2)^2(d_2 - 4)}} \\
+\sigma = \sqrt {\frac{2d_{2}^2(d_{1}+d_{2} - 2)}{d_{1}(d_{2} - 2)^2(d_{2} - 4)}} \\
 d = n - 1 \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 

@@ -1,41 +1,33 @@
 ### product rule
-
-- if there exists $n_1$ ways to do the first task and for every way of doing the first task there exists $n_2$ ways to do the second task then $n_1 \times n_2$ ways to do the procedure
+- if there exists $n_{1}$ ways to do the first task and for every way of doing the first task there exists $n_{2}$ ways to do the second task then $n_{1} \times n_{2}$ ways to do the procedure
 
 ---
 ### calculate product rule
-
-- $n_1$ multiplication with $n_2$
+- $n_{1}$ multiplication with $n_{2}$
 
 ---
 ### sum rule
-
-- if there exists either $n_1$ ways or $n_2$ ways to do the task and none of the $n_1$ ways is the same as any of the $n_2$ ways then $n_1 + n_2$ ways to do the task
+- if there exists either $n_{1}$ ways or $n_{2}$ ways to do the task and none of the $n_{1}$ ways is the same as any of the $n_{2}$ ways then $n_{1} + n_{2}$ ways to do the task
 
 ---
 ### calculate sum rule
-
-- $n_1$ addition with $n_2$
+- $n_{1}$ addition with $n_{2}$
 
 ---
 ### subtraction rule
-
-- if there exists either $n_1$ ways or $n_2$ ways to do the task then $n_1 + n_2$ ways to do the task less the number of common ways
+- if there exists either $n_{1}$ ways or $n_{2}$ ways to do the task then $n_{1} + n_{2}$ ways to do the task less the number of common ways
 
 ---
 ### calculate subtraction rule
-
-- $n_1$ addition with $n_2$
+- $n_{1}$ addition with $n_{2}$
 - sum subtraction with the number of common ways
 
 ---
 ### principle of inclusion exclusion
-
 - the number of union elements equal the sum of the number of elements of per set less the number of common elements
 
 ---
 ### formula of inclusion exclusion
-
 $$
 \begin{aligned}
 |A \cup B| = |A| + |B| - |A \cap B|
@@ -44,25 +36,20 @@ $$
 
 ---
 ### quotient rule
-
-- if there exists $n_1$ ways to do the task and for every outcome there exists $n_2$ unique ways to get that outcome then $n_1 \div n_2$ number of unique outcomes
+- if there exists $n_{1}$ ways to do the task and for every outcome there exists $n_{2}$ unique ways to get that outcome then $n_{1} \div n_{2}$ number of unique outcomes
 
 ---
 ### calculate quotient rule
-
-- $n_1$ division with $n_2$
+- $n_{1}$ division with $n_{2}$
 
 ---
 ### tree diagram
-
 - diagram illustrate the total number of possible outcomes
 ---
 ### pigeonhole principle
-
 - if *a* pigeons put into *b* holes and $a > b$ then at least 1 hole must contain >1 pigeon
 ---
 ### pigeonhole formula
-
 $$
 \begin{aligned}
 k = \lceil \frac{a}{b} \rceil \\
@@ -73,12 +60,10 @@ $$
 
 ---
 ### permutation
-
 - number of ways to arrange objects with order
 
 ---
 ### permutation formula
-
 $$
 \begin{aligned}
 P(n, r) = \frac{n!}{(n - r)!} = n(n - 1)(n - 2) ... (n - r + 1) \\
@@ -89,7 +74,6 @@ $$
 
 ---
 ### permutation formula
-
 $$
 \begin{aligned}
 P(n, r) = n^r \\
@@ -100,12 +84,10 @@ $$
 
 ---
 ### combination
-
 - number of ways to choose objects without order
 
 ---
 ### combination formula
-
 $$
 \begin{aligned}
 C(n, r) = \frac{n!}{r!(n - r)!} = \frac{n(n - 1)(n - 2) ... (n - r + 1)}{r!} \\
@@ -116,22 +98,18 @@ $$
 
 ---
 ### sample space
-
 - set of all possible outcomes of experiment
 
 ---
 ### event
-
 - subset of sample space
 
 ---
 ### probability
-
 - likelihood event will occur
 
 ---
 ### probability formula
-
 $$
 \begin{aligned}
 P(A) = \frac{\text{number of favorable outcomes}}{\text{total number of possible outcomes}}
@@ -140,12 +118,10 @@ $$
 
 ---
 ### complementary probability
-
 - likelihood event will not occur
 
 ---
 ### complementary probability formula
-
 $$
 \begin{aligned}
 P(A') = 1 - P(A)
@@ -154,12 +130,10 @@ $$
 
 ---
 ### conditional probability
-
 - likelihood event A will occur given event B already occur
 
 ---
 ### conditional probability formula
-
 $$
 \begin{aligned}
 P(A | B) = \frac{P(A \cap B)}{P(B)}
@@ -168,17 +142,14 @@ $$
 
 ---
 ### independent event
-
 - event B outcome not dependent upon event A outcome
 
 ---
 ### independent multiplication rule
-
 - likelihood event A and event B will occur given event B independent event A
 
 ---
 ### independent multiplication formula
-
 $$
 \begin{aligned}
 P(A \cap B) = P(A) \times P(B)
@@ -187,17 +158,14 @@ $$
 
 ---
 ### dependent event
-
 - event B outcome dependent upon event A outcome
 
 ---
 ### dependent multiplication rule
-
 - likelihood event A and event B will occur given event B dependent event A
 
 ---
 ### dependent multiplication formula
-
 $$
 \begin{aligned}
 P(A \cap B) = P(A) \times P(B | A)
@@ -206,17 +174,14 @@ $$
 
 ---
 ### disjoint event
-
 - two events cannot occur at same time
 
 ---
 ### disjoint addition rule
-
 - likelihood event A or event B will occur given event B mutually exclusive event A
 
 ---
 ### disjoint addition formula
-
 $$
 \begin{aligned}
 P(A \cup B) = P(A) + P(B)
@@ -225,17 +190,14 @@ $$
 
 ---
 ### joint event
-
 - two events can occur at same time
 
 ---
 ### joint addition rule
-
 - likelihood event A or event B will occur given event B mutually inclusive event A
 
 ---
 ### joint addition formula
-
 $$
 \begin{aligned}
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
@@ -244,22 +206,18 @@ $$
 
 ---
 ### multiplication rule
-
 - independent or dependent
 
 ---
 ### addition rule
-
 - disjoint or joint
 
 ---
 ### bayes theorem
-
 - likelihood event will occur based on prior evidence
 
 ---
 ### bayes formula
-
 $$
 \begin{aligned}
 P(B | A) = \frac{P(A |B) \times P(B)}{P(A)}

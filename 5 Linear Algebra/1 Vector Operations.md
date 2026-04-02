@@ -1,22 +1,18 @@
 ### scalar
-
 - quantity with magnitude
 
 ---
 ### vector
-
 - quantity with both magnitude and direction
 ---
 ### n-vector
-
 - ordered n-tuple of real numbers
 
 ---
 ### n-vector formula
-
 $$
 \begin{aligned}
-\vec x = [x_1, ... , x_n] \\
+\vec x = [x_{1}, ... , x_{n}] \\
 x = \text{coordinate} \\
 n = \text{number of coordinates}
 \end{aligned}
@@ -24,12 +20,10 @@ $$
 
 ---
 ### zero n-vector
-
 - ordered n-tuple of zeros
 
 ---
 ### zero n-vector formula
-
 $$
 \begin{aligned}
 \vec 0 = [0, ..., 0]
@@ -38,15 +32,13 @@ $$
 
 ---
 ### vector equality
-
 - two vectors equal if and only if all corresponding coordinates equal 
 
 ---
 ### vector equality formula
-
 $$
 \begin{aligned}
-\vec x = \vec y \iff [x_1, ..., x_n] = [y_1, ..., y_n] \\
+\vec x = \vec y \iff [x_{1}, ..., x_{n}] = [y_{1}, ..., y_{n}] \\
 \vec x, \vec y = \text{vector} \\
 x, y = \text{coordinate}
 \end{aligned}
@@ -54,15 +46,13 @@ $$
 
 ---
 ### magnitude
-
 - nonnegative distance from the initial point to the terminal point
 
 ---
 ### magnitude formula
-
 $$
 \begin{aligned}
-\|\vec x \| = \sqrt {x_1^2 + ... + x_n^2} \\
+\|\vec x \| = \sqrt {x_{1}^2 + ... + x_{n}^2} \\
 x, y = \text{coordinate} \\
 n = \text{number of coordinates}
 \end{aligned}
@@ -70,12 +60,10 @@ $$
 
 ---
 ### unit vector
-
 - vector whose magnitude equal 1
 
 ---
 ### unit vector formula
-
 $$
 \begin{aligned}
 \hat x = \frac{\vec x}{\|\vec x \|} \\
@@ -86,31 +74,27 @@ $$
 
 ---
 ### standard unit vector
-
 - vector along coordinate axes whose magnitude equal 1
 
 ---
 ### standard unit vector formula
-
 $$
 \begin{aligned}
-\vec e_1 = [1, 0, 0, ..., 0] \\
-\vec e_2 = [0, 1, 0, ..., 0] \\
-\vec e_n = [0, 0, 0, ..., 1]
+\vec e_{1} = [1, 0, 0, ..., 0] \\
+\vec e_{2} = [0, 1, 0, ..., 0] \\
+\vec e_{n} = [0, 0, 0, ..., 1]
 \end{aligned}
 $$
 
 ---
 ### scalar multiplication
-
 - scalar quantity multiplication with vector
 
 ---
 ### scalar multiplication formula
-
 $$
 \begin{aligned}
-c\vec{x} = [cx_1, ..., cx_n] \\
+c\vec{x} = [cx_{1}, ..., cx_{n}] \\
 c = \text{scalar} \\
 x = \text{coordinate} \\
 n = \text{number of coordinates}
@@ -119,7 +103,6 @@ $$
 
 ---
 ### scalar multiplication property
-
 - increase vector magnitude
 - decrease vector magnitude
 - negate vector magnitude
@@ -127,7 +110,6 @@ $$
 
 ---
 ### scalar multiplication property formula
-
 $$
 \begin{aligned}
 c > 1 \implies (+\Delta) ||\vec x || \\
@@ -139,12 +121,10 @@ $$
 
 ---
 ### parallel property
-
 - equal direction if and only if there exists scalar such that scalar multiplication equal vector
 
 ---
 ### parallel property formula
-
 $$
 \begin{aligned}
 \vec x \parallel \vec y \iff \exists c: \vec x = c\vec y \\
@@ -155,12 +135,10 @@ $$
 
 ---
 ### zero product property
-
 - for every product of zero there exists factor of zero
 
 ---
 ### zero product property formula
-
 $$
 \begin{aligned}
 c\vec x = \vec 0 \implies (c = 0) \lor (\vec x = \vec 0)
@@ -169,15 +147,13 @@ $$
 
 ---
 ### vector addition
-
 - vector coordinate addition with corresponding vector coordinate
 
 ---
 ### vector addition formula
-
 $$
 \begin{aligned}
-\vec x + \vec y = [x_1+y_1, ..., x_n+y_n] \\
+\vec x + \vec y = [x_{1}+y_{1}, ..., x_{n}+y_{n}] \\
 x, y = \text{coordinate} \\
 n = \text{number of coordinates}
 \end{aligned}
@@ -185,12 +161,10 @@ $$
 
 ---
 ### graphical vector addition
-
 - vector *B* starts where vector *A* ends
 - vector sum *C* equal diagonal from where vector *A* starts to where vector *B* ends
 ---
 ### vector addition property
-
 - commutative
 - associative
 - identity
@@ -201,7 +175,6 @@ $$
 
 ---
 ### vector addition property formula
-
 $$
 \begin{aligned}
 \vec x + \vec y = \vec y + \vec x \\
@@ -217,16 +190,14 @@ $$
 
 ---
 ### linear combination
-
 - sum of scalar multiplication with vector
 - every vector of $\mathbb R^n$ equal linear combination of standard unit vector of $\mathbb R^n$ 
 
 ---
 ### linear combination formula
-
 $$
 \begin{aligned}
-\vec y = \sum_{i = 1}^k c_i\vec x_i \\
+\vec y = \sum_{i = 1}^k c_{i}\vec x_{i} \\
 c = \text{scalar} \\
 \vec x = \text{vector} \\
 k = \text{number of vectors}
@@ -235,16 +206,14 @@ $$
 
 ---
 ### component
-
-- horizontal change equal $x_1$ component
-- vertical change equal $x_2$ component
+- horizontal change equal $x_{1}$ component
+- vertical change equal $x_{2}$ component
 ---
 ### scalar component formula
-
 $$
 \begin{aligned}
-x_1 = \|\vec x \| \cos (\theta) \\
-x_2 = \|\vec x \| \sin (\theta) \\
+x_{1} = \|\vec x \| \cos (\theta) \\
+x_{2} = \|\vec x \| \sin (\theta) \\
 \|\vec x \| = \text{magnitude} \\
 \theta = \text{direction}
 \end{aligned}
@@ -252,10 +221,9 @@ $$
 
 ---
 ### vector component formula
-
 $$
 \begin{aligned}
-\vec{x} = x_1\vec e_1 + x_2\vec e_1 \\
+\vec{x} = x_{1}\vec e_{1} + x_{2}\vec e_{1} \\
 x = \text{coordinate} \\
 \vec e = \text{standard unit vector} 
 \end{aligned}

@@ -1,28 +1,24 @@
 ### why natural numbers
-
 - cardinality
 - ordinality
 - infinity
 
 ---
 ### why natural numbers formula
-
 $$
 \begin{aligned}
 S = \emptyset \implies |S| \not\in S \\ 
-S = \emptyset \implies x_n \not \in x_{n+1} \\
+S = \emptyset \implies x_{n} \not \in x_{n+1} \\
 S = \emptyset \implies \infty \not \in S \\
 \end{aligned}
 $$
 
 ---
 ### natural numbers
-
 - set of whole numbers from 0 to positive infinity
 
 ---
 ### natural numbers formula
-
 $$
 \begin{aligned}
 \mathbb N = \{0, 1, 2, \dots, \infty\}
@@ -31,7 +27,6 @@ $$
 
 ---
 ### peano axioms
-
 - zero
 - success
 - distinct 
@@ -39,7 +34,6 @@ $$
 
 ---
 ### peano axioms
-
 $$
 \begin{aligned}
 0 \in \mathbb N \\
@@ -51,14 +45,12 @@ $$
 
 ---
 ### construct natural numbers
-
 - initialize zero as the empty set
 - successor equal the union of natural number with singleton set containing natural number
 - natural numbers equal the set of successors
 
 ---
 ### construct natural numbers formula
-
 $$
 \begin{aligned}
 0 &= \emptyset \\
@@ -72,12 +64,10 @@ $$
 
 ---
 ### why integers
-
 - subtraction
 
 ---
 ### why integers formula
-
 $$
 \begin{aligned}
 \forall(m>n) \in \mathbb N: n - m \not\in \mathbb N
@@ -86,12 +76,10 @@ $$
 
 ---
 ### integers
-
 - set of natural numbers and negative natural numbers
 
 ---
 ### integers formula
-
 $$
 \begin{aligned}
 \mathbb Z = \{n - m| n, m \in \mathbb N \}
@@ -100,13 +88,11 @@ $$
 
 ---
 ### integer arithmetic
-
 - addition
 - multiplication
 
 ---
 ### integer arithmetic formula
-
 $$
 \begin{aligned}
 [(m, n)] + [(m', n')] = [(m + m', n + n')] \\
@@ -116,14 +102,12 @@ $$
 
 ---
 ### construct integers
-
 - equivalence relation equal natural pairs with equal difference
 - equivalence class equal the set of natural pairs with equal difference
 - integers equal the set of equivalence classes
 
 ---
 ### construct integers formula
-
 $$
 \begin{aligned}
 (m, n) \sim (m', n') \iff m + n' = m' + n \\
@@ -134,12 +118,10 @@ $$
 
 ---
 ### why rational numbers
-
 - division
 
 ---
 ### why rational numbers
-
 $$
 \begin{aligned}
 \exists p, q \in \mathbb Z, q \ne 0: \frac{p}{q} \not\in \mathbb Z
@@ -148,12 +130,10 @@ $$
 
 ---
 ### rational numbers
-
 - set of ratios of integers
 
 ---
 ### rational numbers formula
-
 $$
 \begin{aligned}
 \mathbb Q = \{\frac{p}{q}| p, q \in \mathbb Z, q \ne 0\} \\
@@ -162,13 +142,11 @@ $$
 
 ---
 ### rational arithmetic
-
 - addition
 - multiplication
 
 ---
 ### rational arithmetic formula
-
 $$
 \begin{aligned}
 [(p, q)] + [(p', q')] = [(pq' + qp', qq')] \\
@@ -178,14 +156,12 @@ $$
 
 ---
 ### construct rational numbers
-
 - equivalence relation equal integer pairs with equal quotient
 - equivalence class equal the set of integer pairs with equal quotient
 - rational numbers equal the set of equivalence classes
 
 ---
 ### construct rational numbers formula
-
 $$
 \begin{aligned}
 (p, q) \sim (p', q') \iff pq' = qp' \\
@@ -196,12 +172,10 @@ $$
 
 ---
 ### why real numbers
-
 - irrationality
 
 ---
 ### why real numbers formula
-
 $$
 \begin{aligned}
 \exists p, q \in \mathbb Z, q \ne 0: \frac{p}{q} \not\in \mathbb Q
@@ -210,12 +184,10 @@ $$
 
 ---
 ### real numbers
-
 - set of rational numbers and irrational numbers
 
 ---
 ### real numbers formula
-
 $$
 \begin{aligned}
 \mathbb R = \mathbb Q \cup \{\mathbb R ∖ \mathbb Q \}
@@ -224,13 +196,11 @@ $$
 
 ---
 ### set ordinality
-
 - trichotomy
 - transitivity
 
 ---
 ### set ordinality formula
-
 $$
 \begin{aligned}
 x, y \in S \implies (x < y) \lor (x = y) \lor (y < x) \\
@@ -240,12 +210,10 @@ $$
 
 ---
 ### field
-
 - set with two binary operations that satisfy the 9 field axioms
 
 ---
 ### field formula
-
 $$
 \begin{aligned}
 (+) : F \times F \rightarrow F \\
@@ -255,7 +223,6 @@ $$
 
 ---
 ### field axioms
-
 - additive commutativity
 - additive associativity
 - additive identity
@@ -268,7 +235,6 @@ $$
 
 ---
 ### field axioms formula
-
 $$
 \begin{aligned}
 x + y = y + x \\
@@ -285,7 +251,6 @@ $$
 
 ---
 ### field ordinality
-
 - addition
 - multiplication
 - reciprocal
@@ -294,7 +259,6 @@ $$
 
 ---
 ### field ordinality formula
-
 $$
 \begin{aligned}
 (x, y, z \in F) \land (x < y) \implies x + z < y + z \\
@@ -307,14 +271,12 @@ $$
 
 ---
 ### field addition property
-
 - equality
 - identity
 - inverse
 
 ---
 ### field addition property formula
-
 $$
 \begin{aligned}
 x + y = x + z \implies y = z \\
@@ -325,7 +287,6 @@ $$
 
 ---
 ### field multiplication property
-
 - zero
 - nonzero
 - single negative
@@ -337,7 +298,6 @@ $$
 
 ---
 ### field multiplication property formula
-
 $$
 \begin{aligned}
 0 \cdot x = 0 \\
@@ -353,12 +313,10 @@ $$
 
 ---
 ### complex number
-
 - ordered pair of real numbers
 
 ---
 ### complex number formula
-
 $$
 \begin{aligned}
 z = a + bi \\
@@ -370,7 +328,6 @@ $$
 
 ---
 ### complex number property
-
 - zero
 - conjugate
 - multiplication
@@ -379,7 +336,6 @@ $$
 
 ---
 ### complex number property formula
-
 $$
 \begin{aligned}
 |z| > 0 \iff z \ne 0 \\
@@ -392,12 +348,10 @@ $$
 
 ---
 ### complex conjugate
-
 - ordered pair of real numbers with negative imaginary part
 
 ---
 ### complex conjugate formula
-
 $$
 \begin{aligned}
 \overline z = a - bi \\
@@ -409,7 +363,6 @@ $$
 
 ---
 ### complex conjugate property
-
 - conjugate addition
 - conjugate multiplication
 - real sum
@@ -418,7 +371,6 @@ $$
 
 ---
 ### complex conjugate property formula
-
 $$
 \begin{aligned}
 \overline {z + w} = \overline z + \overline w \\

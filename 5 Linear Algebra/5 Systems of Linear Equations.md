@@ -1,13 +1,11 @@
 ### linear equation
-
 - equation involving 1 or more variables with degree 1
 
 ---
 ### linear equation formula
-
 $$
 \begin{aligned}
-a_1x_1 + a_1x_2 + \cdots + a_1x_n = b_1 \\
+a_1x_{1} + a_1x_{2} + \cdots + a_1x_{n} = b_{1} \\
 a = \text{coefficient} \\
 b = \text{constant} \\
 x = \text{variable}
@@ -16,19 +14,17 @@ $$
 
 ---
 ### system of linear equations
-
 - collection of $m$ linear equations, each with linear combination of the same $n$ variables
 
 ---
 ### system of linear equations formula
-
 $$
 \begin{aligned}
 \begin{array}{l}
-a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\
-a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
+a_{11}x_{1} + a_{12}x_{2} + \cdots + a_{1n}x_{n} = b_{1} \\
+a_{21}x_{1} + a_{22}x_{2} + \cdots + a_{2n}x_{n} = b_{2} \\
 \quad \vdots \quad \qquad \vdots \quad \qquad \ddots \qquad \vdots \qquad \vdots \\
-a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
+a_{m1}x_{1} + a_{m2}x_{2} + \cdots + a_{mn}x_{n} = b_{m}
 \end{array} \\
 a = \text{coefficient} \\
 b = \text{constant} \\
@@ -38,15 +34,13 @@ $$
 
 ---
 ### particular solution of system of linear equations
-
 - $n$ tuple of solutions that satisfy every linear equation of the system
 
 ---
 ### particular solution of system of linear equations formula
-
 $$
 \begin{aligned}
-\sum_{i=1}^n a_{ji}y_i = b_j \\
+\sum_{i=1}^n a_{ji}y_{i} = b_{j} \\
 a = \text{coefficient} \\
 b = \text{constant} \\
 y = \text{solution} \\
@@ -56,15 +50,13 @@ $$
 
 ---
 ### complete solution set of system of linear equations
-
 - set of all n tuple of solutions that satisfy every linear equation of the system
 
 ---
 ### complete solution set of system of linear equations formula
-
 $$
 \begin{aligned}
-\{y_1, y_2, \dots, y_n\} \\
+\{y_{1}, y_{2}, \dots, y_{n}\} \\
 y = \text{solution} \\
 n = \text{number of variables}
 \end{aligned}
@@ -72,12 +64,10 @@ $$
 
 ---
 ### coefficient matrix
-
 - two dimensional array of coefficients
 
 ---
 ### coefficient matrix formula
-
 $$
 \begin{aligned}
 A = \begin{bmatrix}
@@ -95,19 +85,17 @@ $$
 
 ---
 ### variable matrix 
-
 - 1 dimensional array of variables
 
 ---
 ### variable matrix formula
-
 $$
 \begin{aligned}
 X = \begin{bmatrix}
-x_1 \\
-x_2 \\
+x_{1} \\
+x_{2} \\
 \vdots \\
-x_n
+x_{n}
 \end{bmatrix} \\
 |X| = n \times 1 \\
 x = \text{variable}
@@ -116,19 +104,17 @@ $$
 
 ---
 ### constant matrix
-
 - 1 dimensional array of constants
 
 ---
 ### constant matrix formula
-
 $$
 \begin{aligned}
 B = \begin{bmatrix}
-b_1 \\
-b_2 \\
+b_{1} \\
+b_{2} \\
 \vdots \\
-b_m
+b_{m}
 \end{bmatrix} \\
 |B| = m \times 1 \\
 b = \text{constant}
@@ -137,12 +123,10 @@ $$
 
 ---
 ### system of linear equations
-
 - collection of $m$ linear equations, each with linear combination of the same $n$ variables
 
 ---
 ### system of linear equations formula
-
 $$
 \begin{aligned}
 AX = B \\
@@ -152,15 +136,15 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn} \\
 \end{bmatrix}  \begin{bmatrix}
-x_1 \\
-x_2 \\
+x_{1} \\
+x_{2} \\
 \vdots \\
-x_n
+x_{n}
 \end{bmatrix} = \begin{bmatrix}
-b_1 \\
-b_2 \\
+b_{1} \\
+b_{2} \\
 \vdots \\
-b_m
+b_{m}
 \end{bmatrix} \\
 A = \text{coefficient matrix} \\
 X = \text{variable matrix} \\
@@ -170,63 +154,53 @@ $$
 
 ---
 ### augmented matrix
-
 - coefficient matrix with appended constant matrix
 
 ---
 ### augmented matrix formula
-
 $$
 \begin{aligned}
 A | B = \left[\begin{array}{cccc|c}
-a_{11} & a_{12} & \cdots & a_{1n} & b_1 \\
-a_{21} & a_{22} & \cdots & a_{2n} & b_2 \\
+a_{11} & a_{12} & \cdots & a_{1n} & b_{1} \\
+a_{21} & a_{22} & \cdots & a_{2n} & b_{2} \\
 \vdots & \vdots & \ddots & \vdots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} & b_m
+a_{m1} & a_{m2} & \cdots & a_{mn} & b_{m}
 \end{array}\right]
 \end{aligned}
 $$
 
 ---
 ### number of solutions
-
 - single solution
 - infinite solutions
 - zero solutions
 
 ---
 ### single solution
-
 - intersecting lines
 
 ---
 ### infinite solutions
-
 - equal lines
 
 ---
 ### zero solutions
-
 - parallel lines
 
 ---
 ### consistent system
-
 - nonzero number of solutions
 
 ---
 ### inconsistent system
-
 - zero number of solutions
 
 ---
 ### row echelon form
-
 - staircase pattern of pivot entries where all entries below pivot entry equal zero
 
 ---
 ### gaussian elimination
-
 - form the augmented matrix of the system
 - perform type I row operation on the 1st entry of 1st row such that its 1
 - perform type II row operation on all entries below the pivot such that its 0
@@ -235,12 +209,10 @@ $$
 
 ---
 ### type I row operation
-
 - row scaling
 
 ---
 ### type I row operation formula
-
 $$
 \begin{aligned}
 \langle i\rangle \implies c\langle i\rangle  \\
@@ -251,12 +223,10 @@ $$
 
 ---
 ### type II row operation
-
 - row replacement
 
 ---
 ### type II row operation formula
-
 $$
 \begin{aligned}
 \langle i\rangle \implies \langle i\rangle + c\langle j\rangle \\
@@ -267,27 +237,22 @@ $$
 
 ---
 ### type III row operation
-
 - row swapping
 
 ---
 ### type III row operation formula
-
 $$
 \begin{aligned}
 \langle i \rangle \iff \langle j \rangle \\
 i, j = \text{row index}
-### \end{aligned}
-
+\#\#\# \end{aligned}
 $$---
-### row operation property
-
+\#\#\# row operation property
 - associative
 - multiple associative
 
 ---
-### row operation property formula
-
+\#\#\# row operation property formula
 $$
 \begin{aligned}
 R(AB) = (R(A))B \\
@@ -296,33 +261,27 @@ R_n(\dots (R_2(R_1(AB))) \dots) = (R_n(\dots (R_2(R_1(A))) \dots))B \\
 $$
 
 ---
-### pivot entry
-
+\#\#\# pivot entry
 - special entry equal 1
 
 ---
-### target entry
-
+\#\#\# target entry
 - special entry equal 0
 
 ---
-### pivot column
-
+\#\#\# pivot column
 - column with nonzero pivot entries
 
 ---
-### nonpivot column
-
+\#\#\# nonpivot column
 - column with zero pivot entries
 
 ---
-### independent variable
-
+\#\#\# independent variable
 - variable of nonpivot column equal arbitrary real number
 
 ---
-### dependent variable
-
+\#\#\# dependent variable
 - variable of pivot column equal solution of system of linear equations
 
 ---

@@ -1,10 +1,8 @@
 ### divisibility
-
 - number *a* divisible by number *b* if and only if there exists integer *c* such that number *a* equal *bc* without remainder
 
 ---
 ### divisibility formula
-
 $$
 \begin{aligned}
 b | a \iff \exists c(a = bc) \\
@@ -16,7 +14,6 @@ $$
 
 ---
 ### divisibility addition property
-
 $$
 \begin{aligned}
 b |a \land b |c \implies b|(a + c)
@@ -25,7 +22,6 @@ $$
 
 ---
 ### divisibility multiplication property
-
 $$
 \begin{aligned}
 b|a \implies \forall c (b|ac)
@@ -34,7 +30,6 @@ $$
 
 ---
 ### divisibility transition property
-
 $$
 \begin{aligned}
 b|a \land a|c \implies b|c
@@ -43,12 +38,10 @@ $$
 
 ---
 ### division
-
 - inverse operation of multiplication
 
 ---
 ### division formula
-
 $$
 \begin{aligned}
 a = bq + r \\
@@ -61,12 +54,10 @@ $$
 
 ---
 ### quotient
-
 - result of division without remainder
 
 ---
 ### quotient formula
-
 $$
 \begin{aligned}
 q = a \ \text{div} \ b = floor(\frac{a}{b}) \\
@@ -77,12 +68,10 @@ $$
 
 ---
 ### remainder
-
 - amount left over after division
 
 ---
 ### remainder formula
-
 $$
 \begin{aligned}
 r = a \ \text{mod} \ b = a - bq \\
@@ -93,12 +82,10 @@ $$
 
 ---
 ### congruence relation
-
 - if equivalent elements then applying modulus operation preserves equivalence
 
 ---
 ### congruence relation formula
-
 $$
 \begin{aligned}
 a \equiv b (\text{mod} \ m) \iff k = m |(a - b) \\
@@ -109,12 +96,10 @@ $$
 
 ---
 ### congruence operation
-
 - addition preserves equivalence and multiplication preserves equivalence
 
 ---
 ### congruence operation formula
-
 $$
 \begin{aligned}
 a + c \equiv b + d \ (\text{mod} \ m) \\
@@ -124,16 +109,14 @@ $$
 
 ---
 ### modular arithmetic
-
 - system of arithmetic where numbers wrap around upon reaching the modulus
 ---
 ### modular arithmetic formula
-
 $$
 \begin{aligned}
-a +_m b \equiv (a + b) \ \text{mod} \ m \equiv [(a \ \text{mod} \ m) + (b \ \text{mod} \ m)] \ \text{mod} \ m \\
-a \times_m b \equiv(a \times b) \ \text{mod} \ m \equiv [(a \ \text{mod} \ m) \times (b \ \text{mod} \ m)] \ \text{mod} \ m \\
-Z_m = \{0, 1, ... m - 1\}
+a +_{m} b \equiv (a + b) \ \text{mod} \ m \equiv [(a \ \text{mod} \ m) + (b \ \text{mod} \ m)] \ \text{mod} \ m \\
+a \times_{m} b \equiv(a \times b) \ \text{mod} \ m \equiv [(a \ \text{mod} \ m) \times (b \ \text{mod} \ m)] \ \text{mod} \ m \\
+Z_{m} = \{0, 1, ... m - 1\}
 \end{aligned}
 $$
 

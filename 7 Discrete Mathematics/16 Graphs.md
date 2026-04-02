@@ -1,9 +1,7 @@
 ### graph
-
 - set of vertices and edges where vertices represent elements and edges represent relations
 ---
 ### graph formula
-
 $$
 \begin{aligned}
 G = (V, E) \\
@@ -14,48 +12,38 @@ $$
 
 ---
 ### loop
-
 - edge connecting vertex with itself
 
 ---
 ### multiple edge
-
 - distinct edges connecting same pair of vertices
 
 ---
 ### multiplicity
-
 - number of distinct edges connecting same pair of vertices
 
 ---
 ### simple graph
-
 - undirect graph that may not contain loops or multiple edges
 ---
 ### multigraph
-
 - undirect graph that may contain multiple edges but not loops 
 ---
 ### pseudograph
-
 - undirect graph that may contain multiple edges and loops
 ---
 ### direct graph
-
 - graph whose edges have direction
 ---
 ### undirect graph
-
 - graph whose edges do not have direction
 
 ---
 ### mix graph
-
 - graph whose edges both have direction and do not have direction
 
 ---
 ### graph summary
-
 - simple graph
 - multigraph
 - pseudograph
@@ -64,52 +52,42 @@ $$
 - mix graph
 ---
 ### social network
-
 - graph whose vertices represent people and edges represent relationship between people
 
 ---
 ### communication network
-
 - graph whose vertices represent devices and edges represent type of communication between devices
 
 ---
 ### information network
-
 - graph whose vertices represent sources of information and edges represent links between sources of information
 
 ---
 ### transportation network
-
 - graph whose vertices represent locations and edges represent routes between locations
 
 ---
 ### biological network
-
 - graph whose vertices represent living entity and edges represent relationship between living entity
 
 ---
 ### semantic network
-
 - graph whose vertices represent natural language and edges represent relations between similar natural language
 
 ---
 ### adjacent
-
 - two vertices share the same edge
 
 ---
 ### incident
-
 - if two vertices share the same edge then edge incident with both vertices aka both vertices endpoint of edge
 
 ---
 ### neighborhood
-
 - set of all adjacent vertices
 
 ---
 ### undirect neighborhood formula
-
 $$
 \begin{aligned}
 N(v) = \{u \in V | (v, u) \in E \} \\
@@ -120,7 +98,6 @@ $$
 
 ---
 ### direct neighborhood formula
-
 $$
 \begin{aligned}
 N^-(v) = \{u \in V | (u, v) \in E \} \\
@@ -130,12 +107,10 @@ $$
 
 ---
 ### degree of vertex
-
 - number of edges incident with vertex
 
 ---
 ### degree of vertex formula
-
 $$
 \begin{aligned}
 deg(v) = N(v)
@@ -144,22 +119,18 @@ $$
 
 ---
 ### isolate vertex
-
 - vertex of degree 0
 
 ---
 ### pendant vertex
-
 - vertex of degree 1
 
 ---
 ### undirect handshaking theorem
-
 - for all undirect graphs the sum of the degrees of all vertices equal twice the number of edges
 
 ---
 ### undirect handshaking formula
-
 $$
 \begin{aligned}
 \sum_{v \in V} deg(v) = 2|E| \\
@@ -169,12 +140,10 @@ $$
 
 ---
 ### edge parity theorem
-
 - for all undirect graphs theres always even number of vertices with odd degree
 
 ---
 ### edge parity formula
-
 $$
 \begin{aligned}
 \mathbb{E} = 2k \\
@@ -185,12 +154,10 @@ $$
 
 ---
 ### in degree of vertex
-
 - number of incoming edges incident with vertex
 
 ---
 ### in degree of vertex formula
-
 $$
 \begin{aligned}
 deg^-(v) = \{u \in V | (u, v) \in E \} \\
@@ -201,12 +168,10 @@ $$
 
 ---
 ### out degree of vertex
-
 - number of outgoing edges incident with vertex
 
 ---
 ### out degree of vertex formula
-
 $$
 \begin{aligned}
 deg^+(v) = \{u \in V | (v, u) \in E \} \\
@@ -217,12 +182,10 @@ $$
 
 ---
 ### direct handshaking theorem
-
 - for all direct graphs the sum of the in degrees of all vertices and the sum of the out degrees of all vertices equal the number of edges
 
 ---
 ### direct handshaking formula
-
 $$
 \begin{aligned}
 \sum_{v \in V} deg^-(v) = \sum_{v \in V} deg^+(v) = |E| \\
@@ -232,11 +195,9 @@ $$
 
 ---
 ### complete graph
-
 - graph where every pair of vertices connect by exactly 1 edge
 ---
 ### complete graph formula
-
 $$
 \begin{aligned}
 |E| = \frac{n(n - 1)}{2} \\
@@ -246,11 +207,9 @@ $$
 
 ---
 ### cycle graph
-
 - graph where traversal of all vertices without traversing same vertex twice can begin and end at the same vertex
 ---
 ### cycle graph formula
-
 $$
 \begin{aligned}
 |E| = n \\
@@ -260,10 +219,8 @@ $$
 
 ---
 ### wheel graph
-
 - cycle graph except central vertex connect all vertices
 ### ---
-
 $$
 \begin{aligned}
 |E| = 2(n - 1) \\
@@ -273,11 +230,9 @@ $$
 
 ---
 ### hypercube graph
-
 - graph where vertices equal $2^n$ bit strings of length *n* and two vertices adjacent if and only if bit strings differ by exactly 1 bit
 ---
 ### hypercube graph formula
-
 $$
 \begin{aligned}
 |E| = n \times 2^{n - 1} \\
@@ -287,60 +242,49 @@ $$
 
 ---
 ### bipartition
-
 - divide set of vertices into two disjoint subsets such that every vertex has edge and there exists no edge between vertices within same set
 ---
 ### bipartition formula
-
 $$
 \begin{aligned}
-V_1 \cup V_2 = V \land V_1 \cap V_2 = \emptyset
+V_{1} \cup V_{2} = V \land V_{1} \cap V_{2} = \emptyset
 \end{aligned}
 $$
 
 ---
 ### bipartite color theorem
-
 - bipartition of graph possible if and only if coloring of vertices with exactly two colors such that no adjacent vertices share the same color 
 
 ---
 ### bipartite path theorem
-
 - bipartition of graph possible if and only if traversal of odd number of distinct edges cannot begin and end at the same vertex 
 
 ---
 ### matching
-
 - subset of edges that do not share the same vertex
 
 ---
 ### match vertex
-
 - matching edge incident with vertex
 
 ---
 ### maximum matching
-
 - matching with the most edges among all edges within graph
 
 ---
 ### complete matching
-
 - matching edge incident with every vertex
 
 ---
 ### hall marriage theorem
-
-- bipartite graph $G = (V, E)$ with bipartition $(V_1, V_2)$ has complete matching if and only if $|N(A)| \ge |A|$ for all subsets $A$ of subset $V_1$
+- bipartite graph $G = (V, E)$ with bipartition $(V_{1}, V_{2})$ has complete matching if and only if $|N(A)| \ge |A|$ for all subsets $A$ of subset $V_{1}$
 
 ---
 ### subgraph
-
 - subset of vertices from larger graph where edges exist between select vertices
 
 ---
 ### subgraph formula
-
 $$
 \begin{aligned}
 W \subseteq V \land F \subseteq E \\
@@ -351,15 +295,13 @@ $$
 
 ---
 ### induce subgraph
-
 - subset of vertices from larger graph where edges exist between subset of vertices
 
 ---
 ### induce subgraph formula
-
 $$
 \begin{aligned}
-e \in F \iff (v_1, v_2) \in W \\
+e \in F \iff (v_{1}, v_{2}) \in W \\
 H = (W, F) \\
 G = (V, E)
 \end{aligned}
@@ -367,12 +309,10 @@ $$
 
 ---
 ### edge addition
-
 - graph addition with edge connect non adjacent vertices
 
 ---
 ### edge addition formula
-
 $$
 \begin{aligned}
 G + e = (V, E \cup \{e\})
@@ -381,12 +321,10 @@ $$
 
 ---
 ### edge subtraction
-
 - graph subtraction with edge disconnect adjacent vertices
 
 ---
 ### edge subtraction formula
-
 $$
 \begin{aligned}
 G - e = (V, E - \{e\})
@@ -395,15 +333,13 @@ $$
 
 ---
 ### edge contraction
-
 - graph subtraction with edge merges vertices incident with edge into single vertex
 
 ---
 ### edge contraction formula
-
 $$
 \begin{aligned}
-V' = V - \{v_1, v_2\} \cup \{w\} \\
+V' = V - \{v_{1}, v_{2}\} \cup \{w\} \\
 E' = \{e \in E | e \ne w\} \\
 w = \text{merge vertex}
 \end{aligned}
@@ -411,12 +347,10 @@ $$
 
 ---
 ### vertex subtraction
-
 - graph subtraction with vertex disconnect incident edges
 
 ---
 ### vertex subtraction formula
-
 $$
 \begin{aligned}
 G - v = (V - {v}, E') \\
@@ -426,17 +360,15 @@ $$
 
 ---
 ### graph union
-
 - joining of vertices and edges between graphs
 
 ---
 ### graph union formula
-
 $$
 \begin{aligned}
-G_1 \cup G_2 = V_1 \cup V_2 \land E_1 \cup E_2 \\
-G_1 = (V_1, E_1) \\
-G_2 = (V_2, E_2)
+G_{1} \cup G_{2} = V_{1} \cup V_{2} \land E_{1} \cup E_{2} \\
+G_{1} = (V_{1}, E_{1}) \\
+G_{2} = (V_{2}, E_{2})
 \end{aligned}
 $$
 

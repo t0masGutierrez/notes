@@ -1,13 +1,11 @@
 ### dot product
-
 - scalar quantity of similarity between two vectors
 
 ---
 ### dot product formula
-
 $$
 \begin{aligned}
-\vec x \cdot \vec y = x_1y_1 + ... + x_ny_n = \sum_{i=1}^n x_iy_i \\
+\vec x \cdot \vec y = x_1y_{1} + ... + x_ny_{n} = \sum_{i=1}^n x_iy_{i} \\
 x, y = \text{coordinate} \\
 n = \text{number of coordinates} \\
 i = \text{index}
@@ -16,7 +14,6 @@ $$
 
 ---
 ### dot product formula
-
 $$
 \begin{aligned}
 \vec x \cdot \vec y = (\| \vec x \|)(\| \vec y \|) \cos(\theta) \\
@@ -28,7 +25,6 @@ $$
 
 ---
 ### dot product property
-
 - commutative
 - identity
 - zero
@@ -37,7 +33,6 @@ $$
 
 ---
 ### dot product property formula
-
 $$
 \begin{aligned}
 \vec x \cdot \vec y = \vec y \cdot \vec x \\
@@ -51,12 +46,10 @@ $$
 
 ---
 ### unit vector property
-
 - dot product of unit vector equal $\pm 1$ 
 
 ---
 ### unit vector property formula
-
 $$
 \begin{aligned}
 -1 \le \vec x \cdot \vec y \le 1 \\
@@ -67,12 +60,10 @@ $$
 
 ---
 ### cauchy schwarz inequality
-
 - dot product of magnitudes equal upper boundary for magnitude of dot product
 
 ---
 ### cauchy schwarz inequality formula
-
 $$
 \begin{aligned}
 |\vec x \cdot \vec y | \le (\| \vec x \|)(\| \vec y \|) \\
@@ -83,12 +74,10 @@ $$
 
 ---
 ### triangle inequality
-
 - sum of magnitudes equal upper boundary for magnitude of sum
 
 ---
 ### minkowski’s inequality formula
-
 $$
 \begin{aligned}
 \|\vec{x} + \vec{y}\| \le \|\vec{x}\| + \|\vec{y}\| \\
@@ -99,11 +88,9 @@ $$
 
 ---
 ### direction
-
 - counterclockwise angle between two vectors 
 ---
 ### direction formula
-
 $$
 \begin{aligned}
 \cos(\theta) = \frac{\vec x \cdot \vec y}{(|| \vec x ||)(|| \vec y ||)} \\
@@ -115,7 +102,6 @@ $$
 
 ---
 ### direction property
-
 - acute angle
 - right angle
 - obtuse angle
@@ -124,7 +110,6 @@ $$
 
 ---
 ### direction property formula
-
 $$
 \begin{aligned}
 0 \le \theta \le 90 \iff \vec x \cdot \vec y > 0 \\
@@ -137,15 +122,13 @@ $$
 
 ---
 ### mutually orthogonal
-
 - for every pair of distinct vectors the dot product equal zero
 
 ---
 ### mutually orthogonal formula
-
 $$
 \begin{aligned}
-\forall i, j \in \{1, ..., k\}: i \ne j \implies \vec x_i \cdot \vec x_j = 0 \\
+\forall i, j \in \{1, ..., k\}: i \ne j \implies \vec x_{i} \cdot \vec x_{j} = 0 \\
 i = \text{row index} \\
 j = \text{column index} \\
 k = \text{number of vectors} \\
@@ -155,12 +138,10 @@ $$
 
 ---
 ### parallel projection
-
 - parallel projection of $\vec y$ onto $\vec x$ equal vector component of $\vec y$ parallel $\vec x$ 
 
 ---
 ### parallel projection formula
-
 $$
 \begin{aligned}
 \text{proj}_{x}(y\parallel) = (\frac{\vec x \cdot \vec y}{\|\vec x \|^2})\vec x \\
@@ -171,11 +152,9 @@ $$
 
 ---
 ### orthogonal projection
-
 - orthogonal projection of $\vec y$ onto $\vec x$ equal vector component of $\vec y$ orthogonal $\vec x$ 
 ---
 ### orthogonal projection formula
-
 $$
 \begin{aligned}
 \text{proj}_{x}(y\perp) = \vec y - (\frac{\vec x \cdot \vec y}{\|\vec x \|^2})\vec x \\

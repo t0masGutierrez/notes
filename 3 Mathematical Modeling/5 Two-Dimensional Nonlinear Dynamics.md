@@ -1,28 +1,25 @@
 ### dynamical system
-
 - rule that describes the change of state over time
 
 ---
 ### dynamical system formula
-
 $$
 \begin{aligned}
-\frac{dx}{dt} = f(x, y, c_1, \dots, c_n) \\
-\frac{dy}{dt} = g(x, y, c_1, \dots, c_n) \\
-x(t=0) = x_0 \\
-y(t=0) = y_0 \\
+\frac{dx}{dt} = f(x, y, c_{1}, \dots, c_{n}) \\
+\frac{dy}{dt} = g(x, y, c_{1}, \dots, c_{n}) \\
+x(t=0) = x_{0} \\
+y(t=0) = y_{0} \\
 t \ge 0 \\
 f, g = \text{velocity} \\
 x, y = \text{solution} \\
 t = \text{time} \\
-x_0, y_0 = \text{initial condition} \\
+x_{0}, y_{0} = \text{initial condition} \\
 c = \text{parameter}
 \end{aligned}
 $$
 
 ---
 ### nonlinear system
-
 - products of variables
 - powers of variables
 - transcendental functions of variables
@@ -30,25 +27,22 @@ $$
 
 ---
 ### nonlinear system formula
-
 $$
 \begin{aligned}
-u_1u_2 \\
+u_1u_{2} \\
 u^2 \\
 \sin(u) \\
 \exp(u) \\
-u_1 \circ u_2
+u_{1} \circ u_{2}
 \end{aligned}
 $$
 
 ---
 ### taylor series
-
 - approximate function near point as infinite polynomial
 
 ---
 ### taylor series formula
-
 $$
 \begin{aligned}
 f(u) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(u-a)^n \\
@@ -60,12 +54,10 @@ $$
 
 ---
 ### linearization
-
 - convert from nonlinear system to linear system
 
 ---
 ### linearization formula
-
 $$
 \begin{aligned}
 \frac{dv}{dt} = A_*v + R \\
@@ -78,8 +70,8 @@ x - x_* \\
 y - y_*
 \end{bmatrix} \\
 R = \begin{bmatrix} 
-R_1 \\
-R_2
+R_{1} \\
+R_{2}
 \end{bmatrix} \\
 f, g = \text{velocity} \\
 v = \text{solution} \\
@@ -92,12 +84,10 @@ $$
 
 ---
 ### continuous differentiability
-
 - derivative exists and derivative continuous
 
 ---
 ### continuous differentiability formula
-
 $$
 \begin{aligned}
 f, g:D\subset \mathbb R^2 \rightarrow \mathbb R^2 \land f, g \in C^1(D) \\
@@ -109,42 +99,36 @@ $$
 
 ---
 ### hyperbolicity
-
 - for every eigenvalue there exists nonzero real part
 
 ---
 ### hyperbolicity formula
-
 $$
 \begin{aligned}
-\forall i \le n: \text{Re}(\lambda_i) \ne 0 \\
+\forall i \le n: \text{Re}(\lambda_{i}) \ne 0 \\
 \lambda = \text{eigenvalue}
 \end{aligned}
 $$
 
 ---
 ### hartman-grobman property
-
 - local behavior of continuously differentiable, hyperbolic, nonlinear system qualitatively equal linearized system
 
 ---
 ### hartman-grobman property formula
-
 $$
 \begin{aligned}
-\lambda_1, \lambda_2 < 0 \implies \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) = v_* \\
-(\lambda_1 > 0) \land (\lambda_2 < 0) \implies  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
-\lambda_1, \lambda_2 > 0 \implies  \forall v_0 \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda_{1}, \lambda_{2} < 0 \implies \forall v_{0} \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) = v_* \\
+(\lambda_{1} > 0) \land (\lambda_{2} < 0) \implies  \forall v_{0} \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
+\lambda_{1}, \lambda_{2} > 0 \implies  \forall v_{0} \in N_\epsilon(v_*): \lim_{t \rightarrow \infty} v(t) \ne v_* \\
 \end{aligned}
 $$
 
 ---
 ### periodic solution
-
 - repeating solution with closed orbit
 ---
 ### periodic solution formula
-
 $$
 \begin{aligned}
 \forall t \ge 0: v(t + P) = v(t) \\
@@ -156,11 +140,9 @@ $$
 
 ---
 ### periodic equilibrium property
-
 - for every periodic solution there exists equilibrium point(s) inside the closed orbit
 ---
 ### periodic equilibrium property formula
-
 $$
 \begin{aligned}
 U = \{v|\forall t \ge 0: v(t + P) = v(t)\} \implies \exists v_* \in U \\
@@ -174,15 +156,13 @@ $$
 
 ---
 ### poincare-bendixson property
-
 - compact region without equilibrium point contain periodic solution
 ---
 ### poincare-bendixson property formula
-
 $$
 \begin{aligned}
 (R' \subset R \subset \mathbb R^2) \\
-\land (R \subset \mathbb R^2, \exists v_0 \in \mathbb R^2, \exists (r > 0) \in \mathbb R: B_r(v_0) \supset R) \\
+\land (R \subset \mathbb R^2, \exists v_{0} \in \mathbb R^2, \exists (r > 0) \in \mathbb R: B_{r}(v_{0}) \supset R) \\
 \land (\forall x \in R: f(x) \ne 0) \\
 \land (\partial R \le 0) \\
 \implies \exists v \in R, \forall t \ge 0: v(t + P) = v(t) \\
@@ -197,12 +177,10 @@ $$
 
 ---
 ### nonlinear center property
-
 - there exists neighborhood around equilibrium point such that every nearby solution surround equilibrium point with constant spiral
 
 ---
 ### nonlinear center property formula
-
 $$
 \begin{aligned}
 \frac{dE}{dt}(v_*) = 0 \implies \exists\epsilon > 0, \forall v \in N_{\epsilon}(v_*), \forall t \ge 0: v(t + P) = v(t) \\
@@ -217,12 +195,10 @@ $$
 
 ---
 ### bifurcation
-
 - quantitative change of parameter cause qualitative change of phase
 
 ---
 ### bifurcation formula
-
 $$
 \begin{aligned}
 \Delta h \implies \Delta (h \times u_*)
@@ -231,13 +207,11 @@ $$
 
 ---
 ### bifurcation example
-
 - $f(u) = u^3 - uh$ 
 - $u_* = 0, \pm \sqrt h$ 
 
 ---
 ### bifurcation example formula
-
 $$
 \begin{aligned}
 h \le 0 \implies f'(0) > 0 \\
@@ -249,14 +223,12 @@ $$
 
 ---
 ### bifurcation diagram
-
 - find equilibrium point
 - determine stability of equilibrium point
 - find parameter where the stability of equilibria change
 - graph the equilibrium point versus the parameter
 ---
 ### bifurcation diagram formula
-
 $$
 \begin{aligned}
 h \times u_* = \{(h, u_*)| f(h, u_*) = 0\} \\

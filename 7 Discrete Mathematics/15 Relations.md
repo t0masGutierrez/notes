@@ -1,14 +1,12 @@
 ### binary relation
-
 - subset of cartesian product represent relationship between pairs of elements
 - relate each element of set A to every element of set B
 
 ---
 ### binary relation formula
-
 $$
 \begin{aligned}
-R \subseteq A \times B \implies (a_i, b_j) \in R \\
+R \subseteq A \times B \implies (a_{i}, b_{j}) \in R \\
 i, j = 1, 2, ... n \\
 i, j = \text{index}
 
@@ -17,12 +15,10 @@ $$
 
 ---
 ### self relation
-
 - relation from A to A
 
 ---
 ### self relation formula
-
 $$
 \begin{aligned}
 R \subseteq A \times A
@@ -31,12 +27,10 @@ $$
 
 ---
 ### reflexive relation
-
 - every element relation of itself
 
 ---
 ### reflexive relation formula
-
 $$
 \begin{aligned}
 \forall a (a, a) \in R
@@ -45,12 +39,10 @@ $$
 
 ---
 ### symmetric relation
-
 - if element *a* relate element *b* then element *b* relate element *a*
 
 ---
 ### symmetric relation formula
-
 $$
 \begin{aligned}
 (a, b) \in R \implies (b, a) \in R
@@ -59,12 +51,10 @@ $$
 
 ---
 ### antisymmetric relation
-
 - if element *a* relate element *b* and element *b* relate element *a* then both element equal
 
 ---
 ### antisymmetric relation formula
-
 $$
 \begin{aligned}
 (a, b) \in R \land (b, a) \in R \implies a = b
@@ -73,12 +63,10 @@ $$
 
 ---
 ### transitive relation
-
 - if element *a* relate element *b* and element *b* relate element *c* then element *a* relate element *c*
 
 ---
 ### transitive relation formula
-
 $$
 \begin{aligned}
 (a, b) \in R \land (b, c) \in R \implies (a, c) \in R
@@ -87,12 +75,10 @@ $$
 
 ---
 ### composite relation
-
 - if relation *P* relate element *a* to element *b* and relation *Q* relate element *b* to element *c* then composition of *P* and *Q* relate element *a* to element *c*
 
 ---
 ### composite relation formula
-
 $$
 \begin{aligned}
 (a, b) \in P \land (b, c) \in Q \implies (a, c) \in P \circ Q
@@ -101,12 +87,10 @@ $$
 
 ---
 ### composite self relation
-
 - powers of self relation represent multiple compositions of relation with self
 
 ---
 ### composite self relation formula
-
 $$
 \begin{aligned}
 R^n = R^{n - 1} \circ R
@@ -115,16 +99,14 @@ $$
 
 ---
 ### binary matrix relation
-
 - represent relation as matrix of 0s and 1s
 
 ---
 ### binary matrix relation formula
-
 $$
 \begin{aligned}
-(a_i, b_j) \in R \implies m_{ij} = 1 \\
-(a_i, b_j) \notin R \implies m_{ij} = 0 \\
+(a_{i}, b_{j}) \in R \implies m_{ij} = 1 \\
+(a_{i}, b_{j}) \notin R \implies m_{ij} = 0 \\
 i = \text{row index} \\
 j = \text{column index}
 \end{aligned}
@@ -132,33 +114,26 @@ $$
 
 ---
 ### reflexive matrix
-
 - diagonal elements of matrix equal 1
 ---
 ### symmetric matrix
-
 - corresponding elements of matrix equal itself
 ---
 ### antisymmetric matrix
-
 - corresponding elements of matrix equal complement
 ---
 ### composite matrix
-
 - if matrix *P* relate set *A* to set *B* and matrix *Q* relate set *B* to set *C* then composition of *P* and *Q* relate set *A* to set *C*
 
 ---
 ### composite self matrix
-
 - powers of self matrix represent multiple compositions of relation with self
 
 ---
 ### digraph
-
 - represent relation as directional graph of vertices and edges where vertices represent elements and edges represent relations
 ---
 ### digraph formula
-
 $$
 \begin{aligned}
 (a, b) \in R \\
@@ -169,40 +144,33 @@ $$
 
 ---
 ### reflexive digraph
-
 - for every vertex there exists loop
 
 ---
 ### symmetric digraph
-
 - for every edge between different vertices there exists opposite edge between same vertices
 
 ---
 ### antisymmetric digraph
-
 - for every edge between different vertices there exists no opposite edge between same vertices
 
 ---
 ### transitive digraph
-
 - if edge relate vertex *a* and vertex *b* and edge relate vertex *b* and vertex *c* then edge relate vertex *a* and vertex *c*
 
 ---
 ### digraph summary
-
 - reflexivity
 - symmetry
 - transitivity
 ---
 ### equivalence relation
-
 - reflexive
 - symmetric
 - transitive
 
 ---
 ### equivalence relation formula
-
 $$
 \begin{aligned}
 a R a \\
@@ -214,12 +182,10 @@ $$
 
 ---
 ### equivalence class
-
 - set of all elements *x* such that there exists equivalence relation with element *a* 
 
 ---
 ### equivalence class formula
-
 $$
 \begin{aligned}
 [a] = \{x \in A | x \sim a\}
@@ -228,12 +194,10 @@ $$
 
 ---
 ### representative
-
 - element of equivalence class
 
 ---
 ### representative formula
-
 $$
 \begin{aligned}
 x \in [a]
@@ -242,12 +206,10 @@ $$
 
 ---
 ### modulo congruence class
-
 - groups of integers that have the same remainder after dividing by *n*
 
 ---
 ### modulo congruence class formula
-
 $$
 \begin{aligned}
 [a] = \{x \in Z | x \equiv a \ \text{mod} \ n\}
@@ -256,18 +218,16 @@ $$
 
 ---
 ### partition
-
 - division of set *A* into nonempty pairwise disjoint subsets whose union equal set *A*
 ---
 ### partition formula
-
 $$
 \begin{aligned}
-A_i = \{A_1, A_2, ... A_k\} \\
-\forall i(A_i \ne \emptyset) \\
-\forall i \forall j(i \ne j)(A_i \cap A_j = \emptyset) \\
-\bigcup_{i = 1}^k A_i = A \\
-\therefore A_i = \{x \in A | x \sim a_i\}
+A_{i} = \{A_{1}, A_{2}, ... A_{k}\} \\
+\forall i(A_{i} \ne \emptyset) \\
+\forall i \forall j(i \ne j)(A_{i} \cap A_{j} = \emptyset) \\
+\bigcup_{i = 1}^k A_{i} = A \\
+\therefore A_{i} = \{x \in A | x \sim a_{i}\}
 \end{aligned}
 $$
 

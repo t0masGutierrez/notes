@@ -1,14 +1,12 @@
 ### scale
-
 - size of scaling factor influence the graph of unit-free equation
 ---
 ### scale formula
-
 $$
 \begin{aligned}
 D = \{(t, y) \in [-a, a] \times [-b, b]| p_1a \le t \le p_2b, q_1a \le y \le q_2b\} \\
-y = f(t, c_1, \dots, c_n) \\
-p_1, p_2, q_1, q_2 \in \mathbb Z \\
+y = f(t, c_{1}, \dots, c_{n}) \\
+p_{1}, p_{2}, q_{1}, q_{2} \in \mathbb Z \\
 [a] = [t] \\
 [b] = [y] \\
 D = \text{domain} \\
@@ -20,14 +18,12 @@ $$
 
 ---
 ### scale example
-
-- $y = c_1t^2 + c_2\sin(\frac{2\pi t}{c_3})$ 
-- $c_1 = 2\frac{\text{m}}{\text{s}^2}$ 
-- $c_2 = 0.01 \text{m}$ 
-- $c_3 = 0.01\text{s}$ 
+- $y = c_1t^2 + c_{2}\sin(\frac{2\pi t}{c_{3}})$ 
+- $c_{1} = 2\frac{\text{m}}{\text{s}^2}$ 
+- $c_{2} = 0.01 \text{m}$ 
+- $c_{3} = 0.01\text{s}$ 
 ---
 ### scale example formula
-
 $$
 \begin{aligned}
 \{a, b\} = \{0.001 \text{s}, 0.005\text{m}\}, \{0.02\text{s}, 0.02\text{m}\}, \{0.15 \text{s}, 0.10 \text{m}\}, \{10 \text{s}, 200 \text{m}\}
@@ -36,16 +32,14 @@ $$
 
 ---
 ### scale transformation
-
 - change of variables from domain to scaled, normalized domain
 ---
 ### scale transformation formula
-
 $$
 \begin{aligned}
-(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar D = \{(\bar t, \bar y) \in [-1, 1] \times [-1, 1]| p_1 \le \bar t \le p_2, q_1 \le \bar y \le q_2\} \\
-\bar y = \frac{1}{b}f(a \bar t, c_1, \dots, c_N) = \bar f(\bar t, a, b, c_1, \dots, c_n) \\
-p_1, p_2, q_1, q_2 \in \mathbb Z \\
+(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar D = \{(\bar t, \bar y) \in [-1, 1] \times [-1, 1]| p_{1} \le \bar t \le p_{2}, q_{1} \le \bar y \le q_{2}\} \\
+\bar y = \frac{1}{b}f(a \bar t, c_{1}, \dots, c_{N}) = \bar f(\bar t, a, b, c_{1}, \dots, c_{n}) \\
+p_{1}, p_{2}, q_{1}, q_{2} \in \mathbb Z \\
 [a] = [\bar t] \\
 [b] = [\bar y] \\
 \bar D = \text{domain} \\
@@ -57,14 +51,12 @@ $$
 
 ---
 ### scale transformation example
-
-- $y = c_1t^2 + c_2\sin(\frac{2\pi t}{c_3})$ 
-- $c_1 = 2\frac{\text{m}}{\text{s}^2}$ 
-- $c_2 = 0.01 \text{m}$ 
-- $c_3 = 0.01\text{s}$ 
+- $y = c_1t^2 + c_{2}\sin(\frac{2\pi t}{c_{3}})$ 
+- $c_{1} = 2\frac{\text{m}}{\text{s}^2}$ 
+- $c_{2} = 0.01 \text{m}$ 
+- $c_{3} = 0.01\text{s}$ 
 ---
 ### scale transformation example formula
-
 $$
 \begin{aligned}
 \{a, b\} = \{-1, 1\}
@@ -73,12 +65,10 @@ $$
 
 ---
 ### scale derivative property
-
 - kth derivative of scaled function equal kth power of scaling denominator
 
 ---
 ### scale derivative property formula
-
 $$
 \begin{aligned}
 (\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies\frac{d^k \bar y}{d \bar t^k} = (\frac{a^k}{b})(\frac{d^k y}{d t^k}) \\
@@ -89,12 +79,10 @@ $$
 
 ---
 ### characteristic scale
-
 - typical size of scale equal input
 
 ---
 ### characteristic scale formula
-
 $$
 \begin{aligned}
 b = \max_{t \in I}|y| \\
@@ -104,19 +92,17 @@ $$
 
 ---
 ### associative scale
-
 - output equal true size of scale
 
 ---
 ### associative scale formula
-
 $$
 \begin{aligned}
-(a = \prod_{i=1}^n c_i^{\alpha_i}) \land ([a] = [t]) \iff \Delta_a = A \alpha = \Delta_t \\
-(b = \prod_{i=1}^n c_i^{\beta_i}) \land ([b] = [y]) \iff \Delta_b = A \beta = \Delta_y \\
-A = [\Delta_{c_1}, \dots, \Delta_{c_n}] \in \mathcal M_{m\le n} \\
-\vec \alpha = [\alpha_1, \dots, \alpha_n] \\
-\vec \beta = [\beta_1, \dots, \beta_n] \\
+(a = \prod_{i=1}^n c_{i}^{\alpha_{i}}) \land ([a] = [t]) \iff \Delta_{a} = A \alpha = \Delta_{t} \\
+(b = \prod_{i=1}^n c_{i}^{\beta_{i}}) \land ([b] = [y]) \iff \Delta_{b} = A \beta = \Delta_{y} \\
+A = [\Delta_{c_{1}}, \dots, \Delta_{c_{n}}] \in \mathcal M_{m\le n} \\
+\vec \alpha = [\alpha_{1}, \dots, \alpha_{n}] \\
+\vec \beta = [\beta_{1}, \dots, \beta_{n}] \\
 t, y = \text{variable} \\
 a, b = \text{scaling factor} \\
 \alpha, \beta = \text{parameter exponent} \\
@@ -126,15 +112,13 @@ $$
 
 ---
 ### scaling property
-
 - scale transformation under natural scale equal equivalent function with smaller dimensionless argument
 
 ---
 ### scaling property formula
-
 $$
 \begin{aligned}
-(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar y = \phi(\bar t, \mu_1, \dots, \mu_m) \\
+(\bar t = \frac{t}{a}) \land (\bar y = \frac{y}{b}) \implies \bar y = \phi(\bar t, \mu_{1}, \dots, \mu_{m}) \\
 [\mu] = 1 \\
 t, y, = \text{variable} \\
 a, b = \text{scaling factor} \\

@@ -1,10 +1,8 @@
 ### heat equation
-
 - mathematical model describing the spatiotemporal flow of heat
 
 ---
 ### heat equation formula
-
 $$
 \begin{aligned}
 \frac{\partial u}{\partial t} = k\frac{\partial ^2 u}{\partial ^2 x} \\
@@ -19,12 +17,10 @@ $$
 
 ---
 ### heat equation guess
-
 - separation of temporal variable and spatial variable
 
 ---
 ### heat equation guess formula
-
 $$
 \begin{aligned}
 u(x, t) = X(x)T(t) \\
@@ -35,12 +31,10 @@ $$
 
 ---
 ### system of heat equations
-
 - system of ordinary differential equations for the spatiotemporal flow of heat
 
 ---
 ### system of heat equations formula
-
 $$
 \begin{aligned}
 \frac{X''(x)}{X(x)} = \frac{T'(t)}{kT(t)} = -\lambda \implies \begin{cases} X''(x) + \lambda X(x) = 0 \\
@@ -55,12 +49,10 @@ $$
 
 ---
 ### general solution of spatial heat equation
-
 - mathematical model describing the spatial flow of heat
 
 ---
 ### general solution of spatial heat equation formula
-
 $$
 \begin{aligned}
 X(x) = \sin(\frac{n\pi}{L}x) \\
@@ -72,12 +64,10 @@ $$
 
 ---
 ### general solution of temporal heat equation
-
 - mathematical model describing the temporal flow of heat
 
 ---
 ### general solution of temporal heat equation formula
-
 $$
 \begin{aligned}
 T(t) = \exp(-k\frac{n^2\pi^2}{L^2}t) \\
@@ -90,15 +80,13 @@ $$
 
 ---
 ### general solution of heat equation
-
 - superposition of eigenmodes
 
 ---
 ### general solution of heat equation formula
-
 $$
 \begin{aligned}
-u(x, t) = \sum _{n = 1}^N C_n \sin(\frac{n\pi}{L}x) \exp(-k\frac{n^2\pi^2}{L^2}t) \\
+u(x, t) = \sum _{n = 1}^N C_{n} \sin(\frac{n\pi}{L}x) \exp(-k\frac{n^2\pi^2}{L^2}t) \\
 C = \text{fourier sine series} \\
 n = 1, 2, 3, \dots \\
 x = \text{space} \\
@@ -110,15 +98,13 @@ $$
 
 ---
 ### fourier sine series
-
 - represent function on the interval from $x = 0$ to $x = L$ as infinite sum of sine functions
 
 ---
 ### fourier sine series formula
-
 $$
 \begin{aligned}
-C_n = \frac{2}{L}\int_0^L f(x)\sin(\frac{n\pi}{L}x)dx \\
+C_{n} = \frac{2}{L}\int_{0}^L f(x)\sin(\frac{n\pi}{L}x)dx \\
 L = \text{length} \\
 n = 1, 2, 3, \dots \\
 x = \text{space} \\
