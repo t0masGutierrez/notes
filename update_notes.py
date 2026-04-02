@@ -1,4 +1,19 @@
 import os
+import re
+
+INLINE_MATH_PATTERN = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
+SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9])")
+LITERAL_HASH_PATTERN = re.compile(r"(?<!\\)#")
+
+def sanitize_math_text(text):
+    text = SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\1}", text)
+    return LITERAL_HASH_PATTERN.sub(r"\\#", text)
+
+def sanitize_inline_math(line):
+    return INLINE_MATH_PATTERN.sub(
+        lambda match: f"${sanitize_math_text(match.group(1))}$",
+        line,
+    )
 
 def update_notes():
     input = os.path.expanduser("~") + "/Obsidian/brainTwo/"
@@ -34,22 +49,27 @@ def update_notes():
                         with open(out_file, "r") as git:
                             lines = git.readlines()
 
+                            in_math_block = False
+
                             # loop through lines inside file
-                            for i in range(len(lines)-1):
-                                pattern0 = not lines[i].startswith("- ") and lines[i+1].startswith("- ") 
-                                pattern1 = lines[i+1].startswith("$$") and not lines[i+2].startswith("---")
-                                pattern2 = lines[i+1].startswith("---") 
+                            for i in range(len(lines)):
+                                next_line = lines[i + 1] if i + 1 < len(lines) else ""
+                                line_after_next = lines[i + 2] if i + 2 < len(lines) else ""
+
+                                pattern0 = not lines[i].startswith("- ") and next_line.startswith("- ")
+                                pattern1 = next_line.startswith("$$") and not line_after_next.startswith("---")
+                                pattern2 = next_line.startswith("---")
                                 pattern3 = lines[i].startswith("\\")
                                 pattern4 = "![[" in lines[i]
 
                                 # add hashtags and newlines
                                 if pattern0 or pattern1:
-                                    lines[i] = "### " + lines[i] + "\n"
+                                    lines[i] = "### " + lines[i].rstrip("\n") + "\n"
 
                                 # add newlines
                                 if pattern2:
-                                    lines[i] += "\n"
-                                
+                                    lines[i] = lines[i].rstrip("\n") + "\n\n"
+
                                 # replace alignment
                                 if pattern3:
                                     lines[i] = lines[i].replace("align*", "aligned")
@@ -57,6 +77,16 @@ def update_notes():
                                 # remove images
                                 if pattern4:
                                     lines[i] = lines[i].split("![[")[0]
+
+                                stripped_line = lines[i].strip()
+                                if stripped_line == "$$":
+                                    in_math_block = not in_math_block
+                                    continue
+
+                                if in_math_block:
+                                    lines[i] = sanitize_math_text(lines[i])
+                                else:
+                                    lines[i] = sanitize_inline_math(lines[i])
                             
                             # write to github files
                             with open(out_file, "w") as git:
