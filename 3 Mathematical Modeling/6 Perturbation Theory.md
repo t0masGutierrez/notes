@@ -363,10 +363,11 @@ $$
 - solve regular algebraic equation
 - change of variable
 - substitute change of variable
-- solve epsilon exponent such that two dominant term equal exponent
+- solve scaling factor such that two dominant term equal exponent
 - divide leading coefficient and remaining epsilon order equal epsilon order of series solution
 - solve regular algebraic equation
 - inverse change of variable
+
 ---
 ### singular algebraic equation formula
 
@@ -393,10 +394,13 @@ $$
 
 $$
 \begin{aligned}
-\epsilon = 0 \implies \phi(x)y' = f(x) \land y_{out}(x) = C \\
 \epsilon y'' + \phi(x)y' = f(x) \\
-\epsilon = \text{parameter} \\
-y = \text{solution} 
+a \le x \le b \\
+\epsilon = 0 \implies \phi(x)y' = f(x) \\
+\phi(x) > 0 \implies q_{in} = a \\
+\phi(x) < 0 \implies q_{in} = b \\
+y(q_{out}) = Ce^{rq_{out}} \\
+y_{out}(x)
 \end{aligned}
 $$
 
@@ -404,19 +408,17 @@ $$
 ### inner problem
 
 - rescaled equation governing the fast varying behavior inside the boundary layer
-- choose scaling factor such that at least two terms of order unity
 
 ---
 ### inner problem formula
 
 $$
 \begin{aligned}
-\tau = \frac{x}{\delta} \implies \frac{1}{\delta}(\frac{d^2y}{d\tau^2} + \phi(x)\frac{dy}{d\tau}) = f(x) \\
 \epsilon y'' + \phi(x)y' = f(x) \\
-\delta = \epsilon^n \\ 
-\epsilon = \text{parameter} \\
-\delta = \text{scaling factor} \\
-y = \text{solution} 
+\tau = \frac{x-q_{in}}{\epsilon^n} \\
+\frac{1}{\epsilon^{2}}(\frac{d^2y}{d\tau^2}) + \frac{\phi(x)}{\epsilon}(\frac{dy}{d\tau}) = f(x) \\
+y(q_{in}) = Ae^{r_1 q_{in}} + Be^{r_2 q_{in}} \\
+y_{in}(\tau)
 \end{aligned}
 $$
 
@@ -440,12 +442,16 @@ $$
 ### singular differential equation
 
 - solve the outer problem
-- locate the outer boundary condition
-- solve the inner problem
-- ignore lower order term(s)
-- solve the matching problem
+- locate the boundary layer
+- solve the constant of integration
 - change of variable
-- composite solution equal single equation with multiple scales
+- solve the scaling factor
+- substitute the scaling factor
+- solve the inner problem
+- solve the matching problem
+- inverse change of variable
+- composite solution equal single equation with multiple scale
+![](3%20Mathematical%20Modeling/Images/singular%20differential%20equation.png)
 
 ---
 ### singular differential equation formula
