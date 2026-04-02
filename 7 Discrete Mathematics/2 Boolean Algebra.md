@@ -11,7 +11,7 @@ $$
 \begin{aligned}
 \overline{1} = 0 \\
 \overline{0} = 1
-\#\#\# \end{aligned}
+\end{aligned}
 $$
 
 

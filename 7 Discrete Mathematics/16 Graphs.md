@@ -220,7 +220,7 @@ $$
 ---
 ### wheel graph
 - cycle graph except central vertex connect all vertices
-### ---
+---
 $$
 \begin{aligned}
 |E| = 2(n - 1) \\

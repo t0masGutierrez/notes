@@ -1,19 +1,29 @@
 import os
 import re
 
+
 INLINE_MATH_PATTERN = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
-SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9])")
-LITERAL_HASH_PATTERN = re.compile(r"(?<!\\)#")
+SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9{])")
+
 
 def sanitize_math_text(text):
-    text = SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\g<1>}", text)
-    return LITERAL_HASH_PATTERN.sub(r"\\#", text)
+    return SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\g<1>}", text)
+
 
 def sanitize_inline_math(line):
     return INLINE_MATH_PATTERN.sub(
         lambda match: f"${sanitize_math_text(match.group(1))}$",
         line,
     )
+
+
+def is_heading_candidate(line):
+    stripped = line.strip()
+    if not stripped:
+        return False
+
+    blocked_prefixes = ("- ", "### ", "$$", "---", "\\")
+    return not stripped.startswith(blocked_prefixes)
 
 def update_notes():
     input = os.path.expanduser("~") + "/Obsidian/brainTwo/"
@@ -54,10 +64,11 @@ def update_notes():
                             # loop through lines inside file
                             for i in range(len(lines)):
                                 next_line = lines[i + 1] if i + 1 < len(lines) else ""
-                                line_after_next = lines[i + 2] if i + 2 < len(lines) else ""
+                                stripped_line = lines[i].strip()
+                                next_stripped_line = next_line.strip()
 
-                                pattern0 = not lines[i].startswith("- ") and next_line.startswith("- ")
-                                pattern1 = next_line.startswith("$$") and not line_after_next.startswith("---")
+                                pattern0 = is_heading_candidate(lines[i]) and next_line.startswith("- ")
+                                pattern1 = is_heading_candidate(lines[i]) and next_stripped_line == "$$"
                                 pattern2 = next_line.startswith("---")
                                 pattern3 = lines[i].startswith("\\")
                                 pattern4 = "![[" in lines[i]

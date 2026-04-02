@@ -245,43 +245,45 @@ $$
 \begin{aligned}
 \langle i \rangle \iff \langle j \rangle \\
 i, j = \text{row index}
-\#\#\# \end{aligned}
-$$---
-\#\#\# row operation property
-- associative
-- multiple associative
-
----
-\#\#\# row operation property formula
-$$
-\begin{aligned}
-R(AB) = (R(A))B \\
-R_n(\dots (R_2(R_1(AB))) \dots) = (R_n(\dots (R_2(R_1(A))) \dots))B \\
 \end{aligned}
 $$
 
 ---
-\#\#\# pivot entry
+### row operation property
+- associative
+- multiple associative
+
+---
+### row operation property formula
+$$
+\begin{aligned}
+R(AB) = (R(A))B \\
+R_{n}(\dots (R_{2}(R_{1}(AB))) \dots) = (R_{n}(\dots (R_{2}(R_{1}(A))) \dots))B \\
+\end{aligned}
+$$
+
+---
+### pivot entry
 - special entry equal 1
 
 ---
-\#\#\# target entry
+### target entry
 - special entry equal 0
 
 ---
-\#\#\# pivot column
+### pivot column
 - column with nonzero pivot entries
 
 ---
-\#\#\# nonpivot column
+### nonpivot column
 - column with zero pivot entries
 
 ---
-\#\#\# independent variable
+### independent variable
 - variable of nonpivot column equal arbitrary real number
 
 ---
-\#\#\# dependent variable
+### dependent variable
 - variable of pivot column equal solution of system of linear equations
 
 ---
