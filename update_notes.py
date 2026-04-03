@@ -1,7 +1,6 @@
 import os
 import re
 
-
 INLINE_MATH_PATTERN = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
 SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9{])")
 
