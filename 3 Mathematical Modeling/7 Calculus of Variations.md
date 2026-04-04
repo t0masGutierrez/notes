@@ -99,20 +99,47 @@ f_* = \text{absolute maximizer}
 $$
 
 ---
-### term
+### norm
+- magnitude of vector
+
+---
+### norm formula
+$$
+\begin{aligned}
+\|v\| \ge 0 \\
+\|v\| = 0 \iff v = 0 \\
+c \in \mathbb R \implies \|cv\| = (\|c\|)(\|v\|) \\
+\|v_{1} + v_{2}\| \le \|v_{1}\| + \|v_{2}\|
+\end{aligned}
+$$
+
+---
+### continuous differentiability norm
+- maximum norm of continuously differentiable function
+
+---
+### continuous differentiability norm formula
+$$
+\begin{aligned}
+\|f(x)\|_{C^m} = \sum_{k=0}^m |\max_{a \le x \le b}f^{(k)}(x)| \\
+f \in \mathcal V \subset C^n[a, b] \\
+f = \text{continuously function} \\
+f^{(k)} = \text{kth derivative} \\
+\mathcal V = \text{domain}
+\end{aligned}
+$$
+
+---
+### continuous differentiability neighborhood
 - definition
 
 ---
-### term
-- definition
+### continuous differentiability neighborhood formula
+$$
+\begin{aligned}
 
----
-### term
-- definition
-
----
-### term
-- definition
+\end{aligned}
+$$
 
 ---
 ### term
