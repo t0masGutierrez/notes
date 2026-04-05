@@ -119,8 +119,8 @@ T \sim S(t, \text{d}) = P(T \le t) \\
 T \sim S(a, b, \text{d}) = P(a \le T \le b) \\
 t = \text{t-score} \\
 \text{d} = \text{degrees of freedom} \\
-a = \text{lower t-statistic} \\
-b = \text{upper t-statistic} 
+a = \text{lower t-score} \\
+b = \text{upper t-score} 
 \end{aligned}
 $$
 
@@ -155,14 +155,14 @@ $$
 
 ---
 ### chi-square
-- probability as function of $\chi^2$-statistic
+- probability as function of $\chi^2$-score
 
 ---
 ### chi-square formula
 $$
 \begin{aligned}
 X \sim \chi^2(x, \text{d}) = P(X \ge x) \\
-x = \text{$\chi^2$-statistic} \\
+x = \text{$\chi^2$-score} \\
 \text{d} = \text{degrees of freedom} 
 \end{aligned}
 $$
@@ -182,7 +182,7 @@ $$
 
 ---
 ### F
-- probability as function of F-statistic
+- probability as function of F-score
 
 ---
 ### F formula
@@ -191,7 +191,7 @@ $$
 U \sim \chi^2(f, \text{d}_{1}, \text{d}_{2}) = P(U \le u) \\
 V \sim \chi^2(v, \text{d}_{1}, \text{d}_{2}) = P(V \le v) \\
 F = \frac{U/\text{d}_{1}}{V/\text{d}_{2}} \\
-u, v = \text{F-statistic} \\
+u, v = \text{F-score} \\
 \text{d} = \text{degrees of freedom} 
 \end{aligned}
 $$

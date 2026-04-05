@@ -1,8 +1,7 @@
 ### process
 - formulate question
 - collect data
-- summarize data with descriptive statistics
-- analyze data with inferential statistics
+- analyze data
 - interpret results
 
 ---
@@ -14,54 +13,49 @@
 - infer something about unknown data
 
 ---
-### bar chart
-- compare univariate categorical data
+### numerical statistics
+- mean
+- standard deviation
+- five number summary
 
 ---
-### box plot
+### categorical statistics
+- frequency
+
+---
+### histogram
 - compare univariate numerical data
 
 ---
-### grouped box plot
-- compare multivariate mixed data
-
----
-### contingency table
-- compare bivariate categorical data
+### bar chart
+- compare univariate categorical data
 
 ---
 ### scatter plot
 - compare bivariate numerical data
 
 ---
+### box plot
+- compare multivariate mixed data
+
+---
+### violin plot
+- compare multivariate mixed data
+
+---
+### contingency table
+- compare multivariate categorical data
+
+---
 ### frequency
 - count of category
 
 ---
-### relative frequency
-- count of category per total count
-
----
-### cumulative frequency
-- count of category including sum of all previous category
-
----
-### marginal frequency
-- total count of single category
-
----
-### conditional frequency
-- count of category given 2nd category
-
----
-### histogram
-- frequency distribution
+### normal distribution
+- unimodal, bell-shaped, symmetrical curve
 ---
 ### uniform distribution
 - flat curve
----
-### symmetrical distribution
-- bell shaped curve
 ---
 ### negative skew distribution
 - long left tail
@@ -101,7 +95,7 @@
 ---
 ### measure of spread
 - variability of data
-- range, IQR, variance, and standard deviation
+- range, IQR, and standard deviation
 
 ---
 ### range
@@ -110,10 +104,6 @@
 ---
 ### interquartile range
 - difference between 3rd quartile and 1st quartile
-
----
-### variance
-- standard deviation squared
 
 ---
 ### standard deviation

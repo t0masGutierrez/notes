@@ -30,6 +30,64 @@ T = \text{sample statistic} \\
 $$
 
 ---
+### critical value
+- boundary point on probability distribution between rejection region and non-rejection region
+
+---
+### critical value formula
+$$
+\begin{aligned}
+T < c^*_{L} \implies \text{reject} \\
+T > |c^*_{2}| \implies \text{reject} \\
+T > c^*_{R} \implies \text{reject} \\
+\end{aligned}
+$$
+
+---
+### critical z-value
+- boundary point on normal distribution between rejection region and non-rejection region
+---
+### critical z-value formula
+$$
+\begin{aligned}
+z^*_{L} = N^{-1}(\alpha, 0, 1) \\
+z^*_{2} = N^{-1}(1-\frac{\alpha}{2}, 0, 1) \\
+z^*_{R} = N^{-1}(1-\alpha, 0, 1) \\
+\alpha = \text{significance level}
+\end{aligned}
+$$
+
+---
+### critical t-value
+- boundary point on student distribution between rejection region and non-rejection region
+
+---
+### critical t-value formula
+$$
+\begin{aligned}
+t_* = \frac{\bar X - \mu}{\frac{\sigma}{\sqrt n}} \\
+\bar X = \text{sample mean} \\
+\mu = \text{mean} \\
+\sigma = \text{standard deviation} \\
+n = \text{sample size}
+\end{aligned}
+$$
+
+---
+### critical chi-square-value
+- boundary point on chi-square distribution between rejection region and non-rejection region
+---
+### critical chi-square-value formula
+$$
+\begin{aligned}
+\chi_*^2 = \frac{(n-1)s^2}{\sigma^2} \\
+n = \text{sample size} \\
+s = \text{sample standard deviation} \\
+\sigma = \text{standard deviation}
+\end{aligned}
+$$
+
+---
 ### confidence interval
 - range of guesses for the population parameter
 
@@ -76,7 +134,7 @@ $$
 CI=\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}} \\
 n = \text{sample size} \\
 s = \text{sample standard deviation} \\
-\chi^2 = \text{critical value}
+\chi^2_* = \text{critical value}
 \end{aligned}
 $$
 
@@ -103,20 +161,6 @@ $$
 $$
 
 ---
-### critical value
-- boundary point on probability distribution between rejection region and non-rejection region
-
----
-### critical value formula
-$$
-\begin{aligned}
-T < c^*_{\leftarrow} \implies \text{reject} \\
-T > |c^*_{2}| \implies \text{reject} \\
-T > c^*_{\rightarrow} \implies \text{reject} \\
-\end{aligned}
-$$
-
----
 ### margin of error
 - maximum likely amount of error between statistic and parameter
 
@@ -131,20 +175,6 @@ SE = \text{standard error}
 $$
 
 ---
-### critical z-value
-- boundary point on normal distribution between rejection region and non-rejection region
----
-### critical z-value formula
-$$
-\begin{aligned}
-z^*_{\leftarrow } = N^{-1}(\alpha, 0, 1) \\
-z^*_{2} = N^{-1}(1-\frac{\alpha}{2}, 0, 1) \\
-z^*_{\rightarrow} = N^{-1}(1-\alpha, 0, 1) \\
-\alpha = \text{significance level}
-\end{aligned}
-$$
-
----
 ### sample size
 - number of observations as function of margin of error
 
@@ -153,7 +183,7 @@ $$
 $$
 \begin{aligned}
 n = (\frac{z^*\sigma}{E})^2 \\
-z^* = \text{critical value} \\
+z^* = \text{critical z-value} \\
 \sigma = \text{standard deviation} \\
 E = \text{margin of error}
 \end{aligned}
@@ -164,7 +194,7 @@ $$
 $$
 \begin{aligned}
 n = (\frac{z^*\sqrt {p(1- p)}}{E})^2 \\
-z^* = \text{critical value} \\
+z^* = \text{critical z-value} \\
 p = \text{proportion} \\
 E = \text{margin of error}
 \end{aligned}
@@ -176,9 +206,22 @@ $$
 \begin{aligned}
 n = (\frac{0.5z^*}{E})^2 \\
 p = 0.5 \\
-z^* = \text{critical value} \\
+z^* = \text{critical z-value} \\
 p = \text{proportion} \\
 E = \text{margin of error}
+\end{aligned}
+$$
+
+---
+### degrees of freedom
+- number of sample data that can vary without changing estimate
+
+---
+### degrees of freedom formula
+$$
+\begin{aligned}
+\text{d} = n-1 \\
+n = \text{sample size}
 \end{aligned}
 $$
 
@@ -232,34 +275,6 @@ $$
 - $\hat p - E < p < \hat p + E$ 
 
 ---
-### degrees of freedom
-- number of sample data that can vary without changing estimate
-
----
-### degrees of freedom formula
-$$
-\begin{aligned}
-\text{d} = n-1 \\
-n = \text{sample size}
-\end{aligned}
-$$
-
----
-### critical t-value
-- boundary point on student distribution between rejection region and non-rejection region
-
----
-### critical t-value formula
-$$
-\begin{aligned}
-t^*_{1} = S^{-1}(1-\alpha, \text{d}) \\
-t^*_{2} = S^{-1}(1-\frac{\alpha}{2},\text{d}) \\
-\alpha = \text{significance level} \\
-\text{d} = \text{degrees of freedom}
-\end{aligned}
-$$
-
----
 ### sample standard deviation
 - point estimate of population standard deviation
 
@@ -276,15 +291,6 @@ $$
 - find both critical values from confidence level
 - compute margin of error
 - $\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}}$ 
-
----
-### critical chi-square-value
-- boundary point on chi-square distribution between rejection region and non-rejection region
----
-### calculate critical chi-square-value
-- right tail area equal half of significance level
-- left tail area equal 1 subtraction with half of significance level
-- chi-square table
 
 ---
 ### mean z-interval formula

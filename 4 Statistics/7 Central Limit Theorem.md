@@ -67,13 +67,13 @@ $$
 
 ---
 ### central limit theorem
-- sampling distribution approaches normal distribution as sample size approaches infinity regardless of the population distribution
+- sampling distribution approaches normal distribution as sample size grows large regardless of the population distribution
 
 ---
 ### central limit theorem formula
 $$
 \begin{aligned}
-\lim_{n\rightarrow \infty} T \sim N(\mu, \frac{\sigma}{\sqrt n}) \\
+\forall n \ge 30: T \sim N(\mu, \frac{\sigma}{\sqrt n}) \\
 n = \text{sample size} \\
 T = \text{sample statistic} \\
 \mu = \text{mean} \\

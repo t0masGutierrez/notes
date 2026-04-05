@@ -3,7 +3,7 @@
 
 ---
 ### 2-sample hypothesis test
-- compare group 1 with group 2
+- compare population parameter between group 1 and group 2
 
 ---
 ### independent sample
@@ -12,6 +12,34 @@
 ---
 ### dependent sample
 - there exists meaningful relationship between group 1 and group 2
+
+---
+### null hypothesis
+- difference of population parameter equal zero  
+- statement of equality
+
+---
+### null hypothesis formula
+$$
+\begin{aligned}
+H_{0}: \mu_{1}-\mu_{2} = 0 \\
+H_{0}: p_{1}-p_{2} = 0 \\
+\end{aligned}
+$$
+
+---
+### alternative hypothesis
+- difference of population parameter not equal zero
+- statement of inequality
+
+---
+### alternative hypothesis formula
+$$
+\begin{aligned}
+H_{a}: \mu_{1} - \mu_{2} \ne 0 \\
+H_{a}: p_{1} - p_{2} \ne 0 
+\end{aligned}
+$$
 
 ---
 ### standard error
@@ -31,7 +59,7 @@ $$
 ### proportion difference standard error formula
 $$
 \begin{aligned}
-SE(\hat p_{1} - \hat p_{2}) = \sqrt{\frac{\hat p_{1}\hat q_{1}}{n_{1}} + \frac{\hat p_{2}\hat q_{2}}{n_{2}}} \\
+SE(\hat p_{1} - \hat p_{2}) = \sqrt{\frac{\hat p_{1}(1-\hat p_{1})}{n_{1}} + \frac{\hat p_{2}(1-\hat p_{2})}{n_{2}}} \\
 \hat p = \text{sample proportion} \\
 n = \text{sample size}
 \end{aligned}
@@ -45,7 +73,7 @@ $$
 ### construct two proportion independent confidence interval
 - compute sample proportion
 - compute standard error
-- find critical value from confidence level
+- find critical value
 - compute margin of error
 - $(\hat p_{1} - \hat p_{2}) - E < (\hat p_{1} - \hat p_{2}) < (\hat p_{1} - \hat p_{2}) + E$ 
 

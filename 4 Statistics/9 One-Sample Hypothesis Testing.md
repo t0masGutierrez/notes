@@ -29,21 +29,24 @@ $$
 
 ---
 ### alternative hypothesis
-- value of parameter not equal claim  
+- population parameter not equal claim  
 - statement of inequality
 
 ---
 ### alternative hypothesis formula
 $$
 \begin{aligned}
-H_{1}: \quad >, \quad \ne, \quad <
+H_{a}: \quad >, \quad \ne, \quad <
 \end{aligned}
 $$
 
 ---
-### reject versus fail to reject
-- reject null hypothesis if theres sufficient evidence that population parameter differs from the null hypothesis 
-- fail to reject null hypothesis if theres not sufficient evidence that support the null hypothesis
+### reject null hypothesis
+- theres sufficient evidence for the alternative hypothesis
+
+---
+### fail to reject null hypothesis
+- theres not sufficient evidence for the alternative hypothesis
 
 ---
 ### type I error
@@ -84,6 +87,31 @@ $$
 $$
 
 ---
+### effect size
+- magnitude of difference
+
+---
+### mean effect size formula
+$$
+\begin{aligned}
+d = \frac{\bar X-\mu_{0}}{s} \\
+\bar X = \text{sample mean} \\
+\mu_{0} = \text{null mean} \\
+s = \text{sample standard deviation}
+\end{aligned}
+$$
+
+---
+### proportion effect size formula
+$$
+\begin{aligned}
+d = \hat p - p_{0} \\
+\hat p = \text{sample proportion} \\
+p_{0} = \text{null proportion}
+\end{aligned}
+$$
+
+---
 ### test statistic
 - number of standard deviations between sample statistic and null hypothesis
 
@@ -96,17 +124,17 @@ $$
 ---
 ### two-tail test
 - critical region under both tails
-- $H_{1}: \quad \ne$ 
+- $H_{a}: \quad \ne$ 
 
 ---
 ### left-tail test
 - critical region under the left tail  
-- $H_{1}: \quad <$ 
+- $H_{a}: \quad <$ 
 
 ---
 ### right-tail test
 - critical region under the right tail  
-- $H_{1}: \quad >$ 
+- $H_{a}: \quad >$ 
 
 ---
 ### critical value hypothesis test
@@ -123,14 +151,14 @@ $$
 
 ---
 ### p value hypothesis test
-- compare significance level and probability of observing test statistic at least as extreme given the null hypothesis
+- compare significance level and cumulative probability of observing test statistic given the null hypothesis
 
 ---
 ### conduct p value hypothesis test
 - state hypotheses
 - choose significance level  
 - calculate test statistic
-- calculate p value from test statistic
+- calculate p value
 - if p value less or equal significance level then reject null hypothesis
 - if p value greater significance level then fail to reject null hypothesis
 ---
@@ -141,7 +169,7 @@ $$
 ### conduct confidence interval hypothesis test
 - state hypotheses
 - choose significance level  
-- find critical value(s)
+- find critical value(s) from confidence level
 - construct confidence interval for the sample statistic
 - if null hypothesis outside confidence interval then reject null hypothesis  
 - if null hypothesis inside confidence interval then fail to reject null hypothesis
