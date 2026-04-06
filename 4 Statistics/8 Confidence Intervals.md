@@ -1,5 +1,5 @@
 ### estimator
-- sample statistic capable of estimating the value of population parameter
+- sample statistic capable of estimating population parameter
 
 ---
 ### biased estimator
@@ -9,9 +9,9 @@
 ### biased estimator formula
 $$
 \begin{aligned}
-E[T] \ne \mathcal T \\
-T = \text{sample statistic} \\
-\mathcal T = \text{population parameter}
+\mu_{X} \ne \mathcal X \\
+X = \text{sample statistic} \\
+\mathcal X = \text{population parameter}
 \end{aligned}
 $$
 
@@ -23,9 +23,9 @@ $$
 ### unbiased estimator formula
 $$
 \begin{aligned}
-E[T] = \mathcal T \\
-T = \text{sample statistic} \\
-\mathcal T = \text{population parameter}
+\mu_{X} = \mathcal X \\
+X = \text{sample statistic} \\
+\mathcal X = \text{population parameter}
 \end{aligned}
 $$
 
@@ -37,9 +37,10 @@ $$
 ### critical value formula
 $$
 \begin{aligned}
-T < c^*_{L} \implies \text{reject} \\
-T > |c^*_{2}| \implies \text{reject} \\
-T > c^*_{R} \implies \text{reject} \\
+P(X \le c^*) = \alpha \implies c^* = X^{-1}(\alpha) \\
+X = \text{sample statistic} \\
+c^* = \text{critical value} \\
+\alpha = \text{significance level}
 \end{aligned}
 $$
 
@@ -50,10 +51,9 @@ $$
 ### critical z-value formula
 $$
 \begin{aligned}
-z^*_{L} = N^{-1}(\alpha, 0, 1) \\
-z^*_{2} = N^{-1}(1-\frac{\alpha}{2}, 0, 1) \\
-z^*_{R} = N^{-1}(1-\alpha, 0, 1) \\
-\alpha = \text{significance level}
+P(Z \le z^*) = \alpha \implies z^* = N^{-1}(\alpha, 0, 1, \text{tail}) \\
+P(Z > z^*) = \alpha \implies z^* = N^{-1}(1-\alpha, 0, 1, \text{tail}) \\
+P(-z^* \le Z \le z^*) = 1-\alpha \implies z^* = N^{-1}(1-\alpha/2, 0, 1, \text{tail}) \\
 \end{aligned}
 $$
 
@@ -65,11 +65,9 @@ $$
 ### critical t-value formula
 $$
 \begin{aligned}
-t_* = \frac{\bar X - \mu}{\frac{\sigma}{\sqrt n}} \\
-\bar X = \text{sample mean} \\
-\mu = \text{mean} \\
-\sigma = \text{standard deviation} \\
-n = \text{sample size}
+P(T \le t^*) = \alpha \implies t^* = S^{-1}(\alpha, d) \\
+P(T > t^*) = \alpha \implies t^* = S^{-1}(1-\alpha, d) \\
+P(-t^* \le T \le t^*) = 1-\alpha \implies t^* = S^{-1}(1-\alpha/2, d) \\
 \end{aligned}
 $$
 
@@ -80,10 +78,9 @@ $$
 ### critical chi-square-value formula
 $$
 \begin{aligned}
-\chi_*^2 = \frac{(n-1)s^2}{\sigma^2} \\
-n = \text{sample size} \\
-s = \text{sample standard deviation} \\
-\sigma = \text{standard deviation}
+P(X \le \chi^2_*) = \alpha \implies \chi^2_* = \chi^{-2}(\alpha, d) \\
+P(X > \chi^2_*) = 1-\alpha \implies \chi^2_* = \chi^{-2}(1-\alpha, d) \\
+P(\chi^2_{L} \le X \le \chi^2_{U}) = 1-\alpha \implies \chi^2_* = \chi^{-2}(1-\alpha/2, d) 
 \end{aligned}
 $$
 
@@ -122,7 +119,7 @@ $$
 \begin{aligned}
 CI=\hat p \pm z^* \sqrt {\frac{\hat p(1-\hat p)}{n}} \\
 \hat p = \text{sample proportion} \\
-z^* = \text{critical value} \\
+z^* = \text{critical z-value} \\
 n = \text{sample size}
 \end{aligned}
 $$
@@ -134,7 +131,7 @@ $$
 CI=\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}} \\
 n = \text{sample size} \\
 s = \text{sample standard deviation} \\
-\chi^2_* = \text{critical value}
+\chi^2_* = \text{critical $\chi^2$-value}
 \end{aligned}
 $$
 
@@ -220,7 +217,7 @@ $$
 ### degrees of freedom formula
 $$
 \begin{aligned}
-\text{d} = n-1 \\
+d = n-1 \\
 n = \text{sample size}
 \end{aligned}
 $$
@@ -247,50 +244,14 @@ $$
 ### mean confidence interval assumptions
 - random sample
 - independent observations
-- normal population and large sample size
+- normal population or large sample size
 ---
 ### construct mean confidence interval
-- compute sample proportion
-- compute standard error
-- find critical value from confidence level
-- compute margin of error
+- calculate sample proportion
+- calculate standard error
+- find critical value
+- calculate margin of error
 - $\bar X - E < \mu < \bar X + E$ 
-
----
-### sample proportion
-- point estimate of population proportion
-
----
-### proportion confidence interval assumptions
-- random sample
-- independent trials
-- sufficient number of observations $n\hat p, n\hat q \ge 10$ 
-
----
-### construct proportion confidence interval
-- compute sample proportion
-- compute standard error
-- find critical value from confidence level
-- compute margin of error
-- $\hat p - E < p < \hat p + E$ 
-
----
-### sample standard deviation
-- point estimate of population standard deviation
-
----
-### standard deviation confidence interval requirements
-- random samples
-- independent trials
-- normal population
-
----
-### construct variance confidence interval
-- compute sample variance
-- compute standard error
-- find both critical values from confidence level
-- compute margin of error
-- $\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}}$ 
 
 ---
 ### mean z-interval formula
@@ -308,13 +269,33 @@ $$
 ### mean t-interval formula
 $$
 \begin{aligned}
-\text{avgZ-int}(\bar X, s, n, 1-\alpha) \\
+\text{avgT-int}(\bar X, s, n, 1-\alpha) \\
 \sigma = \text{standard deviation} \\
 \bar X = \text{sample mean} \\
 n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}
 $$
+
+---
+### sample proportion
+- point estimate of population proportion
+
+---
+### proportion confidence interval assumptions
+- random sample
+- independent observations
+- binomial random variable
+- expected number of success greater or equal 10
+- expected number of failures greater or equal 10
+
+---
+### construct proportion confidence interval
+- calculate sample proportion
+- calculate standard error
+- find critical value
+- calculate margin of error
+- $\hat p - E < p < \hat p + E$ 
 
 ---
 ### proportion z-interval formula
@@ -326,5 +307,23 @@ n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}
 $$
+
+---
+### sample standard deviation
+- point estimate of population standard deviation
+
+---
+### standard deviation confidence interval requirements
+- random samples
+- independent observations
+- normal population
+
+---
+### construct variance confidence interval
+- calculate sample variance
+- calculate standard error
+- find both critical value(s)
+- calculate margin of error
+- $\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}}$ 
 
 ---

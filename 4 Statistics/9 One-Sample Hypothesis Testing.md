@@ -118,6 +118,7 @@ $$
 ---
 ### calculate test statistic
 - sample statistic conversion critical value
+
 ---
 ### critical region
 - area under the probability distribution where we reject null hypothesis
@@ -178,12 +179,12 @@ $$
 ### mean z-test formula
 $$
 \begin{aligned}
-\text{avgZ-Test}(\mu_{0}, \sigma, \bar X, n, \mu_{1}) \\
+\text{avgZ-test}(\mu_{0}, \sigma, \bar X, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
 \sigma = \text{standard deviation} \\
 \bar X = \text{sample mean} \\
 n = \text{sample size} \\
-\mu_{1} = \text{alternative hypothesis}
+\mu_{a} = \text{alternative hypothesis}
 \end{aligned}
 $$
 
@@ -191,12 +192,12 @@ $$
 ### mean t-test formula
 $$
 \begin{aligned}
-\text{avgT-Test}(\mu_{0}, \bar X, s, n, \mu_{1}) \\
+\text{avgT-test}(\mu_{0}, \bar X, s, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
 \bar X = \text{sample mean} \\
 s = \text{sample standard deviation} \\
 n = \text{sample size} \\
-\mu_{1} = \text{alternative hypothesis}
+\mu_{a} = \text{alternative hypothesis}
 \end{aligned}
 $$
 
@@ -204,12 +205,12 @@ $$
 ### proportion z-test formula
 $$
 \begin{aligned}
-\text{propZ-Test}(\mu_{0}, \sigma, \bar X, n, \mu_{1}) \\
+\text{propZ-test}(\mu_{0}, \sigma, \bar X, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
 \sigma = \text{standard deviation} \\
 \bar X = \text{sample mean} \\
 n = \text{sample size} \\
-\mu_{1} = \text{alternative hypothesis}
+\mu_{a} = \text{alternative hypothesis}
 \end{aligned}
 $$
 

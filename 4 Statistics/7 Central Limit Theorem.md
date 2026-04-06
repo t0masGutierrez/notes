@@ -5,9 +5,9 @@
 ### sampling variability formula
 $$
 \begin{aligned}
-\omega_{1}, \omega_{2} \subset \Omega \implies T_{1} \ne T_{2} \\
+\omega_{1}, \omega_{2} \subset \Omega \implies X_{1} \ne X_{2} \\
 \omega = \text{sample} \\
-T = \text{sample statistic}
+X = \text{sample statistic}
 \end{aligned}
 $$
 
@@ -19,8 +19,8 @@ $$
 ### sampling distribution formula
 $$
 \begin{aligned}
-T \sim (\mu_{T}, \sigma_{T}) \\
-T = \text{sample statistic} \\
+X \sim (\mu_{X}, \sigma_{X}) \\
+X = \text{sample statistic} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation}
 \end{aligned}
@@ -58,10 +58,10 @@ $$
 ### law of large numbers formula
 $$
 \begin{aligned}
-\lim_{n \rightarrow \infty} T = \mathcal T \\
+\lim_{n \rightarrow \infty} X = \mathcal X \\
 n = \text{sample size} \\
-T = \text{sample statistic} \\
-\mathcal T = \text{population parameter}
+X = \text{sample statistic} \\
+\mathcal X = \text{population parameter}
 \end{aligned}
 $$
 
@@ -73,9 +73,9 @@ $$
 ### central limit theorem formula
 $$
 \begin{aligned}
-\forall n \ge 30: T \sim N(\mu, \frac{\sigma}{\sqrt n}) \\
+\forall n \ge 30: X \sim N(\mu, \frac{\sigma}{\sqrt n}) \\
 n = \text{sample size} \\
-T = \text{sample statistic} \\
+X = \text{sample statistic} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation} 
 \end{aligned}

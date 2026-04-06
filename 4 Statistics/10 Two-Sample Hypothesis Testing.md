@@ -1,8 +1,8 @@
-### 1-sample hypothesis test
+### one sample hypothesis test
 - compare sample statistic with population parameter
 
 ---
-### 2-sample hypothesis test
+### two sample hypothesis test
 - compare population parameter between group 1 and group 2
 
 ---
@@ -36,8 +36,7 @@ $$
 ### alternative hypothesis formula
 $$
 \begin{aligned}
-H_{a}: \mu_{1} - \mu_{2} \ne 0 \\
-H_{a}: p_{1} - p_{2} \ne 0 
+H_{a}: \quad >, \quad \ne, \quad < \\
 \end{aligned}
 $$
 
@@ -46,7 +45,7 @@ $$
 - standard deviation of sampling distribution
 
 ---
-### mean difference standard error formula
+### mean standard error formula
 $$
 \begin{aligned}
 SE(\bar X_{1} - \bar X_{2}) = \sqrt{\frac{s^2}{n_{1}} + \frac{s^2}{n_{2}}} \\
@@ -56,7 +55,7 @@ n = \text{sample size}
 $$
 
 ---
-### proportion difference standard error formula
+### proportion standard error formula
 $$
 \begin{aligned}
 SE(\hat p_{1} - \hat p_{2}) = \sqrt{\frac{\hat p_{1}(1-\hat p_{1})}{n_{1}} + \frac{\hat p_{2}(1-\hat p_{2})}{n_{2}}} \\
@@ -66,58 +65,15 @@ n = \text{sample size}
 $$
 
 ---
-### sample proportion
-- point estimate of population proportion
-
----
-### construct two proportion independent confidence interval
-- compute sample proportion
-- compute standard error
-- find critical value
-- compute margin of error
-- $(\hat p_{1} - \hat p_{2}) - E < (\hat p_{1} - \hat p_{2}) < (\hat p_{1} - \hat p_{2}) + E$ 
-
----
-### two proportion independent z-interval formula
-$$
-\begin{aligned}
-\text{2propZ-int}(X_{1}, n_{1}, X_{2}, n_{2}, 1-\alpha) \\
-X= \text{number of successes} \\
-n = \text{sample size} \\
-\alpha = \text{significance level}
-\end{aligned}
-$$
-
----
-### conduct two proportion independent hypothesis test
-- state hypotheses
-- choose significance level  
-- calculate test statistic  
-- choose method
-- reject or fail to reject null hypothesis  
-- state conclusion
-
----
-### two proportion independent z-test formula
-$$
-\begin{aligned}
-\text{2propZ-test}(X_{1}, n_{1}, X_{2}, n_{2}, p_{1}) \\
-X= \text{number of successes} \\
-n = \text{sample size} \\
-p_{1} = \text{alternative hypothesis}
-\end{aligned}
-$$
-
----
 ### sample mean
 - point estimate of population mean
 
 ---
 ### construct two mean independent confidence interval
-- compute sample mean
-- compute standard error
+- calculate sample mean
+- calculate standard error
 - find critical value from confidence level
-- compute margin of error
+- calculate margin of error
 - $(\bar X_{1} - \bar X_{2}) - E < (\mu_{1} - \mu_{2}) < (\bar X_{1} - \bar X_{2}) + E$ 
 
 ---
@@ -174,7 +130,7 @@ $$
 ### two mean dependent t-interval formula
 $$
 \begin{aligned}
-\text{2avgT-Int}(\text{data}, L_{3}, f, \alpha) \\
+\text{2avgT-int}(\text{data}, L_{3}, f, \alpha) \\
 \end{aligned}
 $$
 
@@ -186,7 +142,50 @@ $$
 ### two mean dependent t-test formula
 $$
 \begin{aligned}
-\text{2avgT-Test} (\text{data}, \mu_{0}, L_{3}, f, \mu_{1})
+\text{2avgT-test} (\text{data}, \mu_{0}, L_{3}, f, \mu_{1})
+\end{aligned}
+$$
+
+---
+### sample proportion
+- point estimate of population proportion
+
+---
+### construct two proportion independent confidence interval
+- calculate sample proportion
+- calculate standard error
+- find critical value
+- calculate margin of error
+- $(\hat p_{1} - \hat p_{2}) - E < (\hat p_{1} - \hat p_{2}) < (\hat p_{1} - \hat p_{2}) + E$ 
+
+---
+### two proportion independent z-interval formula
+$$
+\begin{aligned}
+\text{2propZ-int}(X_{1}, n_{1}, X_{2}, n_{2}, 1-\alpha) \\
+X= \text{number of successes} \\
+n = \text{sample size} \\
+\alpha = \text{significance level}
+\end{aligned}
+$$
+
+---
+### conduct two proportion independent hypothesis test
+- state hypotheses
+- choose significance level  
+- calculate test statistic  
+- choose method
+- reject or fail to reject null hypothesis  
+- state conclusion
+
+---
+### two proportion independent z-test formula
+$$
+\begin{aligned}
+\text{2propZ-test}(X_{1}, n_{1}, X_{2}, n_{2}, p_{1}) \\
+X= \text{number of successes} \\
+n = \text{sample size} \\
+p_{1} = \text{alternative hypothesis}
 \end{aligned}
 $$
 

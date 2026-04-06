@@ -55,8 +55,8 @@ $$
 ### z-score formula
 $$
 \begin{aligned}
-z = \frac{X - \mu}{\sigma} \\
-X = \text{datum} \\
+z = \frac{x - \mu}{\sigma} \\
+x = \text{datum} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation}
 \end{aligned}
@@ -97,11 +97,33 @@ $$
 - number of standard errors from the mean
 
 ---
-### t-score formula
+### one sample t-score formula
 $$
 \begin{aligned}
-t = \frac{\bar X - \mu}{s/\sqrt n} \\
-\bar X = \text{sample mean} \\
+t = \frac{\bar x - \mu}{s/\sqrt n} \\
+\bar x = \text{sample mean} \\
+\mu = \text{mean} \\
+\sigma = \text{standard deviation}
+\end{aligned}
+$$
+
+---
+### two sample independent t-score formula
+$$
+\begin{aligned}
+t = \frac{\bar x - \mu}{s/\sqrt n} \\
+\bar x = \text{sample mean} \\
+\mu = \text{mean} \\
+\sigma = \text{standard deviation}
+\end{aligned}
+$$
+
+---
+### two sample dependent t-score formula
+$$
+\begin{aligned}
+t = \frac{(\bar x_{1} - \bar x_{2}) - \mu}{s/\sqrt n} \\
+\bar x = \text{sample mean} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation}
 \end{aligned}
@@ -115,10 +137,10 @@ $$
 ### student formula
 $$
 \begin{aligned}
-T \sim S(t, \text{d}) = P(T \le t) \\
-T \sim S(a, b, \text{d}) = P(a \le T \le b) \\
+T \sim S(t, d) = P(T \le t) \\
+T \sim S(a, b, d) = P(a \le T \le b) \\
 t = \text{t-score} \\
-\text{d} = \text{degrees of freedom} \\
+d = \text{degrees of freedom} \\
 a = \text{lower t-score} \\
 b = \text{upper t-score} 
 \end{aligned}
@@ -132,9 +154,9 @@ $$
 ### inverse student formula
 $$
 \begin{aligned}
-t = S^{-1}(c, \text{d}) \\
+t = S^{-1}(c, d) \\
 c = \text{cumulative probability of success} \\
-\text{d} = \text{degrees of freedom}
+d = \text{degrees of freedom}
 \end{aligned}
 $$
 
@@ -161,9 +183,9 @@ $$
 ### chi-square formula
 $$
 \begin{aligned}
-X \sim \chi^2(x, \text{d}) = P(X \ge x) \\
+X \sim \chi^2(x,d) = P(X \ge x) \\
 x = \text{$\chi^2$-score} \\
-\text{d} = \text{degrees of freedom} 
+d = \text{degrees of freedom} 
 \end{aligned}
 $$
 
@@ -188,11 +210,11 @@ $$
 ### F formula
 $$
 \begin{aligned}
-U \sim \chi^2(f, \text{d}_{1}, \text{d}_{2}) = P(U \le u) \\
-V \sim \chi^2(v, \text{d}_{1}, \text{d}_{2}) = P(V \le v) \\
-F = \frac{U/\text{d}_{1}}{V/\text{d}_{2}} \\
+U \sim \chi^2(f, d_{1}, d_{2}) = P(U \le u) \\
+V \sim \chi^2(v, d_{1}, d_{2}) = P(V \le v) \\
+F = \frac{U/d_{1}}{V/d_{2}} \\
 u, v = \text{F-score} \\
-\text{d} = \text{degrees of freedom} 
+d = \text{degrees of freedom} 
 \end{aligned}
 $$
 
