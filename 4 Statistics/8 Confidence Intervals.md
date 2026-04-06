@@ -74,6 +74,7 @@ $$
 ---
 ### critical chi-square-value
 - boundary point on chi-square distribution between rejection region and non-rejection region
+
 ---
 ### critical chi-square-value formula
 $$
@@ -92,8 +93,8 @@ $$
 ### confidence interval formula
 $$
 \begin{aligned}
-CI = T \pm (c^*)(SE) \\
-T = \text{sample statistic} \\
+CI = X \pm (c^*)(SE) \\
+X = \text{sample statistic} \\
 c^* = \text{critical value} \\
 SE = \text{standard error}
 \end{aligned}
@@ -103,9 +104,9 @@ $$
 ### mean confidence interval formula
 $$
 \begin{aligned}
-CI=\bar X \pm z^*(\frac{\sigma}{\sqrt n}) \\
-CI=\bar X \pm t^*(\frac{s}{\sqrt n}) \\
-\bar X = \text{mean} \\
+CI=\bar x \pm z^*(\frac{\sigma}{\sqrt n}) \\
+CI=\bar x \pm t^*(\frac{s}{\sqrt n}) \\
+\bar x = \text{sample mean} \\
 z^*, t^* = \text{critical value} \\
 \sigma = \text{standard deviation} \\
 s = \text{sample standard deviation} \\
@@ -230,9 +231,9 @@ $$
 ### point estimate formula
 $$
 \begin{aligned}
-T \approx \mathcal T \\
-T = \text{sample statistic} \\
-\mathcal T = \text{population parameter} \\
+X \approx \mathcal X \\
+X = \text{sample statistic} \\
+\mathcal X = \text{population parameter} \\
 \end{aligned}
 $$
 
@@ -251,15 +252,15 @@ $$
 - calculate standard error
 - find critical value
 - calculate margin of error
-- $\bar X - E < \mu < \bar X + E$ 
+- $\bar x - E < \mu < \bar x + E$ 
 
 ---
 ### mean z-interval formula
 $$
 \begin{aligned}
-\text{avgZ-int}(\sigma, \bar X, n, 1-\alpha) \\
+\text{avgZ-int}(\sigma, \bar x, n, 1-\alpha) \\
 \sigma = \text{standard deviation} \\
-\bar X = \text{sample mean} \\
+\bar x = \text{sample mean} \\
 n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}
@@ -269,9 +270,9 @@ $$
 ### mean t-interval formula
 $$
 \begin{aligned}
-\text{avgT-int}(\bar X, s, n, 1-\alpha) \\
+\text{avgT-int}(\bar x, s, n, 1-\alpha) \\
 \sigma = \text{standard deviation} \\
-\bar X = \text{sample mean} \\
+\bar x = \text{sample mean} \\
 n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}
@@ -319,10 +320,10 @@ $$
 - normal population
 
 ---
-### construct variance confidence interval
-- calculate sample variance
+### construct standard deviation confidence interval
+- calculate sample standard deviation
 - calculate standard error
-- find both critical value(s)
+- find critical value(s)
 - calculate margin of error
 - $\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}}$ 
 

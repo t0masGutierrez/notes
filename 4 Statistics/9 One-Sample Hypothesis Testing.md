@@ -146,7 +146,7 @@ $$
 - state hypotheses
 - choose significance level  
 - calculate test statistic
-- find critical value(s)
+- find critical value
 - if test statistic inside critical region then reject null hypothesis
 - if test statistic outside critical region then fail to reject null hypothesis
 
@@ -170,8 +170,8 @@ $$
 ### conduct confidence interval hypothesis test
 - state hypotheses
 - choose significance level  
-- find critical value(s) from confidence level
-- construct confidence interval for the sample statistic
+- find critical value
+- construct sample statistic confidence interval
 - if null hypothesis outside confidence interval then reject null hypothesis  
 - if null hypothesis inside confidence interval then fail to reject null hypothesis
 

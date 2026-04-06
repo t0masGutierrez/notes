@@ -5,10 +5,10 @@
 ### epsilon-delta limit formula
 $$
 \begin{aligned}
-\lim_{x \rightarrow x_{0}} f(x) = L \iff \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), L) < \epsilon \\
+\lim_{x \rightarrow x_{0}} f(x) = f(x_{0}) \iff \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
 f: S \subset X \rightarrow Y \\
 x_{0} = \text{limit point} \\
-L = \text{limit} \\
+f(x_{0}) = \text{limit} \\
 d = \text{metric} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -22,10 +22,10 @@ $$
 ### sequential limit formula
 $$
 \begin{aligned}
-\lim_{x \rightarrow x_{0}} f(x) = L \iff \forall \set{a_{n}} \in S: \lim_{n\rightarrow \infty} a_{n} = x_{0} \implies \lim_{n\rightarrow \infty} f(a_{n}) = L \\
+\lim_{x \rightarrow a} f(x) = f(a) \iff \forall \set{a_{n}} \in S: \lim_{n\rightarrow \infty} a_{n} = a \implies \lim_{n\rightarrow \infty} f(a_{n}) = f(a) \\
 f: S \subset X \rightarrow Y \\
-x_{0} = \text{sequential limit} \\
-L = \text{limit} \\
+a = \text{sequential limit} \\
+f(a) = \text{limit} \\
 \set{a_{n}} = \text{sequence} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -156,7 +156,7 @@ $$
 ### composite continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(f(x)) = g(f(x_{0})) \implies \lim_{x\rightarrow x_{0}}(g \circ f)(x) = (f \circ g)(x_{0}) \\
+\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(f(x)) = g(f(x_{0})) \implies \lim_{x\rightarrow x_{0}}(g \circ f)(x) = (g \circ f)(x_{0}) \\
 f: X \rightarrow Y \\
 g: Y \rightarrow Z \\
 g \circ f: X \rightarrow Z \\
@@ -309,7 +309,8 @@ $$
 ### homeomorphism formula
 $$
 \begin{aligned}
-f: X \rightarrow Y, X \simeq Y \\
+X \simeq Y \\
+f: X \rightarrow Y \\
 f, f^{-1} = \text{continuous function} \\
 f = \text{bijection} 
 \end{aligned}
@@ -348,7 +349,7 @@ $$
 
 ---
 ### compact uniform continuity property
-- continuous function of compact domain equal uniformly continuous function
+- continuous function of compact domain equal uniform continuous function
 - continuous bounded function of unbounded noncompact set of real numbers equal nonuniform continuous function
 
 ---
@@ -356,10 +357,10 @@ $$
 $$
 \begin{aligned}
 \forall \epsilon > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
-f: X \rightarrow Y \\
-f = \text{continuous function} \\
-f = \text{uniformly continuous function} \\
+f: S \subset X \rightarrow Y \\
 x_{1}, x_{2} = \text{continuous point} \\
+f = \text{continuous function} \\
+f = \text{uniform continuous function} \\
 X = \text{compact set} \\
 Y = \text{metric space} 
 \end{aligned}

@@ -61,29 +61,31 @@ $$
 $$
 \begin{aligned}
 \min(F[f]) \lor \max(F[f]) \\
+
 F = \text{functional} \\
 f = \text{extremizer}
 \end{aligned}
 $$
 
 ---
-### absolute minimizer
-- function associated with global minimum of functional
+### global minimizer
+- function associated with absolute minimum of functional
 
 ---
-### absolute minimizer formula
+### global minimizer formula
 $$
 \begin{aligned}
 \forall f \in \mathcal V: F[f_*] \le F[f] \\
+F : \mathcal V \subset C^n[a, b] \rightarrow \mathbb R \\
 f = \text{continuous function} \\
 \mathcal V = \text{domain} \\
 F = \text{functional} \\
-f_* = \text{absolute minimizer} 
+f_* = \text{global minimizer} 
 \end{aligned}
 $$
 
 ---
-### absolute maximizer
+### global maximizer
 - function associated with global maximum of functional
 
 ---
@@ -91,10 +93,11 @@ $$
 $$
 \begin{aligned}
 \forall f \in \mathcal V: F[f_*] \ge F[f] \\
+F : \mathcal V \subset C^n[a, b] \rightarrow \mathbb R \\
 f = \text{continuous function} \\
 \mathcal V = \text{domain} \\
 F = \text{functional} \\
-f_* = \text{absolute maximizer} 
+f_* = \text{global maximizer} 
 \end{aligned}
 $$
 
@@ -123,7 +126,8 @@ $$
 \begin{aligned}
 \|f(x)\|_{C^m} = \sum_{k=0}^m |\max_{a \le x \le b}f^{(k)}(x)| \\
 f \in \mathcal V \subset C^n[a, b] \\
-f = \text{continuously function} \\
+m \le n \\
+f = \text{continuous function} \\
 f^{(k)} = \text{kth derivative} \\
 \mathcal V = \text{domain}
 \end{aligned}
@@ -131,22 +135,163 @@ $$
 
 ---
 ### continuous differentiability neighborhood
-- definition
+- region where there exists open ball around center
+![](3%20Mathematical%20Modeling/Images/continuous%20differentiability%20neighborhood.png)
 
 ---
 ### continuous differentiability neighborhood formula
 $$
 \begin{aligned}
-
+N_\delta(f_*) = \set{f \in \mathcal V| \|f - f_*\|_{C^m} < \delta} \\
+f = \text{continuous function} \\
+\mathcal V = \text{domain} \\
+f_* = \text{center} 
 \end{aligned}
 $$
 
 ---
-### term
-- definition
+### local minimizer
+- function associated with relative minimum of functional
 
 ---
-### term
-- definition
+### local minimizer formula
+$$
+\begin{aligned}
+\exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \le F[f] \\
+F : \mathcal V \subset C^n[a, b] \rightarrow \mathbb R \\
+f = \text{continuous function} \\
+N = \text{neighborhood} \\
+f_* = \text{local minimizer} \\
+F = \text{functional}
+\end{aligned}
+$$
+
+---
+### local maximizer
+- function associated with relative maximum of functional
+
+---
+### local maximizer formula
+$$
+\begin{aligned}
+\exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \ge F[f] \\
+F : \mathcal V \subset C^n[a, b] \rightarrow \mathbb R \\
+f = \text{continuous function} \\
+N = \text{neighborhood} \\
+f_* = \text{local maximizer} \\
+F = \text{functional}
+\end{aligned}
+$$
+
+---
+### admissibility
+- vector space of admissible functions
+- vector space of admissible variations
+
+---
+### admissibility formula
+$$
+\begin{aligned}
+\mathcal V = \set{f \in C^n[a, b] | \forall j \in (1, \dots, J): G_{j}(f) = c_{j}} \\
+\mathcal V_{0} = \set{h \in C^n[a, b] | \forall j \in (1, \dots, J): G_{j}(h) = 0} \\
+G: C^n[a, b] \rightarrow \mathbb R \\
+c \in \mathbb R \\
+\mathcal V, \mathcal V_{0} = \text{vector space} \\
+f, h = \text{continuous function} \\
+G = \text{functional} \\
+c = \text{constant}
+\end{aligned}
+$$
+
+---
+### admissibility property
+- admissible function under admissible variation equal admissible function
+
+---
+### admissibility property formula
+$$
+\begin{aligned}
+\forall f \in N_\delta(f_*), \exists! h \in \mathcal V_{0}: f = f_* + h \iff \|h\| \le \delta \\
+f, f_* = \text{admissible function} \\
+\mathcal V, \mathcal V_{0} = \text{vector space} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
+### variations
+- one-parameter family of admissible functions
+
+---
+### variations formula
+$$
+\begin{aligned}
+f_* + \epsilon h \in \mathcal V \\
+\epsilon \in \mathbb R \\
+f_* = \text{admissible function} \\
+\epsilon = \text{parameter} \\
+h = \text{admissible variation} 
+\end{aligned}
+$$
+
+---
+### first variation
+- first derivative of functional equal slope of functional
+
+---
+### first variation formula
+$$
+\begin{aligned}
+\partial F[f_*, h] = \left. \frac{d}{d\epsilon}F[f_* + \epsilon h]\right|_{\epsilon=0} \\
+f_* = \text{admissible function} \\
+\epsilon = \text{parameter} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
+### first variation property
+- first variation of local extrema equal zero
+
+---
+### first variation property formula
+$$
+\begin{aligned}
+\forall h \in \mathcal V_{0}: \partial F[f_*, h] = 0 \\
+f_* = \text{local extremizer} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
+### second variation
+- second derivative of functional equal curvature of functional
+
+---
+### second variation formula
+$$
+\begin{aligned}
+\partial^2 F[f_*, h] = \left. \frac{d^2}{d\epsilon^2}F[f_* + \epsilon h]\right|_{\epsilon=0} \\
+f_* = \text{admissible function} \\
+\epsilon = \text{parameter} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
+### second variation property
+- second variation of local minimizer greater or equal zero
+- second variation of local maximizer less or equal zero
+
+---
+### second variation property formula
+$$
+\begin{aligned}
+\forall h \in \mathcal V_{0}: \partial^2 F[f_*, h] \ge 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \le F[f] \\
+\forall h \in \mathcal V_{0}: \partial^2 F[f_*, h] \le 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \ge F[f] \\
+f_* = \text{local extremizer} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
 
 ---

@@ -31,7 +31,8 @@ $$
 ### sequence formula
 $$
 \begin{aligned}
-\{a_{n}\}_{n=1}^{\infty} = a: \mathbb N \rightarrow S, \ n \mapsto a_{n} \\
+\{a_{n}\}_{n=1}^{\infty} = a: \mathbb N \rightarrow S \\
+n \mapsto a_{n} \\
 a_{n} = \text{term} \\
 S = \text{set}
 \end{aligned}
@@ -146,7 +147,8 @@ $$
 ### subsequence formula
 $$
 \begin{aligned}
-\{a_{n_{k}}\}_{k=1}^{\infty} = a \circ n: \mathbb N \rightarrow S, \ k \mapsto a_{n_{k}} \\
+\{a_{n_{k}}\}_{k=1}^{\infty} = a \circ n: \mathbb N \rightarrow S \\
+k \mapsto a_{n_{k}} \\
 \forall k \in \mathbb N: n_{k} < n_{k+1}  \\
 \{a_{n_{k}}\} = \text{subsequence} \\
 S = \text{set}
