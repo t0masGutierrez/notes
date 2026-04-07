@@ -6,9 +6,8 @@
 $$
 \begin{aligned}
 \forall \set {a_{n}} \subset S \subset X, \exists \set {a_{n_{k}}} \subset \set {a_{n}}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_{k}} = L \\
-a_{n} = \text{sequence} \\
-S = \text{set} \\
-a_{n_{k}} = \text{subsequence} \\
+\set {a_{n}} = \text{sequence} \\
+\set {a_{n_{k}}} = \text{subsequence} \\
 X = \text{metric space} \\
 L = \text{subsequential limit}
 \end{aligned}
@@ -23,12 +22,11 @@ $$
 $$
 \begin{aligned}
 \forall \set {a_{n}} \subset S \subset X, \exists \set {a_{n_{k}}} \subset \set {a_{n}}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_{k}} = L \implies \forall \epsilon > 0, \exists \set {a_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{\epsilon}(x_{i}) \\
-a_{n} = \text{sequence} \\
-a_{n_{k}} = \text{subsequence} \\
+\set {a_{n}} = \text{sequence} \\
+\set {a_{n_{k}}} = \text{subsequence} \\
 X = \text{metric space} \\
 L = \text{subsequential limit} \\
 S = \text{totally bounded set} \\
-a_{n} = \text{sequence} \\
 B = \text{open ball} \\
 x_{i} = \text{center}
 \end{aligned}
@@ -82,7 +80,7 @@ S = \text{compact set} \\
 Y = \text{open set} \\
 \set{Y} = \text{open cover} \\
 X = \text{metric space} \\
-a_{n} = \text{sequence} 
+\set {a_{n}} = \text{sequence} 
 \end{aligned}
 $$
 
@@ -104,8 +102,8 @@ X = \text{metric space} \\
 x_{0} = \text{center} \\
 r = \text{radius} \\
 B = \text{open ball} \\
-a_{n} = \text{sequence} \\
-a_{n_{k}} = \text{subsequence} \\
+\set {a_{n}} = \text{sequence} \\
+\set {a_{n_{k}}} = \text{subsequence} \\
 L = \text{subsequential limit} \\
 Y = \text{open set} \\
 \set{Y} = \text{open cover} 
@@ -297,18 +295,5 @@ N = \text{neighborhood} \\
 x_{0} = \text{limit point}  
 \end{aligned} 
 $$
-
----
-### cantor set
-- subset of the unit interval
-- uncountable set
-- compact set
-- perfect set
-
----
-### construct cantor set
-- start with unit interval $C_{0} = [0, 1]$ 
-- remove the open middle third $C_{1}= [0, \frac{1}{3}] \cup [\frac{2}{3}, 1]$ 
-- repeat the removal for the intersection $\mathcal C = \bigcap_{n=1}^\infty C_{n}$ 
 
 ---

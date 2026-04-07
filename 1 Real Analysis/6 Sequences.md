@@ -47,9 +47,8 @@ $$
 $$
 \begin{aligned}
 \exists L \in X: \lim_{n \rightarrow \infty}a_{n} = L \iff \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_{n}, L) < \epsilon \\
-a_{n} = \text{term} \\
-L = \text{sequential limit} \\
-d = \text{metric}
+\set {a_{n}} = \text{convergent sequence} \\
+L = \text{sequential limit} 
 \end{aligned}
 $$
 
@@ -62,9 +61,8 @@ $$
 $$
 \begin{aligned}
 \not\exists L \in X: \lim_{n \rightarrow \infty}a_{n} = L \iff \exists \epsilon > 0, \forall N \in \mathbb N, \exists n \ge N: d(a_{n}, L) \ge \epsilon \\
-a_{n} = \text{term} \\
-L = \text{sequential limit} \\
-d = \text{metric}
+\set {a_{n}} = \text{divergent sequence} \\
+L = \text{sequential limit}
 \end{aligned}
 $$
 
@@ -95,9 +93,8 @@ $$
 $$
 \begin{aligned}
 \lim_{n \rightarrow \infty} a_{n} = L \implies \lim_{n \rightarrow \infty} d(a_{n}, L) = 0 \\
-a_{n} = \text{term} \\
-L = \text{sequential limit} \\
-d = \text{metric}
+\set {a_{n}} = \text{sequence} \\
+L = \text{sequential limit}
 \end{aligned}
 $$
 
@@ -150,8 +147,7 @@ $$
 \{a_{n_{k}}\}_{k=1}^{\infty} = a \circ n: \mathbb N \rightarrow S \\
 k \mapsto a_{n_{k}} \\
 \forall k \in \mathbb N: n_{k} < n_{k+1}  \\
-\{a_{n_{k}}\} = \text{subsequence} \\
-S = \text{set}
+\{a_{n_{k}}\} = \text{subsequence} 
 \end{aligned}
 $$
 
@@ -165,8 +161,9 @@ $$
 \begin{aligned}
 S = \{L | \lim_{k\rightarrow \infty} a_{n_{k}} = L\} \implies S' \subset S \subset X \\
 S = \text{closed set} \\
-a_{n_{k}} = \text{subsequence} \\
+S' = \text{derived set} \\
 L = \text{subsequential limit} \\
+\set {a_{n_{k}}} = \text{subsequence} \\
 X = \text{metric space} 
 \end{aligned}
 $$
@@ -179,7 +176,10 @@ $$
 ### limit subsequence property formula
 $$
 \begin{aligned}
-\lim_{n \rightarrow \infty} a_{n} = L \implies \forall \epsilon > 0, \exists K \in \mathbb N, \forall n_{k} \ge n_{K} \ge N: d(a_{n_{k}}, L) < \epsilon
+\lim_{n \rightarrow \infty} a_{n} = L \implies \forall \epsilon > 0, \exists K \in \mathbb N, \forall n_{k} \ge n_{K} \ge N: d(a_{n_{k}}, L) < \epsilon \\
+\set {a_{n}} = \text{convergent sequence} \\
+L = \text{sequential limit} \\
+\set {{a_{n_{k}}}} = \text{convergent subsequence} \\
 \end{aligned}
 $$
 
@@ -192,8 +192,7 @@ $$
 $$
 \begin{aligned}
 \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(a_{n}, a_{m}) < \epsilon \\
-\{_{c}a_{n}\} = \text{cauchy sequence} \\
-d = \text{metric}
+\{_{c}a_{n}\} = \text{cauchy sequence}
 \end{aligned}
 $$
 

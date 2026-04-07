@@ -9,7 +9,6 @@ $$
 f: S \subset X \rightarrow Y \\
 x_{0} = \text{limit point} \\
 f(x_{0}) = \text{limit} \\
-d = \text{metric} \\
 X, Y = \text{metric space} 
 \end{aligned}
 $$
@@ -22,7 +21,7 @@ $$
 ### sequential limit formula
 $$
 \begin{aligned}
-\lim_{x \rightarrow a} f(x) = f(a) \iff \forall \set{a_{n}} \in S: \lim_{n\rightarrow \infty} a_{n} = a \implies \lim_{n\rightarrow \infty} f(a_{n}) = f(a) \\
+\lim_{x \rightarrow a} f(x) = f(a) \iff \forall \set{a_{n}} \subset S: \lim_{n\rightarrow \infty} a_{n} = a \implies \lim_{n\rightarrow \infty} f(a_{n}) = f(a) \\
 f: S \subset X \rightarrow Y \\
 a = \text{sequential limit} \\
 f(a) = \text{limit} \\
@@ -87,7 +86,6 @@ $$
 \begin{aligned}
 \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
 f: S \subset X \rightarrow Y \\
-d = \text{metric} \\
 x_{0} = \text{continuous point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
@@ -102,11 +100,27 @@ $$
 ### limit continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \\
-f: X \rightarrow Y \\
+\forall x \in S:\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \\
+f: S \subset X \rightarrow Y \\
 x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### convergent continuity property
+- continuous function of convergent sequence equal convergent sequence
+
+---
+### convergent continuity property formula
+$$
+\begin{aligned}
+\forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_{n}, a) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(f(a_{n}), f(a)) < \epsilon \\
+f: X \rightarrow Y \\
+f = \text{continuous function} \\
+\set {a_{n}}, \set {f(a_{n})} = \text{convergent sequence} \\
+a = \text{sequential limit} 
 \end{aligned}
 $$
 
@@ -118,10 +132,9 @@ $$
 ### open inverse continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \iff \forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S \\
+\forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S
 \implies \forall x \in f^{-1}(S), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(S) \\
 f:  X \rightarrow S \subset Y \\
-x_{0} = \text{limit point} \\
 x, y = \text{interior point} \\
 f = \text{continuous function} \\
 N = \text{neighborhood} \\
@@ -138,12 +151,11 @@ $$
 ### closed inverse continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \iff S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
+S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
 f:  X \rightarrow S \subset Y \\
-x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
-S, f^{-1}(S) = \text{closed set} \\
 S', f^{-1}(S)' = \text{derived set} \\
+S, f^{-1}(S) = \text{closed set} \\
 X, Y = \text{metric space}
 \end{aligned}
 $$
@@ -251,7 +263,6 @@ $$
 ---
 ### closed bounded continuity property
 - continuous function of compact domain equal closed bounded range of k-dimensional real numbers and bounded function of k-dimensional real numbers
-- continuous function of noncompact domain equal unbounded function of real numbers
 
 ---
 ### closed bounded continuity property formula
@@ -269,7 +280,6 @@ $$
 ---
 ### extreme continuity property
 - for every continuous function of compact domain there exists supremum and infimum
-- continuous bounded function of noncompact domain equal incomplete function of real numbers
 
 ---
 ### extreme continuity property formula
@@ -332,6 +342,36 @@ X = \text{compact set}
 $$
 
 ---
+### pointwise
+- parameter dependent point
+
+---
+### pointwise formula
+$$
+\begin{aligned}
+\forall x, \exists p: P(x, p) \\
+x = \text{point} \\
+p = \text{parameter} \\
+P = \text{proposition}
+\end{aligned}
+$$
+
+---
+### uniformity
+- parameter independent point
+
+---
+### uniformity formula
+$$
+\begin{aligned}
+\exists p, \forall x: P(x, p) \\
+x = \text{point} \\
+p = \text{parameter} \\
+P = \text{proposition}
+\end{aligned}
+$$
+
+---
 ### uniform continuity
 - for every epsilon distance between every point of continuous function there exists delta distance between every input point
 
@@ -348,9 +388,23 @@ X, Y = \text{metric space}
 $$
 
 ---
+### cauchy uniform continuity property
+- uniform continuous function of cauchy sequence equal cauchy sequence
+
+---
+### cauchy uniform continuity property formula
+$$
+\begin{aligned}
+\forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(a_{n}, a_{m}) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(f(a_{n}), f(a_{m})) < \epsilon \\
+f: X \rightarrow Y \\
+f = \text{uniform continuous function} \\
+\{_{c}a_{n}\}, \{_{c}f(a_{n})\} = \text{cauchy sequence} 
+\end{aligned}
+$$
+
+---
 ### compact uniform continuity property
 - continuous function of compact domain equal uniform continuous function
-- continuous bounded function of unbounded noncompact set of real numbers equal nonuniform continuous function
 
 ---
 ### compact uniform continuity property formula
@@ -363,6 +417,185 @@ f = \text{continuous function} \\
 f = \text{uniform continuous function} \\
 X = \text{compact set} \\
 Y = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### boundary uniform continuity property
+- there exists limit of uniform continuous function on interval endpoint
+- uniform continuous function equal bounded function
+
+---
+### boundary uniform continuity property formula
+$$
+\begin{aligned}
+\lim_{x \rightarrow a}f(x)=f(a) \land \lim_{x \rightarrow b}f(x)=f(b) \\
+\exists M \in \mathbb R, \forall x \in (a, b): |f(x)| \le M \\
+f: (a, b) \rightarrow \mathbb R 
+\end{aligned}
+$$
+
+---
+### extension uniform continuity property
+- uniform continuous function of dense subset and complete codomain extend uniquely into domain
+
+---
+### extension uniform continuity property formula
+$$
+\begin{aligned}
+\exists ! F:X \rightarrow Y: F(S) = f(S) \\
+\land \forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(F(x_{1}), F(x_{2})) < \epsilon \\
+f: \overline S = X \rightarrow Y \\
+f, F = \text{uniform continuous function} \\
+S = \text{dense set} \\
+Y = \text{complete set} 
+\end{aligned}
+$$
+
+---
+### lipschitz
+- every slope of lipschitz function within finite distance
+
+---
+### lipschitz formula
+$$
+\begin{aligned}
+\exists M \ge 0, \forall x_{1}, x_{2} \in S: \frac{d(f(x_{1}), f(x_{2}))}{d(x_{1}, x_{2})} \le M \\
+f: S \subset X \rightarrow Y \\
+M = \text{lipschitz constant} \\
+f = \text{M-lipschitz function}
+\end{aligned}
+$$
+
+---
+### hierarchy lipschitz property
+- lipschitz function equal uniform continuous function
+
+---
+### hierarchy lipschitz property formula
+$$
+\begin{aligned}
+\mathcal A \subset C^\infty \subset \dots \subset C^m \subset \dots \subset C^1 \subset LIP \subset C_{u} \subset C \\
+\mathcal A = \text{analytic} \\
+C^n = \text{continuous differentiable} \\
+LIP = \text{lipschitz} \\
+C_{u} = \text{uniform continuous} \\
+C = \text{continuous}
+\end{aligned}
+$$
+
+---
+### fixed point
+- point that does not move under the function
+
+---
+### fixed point formula
+$$
+\begin{aligned}
+f(x_*) = x_* \\
+x_* = \text{fixed point}
+\end{aligned}
+$$
+
+---
+### contraction
+- function whose distance equal smaller
+
+---
+### contraction formula
+$$
+\begin{aligned}
+d(f(x_{1}), f(x_{2})) \le \gamma d(x_{1}, x_{2}) \\
+0 < \gamma < 1 \\
+f = \text{contraction} 
+\end{aligned}
+$$
+
+---
+### banach fixed point property
+- contraction of complete metric space with single fixed point must converge on fixed point with repeated iteration
+
+---
+### banach fixed point property formula
+$$
+\begin{aligned}
+\forall x_{0} \in X: x_{n+1} = f(x_{n}) \implies \lim_{n \rightarrow \infty} x_{n} = x_* \\
+f : X \rightarrow X \\
+f = \text{contraction} \\
+x_* = \text{fixed point} \\
+X = \text{complete metric space} 
+\end{aligned}
+$$
+
+---
+### function space
+- vector space of continuous function
+
+---
+### function space formula
+$$
+\begin{aligned}
+C(X) = \set{f:X \rightarrow \mathbb R | \lim_{x \rightarrow x_{0}}f(x) = f(x_{0})}\\
+f = \text{continuous function} \\
+X = \text{compact set}
+\end{aligned}
+$$
+
+---
+### function algebra
+- addition
+- multiplication
+- scalar multiplication
+
+---
+### function algebra formula
+$$
+\begin{aligned}
+f, g \in C(X) \implies f+g \in C(X) \\
+f, g \in C(X) \implies f\cdot g \in C(X) \\
+c \in \mathbb R \land f \in C(X) \implies cf \in C(X)
+\end{aligned}
+$$
+
+---
+### function norm
+- magnitude of function
+
+---
+### function norm formula
+$$
+\begin{aligned}
+\|f\| = \sup \set{|(f(x)|\mid x \in X} \\
+f = \text{continuous function} \\
+X = \text{compact set} 
+\end{aligned}
+$$
+
+---
+### function metric
+- distance between functions of set
+
+---
+### function metric formula
+$$
+\begin{aligned}
+d(f, g) = \|f-g\| = |f(x)-g(x)| \\
+f, g = \text{continuous function} 
+\end{aligned}
+$$
+
+---
+### function completeness
+- function space equal complete metric space
+
+---
+### function completeness formula
+$$
+\begin{aligned}
+\forall \{_{c}a_{n}\} \subset C(X), \exists a \in C(X): \lim_{n \rightarrow \infty} {}_{c}a_{n} = a \\
+\{_{c}a_{n}\} = \text{cauchy sequence} \\
+C(X) = \text{complete metric space} \\
+a = \text{sequential limit} \\
 \end{aligned}
 $$
 
