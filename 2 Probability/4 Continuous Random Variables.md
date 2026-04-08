@@ -28,11 +28,11 @@ X = \text{random variable}
 $$
 
 ---
-### continuous probability density function
+### probability density function
 - probability as function of continuous random variable
 
 ---
-### continuous PDF probability formula
+### probability density function formula
 $$
 \begin{aligned}
 P(X = x) = 0 \\

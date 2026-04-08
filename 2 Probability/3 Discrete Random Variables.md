@@ -28,11 +28,11 @@ X = \text{random variable}
 $$
 
 ---
-### discrete probability mass function
+### probability mass function
 - probability as function of discrete random variable
 
 ---
-### discrete PMF probability formula
+### probability mass function formula
 $$
 \begin{aligned}
 P(X) = \sum_{i} P(X = x_{i}) = 1 \\
