@@ -118,9 +118,9 @@ $$
 \begin{aligned}
 \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_{n}, a) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(f(a_{n}), f(a)) < \epsilon \\
 f: X \rightarrow Y \\
-f = \text{continuous function} \\
 \set {a_{n}}, \set {f(a_{n})} = \text{convergent sequence} \\
-a = \text{sequential limit} 
+a = \text{sequential limit} \\
+f = \text{continuous function} 
 \end{aligned}
 $$
 
@@ -136,9 +136,9 @@ $$
 \implies \forall x \in f^{-1}(S), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(S) \\
 f:  X \rightarrow S \subset Y \\
 x, y = \text{interior point} \\
-f = \text{continuous function} \\
 N = \text{neighborhood} \\
 S, f^{-1}(S) = \text{open set} \\
+f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
 $$
@@ -153,9 +153,9 @@ $$
 \begin{aligned}
 S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
 f:  X \rightarrow S \subset Y \\
-f = \text{continuous function} \\
 S', f^{-1}(S)' = \text{derived set} \\
 S, f^{-1}(S) = \text{closed set} \\
+f = \text{continuous function} \\
 X, Y = \text{metric space}
 \end{aligned}
 $$
@@ -204,7 +204,7 @@ $$
 ### vector continuity property formula
 $$
 \begin{aligned}
-\forall i \le k: \lim_{x\rightarrow x_{0}}f_{i}(x) = f_{i}(x_{0}) \\
+\forall i \in (1, \dots, k): \lim_{x\rightarrow x_{0}}f_{i}(x) = f_{i}(x_{0}) \\
 \vec f:X \rightarrow \mathbb R^k = [f_{1}(x), \dots, f_{k}(x)] \\
 x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
@@ -232,13 +232,13 @@ $$
 
 ---
 ### locally bounded
-- every domain of locally bounded function within finite distance
+- domain of locally bounded function within finite distance
 
 ---
 ### locally bounded formula
 $$
 \begin{aligned}
-\forall x_{0} \in X, \exists \delta > 0, \exists M \in \mathbb R: d(x, x_{0}) < \delta \implies \forall x \in S: |f(x)| \le M \\
+\forall x_{0} \in S, \exists \delta > 0, \exists M \in \mathbb R, \forall x \in S: x \in N_\delta(x_{0}) \implies |f(x)| \le M \\
 f: S \subset X \rightarrow \mathbb R \\
 f = \text{locally bounded function} \\
 X = \text{metric space} 
@@ -247,7 +247,7 @@ $$
 
 ---
 ### globally bounded
-- every codomain of bounded function within finite distance
+- range of bounded function within finite distance
 
 ---
 ### globally bounded formula
@@ -334,10 +334,11 @@ $$
 ### compact homeomorphism property formula
 $$
 \begin{aligned}
-f: X \rightarrow Y, X \simeq Y \\
+X \simeq Y \\
+f: X \rightarrow Y \\
+X = \text{compact set} \\
 f = \text{continuous function} \\
-f = \text{bijection} \\
-X = \text{compact set}
+f = \text{bijection} 
 \end{aligned}
 $$
 
@@ -397,8 +398,8 @@ $$
 \begin{aligned}
 \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(a_{n}, a_{m}) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(f(a_{n}), f(a_{m})) < \epsilon \\
 f: X \rightarrow Y \\
-f = \text{uniform continuous function} \\
-\{_{c}a_{n}\}, \{_{c}f(a_{n})\} = \text{cauchy sequence} 
+\{_{c}a_{n}\}, \{_{c}f(a_{n})\} = \text{cauchy sequence} \\
+f = \text{uniform continuous function}
 \end{aligned}
 $$
 
@@ -410,7 +411,7 @@ $$
 ### compact uniform continuity property formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
 f: S \subset X \rightarrow Y \\
 x_{1}, x_{2} = \text{continuous point} \\
 f = \text{continuous function} \\
@@ -431,13 +432,14 @@ $$
 \begin{aligned}
 \lim_{x \rightarrow a}f(x)=f(a) \land \lim_{x \rightarrow b}f(x)=f(b) \\
 \exists M \in \mathbb R, \forall x \in (a, b): |f(x)| \le M \\
-f: (a, b) \rightarrow \mathbb R 
+f: (a, b) \rightarrow \mathbb R \\
+f = \text{uniform continuous function} 
 \end{aligned}
 $$
 
 ---
 ### extension uniform continuity property
-- uniform continuous function of dense subset and complete codomain extend uniquely into domain
+- uniform continuous function of dense domain and complete codomain extend uniquely into domain
 
 ---
 ### extension uniform continuity property formula
@@ -448,7 +450,7 @@ $$
 f: \overline S = X \rightarrow Y \\
 f, F = \text{uniform continuous function} \\
 S = \text{dense set} \\
-Y = \text{complete set} 
+Y = \text{complete metric space} 
 \end{aligned}
 $$
 
@@ -470,6 +472,7 @@ $$
 ---
 ### hierarchy lipschitz property
 - lipschitz function equal uniform continuous function
+- uniform continuous function equal continuous function
 
 ---
 ### hierarchy lipschitz property formula
@@ -499,7 +502,7 @@ $$
 
 ---
 ### contraction
-- function whose distance equal smaller
+- function with decreasing distance
 
 ---
 ### contraction formula
@@ -521,6 +524,7 @@ $$
 \begin{aligned}
 \forall x_{0} \in X: x_{n+1} = f(x_{n}) \implies \lim_{n \rightarrow \infty} x_{n} = x_* \\
 f : X \rightarrow X \\
+\set {x_{n}} = \text{convergent sequence} \\
 f = \text{contraction} \\
 x_* = \text{fixed point} \\
 X = \text{complete metric space} 
@@ -667,10 +671,9 @@ $$
 ### intermediate connected property formula
 $$
 \begin{aligned}
-f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = f(c) \\
-f: [a, b] \rightarrow Y \\
-f = \text{continuous function} \\
-Y = \text{metric space} 
+f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = c \\
+f: [a, b] \rightarrow \mathbb R \\
+f = \text{continuous function}
 \end{aligned}
 $$
 

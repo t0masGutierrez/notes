@@ -246,7 +246,7 @@ $$
 ### first variation formula
 $$
 \begin{aligned}
-\partial F[f, h] = \left. \frac{d}{d\epsilon}F[f + \epsilon h]\right|_{\epsilon=0} \\
+\delta F[f, h] = \left. \frac{d}{d\epsilon}F[f + \epsilon h]\right|_{\epsilon=0} \\
 F = \text{functional} \\
 f = \text{admissible function} \\
 \epsilon = \text{parameter} \\
@@ -262,7 +262,7 @@ $$
 ### first variation property formula
 $$
 \begin{aligned}
-\forall h \in \mathcal V_{0}: \partial F[f_*, h] = 0 \\
+\forall h \in \mathcal V_{0}: \delta F[f_*, h] = 0 \\
 h = \text{admissible variation} \\
 \mathcal V_{0} = \text{vector space} \\
 F = \text{functional} \\
@@ -279,7 +279,7 @@ $$
 ### second variation formula
 $$
 \begin{aligned}
-\partial^2 F[f, h] = \left. \frac{d^2}{d\epsilon^2}F[f + \epsilon h]\right|_{\epsilon=0} \\
+\delta^2 F[f, h] = \left. \frac{d^2}{d\epsilon^2}F[f + \epsilon h]\right|_{\epsilon=0} \\
 F = \text{functional} \\
 f = \text{admissible function} \\
 h = \text{admissible variation} \\
@@ -296,8 +296,8 @@ $$
 ### second variation property formula
 $$
 \begin{aligned}
-\forall h \in \mathcal V_{0}: \partial^2 F[f_*, h] \ge 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \le F[f] \\
-\forall h \in \mathcal V_{0}: \partial^2 F[f_*, h] \le 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \ge F[f] \\
+\forall h \in \mathcal V_{0}: \delta^2 F[f_*, h] \ge 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \le F[f] \\
+\forall h \in \mathcal V_{0}: \delta^2 F[f_*, h] \le 0 \implies \exists \delta > 0, \forall f \in N_\delta(f_*): F[f_*] \ge F[f] \\
 h = \text{admissible variation} \\
 \mathcal V_{0} = \text{vector space} \\
 F = \text{functional} \\
@@ -421,13 +421,5 @@ x = \text{independent variable} \\
 f, f' = \text{admissible function}
 \end{aligned}
 $$
-
----
-### term
-- definition
-
----
-### term
-- definition
 
 ---

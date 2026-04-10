@@ -24,7 +24,7 @@ $$
 $$
 \begin{aligned}
 F_{X,Y}(x, y) = P(X \le x, Y \le y) \\
-1 - F_{X}(x) - F_{Y}(y) + F{X,Y}(x, y) = P(X > x, Y > y) \\
+1 - F_{X}(x) - F_{Y}(y) + F_{X,Y}(x, y) = P(X > x, Y > y) \\
 F_{X}(x) - F_{X, Y} = P(X \le x, Y > y) \\
 F_{Y}(x) - F_{X, Y} = P(X > x, Y \le y) \\
 \end{aligned}
