@@ -391,18 +391,18 @@ $$
 ### analysis of candidate
 - solve euler-lagrange equation for extremal candidate
 - apply boundary condition for constant of integration
-- solve legendre condition for sign of extremal candidate
 - substitute unperturbed variation into functional
 - integrate first variation by parts
 - eliminate admissible variation term(s) with boundary condition
-- eliminate coefficient of admissible variation integrand with euler-lagrange equation
 - sign of functional difference equal sign of extremal candidate
 
 ---
 ### analysis of candidate formula
 $$
 \begin{aligned}
-
+F[y] - F[y_*] \ge 0 \implies \\
+F[y] - F[y_*] \ge 0 \implies \\
+h = y - y_*
 \end{aligned}
 $$
 
