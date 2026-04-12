@@ -27,9 +27,9 @@
   ],
   "4 Statistics": [
     "1 Data.md",
-    "10 Two-Sample Hypothesis Testing.md",
-    "11 Chi-Square Testing.md",
-    "12 ANOVA.md",
+    "10 Two-Sample Hypothesis Tests.md",
+    "11 Chi-Square Hypothesis Tests.md",
+    "12 ANOVA Hypothesis Tests.md",
     "13 Linear Regression.md",
     "2 Descriptive Statistics.md",
     "3 Probability.md",
@@ -38,7 +38,7 @@
     "6 Calculating Distributions.md",
     "7 Central Limit Theorem.md",
     "8 Confidence Intervals.md",
-    "9 One-Sample Hypothesis Testing.md"
+    "9 One-Sample Hypothesis Tests.md"
   ],
   "5 Linear Algebra": [
     "1 Vector Operations.md",
