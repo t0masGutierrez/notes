@@ -35,16 +35,16 @@
 - compare bivariate numerical data
 
 ---
+### contingency table
+- compare bivariate categorical data
+
+---
 ### box plot
 - compare multivariate mixed data
 
 ---
 ### violin plot
 - compare multivariate mixed data
-
----
-### contingency table
-- compare multivariate categorical data
 
 ---
 ### frequency

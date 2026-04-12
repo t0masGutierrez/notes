@@ -207,14 +207,14 @@ $$
 ### mean confidence interval assumptions
 - random sample
 - independent observations
-- normal population or large sample size
+- normal distribution or large sample size
 ---
 ### construct mean confidence interval
 - calculate sample proportion
 - calculate standard error
 - find critical value
 - calculate margin of error
-- $\overline x - E < \mu < \overline x + E$ 
+- $\overline x - E \le \mu \le \overline x + E$ 
 
 ---
 ### mean z-interval formula
@@ -258,7 +258,7 @@ $$
 - calculate standard error
 - find critical value
 - calculate margin of error
-- $\hat p - E < p < \hat p + E$ 
+- $\hat p - E \le p \le \hat p + E$ 
 
 ---
 ### proportion z-interval formula
@@ -279,7 +279,7 @@ $$
 ### standard deviation confidence interval requirements
 - random samples
 - independent observations
-- normal population
+- normal distribution
 
 ---
 ### construct standard deviation confidence interval

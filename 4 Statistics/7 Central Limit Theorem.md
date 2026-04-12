@@ -34,9 +34,10 @@ $$
 ### mean standard error formula
 $$
 \begin{aligned}
-SE(\overline x) = \frac{\sigma}{\sqrt n} \\
-\sigma = \text{standard deviation} \\
-n = \text{sample size}
+SE(\overline x) = \frac{\sigma}{\sqrt n} \approx \frac{s}{\sqrt n } \\
+\sigma = \text{sample standard deviation} \\
+n = \text{sample size} \\ 
+s = \text{sample standard deviation} 
 \end{aligned}
 $$
 
@@ -44,9 +45,10 @@ $$
 ### proportion standard error formula
 $$
 \begin{aligned}
-SE(\hat p) = \sqrt{\frac{p(1-p)}{n}} \\
+SE(\hat p) = \sqrt{\frac{p(1-p)}{n}} \approx \sqrt{\frac{\hat p(1-\hat p)}{n}} \\
 p = \text{proportion} \\
-n = \text{sample size}
+n = \text{sample size} \\
+\hat p = \text{sample proportion}
 \end{aligned}
 $$
 

@@ -24,12 +24,11 @@
 - there exists meaningful relationship between group 1 and group 2
 
 ---
-### null hypothesis
+### two sample null hypothesis
 - difference of population parameter equal zero  
-- statement of equality
 
 ---
-### null hypothesis formula
+### two sample null hypothesis formula
 $$
 \begin{aligned}
 H_{0}: \mu_{1}-\mu_{2} = 0 \\
@@ -38,12 +37,11 @@ H_{0}: p_{1}-p_{2} = 0 \\
 $$
 
 ---
-### alternative hypothesis
+### two sample alternative hypothesis
 - difference of population parameter not equal zero
-- statement of inequality
 
 ---
-### alternative hypothesis formula
+### two sample alternative hypothesis formula
 $$
 \begin{aligned}
 H_{a}: \quad >, \quad \ne, \quad < \\
@@ -52,7 +50,7 @@ $$
 
 ---
 ### unpooled variance
-- unequal population variance between group 1 and group 2
+- unequal variance between group 1 and group 2
 
 ---
 ### unpooled variance formula
@@ -68,7 +66,7 @@ $$
 
 ---
 ### pooled variance
-- equal population variance between group 1 and group 2
+- equal variance between group 1 and group 2
 
 ---
 ### pooled variance formula
@@ -106,7 +104,7 @@ $$
 
 ---
 ### unpooled proportion
-- unequal population proportion between group 1 and group 2
+- unequal proportion between group 1 and group 2
 
 ---
 ### unpooled proportion formula
@@ -121,7 +119,7 @@ $$
 
 ---
 ### pooled proportion
-- equal population proportion between group 1 and group 2
+- equal proportion between group 1 and group 2
 
 ---
 ### pooled proportion formula
@@ -164,44 +162,49 @@ $$
 ---
 ### two mean independent hypothesis test assumptions
 - numerical response variable
-- independent groups
+- categorical explanatory variable with two categories
 - random sample
 - independent observations
-- normal population or large sample size
+- normal distribution or large sample size
+- unknown standard deviation
+- independent groups
 - equal variance
 
 ---
 ### two mean independent t-score formula
 $$
 \begin{aligned}
-t = \frac{\overline d - 0}{SE} \\
+t = \frac{\overline d - 0}{SE(\overline d)} \\
 \overline d = \overline x_{1} - \overline x_{2} \\
+df = n_{1} + n_{2} - 2 \\
 \overline x = \text{sample mean} \\
-SE = \text{standard error}
+SE = \text{standard error} \\
+n = \text{sample size} 
 \end{aligned}
 $$
 
 ---
-### conduct two mean dependent hypothesis test
-- definition
-
----
 ### two mean dependent hypothesis test assumptions
 - numerical response variable
-- paired/matched groups
+- no explanatory variable
 - random sample
 - independent observations
-- normal population or large sample size
+- normal distribution or large sample size
+- unknown standard deviation
+- paired/matched groups
+- unequal variance
 
 ---
 ### two mean dependent t-score formula
 $$
 \begin{aligned}
-t = \frac{\overline d - 0}{SE} \\
+t = \frac{\overline d - 0}{SE(\overline d)} \\
 \overline d = \frac{\sum_{i} \overline d_{i}}{n} \\
 d_{i} = \overline x_{1i} - \overline x_{2i} \\
+df = n - 1 \\
 \overline x = \text{sample mean} \\
-SE = \text{standard error}
+SE = \text{standard error} \\
+n = \text{sample size}
 \end{aligned}
 $$
 
@@ -211,20 +214,20 @@ $$
 
 ---
 ### two proportion independent hypothesis test assumptions
-- categorical response variable
-- independent groups
-- pooled proportion
+- categorical response variable with two categories
+- categorical explanatory variable with two categories
 - random sample
 - independent observations
-- binomial random variable
 - expected number of success greater or equal 10
 - expected number of failures greater or equal 10
+- independent groups
+- equal proportion
 
 ---
 ### two proportion independent z-score formula
 $$
 \begin{aligned}
-z = \frac{\hat d - 0}{SE} \\
+z = \frac{\hat d - 0}{SE(\hat d)} \\
 \hat d = \hat p_{1} - \hat p_{2} \\
 \hat p = \text{sample proportion} \\
 SE = \text{standard error} 
@@ -238,10 +241,11 @@ $$
 ---
 ### two variance independent hypothesis test assumptions
 - numerical response variable
-- independent groups
+- categorical explanatory variable with two categories
 - random samples
 - independent observations
-- normal population
+- normal distribution
+- independent groups
 
 ---
 ### two variance independent F-score formula

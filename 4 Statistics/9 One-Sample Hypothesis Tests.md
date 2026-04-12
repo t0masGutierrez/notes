@@ -88,31 +88,6 @@ $$
 $$
 
 ---
-### effect size
-- magnitude of difference
-
----
-### mean effect size formula
-$$
-\begin{aligned}
-\overline d = \frac{\overline x-\mu_{0}}{s} \\
-\overline x = \text{sample mean} \\
-\mu_{0} = \text{null mean} \\
-s = \text{sample standard deviation}
-\end{aligned}
-$$
-
----
-### proportion effect size formula
-$$
-\begin{aligned}
-\hat d = \hat p - p_{0} \\
-\hat p = \text{sample proportion} \\
-p_{0} = \text{null proportion}
-\end{aligned}
-$$
-
----
 ### test statistic
 - number of standard deviations between sample statistic and null hypothesis
 
@@ -177,6 +152,15 @@ $$
 - if null hypothesis inside confidence interval then fail to reject null hypothesis
 
 ---
+### mean z-test assumptions
+- numerical response variable
+- no explanatory variable
+- random sample
+- independent observations
+- normal distribution or large sample size
+- known standard deviation
+
+---
 ### mean z-test formula
 $$
 \begin{aligned}
@@ -190,6 +174,15 @@ n = \text{sample size} \\
 $$
 
 ---
+### mean t-test assumptions
+- numerical response variable
+- no explanatory variable
+- random sample
+- independent observations
+- normal distribution or large sample size
+- unknown standard deviation
+
+---
 ### mean t-test formula
 $$
 \begin{aligned}
@@ -201,6 +194,13 @@ n = \text{sample size} \\
 \mu_{a} = \text{alternative hypothesis}
 \end{aligned}
 $$
+
+---
+### proportion z-test assumptions
+- categorical response variable with two categories
+- no explanatory variable
+- random sample
+- independent observations
 
 ---
 ### proportion z-test formula

@@ -21,13 +21,10 @@ $$
 ### normal formula
 $$
 \begin{aligned}
-X \sim N(x, \mu, \sigma) = P(X \le x) \\
-X \sim N(a, b, \mu, \sigma) = P(a \le X \le b) \\
-x = \text{number of successes} \\
+X \sim N(x_{1}, x_{2}, \mu, \sigma) = P(x_{1} \le X \le x_{2}) \\
+x = \text{data} \\
 \mu = \text{mean} \\
-\sigma = \text{standard deviation} \\
-a = \text{lower number of successes} \\
-b = \text{upper number of successes} 
+\sigma = \text{standard deviation} 
 \end{aligned}
 $$
 
@@ -56,7 +53,7 @@ $$
 $$
 \begin{aligned}
 z = \frac{x - \mu}{\sigma} \\
-x = \text{datum} \\
+x = \text{data} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation}
 \end{aligned}
@@ -70,11 +67,8 @@ $$
 ### standard normal formula
 $$
 \begin{aligned}
-Z \sim N(x, 0, 1) = P(Z \le z) \\
-Z \sim N(a, b, 0, 1) = P(a \le Z \le b) \\
-z = \text{z-score} \\
-a = \text{lower z-score} \\
-b = \text{upper z-score}
+Z \sim N(z_{1}, z_{2}, 0, 1) = P(z_{1} \le Z \le z_{2}) \\
+z = \text{z-score} 
 \end{aligned}
 $$
 
@@ -101,6 +95,7 @@ $$
 $$
 \begin{aligned}
 t = \frac{\overline x - \mu}{s/\sqrt n} \\
+df = n - 1 \\
 \overline x = \text{sample mean} \\
 \mu = \text{mean} \\
 s = \text{sample standard deviation} \\
@@ -116,12 +111,9 @@ $$
 ### student formula
 $$
 \begin{aligned}
-T \sim S(t, d) = P(T \le t) \\
-T \sim S(a, b, d) = P(a \le T \le b) \\
+T \sim S(t_{1}, t_{2}, df) = P(t_{1} \le T \le t_{2}) \\
 t = \text{t-score} \\
-d = \text{degrees of freedom} \\
-a = \text{lower t-score} \\
-b = \text{upper t-score} 
+df = \text{degrees of freedom}
 \end{aligned}
 $$
 
@@ -133,9 +125,9 @@ $$
 ### inverse student formula
 $$
 \begin{aligned}
-t = S^{-1}(c, d) \\
+t = S^{-1}(c, df) \\
 c = \text{cumulative probability of success} \\
-d = \text{degrees of freedom}
+df = \text{degrees of freedom}
 \end{aligned}
 $$
 
@@ -148,6 +140,7 @@ $$
 $$
 \begin{aligned}
 \chi^2 = \frac{(n-1)s^2}{\sigma^2} \\
+df = n - 1 \\
 n = \text{sample size} \\
 s = \text{sample standard deviation} \\
 \sigma = \text{standard deviation}
@@ -162,22 +155,23 @@ $$
 ### chi-square formula
 $$
 \begin{aligned}
-X \sim \chi^2(x,d) = P(X \ge x) \\
+X \sim \chi^2(x,df) = P(X \ge x) \\
 x = \text{$\chi^2$-score} \\
-d = \text{degrees of freedom} 
+df = \text{degrees of freedom} 
 \end{aligned}
 $$
 
 ---
 ### F-score
-- ratio between group mean square and error mean square
+- ratio of sample variance between group 1 and group 2
 
 ---
 ### F-score formula
 $$
 \begin{aligned}
-F = \frac{MS_{\text{group}}}{MS_{\text{error}}} \\
-MS = \text{mean square} 
+F = \frac{s_{1}^2}{s_{2}^2} \\
+df = n - 1 \\
+s = \text{sample standard deviation} 
 \end{aligned}
 $$
 
@@ -189,11 +183,10 @@ $$
 ### F formula
 $$
 \begin{aligned}
-U \sim \chi^2(f, d_{1}, d_{2}) = P(U \le u) \\
-V \sim \chi^2(v, d_{1}, d_{2}) = P(V \le v) \\
-F = \frac{U/d_{1}}{V/d_{2}} \\
+U \sim \chi^2(u, df_{1}, df_{2}) = P(U \le u) \\
+V \sim \chi^2(v, df_{1}, df_{2}) = P(V \le v) \\
 u, v = \text{F-score} \\
-d = \text{degrees of freedom} 
+df = \text{degrees of freedom} 
 \end{aligned}
 $$
 
