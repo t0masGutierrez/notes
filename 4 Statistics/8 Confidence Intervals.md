@@ -104,9 +104,9 @@ $$
 ### mean confidence interval formula
 $$
 \begin{aligned}
-CI=\bar x \pm z^*(\frac{\sigma}{\sqrt n}) \\
-CI=\bar x \pm t^*(\frac{s}{\sqrt n}) \\
-\bar x = \text{sample mean} \\
+CI=\overline x \pm z^*(\frac{\sigma}{\sqrt n}) \\
+CI=\overline x \pm t^*(\frac{s}{\sqrt n}) \\
+\overline x = \text{sample mean} \\
 z^*, t^* = \text{critical value} \\
 \sigma = \text{standard deviation} \\
 s = \text{sample standard deviation} \\
@@ -120,7 +120,7 @@ $$
 \begin{aligned}
 CI=\hat p \pm z^* \sqrt {\frac{\hat p(1-\hat p)}{n}} \\
 \hat p = \text{sample proportion} \\
-z^* = \text{critical z-value} \\
+z^* = \text{critical value} \\
 n = \text{sample size}
 \end{aligned}
 $$
@@ -132,7 +132,7 @@ $$
 CI=\sqrt{\frac{(n-1)s^2}{\chi^2_{\alpha/2}}} \leq \sigma \leq \sqrt{\frac{(n-1)s^2}{\chi^2_{1-\alpha/2}}} \\
 n = \text{sample size} \\
 s = \text{sample standard deviation} \\
-\chi^2_* = \text{critical $\chi^2$-value}
+\chi^2_* = \text{critical value}
 \end{aligned}
 $$
 
@@ -173,44 +173,6 @@ SE = \text{standard error}
 $$
 
 ---
-### sample size
-- number of observations as function of margin of error
-
----
-### mean sample size formula
-$$
-\begin{aligned}
-n = (\frac{z^*\sigma}{E})^2 \\
-z^* = \text{critical z-value} \\
-\sigma = \text{standard deviation} \\
-E = \text{margin of error}
-\end{aligned}
-$$
-
----
-### known proportion sample size formula
-$$
-\begin{aligned}
-n = (\frac{z^*\sqrt {p(1- p)}}{E})^2 \\
-z^* = \text{critical z-value} \\
-p = \text{proportion} \\
-E = \text{margin of error}
-\end{aligned}
-$$
-
----
-### unknown proportion sample size formula
-$$
-\begin{aligned}
-n = (\frac{0.5z^*}{E})^2 \\
-p = 0.5 \\
-z^* = \text{critical z-value} \\
-p = \text{proportion} \\
-E = \text{margin of error}
-\end{aligned}
-$$
-
----
 ### degrees of freedom
 - number of sample data that can vary without changing estimate
 
@@ -218,7 +180,7 @@ $$
 ### degrees of freedom formula
 $$
 \begin{aligned}
-d = n-1 \\
+df = n-1 \\
 n = \text{sample size}
 \end{aligned}
 $$
@@ -252,15 +214,15 @@ $$
 - calculate standard error
 - find critical value
 - calculate margin of error
-- $\bar x - E < \mu < \bar x + E$ 
+- $\overline x - E < \mu < \overline x + E$ 
 
 ---
 ### mean z-interval formula
 $$
 \begin{aligned}
-\text{avgZ-int}(\sigma, \bar x, n, 1-\alpha) \\
+\text{avgZ-int}(\sigma, \overline x, n, 1-\alpha) \\
 \sigma = \text{standard deviation} \\
-\bar x = \text{sample mean} \\
+\overline x = \text{sample mean} \\
 n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}
@@ -270,9 +232,9 @@ $$
 ### mean t-interval formula
 $$
 \begin{aligned}
-\text{avgT-int}(\bar x, s, n, 1-\alpha) \\
+\text{avgT-int}(\overline x, s, n, 1-\alpha) \\
 \sigma = \text{standard deviation} \\
-\bar x = \text{sample mean} \\
+\overline x = \text{sample mean} \\
 n = \text{sample size} \\
 \alpha = \text{significance level}
 \end{aligned}

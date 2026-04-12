@@ -34,7 +34,7 @@ $$
 ### mean standard error formula
 $$
 \begin{aligned}
-SE(\bar X) = \frac{\sigma}{\sqrt n} \\
+SE(\overline x) = \frac{\sigma}{\sqrt n} \\
 \sigma = \text{standard deviation} \\
 n = \text{sample size}
 \end{aligned}
@@ -78,58 +78,6 @@ n = \text{sample size} \\
 X = \text{sample statistic} \\
 \mu = \text{mean} \\
 \sigma = \text{standard deviation} 
-\end{aligned}
-$$
-
----
-### individual z-score
-- number of standard deviations from the mean
-
----
-### individual mean z-score formula
-$$
-\begin{aligned}
-z = \frac{X - \mu}{\sigma} \\
-X = \text{datum} \\
-\mu = \text{mean} \\
-\sigma = \text{standard deviation} 
-\end{aligned}
-$$
-
----
-### individual proportion z-score formula
-$$
-\begin{aligned}
-z = \frac{\hat p - p}{\sigma} \\
-\hat p = \text{sample proportion} \\
-p = \text{proportion} \\
-\sigma = \text{standard deviation} 
-\end{aligned}
-$$
-
----
-### sample z-score
-- number of standard deviations from the sample mean
-
----
-### sample mean z-score formula
-$$
-\begin{aligned}
-z = \frac{\bar X - \mu}{SE(\bar X)} \\
-\bar X = \text{sample mean} \\
-\mu = \text{mean} \\
-SE = \text{standard error}
-\end{aligned}
-$$
-
----
-### sample proportion z-score formula
-$$
-\begin{aligned}
-z = \frac{\hat p - p}{SE(\hat p)} \\
-\hat p = \text{sample proportion} \\
-p = \text{proportion} \\
-SE = \text{standard error}
 \end{aligned}
 $$
 

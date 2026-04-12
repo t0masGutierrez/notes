@@ -97,35 +97,14 @@ $$
 - number of standard errors from the mean
 
 ---
-### one sample t-score formula
+### t-score formula
 $$
 \begin{aligned}
-t = \frac{\bar x - \mu}{s/\sqrt n} \\
-\bar x = \text{sample mean} \\
+t = \frac{\overline x - \mu}{s/\sqrt n} \\
+\overline x = \text{sample mean} \\
 \mu = \text{mean} \\
-\sigma = \text{standard deviation}
-\end{aligned}
-$$
-
----
-### two sample independent t-score formula
-$$
-\begin{aligned}
-t = \frac{\bar x - \mu}{s/\sqrt n} \\
-\bar x = \text{sample mean} \\
-\mu = \text{mean} \\
-\sigma = \text{standard deviation}
-\end{aligned}
-$$
-
----
-### two sample dependent t-score formula
-$$
-\begin{aligned}
-t = \frac{(\bar x_{1} - \bar x_{2}) - \mu}{s/\sqrt n} \\
-\bar x = \text{sample mean} \\
-\mu = \text{mean} \\
-\sigma = \text{standard deviation}
+s = \text{sample standard deviation} \\
+n = \text{sample size}
 \end{aligned}
 $$
 

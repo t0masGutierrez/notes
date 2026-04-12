@@ -8,8 +8,9 @@
 ---
 ### conduct hypothesis test
 - state hypotheses
+- verify assumptions
 - choose significance level  
-- calculate test statistic  
+- calculate test statistic 
 - choose method
 - reject or fail to reject null hypothesis  
 - state conclusion
@@ -94,8 +95,8 @@ $$
 ### mean effect size formula
 $$
 \begin{aligned}
-d = \frac{\bar X-\mu_{0}}{s} \\
-\bar X = \text{sample mean} \\
+\overline d = \frac{\overline x-\mu_{0}}{s} \\
+\overline x = \text{sample mean} \\
 \mu_{0} = \text{null mean} \\
 s = \text{sample standard deviation}
 \end{aligned}
@@ -105,7 +106,7 @@ $$
 ### proportion effect size formula
 $$
 \begin{aligned}
-d = \hat p - p_{0} \\
+\hat d = \hat p - p_{0} \\
 \hat p = \text{sample proportion} \\
 p_{0} = \text{null proportion}
 \end{aligned}
@@ -179,10 +180,10 @@ $$
 ### mean z-test formula
 $$
 \begin{aligned}
-\text{avgZ-test}(\mu_{0}, \sigma, \bar X, n, \mu_{a}) \\
+\text{avgZ-test}(\mu_{0}, \sigma, \overline x, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
 \sigma = \text{standard deviation} \\
-\bar X = \text{sample mean} \\
+\overline x = \text{sample mean} \\
 n = \text{sample size} \\
 \mu_{a} = \text{alternative hypothesis}
 \end{aligned}
@@ -192,9 +193,9 @@ $$
 ### mean t-test formula
 $$
 \begin{aligned}
-\text{avgT-test}(\mu_{0}, \bar X, s, n, \mu_{a}) \\
+\text{avgT-test}(\mu_{0}, \overline x, s, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
-\bar X = \text{sample mean} \\
+\overline x = \text{sample mean} \\
 s = \text{sample standard deviation} \\
 n = \text{sample size} \\
 \mu_{a} = \text{alternative hypothesis}
@@ -205,10 +206,10 @@ $$
 ### proportion z-test formula
 $$
 \begin{aligned}
-\text{propZ-test}(\mu_{0}, \sigma, \bar X, n, \mu_{a}) \\
+\text{propZ-test}(\mu_{0}, \sigma, \overline x, n, \mu_{a}) \\
 \mu_{0} = \text{null hypothesis} \\
 \sigma = \text{standard deviation} \\
-\bar X = \text{sample mean} \\
+\overline x = \text{sample mean} \\
 n = \text{sample size} \\
 \mu_{a} = \text{alternative hypothesis}
 \end{aligned}
