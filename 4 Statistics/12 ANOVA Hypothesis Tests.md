@@ -12,7 +12,7 @@
 - equal variance
 
 ---
-### F-score formula
+### one-way ANOVA F-score formula
 $$
 \begin{aligned}
 F = \frac{MS_{\text{group}}}{MS_{\text{error}}} \\

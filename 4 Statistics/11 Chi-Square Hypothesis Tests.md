@@ -8,7 +8,7 @@
 - all expected counts greater or equal 5
 
 ---
-### chi-square-score goodness of fit formula
+### goodness of fit chi-square-score formula
 $$
 \begin{aligned}
 \chi^2 = \sum_{i=1}^k \frac{(O_{i}-E_{i})^2}{E_{i}} \\
@@ -57,7 +57,7 @@ $$
 - all expected counts greater or equal 5
 
 ---
-### chi-square-score independence formula
+### independence chi-square-score formula
 $$
 \begin{aligned}
 \chi^2 = \sum_{i=1}^r\sum_{j=1}^c \frac{(O_{ij}-E_{ij})^2}{E_{ij}} \\

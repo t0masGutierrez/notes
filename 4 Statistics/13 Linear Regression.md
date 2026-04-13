@@ -179,6 +179,7 @@ $$
 $$
 \begin{aligned}
 R^2 = \frac{SSR}{SST} \\
+0 \le R^2 \le 1 \\
 SSR = \text{explained variation} \\
 SST = \text{total variation}
 \end{aligned}
@@ -312,9 +313,7 @@ $$
 t = \frac{b_{j} - 0}{SE(b_{j})} \\
 df = n-k-1 \\
 b = \text{slope} \\
-SE = \text{standard error} \\
-n = \text{sample size} \\
-k = \text{number of independent variables}
+SE = \text{standard error} 
 \end{aligned}
 $$
 
@@ -339,6 +338,20 @@ $$
 $$
 \begin{aligned}
 H_{a} : \beta \ne 0 
+\end{aligned}
+$$
+
+---
+### line of best fit
+- coefficient of slope-intercept equation with minimum unexplained variation aka ordinary least squares
+
+---
+### line of best fit formula
+$$
+\begin{aligned}
+\min \sum_{i}^n e_{i}^2 \\
+n = \text{sample size} \\
+e = \text{residual} 
 \end{aligned}
 $$
 
