@@ -35,9 +35,9 @@ $$
 ### probability density function formula
 $$
 \begin{aligned}
-P(X = x) = 0 \\
+P(X = a) = 0 \\
 P(X) = \int_{-\infty}^{\infty}f(x)dx = 1 \\
-P(X \le t) = \int_{-\infty}^t f(x)dx = F(t) \\
+P(X \le a) = \int_{-\infty}^a f(x)dx = F(a) \\
 P(a \le X \le b) = \int_{a}^b f(x)dx = F(b) - F(a)
 \end{aligned}
 $$

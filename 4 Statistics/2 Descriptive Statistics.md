@@ -114,6 +114,7 @@
 - 68% of normal data within 1 standard deviation
 - 95% of normal data within 2 standard deviation
 - 99.7% of normal data within 3 standard deviation
+
 ---
 ### empirical rule of thumb
 - two standard deviation equal significant deviation

@@ -51,7 +51,7 @@ $$
 ### scatterplot formula
 $$
 \begin{aligned}
-\set{(x, y)}_{i=1}^n \\
+X \times Y = \set{(x, y) \mid x \in X, y \in Y} \\
 x = \text{independent variable} \\
 y = \text{dependent variable}
 \end{aligned}

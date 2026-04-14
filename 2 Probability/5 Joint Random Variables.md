@@ -38,7 +38,7 @@ $$
 ### joint probability mass function formula
 $$
 \begin{aligned}
-P(a \le X \le b, c \le Y \le d) = \sum_{i=a}^b \sum_{j=c}^d P(X = x_{i}, Y = y_{j}) \\  
+P(a \le X \le b, c \le Y \le d) = \sum_{a\le x_{i} \le b} \sum_{c\le y_{i} \le d} P(X = x_{i}, Y = y_{j}) \\  
 P(X \le x, Y \le y) = \sum_{x_{i}\le x}\sum_{y_{j}\le y} P(X = x_{i}, Y = y_{j}) \\
 P(X, Y) = \sum_{i}\sum_{j} P(X = x_{i}, Y = y_{j}) = 1 \\  
 P(X = x, Y = y) = P(X \le x, Y \le y) - \\
@@ -56,10 +56,10 @@ $$
 ### joint probability density function formula
 $$
 \begin{aligned}
-P(X=x,Y=y) = 0 \\  
-P(X,Y \in \mathbb{R}^2) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f_{X,Y}(x,y)dy dx = 1 \\  
-P(X < a, Y \le b) = \int_{-\infty}^{a}\int_{-\infty}^{b} f_{X,Y}(x,y)dydx = F_{X,Y}(a, b) \\
-P(a < X \le b, c \le Y \le d) = \int_{a}^b \int_{c}^d f_{X,Y}(x,y)dydx = F_{X,Y}(b,d) - \\
+P(X=a,Y=b) = 0 \\  
+P(X \in \mathbb{R},Y \in \mathbb{R}) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f_{X,Y}(x,y)dy dx = 1 \\  
+P(X \le a, Y \le b) = \int_{-\infty}^{a}\int_{-\infty}^{b} f_{X,Y}(x,y)dydx = F_{X,Y}(a, b) \\
+P(a \le X \le b, c \le Y \le d) = \int_{a}^b \int_{c}^d f_{X,Y}(x,y)dydx = F_{X,Y}(b,d) - \\
 F_{X,Y}(a,d) - \\
 F_{X,Y}(b,c) + \\
 F_{X,Y}(a,c)
@@ -104,9 +104,8 @@ $$
 ### independent random variable formula
 $$
 \begin{aligned}
-P(X \in A, Y \in B) = P(X \in A)P(Y \in B) \\
-P(X = x, Y = y) = P(X = x)P(Y = y) \\
 F_{X,Y}(x, y) = F_{X}(x)F_{Y}(y) \\
+P(X = x, Y = y) = P(X = x)P(Y = y) \\
 f_{X,Y}(x, y) = f_{X}(x)f_{Y}(y) 
 \end{aligned}
 $$
@@ -126,11 +125,105 @@ x, y = \text{real number}
 $$
 
 ---
-### term
-- definition
+### joint conditional probability 
+- likelihood random variable X will occur given random variable Y already occur
 
 ---
-### term
-- definition
+### joint conditional probability formula
+$$
+\begin{aligned}
+F_{X|Y}(x, y) = \frac{F_{X,Y}(x, y)}{F_{Y}(y)} \\
+P(X = x | Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} \\
+f_{X|Y}(x, y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
+\end{aligned}
+$$
+
+---
+### conditional expectation
+- mean of joint conditional random variable
+
+---
+### conditional expectation formula
+$$
+\begin{aligned}
+E[X] = E(E[X | Y]) \\
+X, Y = \text{random variable}
+\end{aligned}
+$$
+
+---
+### conditional variation
+- variance of joint conditional random variable around mean
+
+---
+### conditional variation formula
+$$
+\begin{aligned}
+\text{Var}(X) = E[\text{Var}(X|Y)] + \text{Var}(E[X|Y]) \\
+X, Y = \text{random variable}
+\end{aligned}
+$$
+
+---
+### iid 
+- independent and identically distributed
+
+---
+### iid formula
+$$
+\begin{aligned}
+\forall i, j \in (1, \dots, m): P(X_{i} \in A, X_{j} \in B) = P(X_{i} \in A)P(X_{j} \in B) \\
+\forall i \in (1, \dots, m): X_{i} \sim N(\mu, \sigma^2) \\
+X, Y = \text{random variable} \\
+m = \text{number of random variables} \\
+N = \text{arbitrary probability distribution}
+\end{aligned}
+$$
+
+---
+### convolution
+- probability as function of sum of independent random variable
+
+---
+### convolution formula
+$$
+\begin{aligned}
+F_{X+Y}(z) = \int_{-\infty}^\infty F_{X}(z-y)f_{Y}(y)dy \\
+F_{X+Y}(z) = \int_{-\infty}^\infty F_{Y}(z-x)f_{X}(x)dx \\
+P(X + Y = z) = \sum_{x} P(X = x)P(Y = z-x) \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{X}(x)f_{Y}(z-x)dx \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Y}(y)f_{X}(z-y)dy 
+\end{aligned}
+$$
+
+---
+### iid convolution expectation
+- expectation of sum of iid random variable
+
+---
+### iid convolution expectation formula
+$$
+\begin{aligned}
+E[\sum_{i=1}^n X_{i}] = n\mu \\
+X = \text{random variable} \\
+n = \text{number of random variables} \\
+\mu = \text{mean}
+\end{aligned}
+$$
+
+---
+### iid convolution variation
+- variation of sum of iid random variable
+
+---
+### iid convolution variation formula
+$$
+\begin{aligned}
+\text{Var}(\sum_{i=1}^n X_{i}) = n\sigma^2 \\
+X = \text{random variable} \\
+n = \text{number of random variables} \\
+\sigma = \text{standard deviation}
+\end{aligned}
+$$
 
 ---
