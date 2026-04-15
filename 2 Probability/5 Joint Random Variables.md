@@ -104,7 +104,6 @@ $$
 ### independent random variable formula
 $$
 \begin{aligned}
-F_{X,Y}(x, y) = F_{X}(x)F_{Y}(y) \\
 P(X = x, Y = y) = P(X = x)P(Y = y) \\
 f_{X,Y}(x, y) = f_{X}(x)f_{Y}(y) 
 \end{aligned}
@@ -118,23 +117,22 @@ $$
 ### dependent random variable formula
 $$
 \begin{aligned}
-P(X \in A, Y \in B) = P(X \in A|Y \in B)P(Y \in B) \\
+P(X \in A, Y \in B) = P(X \in A\mid Y \in B)P(Y \in B) \\
 X, Y = \text{random variable} \\
 x, y = \text{real number}
 \end{aligned}
 $$
 
 ---
-### joint conditional probability 
+### conditional probability 
 - likelihood random variable X will occur given random variable Y already occur
 
 ---
-### joint conditional probability formula
+### conditional probability formula
 $$
 \begin{aligned}
-F_{X|Y}(x, y) = \frac{F_{X,Y}(x, y)}{F_{Y}(y)} \\
-P(X = x | Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} \\
-f_{X|Y}(x, y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
+P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} \\
+f_{X\mid Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
 \end{aligned}
 $$
 
@@ -146,7 +144,7 @@ $$
 ### conditional expectation formula
 $$
 \begin{aligned}
-E[X] = E(E[X | Y]) \\
+E[X] = E(E[X \mid Y]) \\
 X, Y = \text{random variable}
 \end{aligned}
 $$
@@ -159,7 +157,7 @@ $$
 ### conditional variation formula
 $$
 \begin{aligned}
-\text{Var}(X) = E[\text{Var}(X|Y)] + \text{Var}(E[X|Y]) \\
+\text{Var}(X) = E[\text{Var}(X\mid Y)] + \text{Var}(E[X\mid Y]) \\
 X, Y = \text{random variable}
 \end{aligned}
 $$

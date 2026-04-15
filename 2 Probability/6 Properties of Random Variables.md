@@ -47,7 +47,8 @@ $$
 ### variation addition property formula
 $$
 \begin{aligned}
-\text{Var}(X) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X, Y)
+\text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X, Y) \\
+X, Y = \text{random variable}
 \end{aligned}
 $$
 
@@ -81,9 +82,6 @@ $$
 P(X \in A, Y \in B) = P(X \in A)P(Y \in B) \implies \text{Cov}(X, Y) = 0 
 \end{aligned}
 $$
-
----
-- definition
 
 ---
 ### term

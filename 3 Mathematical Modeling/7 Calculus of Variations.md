@@ -400,8 +400,8 @@ $$
 ### analysis of candidate formula
 $$
 \begin{aligned}
-F[y] - F[y_*] \ge 0 \implies \\
-F[y] - F[y_*] \ge 0 \implies \\
+F[y] - F[y_*] \le 0 \implies y_* = \max(F) \\
+F[y] - F[y_*] \ge 0 \implies y_* = \min(F) \\
 h = y - y_*
 \end{aligned}
 $$
@@ -421,5 +421,48 @@ x = \text{independent variable} \\
 f, f' = \text{admissible function}
 \end{aligned}
 $$
+
+---
+### fundamental lemma property
+- global zero equal leading coefficient zero
+
+---
+### fundamental lemma property formula
+$$
+\begin{align}
+\forall h \in C^n[a, b]: \int_{a}^b g(x)h(x)dx = 0 \implies \forall x \in [a, b]: g(x) = 0 \\
+h^{(k)}(a) = h^{(k)}(b) = 0 \\
+k = 0, \dots, \mu \le n \\
+h = \text{admissible variation} \\
+g = \text{continuous function} \\
+x = \text{independent variable} 
+\end{align}
+$$
+
+---
+### sign lemma property
+- global sign equal leading coefficient sign
+
+---
+### sign lemma property formula
+$$
+\begin{aligned}
+I(h)\ge 0 \implies \forall x\in [a,b],\ \phi_{\nu\nu}(x)\ge 0 \\
+I(h)=\int_{a}^b \sum_{i=0}^{\nu}\sum_{j=0}^{\nu}\phi_{ij}(x)h^{(i)}(x)h^{(j)}(x)dx \\
+\forall h\in C^n[a,b]: 
+h^{(k)}(a)=h^{(k)}(b)=0 \text{ for } k=0,\dots,\mu \\
+h = \text{admissible variation} \\
+\phi = \text{continuous function} \\
+x = \text{independent variable}
+\end{aligned}
+$$
+
+---
+### term
+- definition
+
+---
+### term
+- definition
 
 ---
