@@ -77,11 +77,11 @@ f^{-1}(B^c) = f^{-1}(B)^c
 $$
 
 ---
-### continuity
+### continuous
 - for every epsilon distance between point of continuous function there exists delta distance between input point
 
 ---
-### continuity formula
+### continuous formula
 $$
 \begin{aligned}
 \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
@@ -343,26 +343,11 @@ f = \text{bijection}
 $$
 
 ---
-### pointwise
-- parameter dependent point
-
----
-### pointwise formula
-$$
-\begin{aligned}
-\forall x, \exists p: P(x, p) \\
-x = \text{point} \\
-p = \text{parameter} \\
-P = \text{proposition}
-\end{aligned}
-$$
-
----
-### uniformity
+### uniform
 - parameter independent point
 
 ---
-### uniformity formula
+### uniform formula
 $$
 \begin{aligned}
 \exists p, \forall x: P(x, p) \\
@@ -373,11 +358,11 @@ P = \text{proposition}
 $$
 
 ---
-### uniform continuity
+### uniform continuous
 - for every epsilon distance between every point of continuous function there exists delta distance between every input point
 
 ---
-### uniform continuity formula
+### uniform continuous formula
 $$
 \begin{aligned}
 \forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\

@@ -38,7 +38,7 @@ $$
 ### joint probability mass function formula
 $$
 \begin{aligned}
-P(a \le X \le b, c \le Y \le d) = \sum_{a\le x_{i} \le b} \sum_{c\le y_{i} \le d} P(X = x_{i}, Y = y_{j}) \\  
+P(a \le X \le b, c \le Y \le d) = \sum_{a\le x_{i} \le b} \sum_{c\le y_{j} \le d} P(X = x_{i}, Y = y_{j}) \\  
 P(X \le x, Y \le y) = \sum_{x_{i}\le x}\sum_{y_{j}\le y} P(X = x_{i}, Y = y_{j}) \\
 P(X, Y) = \sum_{i}\sum_{j} P(X = x_{i}, Y = y_{j}) = 1 \\  
 P(X = x, Y = y) = P(X \le x, Y \le y) - \\
@@ -56,8 +56,8 @@ $$
 ### joint probability density function formula
 $$
 \begin{aligned}
-P(X=a,Y=b) = 0 \\  
-P(X \in \mathbb{R},Y \in \mathbb{R}) = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f_{X,Y}(x,y)dy dx = 1 \\  
+P(X=x,Y=y) = 0 \\  
+P(X \in A,Y \in B) = \int_{A}\int_{B} f_{X,Y}(x,y)dy dx = 1 \\  
 P(X \le a, Y \le b) = \int_{-\infty}^{a}\int_{-\infty}^{b} f_{X,Y}(x,y)dydx = F_{X,Y}(a, b) \\
 P(a \le X \le b, c \le Y \le d) = \int_{a}^b \int_{c}^d f_{X,Y}(x,y)dydx = F_{X,Y}(b,d) - \\
 F_{X,Y}(a,d) - \\
@@ -104,8 +104,10 @@ $$
 ### independent random variable formula
 $$
 \begin{aligned}
-P(X = x, Y = y) = P(X = x)P(Y = y) \\
-f_{X,Y}(x, y) = f_{X}(x)f_{Y}(y) 
+P(X = x \mid Y = y) = P(X = x) \\
+P(Y = y \mid X = x) = P(Y = y) \\
+X, Y = \text{random variable} \\
+x, y = \text{real number}
 \end{aligned}
 $$
 
@@ -117,7 +119,8 @@ $$
 ### dependent random variable formula
 $$
 \begin{aligned}
-P(X \in A, Y \in B) = P(X \in A\mid Y \in B)P(Y \in B) \\
+P(X = x, Y = y) \ne P(X = x)P(Y = y) \\
+f_{X,Y}(x, y) \ne f_{X}(x)f_{Y}(y) \\
 X, Y = \text{random variable} \\
 x, y = \text{real number}
 \end{aligned}
@@ -131,7 +134,7 @@ $$
 ### conditional probability formula
 $$
 \begin{aligned}
-P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} \\
+P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} = \sum_{x} P(X = x \mid Y = y) \\
 f_{X\mid Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
 \end{aligned}
 $$
@@ -186,11 +189,10 @@ $$
 ### convolution formula
 $$
 \begin{aligned}
-F_{X+Y}(z) = \int_{-\infty}^\infty F_{X}(z-y)f_{Y}(y)dy \\
-F_{X+Y}(z) = \int_{-\infty}^\infty F_{Y}(z-x)f_{X}(x)dx \\
-P(X + Y = z) = \sum_{x} P(X = x)P(Y = z-x) \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{X}(x)f_{Y}(z-x)dx \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{Y}(y)f_{X}(z-y)dy 
+P(X + Y = z) = \sum_{x} P(Z = z-x)P(X = x) \\
+P(X + Y = z) = \sum_{y} P(Z = z-y)P(Y = y) \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-x)f_{X}(x)dx \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-y)f_{Y}(y)dy 
 \end{aligned}
 $$
 
