@@ -307,11 +307,11 @@ f = \text{admissible function}
 $$
 
 ---
-### first-order type
+### first-order
 - highest derivative equal first derivative
 
 ---
-### first-order type formula
+### first-order formula
 $$
 \begin{aligned}
 L(x, f, f') \\
@@ -322,11 +322,11 @@ f, f' = \text{admissible function}
 $$
 
 ---
-### fixed-fixed type
+### fixed-fixed
 - vector space satisfy both boundary condition
 
 ---
-### fixed-fixed type formula
+### fixed-fixed formula
 $$
 \begin{aligned}
 \mathcal V = \set{f \in C^2[a, b] \mid f(a) = \alpha, f(b) = \beta} \\
@@ -339,11 +339,11 @@ h = \text{admissible variation} \\
 $$
 
 ---
-### variational
+### first-order fixed-fixed variational
 - problem of finding the extremum of first-order, fixed-fixed functional aka extremal
 
 ---
-### variational formula
+### first-order fixed-fixed variational formula
 $$
 \begin{aligned}
 F[f] = \int_{a}^b L(x, f, f')dx \\
@@ -382,27 +382,35 @@ $$
 ### legendre condition formula
 $$
 \begin{aligned}
-\frac{\partial^2 L}{\partial (f')^2} \ge 0 \\
-\frac{\partial^2 L}{\partial (f')^2} \le 0 \\
+\frac{\partial^2 L}{\partial (f')^2} \ge 0 \implies f_* = \min(F) \\
+\frac{\partial^2 L}{\partial (f')^2} \le 0 \implies f_* = \max(F) \\
+L = \text{lagrangian} \\
+f, f' = \text{admissible function} \\
+f_* = \text{local extremizer} \\
+F = \text{functional}
 \end{aligned}
 $$
 
 ---
 ### analysis of candidate
-- solve euler-lagrange equation for extremal candidate
+- solve euler-lagrange equation for extremal
 - apply boundary condition for constant of integration
 - substitute unperturbed variation into functional
 - integrate first variation by parts
-- eliminate admissible variation term(s) with boundary condition
-- sign of functional difference equal sign of extremal candidate
+- eliminate admissible variation term with boundary condition
+- sign of functional difference equal sign of extremal
 
 ---
 ### analysis of candidate formula
 $$
 \begin{aligned}
-F[y] - F[y_*] \le 0 \implies y_* = \max(F) \\
-F[y] - F[y_*] \ge 0 \implies y_* = \min(F) \\
-h = y - y_*
+F[f] - F[f_*] \le 0 \implies f_* = \max(F) \\
+F[f] - F[f_*] \ge 0 \implies f_* = \min(F) \\
+h = f - f_* \\
+f = \text{admissible function} \\
+F = \text{functional} \\
+f_* = \text{local extremizer} \\
+h = \text{admissible variation}
 \end{aligned}
 $$
 
@@ -430,11 +438,11 @@ $$
 ### fundamental lemma property formula
 $$
 \begin{align}
-\forall h \in C^n[a, b]: \int_{a}^b g(x)h(x)dx = 0 \implies \forall x \in [a, b]: g(x) = 0 \\
+\forall h \in C^n[a, b]: \int_{a}^b \phi(x)h(x)dx = 0 \implies \forall x \in [a, b]: \phi(x) = 0 \\
 h^{(k)}(a) = h^{(k)}(b) = 0 \\
 k = 0, \dots, \mu \le n \\
 h = \text{admissible variation} \\
-g = \text{continuous function} \\
+\phi = \text{continuous function} \\
 x = \text{independent variable} 
 \end{align}
 $$
@@ -447,13 +455,76 @@ $$
 ### sign lemma property formula
 $$
 \begin{aligned}
-I(h)\ge 0 \implies \forall x\in [a,b],\ \phi_{\nu\nu}(x)\ge 0 \\
+I(h)\ge 0 \implies \forall x\in [a,b]: \phi_{\nu\nu}(x)\ge 0 \\
 I(h)=\int_{a}^b \sum_{i=0}^{\nu}\sum_{j=0}^{\nu}\phi_{ij}(x)h^{(i)}(x)h^{(j)}(x)dx \\
-\forall h\in C^n[a,b]: 
-h^{(k)}(a)=h^{(k)}(b)=0 \text{ for } k=0,\dots,\mu \\
+h^{(k)}(a) = h^{(k)}(b) = 0 \\
+k = 0, \dots, \mu \\
 h = \text{admissible variation} \\
 \phi = \text{continuous function} \\
 x = \text{independent variable}
+\end{aligned}
+$$
+
+---
+### fixed-free
+- vector space satisfy single boundary condition
+
+---
+### fixed-free formula
+$$
+\begin{aligned}
+\mathcal V = \set{f \in C^2[a, b] \mid f(a) = \alpha} \\
+\mathcal V_{0} = \set{h \in C^2[a, b] \mid h(a) = 0} \\
+\mathcal V, \mathcal V_{0} = \text{vector space} \\
+f = \text{admissible function} \\
+h = \text{admissible variation} \\
+\alpha = \text{constant}
+\end{aligned}
+$$
+
+---
+### first-order fixed-free variational
+- problem of finding the extremum of first-order, fixed-free functional aka extremal
+
+---
+### first-order fixed-free variational formula
+$$
+\begin{aligned}
+F[f] = \int_{a}^b L(x, f, f')dx + G(y)]_{x=b} \\
+F = \text{functional} \\
+f, f' = \text{admissible function} \\
+L = \text{lagrangian} \\
+x = \text{independent variable} \\
+G = \text{free-end}
+\end{aligned}
+$$
+
+---
+### essential boundary condition
+- boundary condition associated with the fixed-end
+
+---
+### essential boundary condition formula
+$$
+\begin{aligned}
+f(a) = \alpha \\
+f = \text{admissible function} \\
+\alpha = \text{constant}
+\end{aligned}
+$$
+
+---
+### natural boundary condition
+- boundary condition associated with the free-end
+
+---
+### natural boundary condition formula
+$$
+\begin{aligned}
+[\frac{\partial L}{\partial f'} + \frac{\partial G}{\partial y}]_{x = b} = 0 \\
+L = \text{lagrangian} \\
+f, f' = \text{admissible function} \\
+G = \text{free-end}
 \end{aligned}
 $$
 
