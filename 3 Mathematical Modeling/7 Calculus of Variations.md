@@ -392,7 +392,7 @@ F = \text{functional}
 $$
 
 ---
-### analysis of candidate
+### variational calculus
 - solve euler-lagrange equation for extremal
 - apply boundary condition for constant of integration
 - substitute unperturbed variation into functional
@@ -401,7 +401,7 @@ $$
 - sign of functional difference equal sign of extremal
 
 ---
-### analysis of candidate formula
+### variational calculus formula
 $$
 \begin{aligned}
 F[f] - F[f_*] \le 0 \implies f_* = \max(F) \\
@@ -490,7 +490,7 @@ $$
 ### first-order fixed-free variational formula
 $$
 \begin{aligned}
-F[f] = \int_{a}^b L(x, f, f')dx + G(y)]_{x=b} \\
+F[f] = \int_{a}^b L(x, f, f')dx + [G(f)]_{x=b} \\
 F = \text{functional} \\
 f, f' = \text{admissible function} \\
 L = \text{lagrangian} \\
@@ -521,7 +521,7 @@ $$
 ### natural boundary condition formula
 $$
 \begin{aligned}
-[\frac{\partial L}{\partial f'} + \frac{\partial G}{\partial y}]_{x = b} = 0 \\
+[\frac{\partial L}{\partial f'} + \frac{\partial G}{\partial f}]_{x = b} = 0 \\
 L = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
 G = \text{free-end}
@@ -529,11 +529,122 @@ G = \text{free-end}
 $$
 
 ---
-### term
-- definition
+### second-order
+- highest derivative equal second derivative
 
 ---
-### term
-- definition
+### second-order formula
+$$
+\begin{aligned}
+L(x, f, f', f'') \\
+
+L = \text{lagrangian} \\
+x = \text{independent variable} \\
+f, f', f'' = \text{admissible function} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
+### fixed-fixed
+- vector space satisfy both boundary condition
+
+---
+### fixed-fixed formula
+$$
+\begin{aligned}
+\mathcal V = \set{f \in C^4[a, b] \mid f(a) = \alpha, f'(a) = \gamma, f(b) = \beta, f'(b) = \eta} \\
+\mathcal V_{0} = \set{h \in C^4[a, b] \mid h(a) = 0, h'(a) = 0, h(b) = 0, h'(b) = 0 } \\
+\mathcal V, \mathcal V_{0} = \text{vector space} \\
+f = \text{admissible function} \\
+h = \text{admissible variation} \\
+\alpha, \beta, \gamma, \eta = \text{constant}
+\end{aligned}
+$$
+
+---
+### second-order fixed-fixed variational
+- problem of finding the extremum of first-order, fixed-fixed functional aka extremal
+
+---
+### second-order fixed-fixed variational formula
+$$
+\begin{aligned}
+F[f] = \int_{a}^b L(x, f, f', f'')dx \\
+F = \text{functional} \\
+f, f', f'' = \text{admissible function} \\
+L = \text{lagrangian} \\
+x = \text{independent variable} 
+\end{aligned}
+$$
+
+---
+### euler-lagrange equation
+- local extremal of functional must satisfy equation
+
+---
+### euler-lagrange equation formula
+$$
+\begin{aligned}
+\frac{\partial L}{\partial f} - \frac{d}{dx}(\frac{\partial L}{\partial f'}) + \frac{d^2}{dx^2}(\frac{\partial L}{\partial f''}) = 0 \\
+f(a) = \alpha \\
+f'(a) = \gamma \\
+f(b) = \beta \\
+f'(b) = \eta \\
+a < x < b \\
+L = \text{lagrangian} \\
+f, f' = \text{admissible function} \\
+x = \text{independent variable} \\
+\alpha, \beta, \gamma, \eta = \text{constant}
+\end{aligned}
+$$
+
+---
+### legendre condition
+- local minimizer of functional must satisfy condition
+- local maximizer of functional must satisfy condition
+
+---
+### legendre condition formula
+$$
+\begin{aligned}
+\frac{\partial^2 L}{\partial (f'')^2} \ge 0 \implies f_* = \min(F) \\
+\frac{\partial^2 L}{\partial (f'')^2} \le 0 \implies f_* = \max(F) \\
+L = \text{lagrangian} \\
+f, f' = \text{admissible function} \\
+f_* = \text{local extremizer} \\
+F = \text{functional}
+\end{aligned}
+$$
+
+---
+### essential boundary condition
+- boundary condition associated with the fixed-end
+
+---
+### essential boundary condition formula
+$$
+\begin{aligned}
+f(a) = \alpha \\
+f'(a) = \gamma \\
+f, f' = \text{admissible function} \\
+\alpha, \gamma = \text{constant}
+\end{aligned}
+$$
+
+---
+### natural boundary condition
+- boundary condition associated with the free-end
+
+---
+### natural boundary condition formula
+$$
+\begin{aligned}
+f(a) = \text{free} \implies [\frac{\partial L}{\partial f'} - \frac{d}{dx}(\frac{\partial L}{\partial f''})]_{x=a} = 0 \\
+f'(a) = \text{free} \implies [\frac{\partial L}{\partial f''}]_{x=a} = 0 \\
+f(b) = \text{free} \implies [\frac{\partial L}{\partial f'} - \frac{d}{dx}(\frac{\partial L}{\partial f''})]_{x=b} = 0 \\
+f'(b) = \text{free} \implies [\frac{\partial L}{\partial f''}]_{x=b} = 0 
+\end{aligned}
+$$
 
 ---
