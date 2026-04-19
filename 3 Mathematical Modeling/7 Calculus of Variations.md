@@ -246,7 +246,7 @@ $$
 ### first variation formula
 $$
 \begin{aligned}
-\delta F[f, h] = \left. \frac{d}{d\epsilon}F[f + \epsilon h]\right|_{\epsilon=0} \\
+\delta F[f, h] = \frac{d}{d\epsilon}F[f + \epsilon h]_{\epsilon=0} \\
 F = \text{functional} \\
 f = \text{admissible function} \\
 \epsilon = \text{parameter} \\
@@ -279,7 +279,7 @@ $$
 ### second variation formula
 $$
 \begin{aligned}
-\delta^2 F[f, h] = \left. \frac{d^2}{d\epsilon^2}F[f + \epsilon h]\right|_{\epsilon=0} \\
+\delta^2 F[f, h] = \frac{d^2}{d\epsilon^2}F[f + \epsilon h]_{\epsilon=0} \\
 F = \text{functional} \\
 f = \text{admissible function} \\
 h = \text{admissible variation} \\
@@ -521,7 +521,8 @@ $$
 ### natural boundary condition formula
 $$
 \begin{aligned}
-[\frac{\partial L}{\partial f'} + \frac{\partial G}{\partial f}]_{x = b} = 0 \\
+[\frac{\partial G}{\partial f} + \frac{\partial L}{\partial f'}]_{x = b} = 0 \\
+[\frac{\partial G}{\partial f} - \frac{\partial L}{\partial f'}]_{x = a} = 0 \\
 L = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
 G = \text{free-end}

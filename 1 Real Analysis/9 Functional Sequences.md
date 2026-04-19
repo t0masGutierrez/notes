@@ -1,0 +1,172 @@
+### pointwise
+- parameter dependent point
+
+---
+### pointwise formula
+$$
+\begin{aligned}
+\forall x, \exists p: P(x, p) \\
+x = \text{point} \\
+p = \text{parameter} \\
+P = \text{proposition}
+\end{aligned}
+$$
+
+---
+### pointwise convergent
+- for every point there exists limit of sequence
+
+---
+### pointwise convergent formula
+$$
+\begin{aligned}
+\forall x \in S: \lim_{n \rightarrow \infty} f_{n}(x) = f(x) \\
+f_{n} : S \rightarrow \mathbb R \\
+f = \text{pointwise limit} \\
+\set{f_{n}} = \text{pointwise convergent sequence} 
+\end{aligned}
+$$
+
+---
+### limit interchange
+- interchange of limit and operation equal preservation of operation under limit
+
+---
+### limit interchange formula
+$$
+\begin{aligned}
+T(\lim_{n \rightarrow \infty} f_{n}) = \lim_{n \rightarrow \infty} T(f_{n}) \\
+T = \text{operation} \\
+\set{f_{n}} = \text{sequence}
+\end{aligned}
+$$
+
+---
+### limit interchange property
+- pointwise convergence does not preserve continuity
+- pointwise convergence does not preserve differentiability
+- pointwise convergence does not preserve integrability
+
+---
+### limit interchange property formula
+$$
+\begin{aligned}
+\exists x \in S: \lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_{n}(t) \ne \lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_{n}(t) \\
+\exists x \in S: \frac{d}{dx} \lim_{n \rightarrow \infty} f_{n}(x) \ne \lim_{n \rightarrow \infty} f_{n}'(x) \\
+\exists a < b: \int_{a}^b \lim_{n \rightarrow \infty} f_{n}(x)dx \ne \lim_{n \rightarrow \infty}\int_{a}^b f_{n}(x)dx \\
+\end{aligned}
+$$
+
+---
+### uniform convergent
+- there exists limit of sequence for every point
+
+---
+### uniform convergent formula
+$$
+\begin{aligned}
+\forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
+f_{n} : S \rightarrow \mathbb R \\
+f = \text{uniform limit} \\
+\set{f_{n}} = \text{uniform convergent sequence} 
+\end{aligned}
+$$
+
+---
+### supremum uniform convergence property
+- maximum error approaches zero as limit approaches infinity
+
+---
+### supremum uniform convergence property formula
+$$
+\begin{aligned}
+\forall x \in S:\lim_{n \rightarrow \infty}\sup_{x \in S}|f_{n}(x) - f(x)| = 0 \\
+f_{n} : S \rightarrow \mathbb R \\
+f = \text{uniform limit} \\
+\set{f_{n}} = \text{uniform convergent sequence} 
+\end{aligned}
+$$
+
+---
+### continuous uniform convergence property
+- uniform convergent sequence preserve continuity
+
+---
+### continuous uniform convergence property formula
+$$
+\begin{aligned}
+
+\end{aligned}
+$$
+
+---
+### differentiable uniform convergence property
+- uniform convergent sequence preserve integrability
+
+---
+### differentiable uniform convergence property formula
+$$
+\begin{aligned}
+
+\end{aligned}
+$$
+
+---
+### integrable uniform convergence property
+- uniform convergent sequence preserve integrability
+
+---
+### integrable uniform convergence property formula
+$$
+\begin{aligned}
+
+\end{aligned}
+$$
+
+---
+### cauchy uniform convergence property
+- uniform convergent sequence equal uniform cauchy sequence
+
+---
+### cauchy uniform convergence property formula
+$$
+\begin{aligned}
+\forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: |f_{n}(x) - f_{m}(x)| < \epsilon \\
+f_{n} : S \rightarrow \mathbb R \\
+f = \text{uniform limit} \\
+\set{f_{n}} = \text{uniform convergent sequence} 
+\end{aligned}
+$$
+
+---
+### series
+- sum of terms of sequence
+
+---
+### series formula
+$$
+\begin{aligned}
+S_{n}(x) =\sum_{k=1}^n f_{k}(x) \\
+f_{k} : S \rightarrow \mathbb R \\
+\set{S_{n}}, \set{f_{k}} = \text{sequence} \\
+\sum f_{k} = \text{series}
+\end{aligned}
+$$
+
+---
+### series uniform convergence property
+- definition
+
+---
+### series uniform convergence property formula
+$$
+\begin{aligned}
+\forall x \in S: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |S_{n}(x) - S(x)| < \epsilon \\
+S(x) = \lim_{n \rightarrow \infty}\sum_{k=1}^n f_{k}(x) \\
+f_{n} : S \rightarrow \mathbb R \\
+S = \text{uniform limit} \\
+\set{S_{n}} = \text{uniform convergent sequence}
+\end{aligned}
+$$
+
+---
