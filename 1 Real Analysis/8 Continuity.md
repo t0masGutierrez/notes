@@ -1,36 +1,3 @@
-### epsilon-delta limit
-- function approaches limit as input point approaches limit point
-
----
-### epsilon-delta limit formula
-$$
-\begin{aligned}
-\lim_{x \rightarrow x_{0}} f(x) = f(x_{0}) \iff \forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
-f: S \subset X \rightarrow Y \\
-x_{0} = \text{limit point} \\
-f(x_{0}) = \text{limit} \\
-X, Y = \text{metric space} 
-\end{aligned}
-$$
-
----
-### sequential limit
-- function approaches limit as input term approaches sequential limit
-
----
-### sequential limit formula
-$$
-\begin{aligned}
-\lim_{x \rightarrow a} f(x) = f(a) \iff \forall \set{a_{n}} \subset S: \lim_{n\rightarrow \infty} a_{n} = a \implies \lim_{n\rightarrow \infty} f(a_{n}) = f(a) \\
-f: S \subset X \rightarrow Y \\
-a = \text{sequential limit} \\
-f(a) = \text{limit} \\
-\set{a_{n}} = \text{sequence} \\
-X, Y = \text{metric space} 
-\end{aligned}
-$$
-
----
 ### limit property
 - unique
 - addition
@@ -100,9 +67,9 @@ $$
 ### limit continuity property formula
 $$
 \begin{aligned}
-\forall x \in S:\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \\
+\forall t \in X:\lim_{x\rightarrow t}f(x) = f(t) \\
 f: S \subset X \rightarrow Y \\
-x_{0} = \text{limit point} \\
+t = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -116,11 +83,13 @@ $$
 ### convergence continuity property formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_{n}, a) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(f(a_{n}), f(a)) < \epsilon \\
+\forall a \in X, \forall \set{a_{n}} \subset X: \lim_{n\rightarrow \infty} a_{n} = a \implies \lim_{n\rightarrow \infty} f(a_{n}) = f(a) \\
 f: X \rightarrow Y \\
-\set {a_{n}}, \set {f(a_{n})} = \text{convergent sequence} \\
 a = \text{sequential limit} \\
-f = \text{continuous function} 
+\set {a_{n}}, \set {f(a_{n})} = \text{convergent sequence} \\
+f = \text{continuous function} \\
+f(a) = \text{limit} \\
+X, Y = \text{metric space} 
 \end{aligned}
 $$
 
