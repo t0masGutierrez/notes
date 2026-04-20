@@ -104,7 +104,7 @@ $$
 
 ---
 ### differentiable uniform convergence property
-- uniform convergence preserve integrability
+- uniform convergence preserve differentiable
 
 ---
 ### differentiable uniform convergence property formula
@@ -159,32 +159,33 @@ f_{n} : S \rightarrow \mathbb R \\
 $$
 
 ---
-### series absolute convergence property
+### absolute convergence series property
 - finite sum of terms of sequence
 
 ---
-### series absolute convergence property formula
+### absolute convergence series property formula
 $$
 \begin{aligned}
 \sum_{n=1}^\infty |f_{n}(x)| < \infty \\
 f_{n} : S \rightarrow \mathbb R \\
 \set{f_{n}} = \text{sequence} \\
-\sum f_{n} = \text{series}
+\sum f_{n} = \text{absolute convergent series}
 \end{aligned}
 $$
 
 ---
-### series uniform convergence property
+### uniform convergence series property
 - there exists limit of series for every point
 
 ---
-### series uniform convergence property formula
+### uniform convergence series property formula
 $$
 \begin{aligned}
 \forall x \in S: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
 f_{n} : S \rightarrow \mathbb R \\
 f = \text{uniform limit} \\
-\set{f_{n}} = \text{uniform convergent sequence}
+\set{f_{n}} = \text{sequence} \\
+\sum f_{n} = \text{uniform convergent series}
 \end{aligned}
 $$
 
