@@ -109,11 +109,11 @@ X, Y = \text{metric space}
 $$
 
 ---
-### convergent continuity property
+### convergence continuity property
 - continuous function of convergent sequence equal convergent sequence
 
 ---
-### convergent continuity property formula
+### convergence continuity property formula
 $$
 \begin{aligned}
 \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(a_{n}, a) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: d(f(a_{n}), f(a)) < \epsilon \\
@@ -121,6 +121,24 @@ f: X \rightarrow Y \\
 \set {a_{n}}, \set {f(a_{n})} = \text{convergent sequence} \\
 a = \text{sequential limit} \\
 f = \text{continuous function} 
+\end{aligned}
+$$
+
+---
+### compact continuity property
+- continuous function of compact domain equal compact range
+
+---
+### compact continuity property formula
+$$
+\begin{aligned}
+\forall \set{A_{i}}_{i\in I} \subset Y, \exists \{A_{i_{j}}\}_{j=1}^n \subset \{A_{i}\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_{j}} \subset Y \\
+f: X \rightarrow Y \\
+A = \text{open set} \\
+\set{A} = \text{open cover} \\
+I, J = \text{index set} \\
+f = \text{continuous function} \\
+X, f(X) = \text{compact set}
 \end{aligned}
 $$
 
@@ -209,24 +227,6 @@ $$
 x_{0} = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
-\end{aligned}
-$$
-
----
-### compact continuity property
-- continuous function of compact domain equal compact range
-
----
-### compact continuity property formula
-$$
-\begin{aligned}
-\forall \set{A_{i}}_{i\in I} \subset Y, \exists \{A_{i_{j}}\}_{j=1}^n \subset \{A_{i}\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_{j}} \subset Y \\
-f: X \rightarrow Y \\
-A = \text{open set} \\
-\set{A} = \text{open cover} \\
-I, J = \text{index set} \\
-f = \text{continuous function} \\
-X, f(X) = \text{compact set}
 \end{aligned}
 $$
 
