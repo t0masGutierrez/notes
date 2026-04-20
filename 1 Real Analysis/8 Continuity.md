@@ -554,7 +554,7 @@ $$
 ### function norm formula
 $$
 \begin{aligned}
-\|f\| = \sup \set{|(f(x)|\mid x \in X} \\
+\|f\| = \sup \set{|f(x)|\mid x \in X} \\
 f = \text{continuous function} \\
 X = \text{compact set} 
 \end{aligned}

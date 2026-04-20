@@ -95,7 +95,10 @@ $$
 ### continuous uniform convergence property formula
 $$
 \begin{aligned}
-
+\lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_{n}(t) = \lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_{n}(t) \\
+x = \text{limit point} \\
+f_{n} = \text{continuous function} \\
+\set{f_{n}} = \text{uniform convergent sequence}
 \end{aligned}
 $$
 
@@ -146,26 +149,40 @@ $$
 ### series formula
 $$
 \begin{aligned}
-S_{n}(x) =\sum_{k=1}^n f_{k}(x) \\
-f_{k} : S \rightarrow \mathbb R \\
-\set{S_{n}}, \set{f_{k}} = \text{sequence} \\
-\sum f_{k} = \text{series}
+\sum_{n=1}^\infty f_{n}(x) \\
+f_{n} : S \rightarrow \mathbb R \\
+\set{f_{n}} = \text{sequence} \\
+\sum f_{n} = \text{series}
+\end{aligned}
+$$
+
+---
+### series absolute convergence property
+- finite sum of terms of sequence
+
+---
+### series absolute convergence property formula
+$$
+\begin{aligned}
+\sum_{n=1}^\infty |f_{n}(x)| < \infty \\
+f_{n} : S \rightarrow \mathbb R \\
+\set{f_{n}} = \text{sequence} \\
+\sum f_{n} = \text{series}
 \end{aligned}
 $$
 
 ---
 ### series uniform convergence property
-- definition
+- there exists limit of series for every point
 
 ---
 ### series uniform convergence property formula
 $$
 \begin{aligned}
-\forall x \in S: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |S_{n}(x) - S(x)| < \epsilon \\
-S(x) = \lim_{n \rightarrow \infty}\sum_{k=1}^n f_{k}(x) \\
+\forall x \in S: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
 f_{n} : S \rightarrow \mathbb R \\
-S = \text{uniform limit} \\
-\set{S_{n}} = \text{uniform convergent sequence}
+f = \text{uniform limit} \\
+\set{f_{n}} = \text{uniform convergent sequence}
 \end{aligned}
 $$
 
