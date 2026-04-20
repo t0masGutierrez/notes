@@ -89,7 +89,7 @@ $$
 
 ---
 ### continuous uniform convergence property
-- uniform convergent sequence preserve continuity
+- uniform convergence preserve continuity
 
 ---
 ### continuous uniform convergence property formula
@@ -104,25 +104,27 @@ $$
 
 ---
 ### differentiable uniform convergence property
-- uniform convergent sequence preserve integrability
+- uniform convergence preserve integrability
 
 ---
 ### differentiable uniform convergence property formula
 $$
 \begin{aligned}
-
+\frac{d}{dx} \lim_{n \rightarrow \infty} f_{n}(x) = \lim_{n \rightarrow \infty} f_{n}'(x) \\
+f_{n} = \text{continuous function} \\
+\set{f_{n}} = \text{uniform convergent sequence}
 \end{aligned}
 $$
 
 ---
 ### integrable uniform convergence property
-- uniform convergent sequence preserve integrability
+- uniform convergence preserve integrability
 
 ---
 ### integrable uniform convergence property formula
 $$
 \begin{aligned}
-
+\int_{a}^b \lim_{n \rightarrow \infty} f_{n}(x)dx = \lim_{n \rightarrow \infty}\int_{a}^b f_{n}(x)dx \\
 \end{aligned}
 $$
 
