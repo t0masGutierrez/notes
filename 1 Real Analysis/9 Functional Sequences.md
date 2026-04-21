@@ -1,18 +1,3 @@
-### pointwise
-- parameter dependent point
-
----
-### pointwise formula
-$$
-\begin{aligned}
-\forall x, \exists p: P(x, p) \\
-x = \text{point} \\
-p = \text{parameter} \\
-P = \text{proposition}
-\end{aligned}
-$$
-
----
 ### pointwise convergent
 - for every point there exists limit of sequence
 
@@ -181,8 +166,8 @@ $$
 ### uniform convergence series property formula
 $$
 \begin{aligned}
-\forall x \in S: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
-f_{n} : S \rightarrow \mathbb R \\
+\forall x \in X: |f_{n}(x)| \le M_{n} \land \sum M_{n} < \infty \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |\sum_{k=1}^n f_{k}(x) -  \sum_{k=1}^\infty f_{k}(x)| < \epsilon \\
+f_{n} : X \rightarrow \mathbb R \\
 f = \text{uniform limit} \\
 \set{f_{n}} = \text{sequence} \\
 \sum f_{n} = \text{uniform convergent series}

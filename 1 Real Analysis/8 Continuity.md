@@ -9,11 +9,11 @@
 ### limit property formula
 $$
 \begin{aligned}
-(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} f(x) = K) \implies L = K \\
-(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f+g)(x) = L + K \\
-(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f-g)(x) = L - K \\
-(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K) \implies \lim_{x \rightarrow x_{0}} (f \cdot g)(x) = L \cdot K \\
-(\lim_{x \rightarrow x_{0}} f(x) = L) \land (\lim_{x \rightarrow x_{0}} g(x) = K \ne 0) \implies \lim_{x \rightarrow x_{0}} (\frac{f}{g})(x) = \frac{L}{K}
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} f(x) = K) \implies L = K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f+g)(x) = L + K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f-g)(x) = L - K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f \cdot g)(x) = L \cdot K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K \ne 0) \implies \lim_{x \rightarrow t} (\frac{f}{g})(x) = \frac{L}{K}
 \end{aligned}
 $$
 
@@ -51,9 +51,9 @@ $$
 ### continuous formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x \in S: d(x, x_{0}) < \delta \implies d(f(x), f(x_{0})) < \epsilon \\
-f: S \subset X \rightarrow Y \\
-x_{0} = \text{continuous point} \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x \in X: d(x, t) < \delta \implies d(f(x), f(t)) < \epsilon \\
+f: X \rightarrow Y \\
+
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -68,7 +68,7 @@ $$
 $$
 \begin{aligned}
 \forall t \in X:\lim_{x\rightarrow t}f(x) = f(t) \\
-f: S \subset X \rightarrow Y \\
+f: X \rightarrow Y \\
 t = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
@@ -119,12 +119,12 @@ $$
 ### open inverse continuity property formula
 $$
 \begin{aligned}
-\forall y \in S, \exists \epsilon > 0: N_{\epsilon}(y) \subset S
-\implies \forall x \in f^{-1}(S), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(S) \\
-f:  X \rightarrow S \subset Y \\
+\forall y \in Y, \exists \epsilon > 0: N_{\epsilon}(y) \subset Y
+\implies \forall x \in f^{-1}(Y), \exists \epsilon > 0: N_{\epsilon}(x) \subset f^{-1}(Y) \\
+f:  X \rightarrow Y \\
 x, y = \text{interior point} \\
 N = \text{neighborhood} \\
-S, f^{-1}(S) = \text{open set} \\
+Y, f^{-1}(Y) = \text{open set} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -138,10 +138,10 @@ $$
 ### closed inverse continuity property formula
 $$
 \begin{aligned}
-S'\subset S \subset Y  \implies f^{-1}(S)' \subset f^{-1}(S) \subset X \\
-f:  X \rightarrow S \subset Y \\
-S', f^{-1}(S)' = \text{derived set} \\
-S, f^{-1}(S) = \text{closed set} \\
+Y'\subset Y \implies f^{-1}(Y)' \subset f^{-1}(Y) \\
+f:  X \rightarrow Y \\
+Y', f^{-1}(Y)' = \text{derived set} \\
+Y, f^{-1}(Y) = \text{closed set} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space}
 \end{aligned}
@@ -155,11 +155,11 @@ $$
 ### composite continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(f(x)) = g(f(x_{0})) \implies \lim_{x\rightarrow x_{0}}(g \circ f)(x) = (g \circ f)(x_{0}) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(f(x)) = g(f(t)) \implies \lim_{x\rightarrow t}(g \circ f)(x) = (g \circ f)(t) \\
 f: X \rightarrow Y \\
 g: Y \rightarrow Z \\
 g \circ f: X \rightarrow Z \\
-x_{0} = \text{limit point} \\
+t = \text{limit point} \\
 f, g = \text{continuous function} \\
 X, Y, Z = \text{metric space} 
 \end{aligned}
@@ -176,10 +176,10 @@ $$
 ### operation continuity property
 $$
 \begin{aligned}
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f+g)(x) = (f+g)(x_{0}) \\
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f-g)(x) = (f-g)(x_{0}) \\
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \implies \lim_{x\rightarrow x_{0}}(f\cdot g)(x) = (f\cdot g)(x_{0}) \\
-\lim_{x\rightarrow x_{0}}f(x) = f(x_{0}) \land \lim_{x\rightarrow x_{0}}g(x) = g(x_{0}) \ne 0 \implies \lim_{x\rightarrow x_{0}}(\frac{f}{g})(x) = (\frac{f}{g})(x_{0}) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f+g)(x) = (f+g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f-g)(x) = (f-g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f\cdot g)(x) = (f\cdot g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \ne 0 \implies \lim_{x\rightarrow t}(\frac{f}{g})(x) = (\frac{f}{g})(t) \\
 \end{aligned}
 $$
 
@@ -191,9 +191,9 @@ $$
 ### vector continuity property formula
 $$
 \begin{aligned}
-\forall i \in (1, \dots, k): \lim_{x\rightarrow x_{0}}f_{i}(x) = f_{i}(x_{0}) \\
-\vec f:X \rightarrow \mathbb R^k = [f_{1}(x), \dots, f_{k}(x)] \\
-x_{0} = \text{limit point} \\
+\forall i \in (1, \dots, k): \lim_{x\rightarrow t}f_{i}(x) = f_{i}(t) \\
+f:X \rightarrow \mathbb R^k = [f_{1}(x), \dots, f_{k}(x)] \\
+t = \text{limit point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
 \end{aligned}
@@ -207,8 +207,8 @@ $$
 ### locally bounded formula
 $$
 \begin{aligned}
-\forall x_{0} \in S, \exists \delta > 0, \exists M \in \mathbb R, \forall x \in S: x \in N_\delta(x_{0}) \implies |f(x)| \le M \\
-f: S \subset X \rightarrow \mathbb R \\
+\forall t \in X, \exists \delta > 0, \exists M \in \mathbb R, \forall x \in X: d(x, t) < \delta \implies |f(x)| \le M \\
+f: X \rightarrow \mathbb R \\
 f = \text{locally bounded function} \\
 X = \text{metric space} 
 \end{aligned}
@@ -222,8 +222,8 @@ $$
 ### globally bounded formula
 $$
 \begin{aligned}
-\exists M \in \mathbb R, \forall x \in S: |f(x)| \le M \\
-f: S \subset X \rightarrow \mathbb R \\
+\exists M \in \mathbb R, \forall x \in X: |f(x)| \le M \\
+f: X \rightarrow \mathbb R \\
 f = \text{bounded function} \\
 X = \text{metric space} 
 \end{aligned}
@@ -247,11 +247,11 @@ f(X) = \text{closed bounded set}
 $$
 
 ---
-### extreme continuity property
+### extremum continuity property
 - for every continuous function of compact domain there exists supremum and infimum
 
 ---
-### extreme continuity property formula
+### extremum continuity property formula
 $$
 \begin{aligned}
 \exists \sup f(X), \inf f(X) \in  Y: \inf f(X) \le f(X) \le \sup f(X) \\
@@ -259,24 +259,6 @@ f: X \rightarrow Y \\
 f = \text{continuous function} \\
 X = \text{compact set} \\
 Y = \text{metric space} \\
-\end{aligned}
-$$
-
----
-### compact inverse continuity property
-- for every injective continuous function of compact domain there exists inverse continuous function
-
----
-### compact inverse continuity property formula
-$$
-\begin{aligned}
-\forall f(x), \exists f^{-1}(y): \lim_{y\rightarrow y_{0}}f^{-1}(y) = f^{-1}(y_{0}) \\
-f: X \rightarrow Y \\
-f = \text{injective function} \\
-f, f^{-1} = \text{continuous function} \\
-y_{0} = \text{limit point} \\
-X = \text{compact set} \\
-Y = \text{metric space}
 \end{aligned}
 $$
 
@@ -312,21 +294,6 @@ f = \text{bijection}
 $$
 
 ---
-### uniform
-- parameter independent point
-
----
-### uniform formula
-$$
-\begin{aligned}
-\exists p, \forall x: P(x, p) \\
-x = \text{point} \\
-p = \text{parameter} \\
-P = \text{proposition}
-\end{aligned}
-$$
-
----
 ### uniform continuous
 - for every epsilon distance between every point of continuous function there exists delta distance between every input point
 
@@ -334,8 +301,8 @@ $$
 ### uniform continuous formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
-f: S \subset X \rightarrow Y \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in X: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
+f: X \rightarrow Y \\
 x_{1}, x_{2} = \text{continuous point} \\
 f = \text{continuous function} \\
 X, Y = \text{metric space} 
@@ -350,7 +317,7 @@ $$
 ### cauchy uniform continuity property formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(a_{n}, a_{m}) < \epsilon \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(f(a_{n}), f(a_{m})) < \epsilon \\
+\forall \delta > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(a_{n}, a_{m}) < \delta \implies \forall \epsilon > 0, \exists N \in \mathbb N, \forall n, m \ge N: d(f(a_{n}), f(a_{m})) < \epsilon \\
 f: X \rightarrow Y \\
 \{_{c}a_{n}\}, \{_{c}f(a_{n})\} = \text{cauchy sequence} \\
 f = \text{uniform continuous function}
@@ -365,13 +332,12 @@ $$
 ### compact uniform continuity property formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
-f: S \subset X \rightarrow Y \\
-x_{1}, x_{2} = \text{continuous point} \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in X: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
+f: X \rightarrow Y \\
 f = \text{continuous function} \\
 f = \text{uniform continuous function} \\
 X = \text{compact set} \\
-Y = \text{metric space} 
+X, Y = \text{metric space} 
 \end{aligned}
 $$
 
@@ -404,6 +370,7 @@ $$
 f: \overline S = X \rightarrow Y \\
 f, F = \text{uniform continuous function} \\
 S = \text{dense set} \\
+X = \text{metric space} \\
 Y = \text{complete metric space} 
 \end{aligned}
 $$
@@ -416,8 +383,8 @@ $$
 ### lipschitz formula
 $$
 \begin{aligned}
-\exists M \ge 0, \forall x_{1}, x_{2} \in S: \frac{d(f(x_{1}), f(x_{2}))}{d(x_{1}, x_{2})} \le M \\
-f: S \subset X \rightarrow Y \\
+\exists M \ge 0, \forall x_{1}, x_{2} \in X: \frac{d(f(x_{1}), f(x_{2}))}{d(x_{1}, x_{2})} \le M \\
+f: X \rightarrow Y \\
 M = \text{lipschitz constant} \\
 f = \text{M-lipschitz function}
 \end{aligned}
@@ -486,27 +453,27 @@ X = \text{complete metric space}
 $$
 
 ---
-### function space
+### continuous space
 - vector space of continuous function
 
 ---
-### function space formula
+### continuous space formula
 $$
 \begin{aligned}
-C(X) = \set{f:X \rightarrow \mathbb R | \lim_{x \rightarrow x_{0}}f(x) = f(x_{0})}\\
+C(X) = \set{f:X \rightarrow \mathbb R | \lim_{x \rightarrow t}f(x) = f(t)}\\
 f = \text{continuous function} \\
 X = \text{compact set}
 \end{aligned}
 $$
 
 ---
-### function algebra
+### continuous algebra
 - addition
 - multiplication
 - scalar multiplication
 
 ---
-### function algebra formula
+### continuous algebra formula
 $$
 \begin{aligned}
 f, g \in C(X) \implies f+g \in C(X) \\
@@ -516,44 +483,31 @@ c \in \mathbb R \land f \in C(X) \implies cf \in C(X)
 $$
 
 ---
-### function norm
-- magnitude of function
+### continuous metric
+- distance between continuous functions of set
 
 ---
-### function norm formula
+### continuous metric formula
 $$
 \begin{aligned}
-\|f\| = \sup \set{|f(x)|\mid x \in X} \\
-f = \text{continuous function} \\
-X = \text{compact set} 
-\end{aligned}
-$$
-
----
-### function metric
-- distance between functions of set
-
----
-### function metric formula
-$$
-\begin{aligned}
-d(f, g) = \|f-g\| = |f(x)-g(x)| \\
+d(f, g) = \sup_{x \in X} |f(x)-g(x)| \\
+X = \text{compact set} \\
 f, g = \text{continuous function} 
 \end{aligned}
 $$
 
 ---
-### function completeness
-- function space equal complete metric space
+### continuous complete
+- continuous space equal complete metric space
 
 ---
-### function completeness formula
+### continuous complete formula
 $$
 \begin{aligned}
-\forall \{_{c}a_{n}\} \subset C(X), \exists a \in C(X): \lim_{n \rightarrow \infty} {}_{c}a_{n} = a \\
-\{_{c}a_{n}\} = \text{cauchy sequence} \\
+\forall \{_{c}f_{n}\} \subset C(X), \exists f \in C(X): \lim_{n \rightarrow \infty} {}_{c}f_{n}(x) = f(x) \\
+\{_{c}f_{n}\} = \text{cauchy sequence} \\
 C(X) = \text{complete metric space} \\
-a = \text{sequential limit} \\
+f = \text{sequential limit} \\
 \end{aligned}
 $$
 
