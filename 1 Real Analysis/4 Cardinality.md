@@ -1,5 +1,5 @@
 ### convex
-- every coordinate along segment equal coordinate of convex set
+- segment between coordinates of convex set equal coordinate of convex set
 
 ---
 ### convex formula
@@ -33,19 +33,6 @@ $$
 \begin{aligned}
 I_{1} \subset I_{2} \subset \dots \subset I_{n} \subset I_{n+1} \subset \dots \\
 I = \text{interval}
-\end{aligned}
-$$
-
----
-### nested interval property
-- intersection of nested interval equal singleton set
-
----
-### nested interval property formula
-$$
-\begin{aligned}
-(\forall n \in \mathbb N: I_{n} = [a_{n}, b_{n}] \subset \mathbb R) \land (\lim_{n \rightarrow \infty}b_{n} - a_{n} = 0) \implies \exists x \in \mathbb R, \forall n \in \mathbb N: \bigcap_{n=1}^\infty I_{n} = \{x\} \\
-I_{n} = \text{nested interval} \\
 \end{aligned}
 $$
 
@@ -127,18 +114,6 @@ $$
 \begin{aligned}
 2^{\aleph_{0}} = \# \mathbb R \\
 \# = \text{cardinality}
-\end{aligned}
-$$
-
----
-### union cardinality property
-- size of set union equal sum of size subtraction with joint size
-
----
-### union cardinality property formula
-$$
-\begin{aligned}
-(\{0, 1,\dots, n\} \sim S) \land (S_{1}, \dots, S_{n}) \implies \# \bigcup_{i=1}^n S_{i} = \sum_{i=1}^n \# S_{i} - \# \bigcap_{i=1}^n S_{i} \\
 \end{aligned}
 $$
 
@@ -225,22 +200,46 @@ $$
 $$
 
 ---
+### nested interval property
+- intersection of nested interval equal singleton set
+
+---
+### nested interval property formula
+$$
+\begin{aligned}
+(\forall n \in \mathbb N: I_{n} = [a_{n}, b_{n}] \subset \mathbb R) \land (\lim_{n \rightarrow \infty}b_{n} - a_{n} = 0) \implies \exists x \in \mathbb R, \forall n \in \mathbb N: \bigcap_{n=1}^\infty I_{n} = \{x\} \\
+I_{n} = \text{nested interval} \\
+\end{aligned}
+$$
+
+---
+### cardinal union property
+- size of set union equal sum of size subtraction with joint size
+
+---
+### cardinal union property formula
+$$
+\begin{aligned}
+(\{0, 1,\dots, n\} \sim S) \land (S_{1}, \dots, S_{n}) \implies \# \bigcup_{i=1}^n S_{i} = \sum_{i=1}^n \# S_{i} - \# \bigcap_{i=1}^n S_{i} \\
+\end{aligned}
+$$
+
+---
 ### countable subset property
-- every subset of countable set equal countable set
+- subset of countable set equal countable set
 
 ---
 ### countable subset property formula
 $$
 \begin{aligned}
 (\mathbb N \sim S) \land (S_{1} \subset S) \implies \mathbb N \sim S_{1} \\
-S = \text{countable set} \\
-S_{1} = \text{countable set}
+S, S_{1} = \text{countable set} 
 \end{aligned}
 $$
 
 ---
 ### countable infinity property
-- every countable set equal infinite set
+- countable set equal infinite set
 
 ---
 ### countable infinity property formula
@@ -253,7 +252,7 @@ $$
 
 ---
 ### countable union property
-- every countable union of countable set equal countable set
+- countable union of countable set equal countable set
 
 ---
 ### countable union property formula
@@ -266,7 +265,7 @@ $$
 
 ---
 ### countable product property
-- every countable product of countable set equal countable set
+- countable product of countable set equal countable set
 
 ---
 ### countable product property formula
@@ -279,7 +278,7 @@ $$
 
 ---
 ### uncountable interval property
-- every interval of real numbers equal uncountable set
+- interval of real numbers equal uncountable set
 
 ---
 ### uncountable interval property formula

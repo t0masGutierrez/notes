@@ -200,6 +200,21 @@ X, Y = \text{metric space}
 $$
 
 ---
+### extremum continuity property
+- for every continuous function of compact domain there exists minimum and maximum
+
+---
+### extremum continuity property formula
+$$
+\begin{aligned}
+\exists x_{0}, x_{1} \in X: f(x_{0}) \le f(X) \le f(x_{1}) \\
+f: X \rightarrow \mathbb R \\
+f = \text{continuous function} \\
+X = \text{compact set}
+\end{aligned}
+$$
+
+---
 ### locally bounded
 - domain of locally bounded function within finite distance
 
@@ -243,21 +258,6 @@ f = \text{continuous function} \\
 f = \text{bounded function} \\
 X = \text{compact set} \\
 f(X) = \text{closed bounded set} 
-\end{aligned}
-$$
-
----
-### extremum continuity property
-- for every continuous function of compact domain there exists minimum and maximum
-
----
-### extremum continuity property formula
-$$
-\begin{aligned}
-\exists x_{0}, x_{1} \in X: f(x_{0}) \le f(X) \le f(x_{1}) \\
-f: X \rightarrow \mathbb R \\
-f = \text{continuous function} \\
-X = \text{compact set}
 \end{aligned}
 $$
 

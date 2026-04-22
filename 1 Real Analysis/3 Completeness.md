@@ -6,6 +6,7 @@
 $$
 \begin{aligned}
 S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \\
+S = \text{bounded above set} \\
 u = \text{upper bound} 
 \end{aligned}
 $$
@@ -19,6 +20,7 @@ $$
 $$
 \begin{aligned}
 S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \\
+S = \text{bounded below set} \\
 w = \text{lower bound} 
 \end{aligned}
 $$
@@ -32,6 +34,7 @@ $$
 $$
 \begin{aligned}
 S \subset \mathbb R, \exists u, w \in \mathbb R, \forall x \in S: w \le x \le u \\
+S = \text{bounded set} \\
 u = \text{upper bound} \\
 w = \text{lower bound} 
 \end{aligned}
@@ -46,6 +49,7 @@ $$
 $$
 \begin{aligned}
 S \subset \mathbb R, \exists u, w \in \mathbb R, \exists x \in S: (x < w) \lor (x > u) \\
+S = \text{unbounded set} \\
 u = \text{upper bound} \\
 w = \text{lower bound}
 \end{aligned}
@@ -60,6 +64,7 @@ $$
 $$
 \begin{aligned}
 (S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u) \land (\exists u' \in \mathbb R: u' < u \implies \exists x \in S: x > u') \implies u = \sup S \\
+S = \text{bounded above set} \\
 u = \text{supremum} \\
 \end{aligned}
 $$
@@ -73,6 +78,7 @@ $$
 $$
 \begin{aligned}
 (S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x) \land (\exists w' \in \mathbb R: w' > w \implies \exists x \in S: x < w') \implies w = \inf S \\
+S = \text{bounded below set} \\
 w = \text{infimum} \\
 \end{aligned}
 $$
@@ -88,28 +94,42 @@ $$
 \begin{aligned}
 S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \implies \exists \sup S \in \mathbb R \\
 S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \implies \exists \inf S \in \mathbb R \\
+S = \text{bounded set} \\
 u = \text{upper bound} \\
 w = \text{lower bound} 
 \end{aligned}
 $$
 
 ---
-### upper bound property
-- epsilon upper bound
-- sub upper bound
+### supremum epsilon property
+- set greater supremum subtraction with epsilon
 
 ---
-### upper bound property
+### supremum epsilon property formula
 $$
 \begin{aligned}
 S \subset \mathbb R, \forall \epsilon > 0, \exists x \in S: x > u - \epsilon \implies u = \sup S \\
+S = \text{bounded above set} \\
+u = \text{supremum}
+\end{aligned}
+$$
+
+---
+### supremum subset property
+- subset of set equal subset of supremum
+
+---
+### supremum subset property formula
+$$
+\begin{aligned}
 S_{2} \subset S_{1} \subset \mathbb R \implies \sup S_{2} \le \sup S_{1} \\
+S = \text{bounded above set}
 \end{aligned}
 $$
 
 ---
 ### supremum addition property
-- supremum of non-empty sum equal sum of supremum
+- supremum of nonempty sum equal sum of supremum
 
 ---
 ### supremum addition property formula
@@ -122,7 +142,7 @@ $$
 
 ---
 ### supremum union property
-- supremum of non-empty union equal maximum of supremum
+- supremum of nonempty union equal maximum of supremum
 
 ---
 ### supremum union property formula
@@ -141,7 +161,7 @@ $$
 ### archimedean property formula
 $$
 \begin{aligned}
-\forall x \in \mathbb R^+, \forall y \in \mathbb R, \exists n \in \mathbb N: y < nx
+\forall x \in \mathbb R^+, \forall y \in \mathbb R, \exists n \in \mathbb N: y < nx 
 \end{aligned}
 $$
 

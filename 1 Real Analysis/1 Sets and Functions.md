@@ -52,7 +52,7 @@ $$
 
 ---
 ### function
-- mapping between set such that for every preimage there exists unique image
+- mapping between set
 
 ---
 ### function formula

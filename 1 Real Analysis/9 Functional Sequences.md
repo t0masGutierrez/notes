@@ -1,3 +1,17 @@
+### limit interchange
+- interchange of limit and operation equal preservation of operation under limit
+
+---
+### limit interchange formula
+$$
+\begin{aligned}
+T(\lim_{n \rightarrow \infty} f_{n}) = \lim_{n \rightarrow \infty} T(f_{n}) \\
+T = \text{operation} \\
+\set{f_{n}} = \text{sequence}
+\end{aligned}
+$$
+
+---
 ### pointwise convergent
 - for every point there exists limit of sequence
 
@@ -13,16 +27,32 @@ f = \text{pointwise limit} \\
 $$
 
 ---
-### limit interchange
-- interchange of limit and operation equal preservation of operation under limit
+### uniform convergent
+- there exists limit of sequence for every point
 
 ---
-### limit interchange formula
+### uniform convergent formula
 $$
 \begin{aligned}
-T(\lim_{n \rightarrow \infty} f_{n}) = \lim_{n \rightarrow \infty} T(f_{n}) \\
-T = \text{operation} \\
-\set{f_{n}} = \text{sequence}
+\forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
+f_{n} : S \rightarrow \mathbb R \\
+f = \text{uniform limit} \\
+\set{f_{n}} = \text{uniform convergent sequence} 
+\end{aligned}
+$$
+
+---
+### series
+- sum of terms of sequence
+
+---
+### series formula
+$$
+\begin{aligned}
+\sum_{n=1}^\infty f_{n}(x) \\
+f_{n} : S \rightarrow \mathbb R \\
+\set{f_{n}} = \text{sequence} \\
+\sum f_{n} = \text{series}
 \end{aligned}
 $$
 
@@ -39,21 +69,6 @@ $$
 \exists x \in S: \lim_{t \rightarrow x} \lim_{n \rightarrow \infty} f_{n}(t) \ne \lim_{n \rightarrow \infty} \lim_{t \rightarrow x} f_{n}(t) \\
 \exists x \in S: \frac{d}{dx} \lim_{n \rightarrow \infty} f_{n}(x) \ne \lim_{n \rightarrow \infty} f_{n}'(x) \\
 \exists a < b: \int_{a}^b \lim_{n \rightarrow \infty} f_{n}(x)dx \ne \lim_{n \rightarrow \infty}\int_{a}^b f_{n}(x)dx \\
-\end{aligned}
-$$
-
----
-### uniform convergent
-- there exists limit of sequence for every point
-
----
-### uniform convergent formula
-$$
-\begin{aligned}
-\forall \epsilon > 0, \exists N \in \mathbb N, \forall n \ge N: |f_{n}(x) - f(x)| < \epsilon \\
-f_{n} : S \rightarrow \mathbb R \\
-f = \text{uniform limit} \\
-\set{f_{n}} = \text{uniform convergent sequence} 
 \end{aligned}
 $$
 
@@ -89,7 +104,7 @@ $$
 
 ---
 ### differentiable uniform convergence property
-- uniform convergence preserve differentiable
+- uniform convergence preserve differentiability
 
 ---
 ### differentiable uniform convergence property formula
@@ -125,21 +140,6 @@ $$
 f_{n} : S \rightarrow \mathbb R \\
 f = \text{uniform limit} \\
 \set{f_{n}} = \text{uniform convergent sequence} 
-\end{aligned}
-$$
-
----
-### series
-- sum of terms of sequence
-
----
-### series formula
-$$
-\begin{aligned}
-\sum_{n=1}^\infty f_{n}(x) \\
-f_{n} : S \rightarrow \mathbb R \\
-\set{f_{n}} = \text{sequence} \\
-\sum f_{n} = \text{series}
 \end{aligned}
 $$
 

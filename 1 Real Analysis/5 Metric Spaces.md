@@ -10,28 +10,6 @@ x \in \mathbb R \implies |x| \ge 0
 $$
 
 ---
-### absolute value property
-- negative
-- multiplication
-- addition
-- subtraction
-- absolute subtraction
-- subtraction
-
----
-### absolute value property formula
-$$
-\begin{aligned}
-|-x| = |x| \\
-|x \cdot y| = (|x|)(|y|) \\
-|x + y| \le |x| + |y| \\
-|x - y| \le |x| + |y| \\
-||x| - |y|| \le |x - y| \\
-|x - y| \le |x| + |y| \\
-\end{aligned}
-$$
-
----
 ### metric
 - distance between coordinates of set
 
@@ -277,6 +255,28 @@ X = \text{metric space} \\
 a_{n} = \text{sequence} \\
 B = \text{open ball} \\
 x_{i} = \text{center}
+\end{aligned}
+$$
+
+---
+### absolute value property
+- negative
+- multiplication
+- addition
+- subtraction
+- absolute subtraction
+- subtraction
+
+---
+### absolute value property formula
+$$
+\begin{aligned}
+|-x| = |x| \\
+|x \cdot y| = (|x|)(|y|) \\
+|x + y| \le |x| + |y| \\
+|x - y| \le |x| + |y| \\
+||x| - |y|| \le |x - y| \\
+|x - y| \le |x| + |y| \\
 \end{aligned}
 $$
 
