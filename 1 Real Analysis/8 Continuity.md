@@ -248,17 +248,16 @@ $$
 
 ---
 ### extremum continuity property
-- for every continuous function of compact domain there exists supremum and infimum
+- for every continuous function of compact domain there exists minimum and maximum
 
 ---
 ### extremum continuity property formula
 $$
 \begin{aligned}
-\exists \sup f(X), \inf f(X) \in  Y: \inf f(X) \le f(X) \le \sup f(X) \\
-f: X \rightarrow Y \\
+\exists x_{0}, x_{1} \in X: f(x_{0}) \le f(X) \le f(x_{1}) \\
+f: X \rightarrow \mathbb R \\
 f = \text{continuous function} \\
-X = \text{compact set} \\
-Y = \text{metric space} \\
+X = \text{compact set}
 \end{aligned}
 $$
 

@@ -259,21 +259,53 @@ $$
 ### conditional expectation formula
 $$
 \begin{aligned}
+E[X | Y = y] = \sum_{x} xP(X = x | Y = y) \\
+E[X | Y = y] = \int_{-\infty}^\infty x f_{X|Y}(x, y)dx \\
+X, Y = \text{random variable}
+\end{aligned}
+$$
+
+---
+### conditional expectation property
+- expectation equal expectation of conditional expectation
+
+---
+### conditional expectation property formula
+$$
+\begin{aligned}
 E[X] = E(E[X \mid Y]) \\
 X, Y = \text{random variable}
 \end{aligned}
 $$
 
 ---
-### conditional variation
-- variance of joint conditional random variable around mean
+### covariation
+- joint variance of two random variable around mean
 
 ---
-### conditional variation formula
+### covariation formula
 $$
 \begin{aligned}
-\text{Var}(X) = E[\text{Var}(X\mid Y)] + \text{Var}(E[X\mid Y]) \\
-X, Y = \text{random variable}
+\text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])] = E[XY] - E[X]E[Y] \\
+
+\end{aligned}
+$$
+
+---
+### covariation property
+- symmetry
+- identity
+- linearity
+- independence
+
+---
+### covariation property formula
+$$
+\begin{aligned}
+\text{Cov}(X, Y) = \text{Cov}(Y, X) \\
+\text{Cov}(X, X) = \text{Cov}(X) \\
+\text{Cov}(aX + bY, Z + c) = a \text{Cov}(X, Z) + b\text{Cov}(Y, Z) \\
+P(X \in A, Y \in B) = P(X \in A)P(Y \in B) \implies \text{Cov}(X, Y) = 0 
 \end{aligned}
 $$
 
