@@ -1,19 +1,138 @@
-### limit property
-- unique
-- addition
-- subtraction
-- multiplication
-- division
+### continuous
+- for every epsilon distance between point of continuous function there exists delta distance between input point
 
 ---
-### limit property formula
+### continuous formula
 $$
 \begin{aligned}
-(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} f(x) = K) \implies L = K \\
-(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f+g)(x) = L + K \\
-(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f-g)(x) = L - K \\
-(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f \cdot g)(x) = L \cdot K \\
-(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K \ne 0) \implies \lim_{x \rightarrow t} (\frac{f}{g})(x) = \frac{L}{K}
+\forall \epsilon > 0, \exists \delta > 0, \forall x \in X: d(x, t) < \delta \implies d(f(x), f(t)) < \epsilon \\
+f: X \rightarrow Y \\
+f = \text{continuous function} \\
+X, Y = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### uniform continuous
+- for every epsilon distance between every point of continuous function there exists delta distance between every input point
+
+---
+### uniform continuous formula
+$$
+\begin{aligned}
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in X: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
+f: X \rightarrow Y \\
+x_{1}, x_{2} = \text{continuous point} \\
+f = \text{continuous function} \\
+X, Y = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### lipschitz
+- every slope of lipschitz function within finite distance
+
+---
+### lipschitz formula
+$$
+\begin{aligned}
+\exists M \ge 0, \forall x_{1}, x_{2} \in X: \frac{d(f(x_{1}), f(x_{2}))}{d(x_{1}, x_{2})} \le M \\
+f: X \rightarrow Y \\
+M = \text{lipschitz constant} \\
+f = \text{M-lipschitz function}
+\end{aligned}
+$$
+
+---
+### separated
+- every point of 1st subset equal isolated point of 2nd subset and vice versa
+
+---
+### separated formula
+$$
+\begin{aligned}
+A, B \subset X \implies \overline A \cap B = A \cap \overline B = \emptyset \\
+A, B = \text{separated set} \\
+\overline A, \overline B = \text{closure} \\
+X = \text{metric space}
+\end{aligned}
+$$
+
+---
+### disconnected
+- there exists union of nonempty separated set
+
+---
+### disconnected formula
+$$
+\begin{aligned}
+\exists A, B \in X: S = A \cup B \\
+A, B = \text{separated set} \\
+X = \text{metric space} \\
+S = \text{disconnected set} 
+\end{aligned}
+$$
+
+---
+### path
+- continuous function connecting coordinate
+
+---
+### path formula
+$$
+\begin{aligned}
+\gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
+\gamma: [0, 1] \rightarrow X \\
+\gamma = \text{continuous function} \\
+x_{0}, x_{1} = \text{coordinate} \\
+X = \text{metric space} 
+\end{aligned} 
+$$
+
+---
+### path connected
+- for every coordinate of path connected set there exists continuous function connecting coordinate
+
+---
+### path connected formula
+$$
+\begin{aligned}
+\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
+\gamma: [0, 1] \rightarrow S \subset X \\
+x_{0}, x_{1} = \text{coordinate} \\
+S  = \text{path connected set} \\
+\gamma = \text{continuous function} \\
+X = \text{metric space} 
+\end{aligned} 
+$$
+
+---
+### locally bounded
+- domain of locally bounded function within finite distance
+
+---
+### locally bounded formula
+$$
+\begin{aligned}
+\forall t \in X, \exists \delta > 0, \exists M \in \mathbb R, \forall x \in X: d(x, t) < \delta \implies |f(x)| \le M \\
+f: X \rightarrow \mathbb R \\
+f = \text{locally bounded function} \\
+X = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### globally bounded
+- range of bounded function within finite distance
+
+---
+### globally bounded formula
+$$
+\begin{aligned}
+\exists M \in \mathbb R, \forall x \in X: |f(x)| \le M \\
+f: X \rightarrow \mathbb R \\
+f = \text{bounded function} \\
+X = \text{metric space} 
 \end{aligned}
 $$
 
@@ -44,18 +163,22 @@ f^{-1}(B^c) = f^{-1}(B)^c
 $$
 
 ---
-### continuous
-- for every epsilon distance between point of continuous function there exists delta distance between input point
+### limit property
+- unique
+- addition
+- subtraction
+- multiplication
+- division
 
 ---
-### continuous formula
+### limit property formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x \in X: d(x, t) < \delta \implies d(f(x), f(t)) < \epsilon \\
-f: X \rightarrow Y \\
-
-f = \text{continuous function} \\
-X, Y = \text{metric space} 
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} f(x) = K) \implies L = K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f+g)(x) = L + K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f-g)(x) = L - K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K) \implies \lim_{x \rightarrow t} (f \cdot g)(x) = L \cdot K \\
+(\lim_{x \rightarrow t} f(x) = L) \land (\lim_{x \rightarrow t} g(x) = K \ne 0) \implies \lim_{x \rightarrow t} (\frac{f}{g})(x) = \frac{L}{K}
 \end{aligned}
 $$
 
@@ -76,6 +199,24 @@ X, Y = \text{metric space}
 $$
 
 ---
+### operation continuity property
+- addition
+- subtraction
+- multiplication
+- division
+
+---
+### operation continuity property
+$$
+\begin{aligned}
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f+g)(x) = (f+g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f-g)(x) = (f-g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f\cdot g)(x) = (f\cdot g)(t) \\
+\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \ne 0 \implies \lim_{x\rightarrow t}(\frac{f}{g})(x) = (\frac{f}{g})(t) \\
+\end{aligned}
+$$
+
+---
 ### convergence continuity property
 - continuous function of convergent sequence equal convergent sequence
 
@@ -90,24 +231,6 @@ a = \text{sequential limit} \\
 f = \text{continuous function} \\
 f(a) = \text{limit} \\
 X, Y = \text{metric space} 
-\end{aligned}
-$$
-
----
-### compact continuity property
-- continuous function of compact domain equal compact range
-
----
-### compact continuity property formula
-$$
-\begin{aligned}
-\forall \set{A_{i}}_{i\in I} \subset Y, \exists \{A_{i_{j}}\}_{j=1}^n \subset \{A_{i}\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_{j}} \subset Y \\
-f: X \rightarrow Y \\
-A = \text{open set} \\
-\set{A} = \text{open cover} \\
-I, J = \text{index set} \\
-f = \text{continuous function} \\
-X, f(X) = \text{compact set}
 \end{aligned}
 $$
 
@@ -166,36 +289,20 @@ X, Y, Z = \text{metric space}
 $$
 
 ---
-### operation continuity property
-- addition
-- subtraction
-- multiplication
-- division
+### compact continuity property
+- continuous function of compact domain equal compact range
 
 ---
-### operation continuity property
+### compact continuity property formula
 $$
 \begin{aligned}
-\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f+g)(x) = (f+g)(t) \\
-\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f-g)(x) = (f-g)(t) \\
-\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \implies \lim_{x\rightarrow t}(f\cdot g)(x) = (f\cdot g)(t) \\
-\lim_{x\rightarrow t}f(x) = f(t) \land \lim_{x\rightarrow t}g(x) = g(t) \ne 0 \implies \lim_{x\rightarrow t}(\frac{f}{g})(x) = (\frac{f}{g})(t) \\
-\end{aligned}
-$$
-
----
-### vector continuity property
-- continuous vector equal coordinatewise continuous function
-
----
-### vector continuity property formula
-$$
-\begin{aligned}
-\forall i \in (1, \dots, k): \lim_{x\rightarrow t}f_{i}(x) = f_{i}(t) \\
-f:X \rightarrow \mathbb R^k = [f_{1}(x), \dots, f_{k}(x)] \\
-t = \text{limit point} \\
+\forall \set{A_{i}}_{i\in I} \subset Y, \exists \{A_{i_{j}}\}_{j=1}^n \subset \{A_{i}\}_{i\in I}: f(X) \subset \bigcup_{j=1}^n A_{i_{j}} \subset Y \\
+f: X \rightarrow Y \\
+A = \text{open set} \\
+\set{A} = \text{open cover} \\
+I, J = \text{index set} \\
 f = \text{continuous function} \\
-X, Y = \text{metric space} 
+X, f(X) = \text{compact set}
 \end{aligned}
 $$
 
@@ -211,100 +318,6 @@ $$
 f: X \rightarrow \mathbb R \\
 f = \text{continuous function} \\
 X = \text{compact set}
-\end{aligned}
-$$
-
----
-### locally bounded
-- domain of locally bounded function within finite distance
-
----
-### locally bounded formula
-$$
-\begin{aligned}
-\forall t \in X, \exists \delta > 0, \exists M \in \mathbb R, \forall x \in X: d(x, t) < \delta \implies |f(x)| \le M \\
-f: X \rightarrow \mathbb R \\
-f = \text{locally bounded function} \\
-X = \text{metric space} 
-\end{aligned}
-$$
-
----
-### globally bounded
-- range of bounded function within finite distance
-
----
-### globally bounded formula
-$$
-\begin{aligned}
-\exists M \in \mathbb R, \forall x \in X: |f(x)| \le M \\
-f: X \rightarrow \mathbb R \\
-f = \text{bounded function} \\
-X = \text{metric space} 
-\end{aligned}
-$$
-
----
-### closed bounded continuity property
-- continuous function of compact domain equal closed bounded range of k-dimensional real numbers and bounded function of k-dimensional real numbers
-
----
-### closed bounded continuity property formula
-$$
-\begin{aligned}
-f(X)' \subset f(X) \subset \mathbb R^k \land \exists M \in \mathbb R: |f(X)| \le M \\
-f: X \rightarrow \mathbb R^k \\
-f = \text{continuous function} \\
-f = \text{bounded function} \\
-X = \text{compact set} \\
-f(X) = \text{closed bounded set} 
-\end{aligned}
-$$
-
----
-### homeomorphism 
-- bijective continuous function with continuous inverse function
-
----
-### homeomorphism formula
-$$
-\begin{aligned}
-X \simeq Y \\
-f: X \rightarrow Y \\
-f, f^{-1} = \text{continuous function} \\
-f = \text{bijection} 
-\end{aligned}
-$$
-
----
-### compact homeomorphism property
-- bijective continuous function with compact domain equal homeomorphism
-
----
-### compact homeomorphism property formula
-$$
-\begin{aligned}
-X \simeq Y \\
-f: X \rightarrow Y \\
-X = \text{compact set} \\
-f = \text{continuous function} \\
-f = \text{bijection} 
-\end{aligned}
-$$
-
----
-### uniform continuous
-- for every epsilon distance between every point of continuous function there exists delta distance between every input point
-
----
-### uniform continuous formula
-$$
-\begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in X: d(x_{1}, x_{2}) < \delta \implies d(f(x_{1}), f(x_{2})) < \epsilon \\
-f: X \rightarrow Y \\
-x_{1}, x_{2} = \text{continuous point} \\
-f = \text{continuous function} \\
-X, Y = \text{metric space} 
 \end{aligned}
 $$
 
@@ -375,21 +388,6 @@ Y = \text{complete metric space}
 $$
 
 ---
-### lipschitz
-- every slope of lipschitz function within finite distance
-
----
-### lipschitz formula
-$$
-\begin{aligned}
-\exists M \ge 0, \forall x_{1}, x_{2} \in X: \frac{d(f(x_{1}), f(x_{2}))}{d(x_{1}, x_{2})} \le M \\
-f: X \rightarrow Y \\
-M = \text{lipschitz constant} \\
-f = \text{M-lipschitz function}
-\end{aligned}
-$$
-
----
 ### hierarchy lipschitz property
 - lipschitz function equal uniform continuous function
 - uniform continuous function equal continuous function
@@ -404,156 +402,6 @@ C^n = \text{continuous differentiable} \\
 LIP = \text{lipschitz} \\
 C_{u} = \text{uniform continuous} \\
 C = \text{continuous}
-\end{aligned}
-$$
-
----
-### fixed point
-- point that does not move under the function
-
----
-### fixed point formula
-$$
-\begin{aligned}
-f(x_*) = x_* \\
-x_* = \text{fixed point}
-\end{aligned}
-$$
-
----
-### contraction
-- function with decreasing distance
-
----
-### contraction formula
-$$
-\begin{aligned}
-d(f(x_{1}), f(x_{2})) \le \gamma d(x_{1}, x_{2}) \\
-0 < \gamma < 1 \\
-f = \text{contraction} 
-\end{aligned}
-$$
-
----
-### banach fixed point property
-- contraction of complete metric space with single fixed point must converge on fixed point with repeated iteration
-
----
-### banach fixed point property formula
-$$
-\begin{aligned}
-\forall x_{0} \in X: x_{n+1} = f(x_{n}) \implies \lim_{n \rightarrow \infty} x_{n} = x_* \\
-f : X \rightarrow X \\
-\set {x_{n}} = \text{convergent sequence} \\
-f = \text{contraction} \\
-x_* = \text{fixed point} \\
-X = \text{complete metric space} 
-\end{aligned}
-$$
-
----
-### continuous space
-- vector space of continuous function
-
----
-### continuous space formula
-$$
-\begin{aligned}
-C(X) = \set{f:X \rightarrow \mathbb R | \lim_{x \rightarrow t}f(x) = f(t)}\\
-f = \text{continuous function} \\
-X = \text{compact set}
-\end{aligned}
-$$
-
----
-### continuous algebra
-- addition
-- multiplication
-- scalar multiplication
-
----
-### continuous algebra formula
-$$
-\begin{aligned}
-f, g \in C(X) \implies f+g \in C(X) \\
-f, g \in C(X) \implies f\cdot g \in C(X) \\
-c \in \mathbb R \land f \in C(X) \implies cf \in C(X)
-\end{aligned}
-$$
-
----
-### continuous metric
-- distance between continuous functions of set
-
----
-### continuous metric formula
-$$
-\begin{aligned}
-d(f, g) = \sup_{x \in X} |f(x)-g(x)| \\
-X = \text{compact set} \\
-f, g = \text{continuous function} 
-\end{aligned}
-$$
-
----
-### continuous complete
-- continuous space equal complete metric space
-
----
-### continuous complete formula
-$$
-\begin{aligned}
-\forall \{_{c}f_{n}\} \subset C(X), \exists f \in C(X): \lim_{n \rightarrow \infty} {}_{c}f_{n}(x) = f(x) \\
-\{_{c}f_{n}\} = \text{cauchy sequence} \\
-C(X) = \text{complete metric space} \\
-f = \text{sequential limit} \\
-\end{aligned}
-$$
-
----
-### separated
-- every point of 1st subset equal isolated point of 2nd subset and vice versa
-
----
-### separated formula
-$$
-\begin{aligned}
-A, B \subset X \implies \overline A \cap B = A \cap \overline B = \emptyset \\
-A, B = \text{separated set} \\
-\overline A, \overline B = \text{closure} \\
-X = \text{metric space}
-\end{aligned}
-$$
-
----
-### disconnected
-- there exists union of nonempty separated set
-
----
-### disconnected formula
-$$
-\begin{aligned}
-\exists A, B \in X: S = A \cup B \\
-A, B = \text{separated set} \\
-X = \text{metric space} \\
-S = \text{disconnected set} 
-\end{aligned}
-$$
-
----
-### continuous connected property
-- continuous function of connected set equal connected set
-
----
-### continuous connected property formula
-$$
-\begin{aligned}
-\not\exists A, B \in Y: f(X) = A \cup B \\
-f: X \rightarrow Y \\
-A, B = \text{separated set} \\
-Y = \text{metric space} \\
-f = \text{continuous function} \\
-X, f(X) = \text{connected set} 
 \end{aligned}
 $$
 
@@ -582,39 +430,6 @@ f(a) < c < f(b) \implies \exists x \in (a, b): f(x) = c \\
 f: [a, b] \rightarrow \mathbb R \\
 f = \text{continuous function}
 \end{aligned}
-$$
-
----
-### path
-- continuous function connecting coordinate
-
----
-### path formula
-$$
-\begin{aligned}
-\gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
-\gamma: [0, 1] \rightarrow X \\
-\gamma = \text{continuous function} \\
-x_{0}, x_{1} = \text{coordinate} \\
-X = \text{metric space} 
-\end{aligned} 
-$$
-
----
-### path connected
-- for every coordinate of path connected set there exists continuous function connecting coordinate
-
----
-### path connected formula
-$$
-\begin{aligned}
-\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
-\gamma: [0, 1] \rightarrow S \subset X \\
-x_{0}, x_{1} = \text{coordinate} \\
-S  = \text{path connected set} \\
-\gamma = \text{continuous function} \\
-X = \text{metric space} 
-\end{aligned} 
 $$
 
 ---

@@ -69,7 +69,7 @@ $$
 
 ---
 ### central limit theorem
-- sampling distribution approaches normal distribution as sample size grows large regardless of the population distribution
+- sampling distribution approaches normal distribution as sample size gets large regardless of the population distribution
 
 ---
 ### central limit theorem formula

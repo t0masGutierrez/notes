@@ -17,7 +17,6 @@ $$
 ---
 ### joint cumulative distribution function
 - cumulative probability as function of joint random variable
-![](2%20Probability/Images/joint%20cumulative%20distribution%20function.png)
 
 ---
 ### joint cumulative distribution function formula
@@ -139,6 +138,21 @@ A = \text{event}
 $$
 
 ---
+### convolution
+- probability as function of sum of independent random variable
+
+---
+### convolution formula
+$$
+\begin{aligned}
+P(X + Y = z) = \sum_{x} P(Z = z-x)P(X = x) \\
+P(X + Y = z) = \sum_{y} P(Z = z-y)P(Y = y) \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-x)f_{X}(x)dx \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-y)f_{Y}(y)dy 
+\end{aligned}
+$$
+
+---
 ### independent random variable
 - 1st random variable cannot influence the outcome 2nd random variable
 
@@ -178,21 +192,6 @@ $$
 \begin{aligned}
 P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} = \sum_{x} P(X = x \mid Y = y) \\
 f_{X\mid Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
-\end{aligned}
-$$
-
----
-### convolution
-- probability as function of sum of independent random variable
-
----
-### convolution formula
-$$
-\begin{aligned}
-P(X + Y = z) = \sum_{x} P(Z = z-x)P(X = x) \\
-P(X + Y = z) = \sum_{y} P(Z = z-y)P(Y = y) \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-x)f_{X}(x)dx \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-y)f_{Y}(y)dy 
 \end{aligned}
 $$
 
@@ -306,6 +305,52 @@ $$
 \text{Cov}(X, X) = \text{Cov}(X) \\
 \text{Cov}(aX + bY, Z + c) = a \text{Cov}(X, Z) + b\text{Cov}(Y, Z) \\
 P(X \in A, Y \in B) = P(X \in A)P(Y \in B) \implies \text{Cov}(X, Y) = 0 
+\end{aligned}
+$$
+
+---
+### iid
+- independent and identically distributed
+
+---
+### iid formula
+$$  
+\begin{aligned}  
+\forall i, j \in (1, \dots, m): P(X_{i} \in A, X_{j} \in B) = P(X_{i} \in A)P(X_{j} \in B) \\  
+\forall i \in (1, \dots, m): X_{i} \sim N(\mu, \sigma^2) \\  
+X, Y = \text{random variable} \\  
+m = \text{number of random variables} \\  
+N = \text{probability distribution}  
+\end{aligned}  
+$$
+
+---
+### iid expectation
+- mean of iid random variable
+
+---
+### iid expectation formula
+$$
+\begin{aligned}
+E[\sum_{i=1}^n X_{i}] = n\mu \\
+X = \text{iid random variable} \\
+n = \text{sample size} \\
+\mu = \text{mean} \\
+\end{aligned}
+$$
+
+---
+### iid variation
+- variance of iid random variable around mean
+
+---
+### iid variation formula
+$$
+\begin{aligned}
+\text{Var}(\sum_{i=1}^n X_{i}) = n\sigma^2 \\
+X = \text{iid random variable} \\
+n = \text{sample size} \\
+\sigma^2 = \text{variance} \\
 \end{aligned}
 $$
 
