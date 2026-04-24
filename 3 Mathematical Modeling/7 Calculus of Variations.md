@@ -307,6 +307,29 @@ f = \text{admissible function}
 $$
 
 ---
+### variational calculus
+- solve euler-lagrange equation for extremal
+- apply boundary condition for constant of integration
+- substitute unperturbed variation into functional
+- integrate first variation by parts
+- eliminate admissible variation term with boundary condition
+- sign of functional difference equal sign of extremal
+
+---
+### variational calculus formula
+$$
+\begin{aligned}
+F[f] - F[f_*] \le 0 \implies f_* = \max(F) \\
+F[f] - F[f_*] \ge 0 \implies f_* = \min(F) \\
+h = f - f_* \\
+f = \text{admissible function} \\
+F = \text{functional} \\
+f_* = \text{local extremizer} \\
+h = \text{admissible variation}
+\end{aligned}
+$$
+
+---
 ### first-order
 - highest derivative equal first derivative
 
@@ -340,7 +363,7 @@ $$
 
 ---
 ### first-order fixed-fixed variational
-- problem of finding the extremum of first-order, fixed-fixed functional aka extremal
+- problem of finding the extremal of first-order, fixed-fixed functional
 
 ---
 ### first-order fixed-fixed variational formula
@@ -355,31 +378,27 @@ x = \text{independent variable}
 $$
 
 ---
-### euler-lagrange equation
+### first-order fixed-fixed euler-lagrange equation
 - local extremal of functional must satisfy equation
 
 ---
-### euler-lagrange equation formula
+### first-order fixed-fixed euler-lagrange equation formula
 $$
 \begin{aligned}
 \frac{\partial L}{\partial f} - \frac{d}{dx}(\frac{\partial L}{\partial f'}) = 0 \\
-f(a) = \alpha \\
-f(b) = \beta \\
-a < x < b \\
 L = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
-x = \text{independent variable} \\
-\alpha, \beta = \text{constant}
+x = \text{independent variable} 
 \end{aligned}
 $$
 
 ---
-### legendre condition
+### first-order fixed-fixed legendre condition
 - local minimizer of functional must satisfy condition
 - local maximizer of functional must satisfy condition
 
 ---
-### legendre condition formula
+### first-order fixed-fixed legendre condition formula
 $$
 \begin{aligned}
 \frac{\partial^2 L}{\partial (f')^2} \ge 0 \implies f_* = \min(F) \\
@@ -388,29 +407,6 @@ L = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
 f_* = \text{local extremizer} \\
 F = \text{functional}
-\end{aligned}
-$$
-
----
-### variational calculus
-- solve euler-lagrange equation for extremal
-- apply boundary condition for constant of integration
-- substitute unperturbed variation into functional
-- integrate first variation by parts
-- eliminate admissible variation term with boundary condition
-- sign of functional difference equal sign of extremal
-
----
-### variational calculus formula
-$$
-\begin{aligned}
-F[f] - F[f_*] \le 0 \implies f_* = \max(F) \\
-F[f] - F[f_*] \ge 0 \implies f_* = \min(F) \\
-h = f - f_* \\
-f = \text{admissible function} \\
-F = \text{functional} \\
-f_* = \text{local extremizer} \\
-h = \text{admissible variation}
 \end{aligned}
 $$
 
@@ -466,6 +462,21 @@ x = \text{independent variable}
 $$
 
 ---
+### first-order
+- highest derivative equal first derivative
+
+---
+### first-order formula
+$$
+\begin{aligned}
+L(x, f, f') \\
+L = \text{lagrangian} \\
+x = \text{independent variable} \\
+f, f' = \text{admissible function}
+\end{aligned}
+$$
+
+---
 ### fixed-free
 - vector space satisfy single boundary condition
 
@@ -483,11 +494,11 @@ h = \text{admissible variation} \\
 $$
 
 ---
-### first-order fixed-free variational
-- problem of finding the extremum of first-order, fixed-free functional aka extremal
+### fixed-free variational
+- problem of finding the extremal of first-order, fixed-free functional
 
 ---
-### first-order fixed-free variational formula
+### fixed-free variational formula
 $$
 \begin{aligned}
 F[f] = \int_{a}^b L(x, f, f')dx + [G(f)]_{x=b} \\
@@ -500,11 +511,11 @@ G = \text{free-end}
 $$
 
 ---
-### essential boundary condition
+### fixed-free essential boundary condition
 - boundary condition associated with the fixed-end
 
 ---
-### essential boundary condition formula
+### fixed-free essential boundary condition formula
 $$
 \begin{aligned}
 f(a) = \alpha \\
@@ -514,11 +525,11 @@ f = \text{admissible function} \\
 $$
 
 ---
-### natural boundary condition
+### fixed-free natural boundary condition
 - boundary condition associated with the free-end
 
 ---
-### natural boundary condition formula
+### fixed-free natural boundary condition formula
 $$
 \begin{aligned}
 [\frac{\partial G}{\partial f} + \frac{\partial L}{\partial f'}]_{x = b} = 0 \\
@@ -564,11 +575,11 @@ h = \text{admissible variation} \\
 $$
 
 ---
-### second-order fixed-fixed variational
-- problem of finding the extremum of first-order, fixed-fixed functional aka extremal
+### second-order variational
+- problem of finding the extremal of first-order, fixed-fixed functional
 
 ---
-### second-order fixed-fixed variational formula
+### second-order variational formula
 $$
 \begin{aligned}
 F[f] = \int_{a}^b L(x, f, f', f'')dx \\
@@ -580,50 +591,26 @@ x = \text{independent variable}
 $$
 
 ---
-### euler-lagrange equation
+### second-order euler-lagrange equation
 - local extremal of functional must satisfy equation
 
 ---
-### euler-lagrange equation formula
+### second-order euler-lagrange equation formula
 $$
 \begin{aligned}
 \frac{\partial L}{\partial f} - \frac{d}{dx}(\frac{\partial L}{\partial f'}) + \frac{d^2}{dx^2}(\frac{\partial L}{\partial f''}) = 0 \\
-f(a) = \alpha \\
-f'(a) = \gamma \\
-f(b) = \beta \\
-f'(b) = \eta \\
-a < x < b \\
 L = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
-x = \text{independent variable} \\
-\alpha, \beta, \gamma, \eta = \text{constant}
+x = \text{independent variable}
 \end{aligned}
 $$
 
 ---
-### legendre condition
-- local minimizer of functional must satisfy condition
-- local maximizer of functional must satisfy condition
-
----
-### legendre condition formula
-$$
-\begin{aligned}
-\frac{\partial^2 L}{\partial (f'')^2} \ge 0 \implies f_* = \min(F) \\
-\frac{\partial^2 L}{\partial (f'')^2} \le 0 \implies f_* = \max(F) \\
-L = \text{lagrangian} \\
-f, f' = \text{admissible function} \\
-f_* = \text{local extremizer} \\
-F = \text{functional}
-\end{aligned}
-$$
-
----
-### essential boundary condition
+### second-order essential boundary condition
 - boundary condition associated with the fixed-end
 
 ---
-### essential boundary condition formula
+### second-order essential boundary condition formula
 $$
 \begin{aligned}
 f(a) = \alpha \\
@@ -634,17 +621,110 @@ f, f' = \text{admissible function} \\
 $$
 
 ---
-### natural boundary condition
+### second-order natural boundary condition
 - boundary condition associated with the free-end
 
 ---
-### natural boundary condition formula
+### second-order natural boundary condition formula
 $$
 \begin{aligned}
 f(a) = \text{free} \implies [\frac{\partial L}{\partial f'} - \frac{d}{dx}(\frac{\partial L}{\partial f''})]_{x=a} = 0 \\
 f'(a) = \text{free} \implies [\frac{\partial L}{\partial f''}]_{x=a} = 0 \\
 f(b) = \text{free} \implies [\frac{\partial L}{\partial f'} - \frac{d}{dx}(\frac{\partial L}{\partial f''})]_{x=b} = 0 \\
 f'(b) = \text{free} \implies [\frac{\partial L}{\partial f''}]_{x=b} = 0 
+\end{aligned}
+$$
+
+---
+### lagrange-multiplier rule
+- allowable movement along constraint
+
+---
+### lagrange-multiplier rule formula
+$$
+\begin{aligned}
+\begin{bmatrix}  
+\dfrac{\partial \widetilde F}{\partial \varepsilon_{1}}(0,0)  
++  
+\lambda  
+\dfrac{\partial \widetilde G}{\partial \varepsilon_{1}}(0,0) \\
+\dfrac{\partial \widetilde F}{\partial \varepsilon_{2}}(0,0)  
++  
+\lambda  
+\dfrac{\partial \widetilde G}{\partial \varepsilon_{2}}(0,0) \\
+\end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+\tilde F = F[f_* + \epsilon_1h_{1} + \epsilon_2h_{2}] \\
+\tilde G = G[g_* + \epsilon_1h_{1} + \epsilon_2h_{2}] \\
+F, G = \text{objective functional} \\
+G = \text{constraint functional} \\
+f_* = \text{local extremizer} \\
+\epsilon = \text{parameter} \\
+h = \text{admissible variation} 
+\end{aligned}
+$$
+
+---
+### constraint variational
+- problem of finding the extremal of constraint functional
+
+---
+### constraint variational formula
+$$
+\begin{aligned}
+J = L + \lambda M \\
+F[f] = \int_{a}^b L(x, f, f')dx \\
+G[f] = \int_{a}^b M(x, f, f')dx = k\\
+F = \text{objective functional} \\
+G = \text{constraint functional} \\
+L, M = \text{lagrangian} \\
+k = \text{constraint} \\
+f, f' = \text{admissible function} \\
+x = \text{independent variable} 
+\end{aligned}
+$$
+
+---
+### constraint euler-lagrange equation
+- local extremal of functional must satisfy equation
+
+---
+### constraint euler-lagrange equation formula
+$$
+\begin{aligned}
+\frac{\partial L}{\partial f} + \frac{d}{dx}\frac{\partial L}{\partial f'} + \lambda(\frac{\partial M}{\partial f} + \frac{d}{dx}\frac{\partial M}{\partial f'}) = 0 \\
+L = \text{lagrangian} \\
+M = \text{constraint} \\
+f, f' = \text{admissible function} \\
+x = \text{independent variable} 
+\end{aligned}
+$$
+
+---
+### constraint essential boundary condition
+- boundary condition associated with the fixed-end
+
+---
+### constraint essential boundary condition formula
+$$
+\begin{aligned}
+f(a) = \alpha \\
+G[f] = k \\
+\lambda \in \mathbb R
+\end{aligned}
+$$
+
+---
+### constraint natural boundary condition
+- boundary condition associated with the free-end
+
+---
+### constraint natural boundary condition formula
+$$
+\begin{aligned}
+f(a), f(b) = \text{free} \implies [\frac{\partial L}{\partial f'} + \lambda \frac{\partial M}{\partial f'}]_{x=a} = [\frac{\partial L}{\partial f'} + \lambda \frac{\partial M}{\partial f'}]_{x=b} = 0 \\
+L = \text{lagrangian} \\
+M = \text{constraint} \\
+f' = \text{admissible function} 
 \end{aligned}
 $$
 

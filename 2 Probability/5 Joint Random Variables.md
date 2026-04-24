@@ -130,7 +130,7 @@ $$
 ### indicator variation formula
 $$
 \begin{aligned}
-\text{Var}(X) = \text{Var}(\sum_{i=1}^n I_{i}) = P(A)Q(A) \\
+\text{Var}(X) = \text{Var}(\sum_{i=1}^n I_{i}) = \sum_{i=1}^n P(A_{i})Q(A_{i}) \\
 Q(A) = 1-P(A) \\ 
 X, I = \text{random variable} \\
 A = \text{event}
@@ -145,10 +145,10 @@ $$
 ### convolution formula
 $$
 \begin{aligned}
-P(X + Y = z) = \sum_{x} P(Z = z-x)P(X = x) \\
-P(X + Y = z) = \sum_{y} P(Z = z-y)P(Y = y) \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-x)f_{X}(x)dx \\
-f_{X+Y}(z) = \int_{-\infty}^\infty f_{Z}(z-y)f_{Y}(y)dy 
+P(X + Y = z) = \sum_{x} P(Y = z-x)P(X = x) \\
+P(X + Y = z) = \sum_{y} P(X = z-y)P(Y = y) \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{Y}(z-x)f_{X}(x)dx \\
+f_{X+Y}(z) = \int_{-\infty}^\infty f_{X}(z-y)f_{Y}(y)dy 
 \end{aligned}
 $$
 
@@ -190,7 +190,7 @@ $$
 ### conditional probability formula
 $$
 \begin{aligned}
-P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} = \sum_{x} P(X = x \mid Y = y) \\
+P(X = x \mid Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} \\
 f_{X\mid Y}(x \mid y) = \frac{f_{X,Y}(x, y)}{f_{Y}(y)}
 \end{aligned}
 $$
