@@ -33,7 +33,7 @@ $$
 - induct
 
 ---
-### peano axioms
+### peano axioms formula
 $$
 \begin{aligned}
 0 \in \mathbb N \\
@@ -87,12 +87,12 @@ $$
 $$
 
 ---
-### integer arithmetic
+### integers arithmetic
 - addition
 - multiplication
 
 ---
-### integer arithmetic formula
+### integers arithmetic formula
 $$
 \begin{aligned}
 [(m, n)] + [(m', n')] = [(m + m', n + n')] \\
@@ -121,7 +121,7 @@ $$
 - division
 
 ---
-### why rational numbers
+### why rational numbers formula
 $$
 \begin{aligned}
 \exists p, q \in \mathbb Z, q \ne 0: \frac{p}{q} \not\in \mathbb Z
@@ -141,12 +141,12 @@ $$
 $$
 
 ---
-### rational arithmetic
+### rational numbers arithmetic
 - addition
 - multiplication
 
 ---
-### rational arithmetic formula
+### rational numbers arithmetic formula
 $$
 \begin{aligned}
 [(p, q)] + [(p', q')] = [(pq' + qp', qq')] \\

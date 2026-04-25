@@ -39,7 +39,7 @@ $$
 
 ---
 ### equivalence class
-- nonempty, disjoint subset consisting of all elements equivalent with representative under the equivalence relation
+- nonempty disjoint set consisting of all elements equivalent with representative under the equivalence relation
 
 ---
 ### equivalence class formula
