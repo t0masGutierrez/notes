@@ -113,7 +113,7 @@ $$
 
 ---
 ### negative supremum property
-- infimum of nonempty set equal negative supremum of negative set
+- infimum of set equal negative supremum of negative set
 
 ---
 ### negative supremum property formula
@@ -126,7 +126,7 @@ $$
 
 ---
 ### epsilon supremum property
-- set greater supremum subtraction with epsilon
+- supremum subtraction with epsilon lesser set
 
 ---
 ### epsilon supremum property formula
@@ -140,7 +140,7 @@ $$
 
 ---
 ### subset supremum property
-- subset of set equal subset of supremum
+- subset of set equal subsupremum of supremum
 
 ---
 ### subset supremum property formula
@@ -153,7 +153,7 @@ $$
 
 ---
 ### maximum supremum property
-- supremum of nonempty set equal equal maximum of set
+- supremum of set equal equal maximum of set
 
 ---
 ### maximum supremum property formula
@@ -166,7 +166,7 @@ $$
 
 ---
 ### addition supremum property
-- supremum of nonempty sum equal sum of supremum
+- supremum of sum equal sum of supremum
 
 ---
 ### addition supremum property formula
@@ -179,7 +179,7 @@ $$
 
 ---
 ### union supremum property
-- supremum of nonempty union equal maximum of supremum
+- supremum of union equal maximum of supremum
 
 ---
 ### union supremum property formula
