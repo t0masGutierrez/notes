@@ -194,13 +194,12 @@ $$
 ### correlation formula
 $$
 \begin{aligned}
-r = \frac{1}{(n-1)s_xs_{y}}\sum_{i}^n(x_{i} - \overline x)(y_{i} - \overline y) \\
+r = \frac{\sum z_xz_{y}}{n-1} \\
 -1 \le r \le 1 \\
+z = \text{z-score} \\
 n = \text{sample size} \\
-s_{x}, s_{y} = \text{sample standard deviation} \\
 x = \text{independent variable} \\
-y = \text{dependent variable} \\
-\overline x, \overline y = \text{sample mean} 
+y = \text{dependent variable} 
 \end{aligned}
 $$
 

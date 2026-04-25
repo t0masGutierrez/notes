@@ -636,11 +636,11 @@ f'(b) = \text{free} \implies [\frac{\partial L}{\partial f''}]_{x=b} = 0
 $$
 
 ---
-### lagrange-multiplier rule
+### lagrange-multiplier
 - allowable movement along constraint
 
 ---
-### lagrange-multiplier rule formula
+### lagrange-multiplier formula
 $$
 \begin{aligned}
 \begin{bmatrix}  
@@ -671,13 +671,14 @@ $$
 ### constraint variational formula
 $$
 \begin{aligned}
-J = L + \lambda M \\
 F[f] = \int_{a}^b L(x, f, f')dx \\
 G[f] = \int_{a}^b M(x, f, f')dx = k\\
+N = L + \lambda M \\
 F = \text{objective functional} \\
 G = \text{constraint functional} \\
-L, M = \text{lagrangian} \\
+L, M, N= \text{lagrangian} \\
 k = \text{constraint} \\
+\lambda = \text{lagrange multiplier} \\
 f, f' = \text{admissible function} \\
 x = \text{independent variable} 
 \end{aligned}
@@ -691,9 +692,8 @@ $$
 ### constraint euler-lagrange equation formula
 $$
 \begin{aligned}
-\frac{\partial L}{\partial f} + \frac{d}{dx}\frac{\partial L}{\partial f'} + \lambda(\frac{\partial M}{\partial f} + \frac{d}{dx}\frac{\partial M}{\partial f'}) = 0 \\
-L = \text{lagrangian} \\
-M = \text{constraint} \\
+\frac{\partial N}{\partial f} - \frac{d}{dx}(\frac{\partial N}{\partial f'}) = 0 \\
+N = \text{lagrangian} \\
 f, f' = \text{admissible function} \\
 x = \text{independent variable} 
 \end{aligned}
@@ -722,9 +722,9 @@ $$
 $$
 \begin{aligned}
 f(a), f(b) = \text{free} \implies [\frac{\partial L}{\partial f'} + \lambda \frac{\partial M}{\partial f'}]_{x=a} = [\frac{\partial L}{\partial f'} + \lambda \frac{\partial M}{\partial f'}]_{x=b} = 0 \\
-L = \text{lagrangian} \\
-M = \text{constraint} \\
-f' = \text{admissible function} 
+L, M = \text{lagrangian} \\
+f' = \text{admissible function} \\
+\lambda = \text{lagrange multiplier} 
 \end{aligned}
 $$
 
