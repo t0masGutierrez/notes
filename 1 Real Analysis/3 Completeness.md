@@ -153,7 +153,7 @@ $$
 
 ---
 ### maximum supremum property
-- supremum of set equal equal maximum of set
+- set containing supremum of set equal maximum of set
 
 ---
 ### maximum supremum property formula
