@@ -1,11 +1,11 @@
 ### bounded above
-- there exist upper bound such that every element of set less or equal upper bound
+- there exist upper bound such that every element of set lesser or equal upper bound
 
 ---
 ### bounded above formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \\
+\exists u \in \mathbb R, \forall x \in S \subset \mathbb R: x \le u \\
 S = \text{bounded above set} \\
 u = \text{upper bound} 
 \end{aligned}
@@ -19,7 +19,7 @@ $$
 ### bounded below formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \\
+\exists w \in \mathbb R, \forall x \in S \subset \mathbb R: w \le x \\
 S = \text{bounded below set} \\
 w = \text{lower bound} 
 \end{aligned}
@@ -33,7 +33,7 @@ $$
 ### bounded formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists u, w \in \mathbb R, \forall x \in S: w \le x \le u \\
+\exists u, w \in \mathbb R, \forall x \in S \subset \mathbb R: w \le x \le u \\
 S = \text{bounded set} \\
 u = \text{upper bound} \\
 w = \text{lower bound} 
@@ -48,7 +48,7 @@ $$
 ### unbounded formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists u, w \in \mathbb R, \exists x \in S: (x < w) \lor (x > u) \\
+\exists u, w \in \mathbb R, \exists x \in S \subset \mathbb R: (x < w) \lor (x > u) \\
 S = \text{unbounded set} \\
 u = \text{upper bound} \\
 w = \text{lower bound}
@@ -63,7 +63,7 @@ $$
 ### supremum formula
 $$
 \begin{aligned}
-(S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u) \land (\exists u' \in \mathbb R: u' < u \implies \exists x \in S: x > u') \implies u = \sup S \\
+(\forall x \in S \subset \mathbb R: x \le u) \land (\exists u' \in \mathbb R: u' < u \implies \exists x \in S: x > u') \implies u = \sup S \\
 S = \text{bounded above set} \\
 u = \text{supremum} \\
 \end{aligned}
@@ -77,49 +77,73 @@ $$
 ### infimum formula
 $$
 \begin{aligned}
-(S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x) \land (\exists w' \in \mathbb R: w' > w \implies \exists x \in S: x < w') \implies w = \inf S \\
+(\forall x \in S \subset \mathbb R: w \le x) \land (\exists w' \in \mathbb R: w' > w \implies \exists x \in S: x < w') \implies w = \inf S \\
 S = \text{bounded below set} \\
 w = \text{infimum} \\
 \end{aligned}
 $$
 
 ---
-### completeness property
+### least upper bound property
 - for every nonempty bounded above set there exists supremum
+
+---
+### least upper bound property formula
+$$
+\begin{aligned}
+\exists u \in \mathbb R, \forall x \in S \subset \mathbb R: x \le u \implies \exists \sup S \in \mathbb R \\
+S = \text{bounded above set} \\
+u = \text{upper bound} \\
+\end{aligned}
+$$
+
+---
+### greatest lower bound property
 - for every nonempty bounded below set there exists infimum
 
 ---
-### completeness property formula
+### greatest lower bound property formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \exists u \in \mathbb R, \forall x \in S: x \le u \implies \exists \sup S \in \mathbb R \\
-S \subset \mathbb R, \exists w \in \mathbb R, \forall x \in S: w \le x \implies \exists \inf S \in \mathbb R \\
-S = \text{bounded set} \\
-u = \text{upper bound} \\
+\exists w \in \mathbb R, \forall x \in S \subset \mathbb R: w \le x \implies \exists \inf S \in \mathbb R \\
+S = \text{bounded below set} \\
 w = \text{lower bound} 
 \end{aligned}
 $$
 
 ---
-### supremum epsilon property
+### negative supremum property
+- infimum of nonempty set equal negative supremum of negative set
+
+---
+### negative supremum property formula
+$$
+\begin{aligned}
+\inf S = -\sup (-S) \\
+S = \text{bounded set}
+\end{aligned}
+$$
+
+---
+### epsilon supremum property
 - set greater supremum subtraction with epsilon
 
 ---
-### supremum epsilon property formula
+### epsilon supremum property formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \forall \epsilon > 0, \exists x \in S: x > u - \epsilon \implies u = \sup S \\
+\forall \epsilon > 0, \exists x \in S \subset \mathbb R: u - \epsilon < x < u \implies u = \sup S \\
 S = \text{bounded above set} \\
 u = \text{supremum}
 \end{aligned}
 $$
 
 ---
-### supremum subset property
+### subset supremum property
 - subset of set equal subset of supremum
 
 ---
-### supremum subset property formula
+### subset supremum property formula
 $$
 \begin{aligned}
 S_{2} \subset S_{1} \subset \mathbb R \implies \sup S_{2} \le \sup S_{1} \\
@@ -128,11 +152,24 @@ S = \text{bounded above set}
 $$
 
 ---
-### supremum addition property
+### maximum supremum property
+- supremum of nonempty set equal equal maximum of set
+
+---
+### maximum supremum property formula
+$$
+\begin{aligned}
+\sup S \in S \implies \sup S = \max S \\
+S = \text{bounded above set}
+\end{aligned}
+$$
+
+---
+### addition supremum property
 - supremum of nonempty sum equal sum of supremum
 
 ---
-### supremum addition property formula
+### addition supremum property formula
 $$
 \begin{aligned}
 \sup(S_{1} + S_{2}) = \sup S_{1} + \sup S_{2} \\
@@ -141,11 +178,11 @@ S = \text{bounded above set}
 $$
 
 ---
-### supremum union property
+### union supremum property
 - supremum of nonempty union equal maximum of supremum
 
 ---
-### supremum union property formula
+### union supremum property formula
 $$
 \begin{aligned}
 \sup(S_{1} \cup S_{2}) = \max \set{\sup S_{1}, \sup S_{2}} \\
