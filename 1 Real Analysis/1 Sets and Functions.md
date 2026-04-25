@@ -51,21 +51,8 @@ x = \text{representative}
 $$
 
 ---
-### function
-- mapping between set
-
----
-### function formula
-$$
-\begin{aligned}
-f: A \rightarrow B, \forall a \in A, \exists !b \in B: f(a) = b
-\end{aligned}
-$$
-
----
 ### injection
 - every element of domain map to 1 element of codomain
-- into
 
 ---
 ### injection formula
@@ -78,7 +65,6 @@ $$
 ---
 ### surjection
 - every element of codomain map to $\ge1$ element of domain
-- onto
 
 ---
 ### surjection formula
@@ -91,7 +77,6 @@ $$
 ---
 ### bijection
 - every element of codomain map to 1 element of domain
-- into and onto
 
 ---
 ### bijection formula

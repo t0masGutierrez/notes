@@ -58,7 +58,7 @@ $$
 2 &= S(1) = 1 \cup \{1\} = \{0\} \cup \{1\} = \{0, 1\} \\
 3 &= S(2) = 2 \cup \{2\} = \{0, 1\} \cup \{2\} = \{0, 1, 2\} \\
 \vdots \\ 
-\mathbb N &= \{S(n) | 0 \le n \le \infty\}
+\mathbb N &= \{S(n) | 0 \le n < \infty\}
 \end{aligned}
 $$
 
@@ -195,20 +195,6 @@ $$
 $$
 
 ---
-### set ordinality
-- trichotomy
-- transitivity
-
----
-### set ordinality formula
-$$
-\begin{aligned}
-x, y \in S \implies (x < y) \lor (x = y) \lor (y < x) \\
-(x, y, z \in S) \land (x < y) \land (y < z) \implies x < z 
-\end{aligned}
-$$
-
----
 ### field
 - set with two binary operations that satisfy the 9 field axioms
 
@@ -222,7 +208,7 @@ $$
 $$
 
 ---
-### field axioms
+### axiom field property
 - additive commutativity
 - additive associativity
 - additive identity
@@ -234,80 +220,38 @@ $$
 - multiplicative inverse
 
 ---
-### field axioms formula
+### axiom field property formula
 $$
 \begin{aligned}
 x + y = y + x \\
 x + (y + z) = (x + y) + z \\
-x + (-x) = 0 \\
 x + 0 = x \\
+x + (-x) = 0 \\
 x\cdot (y + z) = x \cdot y + x \cdot z \\
 x \cdot y = y \cdot x \\
 x \cdot (y \cdot z) = (x \cdot y) \cdot z \\
-x \cdot (\frac{1}{x}) = 1 \\
 x \cdot 1 = x \\
+x \cdot (\frac{1}{x}) = 1
 \end{aligned}
 $$
 
 ---
-### field ordinality
+### ordinality field property
 - addition
 - multiplication
-- reciprocal
-- square
-- negative
+- negative multiplication
+- trichotomy
+- transitivity
 
 ---
-### field ordinality formula
+### ordinality field property formula
 $$
 \begin{aligned}
 (x, y, z \in F) \land (x < y) \implies x + z < y + z \\
 (x, y \in F) \land (x < y) \land (z > 0) \implies x \cdot z < y \cdot z \\
-0 < x < y \implies 0 < \frac{1}{y} < \frac{1}{x} \\
-x \ne 0 \implies 0 < x^2  \\
-x > 0 \iff -x < 0 
-\end{aligned}
-$$
-
----
-### field addition property
-- equality
-- identity
-- inverse
-
----
-### field addition property formula
-$$
-\begin{aligned}
-x + y = x + z \implies y = z \\
-x + y = x \implies y = 0 \\
-x + y = 0 \implies y = -x 
-\end{aligned}
-$$
-
----
-### field multiplication property
-- zero
-- nonzero
-- single negative
-- double negative
-- equality
-- identity
-- single inverse
-- double inverse
-
----
-### field multiplication property formula
-$$
-\begin{aligned}
-0 \cdot x = 0 \\
-(x \ne 0) \land (y \ne 0) \implies x \cdot y \ne 0 \\
-(-x) \cdot y = -(x \cdot y) = x \cdot (-y) \\
-(-x) \cdot (-y) = x \cdot y \\
-(x \ne 0) \land (x \cdot y = x \cdot z) \implies y = z \\
-(x \ne 0) \land (x \cdot y = x) \implies y = 1 \\
-(x \ne 0) \land (x \cdot y = 1) \implies y = \frac{1}{x} \\
-x \ne 0 \implies \frac{1}{1/x} = x \\
+(x, y \in F) \land (x < y) \land (z < 0) \implies x \cdot z > y \cdot z \\
+x, y \in F \implies (x < y) \lor (x = y) \lor (y < x) \\
+(x, y, z \in F) \land (x < y) \land (y < z) \implies x < z 
 \end{aligned}
 $$
 
@@ -322,7 +266,7 @@ $$
 z = a + bi \\
 a = \text{real part} \\
 b = \text{imaginary part} \\
-i = \sqrt {-1}
+i = \text{imaginary number}
 \end{aligned}
 $$
 
