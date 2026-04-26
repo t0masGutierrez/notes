@@ -272,7 +272,7 @@ $$
 
 ---
 ### complex number property
-- zero
+- square
 - conjugate
 - multiplication
 - addition
@@ -282,7 +282,7 @@ $$
 ### complex number property formula
 $$
 \begin{aligned}
-|z| > 0 \iff z \ne 0 \\
+|z|^2 = (z)(\overline z) \\
 |\overline z| = |z| \\
 |zw| = (|z|)(|w|) \\
 |z + w| \le |z| + |w| \\

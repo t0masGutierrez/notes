@@ -5,7 +5,7 @@
 ### convex formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \forall p, q \in S, \forall \lambda \in [0, 1]: \lambda p + (1 - q)\lambda \in S \\
+\forall p, q \in S \subset \mathbb R, \forall \lambda \in [0, 1]: \lambda p + (1 - q)\lambda \in S \\
 S = \text{convex set}
 \end{aligned}
 $$
@@ -74,7 +74,8 @@ $$
 $$
 \begin{aligned}
 \# A = \# B \iff f: A \rightarrow B, \forall b \in B, \exists !a \in A: f(a) = b \\
-\# = \text{cardinality}
+\# = \text{cardinality} \\
+f = \text{bijection}
 \end{aligned}
 $$
 
@@ -106,33 +107,33 @@ $$
 
 ---
 ### finite
-- there exists bijection between set and finite subset of natural numbers
+- there exists bijection with finite subset of natural numbers
 
 ---
 ### finite formula
 $$
 \begin{aligned}
-\exists n \in \mathbb N: \{0, 1, 2, 3, \dots, n\} \sim S\\
+\exists n \in \mathbb N: \{0, 1, 2, \dots, n\} \sim S\\
 S = \text{finite set} 
 \end{aligned}
 $$
 
 ---
 ### infinite
-- there exists no bijection between set and finite subset of natural numbers
+- there exists no bijection with finite subset of natural numbers
 
 ---
 ### infinite formula
 $$
 \begin{aligned}
-\forall n \in \mathbb N: \{0, 1, 2, 3, \dots, n\} \not \sim S \\
+\forall n \in \mathbb N: \{0, 1, 2, \dots, n\} \not \sim S \\
 S = \text{infinite set} 
 \end{aligned}
 $$
 
 ---
 ### countable
-- there exists bijection between set and set of natural numbers
+- there exists bijection with set of natural numbers
 
 ---
 ### countable formula
@@ -151,7 +152,7 @@ $$
 ### uncountable formula
 $$
 \begin{aligned}
-(\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
+(\{0, 1, 2, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
 S = \text{uncountable set}
 \end{aligned}
 $$
@@ -181,8 +182,8 @@ $$
 ### uncountable example formula
 $$
 \begin{aligned}
-(\{0, 1, 2, 3, \dots, n\} \not \sim \mathbb R \setminus \mathbb Q) \land (\mathbb N \not\sim \mathbb R \setminus \mathbb Q) \\
-(\{0, 1, 2, 3, \dots, n\} \not \sim \mathbb R) \land (\mathbb N \not\sim \mathbb R) 
+(\{0, 1, 2, \dots, n\} \not \sim \mathbb R \setminus \mathbb Q) \land (\mathbb N \not\sim \mathbb R \setminus \mathbb Q) \\
+(\{0, 1, 2, \dots, n\} \not \sim \mathbb R) \land (\mathbb N \not\sim \mathbb R) 
 \end{aligned}
 $$
 
@@ -207,7 +208,7 @@ $$
 ### union cardinality property formula
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_{1}, S_{2}, S_{3}, \dots = \aleph_{0}) \implies \mathbb N \sim \bigcup_{n=1}^\infty S_{n}\\
+\forall \in \mathbb N: \mathbb N \sim S_{n} \implies \mathbb N \sim \bigcup_{n=1}^\infty S_{n}\\
 S = \text{countable set}
 \end{aligned}
 $$
@@ -220,7 +221,7 @@ $$
 ### product cardinality property formula
 $$
 \begin{aligned}
-(\mathbb N \sim S) \land (S_{1}, S_{2}, S_{3}, \dots, S_{n}) \implies \mathbb N \sim S^n \\
+\forall \in \mathbb N: \mathbb N \sim S_{n} \implies \mathbb N \sim S^n \\
 S = \text{countable set}
 \end{aligned}
 $$
@@ -233,7 +234,8 @@ $$
 ### interval cardinality property formula
 $$
 \begin{aligned}
-[0, 1] = \{x \in \mathbb R| 0 \le x \le 1\} \implies \mathbb N \not\sim [0, 1]
+(a, b \in \mathbb R) \land (S = \{x \in \mathbb R| a \le x \le b\}) \implies \mathbb N \not\sim S \\
+S = \text{uncountable set}
 \end{aligned}
 $$
 
@@ -248,6 +250,7 @@ $$
 (f: A \rightarrow B) \land (\mathbb N \sim A) \implies \mathbb N \sim f(A) \\
 f = \text{function} \\
 A = \text{domain} \\
+A, f(A) = \text{countable set} \\
 B = \text{codomain} 
 \end{aligned}
 $$

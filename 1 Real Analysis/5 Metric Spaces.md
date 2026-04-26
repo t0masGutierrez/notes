@@ -261,22 +261,26 @@ $$
 ---
 ### absolute value property
 - negative
+- root
+- inequality
+- reverse inequality
 - multiplication
 - addition
 - subtraction
 - absolute subtraction
-- subtraction
 
 ---
 ### absolute value property formula
 $$
 \begin{aligned}
-|-x| = |x| \\
+|x| = |-x| \\
+|x| = \sqrt{x^2} \\
+|x| \le c \iff -c \le x \le c \\
+|x| \ge c \iff x \ge c \lor x \le -c \\
 |x \cdot y| = (|x|)(|y|) \\
 |x + y| \le |x| + |y| \\
 |x - y| \le |x| + |y| \\
-||x| - |y|| \le |x - y| \\
-|x - y| \le |x| + |y| \\
+||x| - |y|| \le |x - y| 
 \end{aligned}
 $$
 
