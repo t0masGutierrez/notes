@@ -1759,6 +1759,12 @@
         _initKeyboardListeners() {
             const self = this;
             document.addEventListener('keydown', function(event) {
+                const learnModal = document.getElementById('learn-modal');
+                if ((event.key === 'Escape' || event.code === 'Escape') && learnModal.style.display === 'flex') {
+                    event.preventDefault();
+                    self.closeModal();
+                    return;
+                }
                 if (document.getElementById('flashcard-view').style.display === 'flex') {
                     if (event.code === 'ArrowLeft') self.flashcardMode.prev();
                     else if (event.code === 'ArrowRight') self.flashcardMode.next();
