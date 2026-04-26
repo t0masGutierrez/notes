@@ -393,24 +393,6 @@ x = \text{independent variable}
 $$
 
 ---
-### first-order fixed-fixed legendre condition
-- local minimizer of functional must satisfy condition
-- local maximizer of functional must satisfy condition
-
----
-### first-order fixed-fixed legendre condition formula
-$$
-\begin{aligned}
-\frac{\partial^2 L}{\partial (f')^2} \ge 0 \implies f_* = \min(F) \\
-\frac{\partial^2 L}{\partial (f')^2} \le 0 \implies f_* = \max(F) \\
-L = \text{lagrangian} \\
-f, f' = \text{admissible function} \\
-f_* = \text{local extremizer} \\
-F = \text{functional}
-\end{aligned}
-$$
-
----
 ### first integral
 - general solution of euler-lagrange equation constant along every trajectory
 
