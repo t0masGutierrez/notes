@@ -39,7 +39,7 @@ $$
 $$
 \begin{aligned}
 \frac{dx}{dt} = f(t, x, \epsilon) \\
-x(t=0) = x_{0} \\
+x(t_{0}) = x_{0} \\
 t \ge 0 \\
 f = \text{perturbed equation} \\
 t = \text{time} \\
@@ -56,7 +56,7 @@ $$
 ### regular formula
 $$
 \begin{aligned}
-\# f(t, x, \epsilon) = k, \epsilon > 0 \land \# f(t, x, \epsilon) = k, \epsilon = 0 \\
+(\epsilon > 0) \land (\# f(t, x, \epsilon) = k) \implies (\epsilon = 0) \land (\# f(t, x, \epsilon) = k) \\
 f = \text{perturbed equation} \\
 t = \text{time} \\
 x = \text{solution} \\
@@ -73,7 +73,7 @@ $$
 ### singular formula
 $$
 \begin{aligned}
-\# f(t, x, \epsilon) = k, \epsilon > 0 \land \# f(t, x, \epsilon) \ne k, \epsilon = 0 \\
+(\epsilon > 0) \land (\# f(t, x, \epsilon) = k) \implies (\epsilon = 0) \land (\# f(t, x, \epsilon) \ne k) \\
 f = \text{perturbed equation} \\
 t = \text{time} \\
 x = \text{solution} \\
@@ -102,24 +102,6 @@ c = \text{coefficient} \\
 $$
 
 ---
-### analytic property
-- complex analytic function
-- complex analytic variable
-- multivariable analytic function
-- analytic operation
-
----
-### analytic property formula
-$$
-\begin{aligned}
-f \in \mathbb C \implies f(t, x, \epsilon) \in C^{\omega} \\
-x \in \mathbb C \implies f(t, x, \epsilon) \in C^{\omega} \\
-i \ge 1 \implies  f(t, x_{i}, \epsilon) \in C^{\omega} \\
-(+), (\cdot), (\circ), (\frac{df}{dx}), (\int dfdx) \in C^{\omega} 
-\end{aligned}
-$$
-
----
 ### function notation
 - asymptotic behavior of function as parameter approaches limit
 
@@ -128,16 +110,16 @@ $$
 $$
 \begin{aligned}
 f(\epsilon) = \sum_{n=0}^\infty c_{n} \epsilon^n \\
-\frac{f(\epsilon)}{\epsilon^r} = \sum_{n=r}^\infty c_{n-r} \epsilon^{n-r} \\
+\frac{f(\epsilon)}{\epsilon^r} = \sum_{n=0}^\infty c_{n} \epsilon^{n-r} \\
 f = \text{perturbed equation} \\
-\epsilon = \text{parameter} \\
-c = \text{sequence} 
+c = \text{coefficient} \\
+\epsilon = \text{parameter} 
 \end{aligned}
 $$
 
 ---
 ### big-O notation
-- size of function less or equal big-O
+- size of function lesser or equal big-O
 
 ---
 ### big-O notation formula
@@ -147,13 +129,13 @@ $$
 f = \text{perturbed equation} \\
 \epsilon = \text{parameter} \\
 C = \text{constant} \\
-O = \text{order} 
+r = \text{order} 
 \end{aligned}
 $$
 
 ---
 ### little-o notation
-- size of function much less little-o
+- size of function much lesser little-o
 
 ---
 ### little-o notation formula
@@ -177,24 +159,23 @@ $$
 f(\epsilon) = \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!}\epsilon^n \\
 f = \text{perturbed equation} \\
 f^n = \text{nth derivative} \\
-n! = \text{nth factorial} \\
 \epsilon = \text{parameter}
 \end{aligned}
 $$
 
 ---
 ### regular algebraic equation
-- solve 0th order variable
+- solve perturbed equation for 0th order variable
 - substitute series solution into variable
 - collect coefficients of ith order epsilon
-- solve 1st order variable
+- solve perturbed equation for 1st order variable
 - ith order variable equal coefficient of ith order epsilon 
 ---
 ### regular algebraic equation formula
 $$
 \begin{aligned}
 F(x, \epsilon) = 0 \\
-x(\epsilon = 0) = x_{0} \\
+x(\epsilon_{0}) = x_{0} \\
 0 \le \epsilon \ll 1 \\
 F = \text{regular algebraic equation} \\
 x = \text{solution} \\
@@ -210,7 +191,7 @@ $$
 ### regular algebraic property formula
 $$
 \begin{aligned}
-(C^{\omega} \ni F(x_{0}, 0) = 0) \land (\frac{\partial F}{\partial x}(x_{0}, 0) \ne 0) \implies \exists! x(\epsilon) \in C^{\omega} \\
+(F \in C^{\omega}) \land (F(x_{0}, \epsilon_{0}) = 0) \land (\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0}) \ne 0) \implies \exists! x(\epsilon) \in C^{\omega}: x(\epsilon_{0}) = F(x(\epsilon), \epsilon) = 0 \\
 C^{\omega} = \text{analyticity} \\
 F = \text{algebraic equation} \\
 x = \text{solution} \\
@@ -226,7 +207,8 @@ $$
 ### simple root formula
 $$
 \begin{aligned}
-\frac{\partial F}{\partial x}(x_{0}, 0) \ne 0 \implies x(\epsilon) = \sum_{n=0}^{\infty} x_{n}\epsilon^n \\
+\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0}) \ne 0 \implies x(\epsilon) = \sum_{n=0}^{\infty} x_{n}\epsilon^n \\
+F = \text{algebraic equation} \\
 x = \text{solution} \\
 \epsilon = \text{parameter} 
 \end{aligned}
@@ -240,8 +222,9 @@ $$
 ### multiple root formula
 $$
 \begin{aligned}
-\frac{\partial F}{\partial x}(x_{0}, 0)= 0 \implies x(\delta) = \sum_{n =0}^{\infty} x_{n}\delta^n \\
+\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0})= 0 \implies x(\delta) = \sum_{n =0}^{\infty} x_{n}\delta^n \\
 \delta = \epsilon^{1/m} \\
+F = \text{algebraic equation} \\
 x = \text{solution} \\
 \epsilon = \text{parameter}  \\
 m = \text{order} 
@@ -256,11 +239,11 @@ $$
 $$
 \begin{aligned}
 \frac{du}{dt} = F(t, u, \epsilon) \\
-u(t=0, \epsilon=0) = u_{0} \\
+u(t_{0}, \epsilon_{0}) = u_{0} \\
 0 \le \epsilon \ll 1 \\
 t\ge 0 \\
 F = \text{regular differential equation} \\
-u(t, \epsilon ) = \text{solution} \\
+u = \text{solution} \\
 \epsilon = \text{parameter}
 \end{aligned}
 $$
@@ -273,10 +256,10 @@ $$
 ### regular differential property formula
 $$
 \begin{aligned}
-F(0, u_{0}, 0) \in C^{\omega} \implies \exists! u(t, \epsilon) \in C^{\omega} \\
+F(t_{0}, u_{0}, \epsilon_{0}) \in C^{\omega} \implies \exists! u(t, \epsilon) \in C^{\omega} \\
 F = \text{regular differential equation} \\
 C^{\omega} = \text{analyticity} \\
-u(t, \epsilon) = \text{solution} \\
+u = \text{solution} \\
 \epsilon = \text{parameter} 
 \end{aligned}
 $$
@@ -297,12 +280,12 @@ $$
 ---
 ### poincare-lindstedt
 - rescale time
-- solve 0th order variable
+- solve perturbed equation for 0th order variable
 - expand frequency in powers of epsilon
 - expand solution in powers of epsilon
 - substitute series solution into variable
 - collect coefficients of ith order epsilon
-- solve 1st order variable
+- solve perturbed equation for 1st order variable
 - eliminate secularity with 1st order frequency such that coefficient of resonant term equal zero
 - ith order variable equal coefficient of ith order epsilon
 - approximate periodic solution of nonlinear differential equation
@@ -334,9 +317,9 @@ $$
 $$
 \begin{aligned}
 F(x, \epsilon) = 0 \\
-x(\epsilon = 0) = x_{0} \\
-0 \le \epsilon \ll 1 \\
+x(\epsilon_{0}) = x_{0} \\
 x = \epsilon^{-n}y \\
+0 \le \epsilon \ll 1 \\
 F = \text{regular algebraic equation} \\
 x = \text{solution} \\
 y = \text{change of variable} \\
