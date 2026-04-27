@@ -83,11 +83,11 @@ R = \text{remainder}
 $$
 
 ---
-### continuous differentiability
+### continuous differentiable
 - derivative exists and derivative continuous
 
 ---
-### continuous differentiability formula
+### continuous differentiable formula
 $$
 \begin{aligned}
 f, g:D\subset \mathbb R^2 \rightarrow \mathbb R^2 \land f, g \in C^1(D) \\

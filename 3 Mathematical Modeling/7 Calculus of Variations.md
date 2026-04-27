@@ -11,11 +11,11 @@ $$
 $$
 
 ---
-### continuous differentiability
+### continuous differentiable
 - vector space of functions with continuous derivatives
 
 ---
-### continuous differentiability formula
+### continuous differentiable formula
 $$
 \begin{aligned}
 C^n[a, b] = \set{f:[a, b] \rightarrow \mathbb R| \lim_{x\rightarrow x_{0}}f^{(n)}(x)=f^{(n)}(x_{0})} \\
@@ -119,11 +119,11 @@ c \in \mathbb R \implies \|cv\| = (\|c\|)(\|v\|) \\
 $$
 
 ---
-### continuous differentiability norm
+### continuous differentiable norm
 - norm of continuously differentiable function
 
 ---
-### continuous differentiability norm formula
+### continuous differentiable norm formula
 $$
 \begin{aligned}
 \|f\|_{C^m} = \sum_{k=0}^m |\max_{a \le x \le b}f^{(k)}(x)| \\
@@ -137,12 +137,12 @@ x = \text{independent variable} \\
 $$
 
 ---
-### continuous differentiability neighborhood
+### continuous differentiable neighborhood
 - region where there exists open ball around center
-![](3%20Mathematical%20Modeling/Images/continuous%20differentiability%20neighborhood.png)
+![](3%20Mathematical%20Modeling/Images/continuous%20differentiable%20neighborhood.png)
 
 ---
-### continuous differentiability neighborhood formula
+### continuous differentiable neighborhood formula
 $$
 \begin{aligned}
 N_\delta(f_*) = \set{f \in \mathcal V| \|f - f_*\|_{C^m} < \delta} \\

@@ -165,10 +165,10 @@ $$
 
 ---
 ### regular algebraic equation
-- solve perturbed equation for 0th order variable
+- solve perturbed algebraic equation for 0th order variable
 - substitute series solution into variable
 - collect coefficient of ith order epsilon
-- solve perturbed equation for 1st order variable
+- solve perturbed algebraic equation for 1st order variable
 - ith order variable equal coefficient of ith order epsilon 
 ---
 ### regular algebraic equation formula
@@ -192,7 +192,7 @@ $$
 $$
 \begin{aligned}
 (F \in C^{\omega}) \land (F(x_{0}, \epsilon_{0}) = 0) \land (\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0}) \ne 0) \implies \exists! x(\epsilon) \in C^{\omega}: x(\epsilon_{0}) = F(x(\epsilon), \epsilon) = 0 \\
-C^{\omega} = \text{analyticity} \\
+C^{\omega} = \text{analytic} \\
 F = \text{algebraic equation} \\
 x = \text{solution} \\
 \epsilon = \text{parameter} 
@@ -233,7 +233,11 @@ $$
 
 ---
 ### regular differential equation
-- series solution equal solution of differential equation
+- solve perturbed differential equation for 0th order variable
+- substitute series solution into variable
+- collect coefficient of ith order epsilon
+- solve perturbed differential equation for 1st order variable
+- ith order variable equal coefficient of ith order epsilon 
 ---
 ### regular differential equation formula
 $$
@@ -258,7 +262,7 @@ $$
 \begin{aligned}
 F(t_{0}, u_{0}, \epsilon_{0}) \in C^{\omega} \implies \exists! u(t, \epsilon) \in C^{\omega} \\
 F = \text{regular differential equation} \\
-C^{\omega} = \text{analyticity} \\
+C^{\omega} = \text{analytic} \\
 u = \text{solution} \\
 \epsilon = \text{parameter} 
 \end{aligned}
