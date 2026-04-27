@@ -167,7 +167,7 @@ $$
 ### regular algebraic equation
 - solve perturbed equation for 0th order variable
 - substitute series solution into variable
-- collect coefficients of ith order epsilon
+- collect coefficient of ith order epsilon
 - solve perturbed equation for 1st order variable
 - ith order variable equal coefficient of ith order epsilon 
 ---
@@ -284,7 +284,7 @@ $$
 - expand frequency in powers of epsilon
 - expand solution in powers of epsilon
 - substitute series solution into variable
-- collect coefficients of ith order epsilon
+- collect coefficient of ith order epsilon
 - solve perturbed equation for 1st order variable
 - eliminate secularity with 1st order frequency such that coefficient of resonant term equal zero
 - ith order variable equal coefficient of ith order epsilon
@@ -320,7 +320,7 @@ F(x, \epsilon) = 0 \\
 x(\epsilon_{0}) = x_{0} \\
 x = \epsilon^{-n}y \\
 0 \le \epsilon \ll 1 \\
-F = \text{regular algebraic equation} \\
+F = \text{singular algebraic equation} \\
 x = \text{solution} \\
 y = \text{change of variable} \\
 \epsilon = \text{parameter}
