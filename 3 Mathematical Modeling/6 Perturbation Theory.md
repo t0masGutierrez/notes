@@ -185,14 +185,13 @@ $$
 
 ---
 ### regular algebraic property
-- for every regular, analytic algebraic equation there exists unique analytic solution
+- perturbed algebraic equation equal regular algebraic equation
 
 ---
 ### regular algebraic property formula
 $$
 \begin{aligned}
-(F \in C^{\omega}) \land (F(x_{0}, \epsilon_{0}) = 0) \land (\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0}) \ne 0) \implies \exists! x(\epsilon) \in C^{\omega}: x(\epsilon_{0}) = F(x(\epsilon), \epsilon) = 0 \\
-C^{\omega} = \text{analytic} \\
+\frac{\partial F}{\partial x}(x_{0}, \epsilon_{0}) \ne 0 \\
 F = \text{algebraic equation} \\
 x = \text{solution} \\
 \epsilon = \text{parameter} 
@@ -227,7 +226,7 @@ $$
 F = \text{algebraic equation} \\
 x = \text{solution} \\
 \epsilon = \text{parameter}  \\
-m = \text{order} 
+m = \text{multiplicity} 
 \end{aligned}
 $$
 
@@ -237,13 +236,13 @@ $$
 - substitute series solution into variable
 - collect coefficient of ith order epsilon
 - solve perturbed differential equation for 1st order variable
-- ith order variable equal coefficient of ith order epsilon 
+- ith order variable equal coefficient of ith order epsilon
 ---
 ### regular differential equation formula
 $$
 \begin{aligned}
 \frac{du}{dt} = F(t, u, \epsilon) \\
-u(t_{0}, \epsilon_{0}) = u_{0} \\
+u(t_{0}, \epsilon) = u_{0}(\epsilon) \\
 0 \le \epsilon \ll 1 \\
 t\ge 0 \\
 F = \text{regular differential equation} \\
@@ -254,15 +253,14 @@ $$
 
 ---
 ### regular differential property
-- for every regular, analytic differential equation there exists unique analytic solution
+- perturbed differential equation equal regular differential equation
 
 ---
 ### regular differential property formula
 $$
 \begin{aligned}
-F(t_{0}, u_{0}, \epsilon_{0}) \in C^{\omega} \implies \exists! u(t, \epsilon) \in C^{\omega} \\
-F = \text{regular differential equation} \\
-C^{\omega} = \text{analytic} \\
+\frac{\partial F}{\partial u'}(t_{0}, u_{0}, u_{0}', \epsilon_{0}) \ne 0 \\
+F = \text{algebraic equation} \\
 u = \text{solution} \\
 \epsilon = \text{parameter} 
 \end{aligned}
@@ -270,14 +268,17 @@ $$
 
 ---
 ### secularity
-- unbounded growth over time destroy the periodicity of solution
+- forcing term equal frequency of homogeneous solution therefore unbounded growth over time destroy the periodicity of solution
 
 ---
 ### secularity formula
 $$
 \begin{aligned}
-f_{1}(t) \in \text{span}\set{\cos t, \sin t} \implies x_{1}(t) = t(A \cos \omega t + B \sin \omega t) \\
-f_{1}(t) = x_{1}'' + x_{1} 
+x_{1}'' + x_{1} = f_{1}(t) \in \text{span}\set{\cos t, \sin t} \implies t\cos \omega t, t \sin \omega t \subset x_{1}(t) \\
+x = \text{solution} \\
+f = \text{force} \\
+t = \text{time} \\
+\omega = \text{frequency}
 \end{aligned}
 $$
 
@@ -312,6 +313,7 @@ $$
 - change of variable
 - substitute change of variable
 - solve scaling factor such that two dominant term equal exponent
+- substitute scaling factor
 - divide leading coefficient and remaining epsilon order equal epsilon order of series solution
 - solve regular algebraic equation
 - inverse change of variable
