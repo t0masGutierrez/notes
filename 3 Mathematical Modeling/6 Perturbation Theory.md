@@ -39,7 +39,7 @@ $$
 $$
 \begin{aligned}
 \frac{dx}{dt} = f(t, x, \epsilon) \\
-x(t_{0}) = x_{0} \\
+x(t_{0}, \epsilon) = x_{0}(\epsilon) \\
 t \ge 0 \\
 f = \text{perturbed equation} \\
 t = \text{time} \\
