@@ -286,3 +286,23 @@ B = \text{codomain}
 $$
 
 ---
+### bijection example
+- subtraction
+- addition
+- exponential
+- logarithm
+- inverse exponential
+
+---
+### bijection example formula
+$$
+\begin{aligned}
+f: (0, 1) \rightarrow (0, \infty) \implies f(x) = \frac{x}{1-x} \\
+f: (0, \infty) \rightarrow (0, 1) \implies f(x) = \frac{x}{1+x} \\
+f: \mathbb R \rightarrow (0, \infty) \implies f(x) = e^x \\
+f: (0, 1) \rightarrow \mathbb R \implies f(x) = \ln x \\
+f: \mathbb R \rightarrow (0, 1) \implies f(x) = \frac{1}{1+e^{-x}} \\
+\end{aligned}
+$$
+
+---
