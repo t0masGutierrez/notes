@@ -361,7 +361,7 @@ $$
 \begin{aligned}
 \epsilon y'' + \phi(x)y' = f(x) \\
 \tau = \frac{x-q_{in}}{\epsilon^n} \\
-\frac{1}{\epsilon^{2}}(\frac{d^2y}{d\tau^2}) + \frac{\phi(x)}{\epsilon}(\frac{dy}{d\tau}) = f(x) \\
+\frac{1}{\epsilon^{2n}}(\frac{d^2y}{d\tau^2}) + \frac{\phi(x)}{\epsilon^n}(\frac{dy}{d\tau}) = f(x) \\
 y(q_{in}) = Ae^{r_{1} q_{in}} + Be^{r_{2} q_{in}} \\
 y_{in}(\tau)
 \end{aligned}
