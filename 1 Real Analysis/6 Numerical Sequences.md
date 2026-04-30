@@ -116,40 +116,6 @@ S = \text{derived set} \\
 $$
 
 ---
-### convergence property
-- neighborhood convergence
-- unique convergence
-- bounded convergence
-- limit convergence
-
----
-### convergence property formula
-$$
-\begin{aligned}
-\lim_{n \rightarrow \infty} a_{n} = a \iff \forall \epsilon> 0, \exists N \in \mathbb N, \forall n \ge N: a_{n} \in N_{\epsilon}(a) \\
-(\lim_{n \rightarrow \infty} a_{n} = a) \land (\lim_{n \rightarrow \infty} a_{n} = a') \implies a = a' \\
-\lim_{n \rightarrow \infty} a_{n} = a \implies \exists \epsilon > 0: \{a_{n}\} \subset B_{\epsilon}(a) \subset X \\
-a \in S' \implies \exists \{a_{n}\} \in S \subset X: \lim_{n \rightarrow \infty} a_{n} = a
-\end{aligned}
-$$
-
----
-### cauchy convergence property
-- every convergent sequence of metric space equal cauchy sequence
-- every cauchy sequence of compact set equal convergent sequence
-- every cauchy sequence of k-dimensional real numbers equal convergent sequence
-
----
-### cauchy convergence property formula
-$$
-\begin{aligned}
-\lim_{n\rightarrow \infty} a_{n} = a \implies \{a_{n}\} = \{_{c}a_{n}\} \\
-\forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: X \subset \bigcup_{k=1}^n Y_{i_{k}} \implies \forall \{_{c}a_{n}\} \subset X, \exists a \in X: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
-\forall \{_{c}a_{n}\} \subset \mathbb R^k, \exists a \in \mathbb R^k: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
-\end{aligned}
-$$
-
----
 ### limit convergence property
 - distance between $n$th term and limit approaches zero as $n$ approaches infinity
 
@@ -184,16 +150,38 @@ $$
 $$
 
 ---
-### limit subsequence property
-- every limit of convergent sequence equal limit of subsequence
+### convergence property
+- subsequence convergence
+- neighborhood convergence
+- unique convergence
+- bounded convergence
+- limit convergence
 
 ---
-### limit subsequence property formula
+### convergence property formula
 $$
 \begin{aligned}
 \lim_{n \rightarrow \infty} a_{n} = a \implies \forall \epsilon > 0, \exists K \in \mathbb N, \forall n_{k} \ge n_{K} \ge N: d(a_{n_{k}}, a) < \epsilon \\
-\set {a_{n}}, \set {{a_{n_{k}}}} = \text{convergent sequence} \\
-a = \text{sequential limit} 
+\lim_{n \rightarrow \infty} a_{n} = a \iff \forall \epsilon> 0, \exists N \in \mathbb N, \forall n \ge N: a_{n} \in N_{\epsilon}(a) \\
+(\lim_{n \rightarrow \infty} a_{n} = a) \land (\lim_{n \rightarrow \infty} a_{n} = a') \implies a = a' \\
+\lim_{n \rightarrow \infty} a_{n} = a \implies \exists \epsilon > 0: \{a_{n}\} \subset B_{\epsilon}(a) \subset X \\
+a \in S' \implies \exists \{a_{n}\} \in S \subset X: \lim_{n \rightarrow \infty} a_{n} = a 
+\end{aligned}
+$$
+
+---
+### cauchy property
+- every convergent sequence of metric space equal cauchy sequence
+- every cauchy sequence of compact set equal convergent sequence
+- every cauchy sequence of k-dimensional real numbers equal convergent sequence
+
+---
+### cauchy property formula
+$$
+\begin{aligned}
+\lim_{n\rightarrow \infty} a_{n} = a \implies \{a_{n}\} = \{_{c}a_{n}\} \\
+\forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: X \subset \bigcup_{k=1}^n Y_{i_{k}} \implies \forall \{_{c}a_{n}\} \subset X, \exists a \in X: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
+\forall \{_{c}a_{n}\} \subset \mathbb R^k, \exists a \in \mathbb R^k: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
 \end{aligned}
 $$
 
