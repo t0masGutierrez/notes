@@ -117,14 +117,14 @@ $$
 
 ---
 ### limit convergence property
-- distance between $n$th term and limit approaches zero as $n$ approaches infinity
+- distance between $n$th term of convergent sequence and sequential limit approaches zero as number of terms approaches infinity
 
 ---
 ### limit convergence property formula
 $$
 \begin{aligned}
 \lim_{n \rightarrow \infty} a_{n} = a \implies \lim_{n \rightarrow \infty} d(a_{n}, a) = 0 \\
-\set {a_{n}} = \text{sequence} \\
+\set {a_{n}} = \text{convergent sequence} \\
 a = \text{sequential limit}
 \end{aligned}
 $$
@@ -179,8 +179,8 @@ $$
 ### cauchy property formula
 $$
 \begin{aligned}
-\lim_{n\rightarrow \infty} a_{n} = a \implies \{a_{n}\} = \{_{c}a_{n}\} \\
-\forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: X \subset \bigcup_{k=1}^n Y_{i_{k}} \implies \forall \{_{c}a_{n}\} \subset X, \exists a \in X: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
+\exists a \in X:\lim_{n\rightarrow \infty} a_{n} = a \implies \{a_{n}\} = \{_{c}a_{n}\} \\
+\forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: S \subset \bigcup_{k=1}^n Y_{i_{k}} \implies \forall \{_{c}a_{n}\} \subset S, \exists a \in X: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
 \forall \{_{c}a_{n}\} \subset \mathbb R^k, \exists a \in \mathbb R^k: \lim_{n\rightarrow \infty} {}_{c}a_{n} = a \\
 \end{aligned}
 $$
