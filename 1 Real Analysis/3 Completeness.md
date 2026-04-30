@@ -215,16 +215,3 @@ $$
 $$
 
 ---
-### nth root property
-- for every positive real number there exists unique positive real number root for every natural number power
-
----
-### nth root property formula
-$$
-\begin{aligned}
-\forall x \in \mathbb R^+, \exists !y \in \mathbb R^+, \forall n \in \mathbb N: y^n = x \\
-y = \text{nth root}
-\end{aligned}
-$$
-
----

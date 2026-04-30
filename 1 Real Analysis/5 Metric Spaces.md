@@ -1,15 +1,3 @@
-### absolute value
-- nonnegativity operation on real number equal distance between real numbers
-
----
-### absolute value formula
-$$
-\begin{aligned}
-x \in \mathbb R \implies |x| \ge 0
-\end{aligned}
-$$
-
----
 ### metric
 - distance between coordinates of set
 
@@ -18,6 +6,21 @@ $$
 $$
 \begin{aligned}
 d: X \times X \rightarrow \mathbb R = [0, \infty)
+\end{aligned}
+$$
+
+---
+### euclidean metric
+- nonnegativity operation on real number equal distance between real numbers
+
+---
+### euclidean metric formula
+$$
+\begin{aligned}
+x, y \in \mathbb R^n \implies d(x, y) = \|x - y\| = \sum_{i=1}^n \sqrt {(x_{i} - y_{i})^2} \\
+x, y = \text{coordinate} \\
+\|\cdot \| = \text{norm} \\
+
 \end{aligned}
 $$
 
@@ -45,10 +48,9 @@ $$
 $$
 \begin{aligned}
 B_{r}(x_{0}) = \{x \in X |d(x, x_{0}) < r\} \\
-x = \text{point} \\
-d = \text{metric} \\
+r = \text{radius} \\
 x_{0} = \text{center} \\
-r = \text{radius}
+X = \text{metric space}
 \end{aligned}
 $$
 
@@ -60,28 +62,12 @@ $$
 ### neighborhood formula
 $$
 \begin{aligned}
-N \subset X, \exists r > 0: x_{0} \in B_{r}(x_{0}) \subset N_{r}(x_{0}) \\
-N = \text{neighborhood} \\
-X = \text{metric space} \\
+\exists r > 0: B_{r}(x_{0}) \subset N \subset X\\
 r = \text{radius} \\
+B = \text{open ball} \\
 x_{0} = \text{center} \\
-B = \text{open ball}
-\end{aligned}
-$$
-
----
-### limit point
-- every neighborhood around limit point contain point of set
-
----
-### limit point formula
-$$
-\begin{aligned}
-S \subset X, \forall r > 0: N_{r}(x_{0}) \setminus \{x_{0}\} \cap S \ne \emptyset \\
-X = \text{metric space} \\
-r = \text{radius} \\
 N = \text{neighborhood} \\
-x_{0} = \text{limit point}
+X = \text{metric space} 
 \end{aligned}
 $$
 
@@ -93,11 +79,27 @@ $$
 ### interior point formula
 $$
 \begin{aligned}
-S \subset X, \exists r > 0: N_{r}(x_{0}) \subset S \\
-X = \text{metric space} \\
+\exists r > 0: B_{r}(x_{0}) \subset S \subset X \\
 r = \text{radius} \\
-N = \text{neighborhood} \\
-x_{0} = \text{interior point}
+B = \text{open ball} \\
+x_{0} = \text{interior point} \\
+X = \text{metric space} 
+\end{aligned}
+$$
+
+---
+### limit point
+- every neighborhood around limit point contain point of set
+
+---
+### limit point formula
+$$
+\begin{aligned}
+\forall r > 0: B_{r}(x_{0}) \setminus \{x_{0}\} \cap (S \subset X) \ne \emptyset \\
+r = \text{radius} \\
+B = \text{open ball} \\
+x_{0} = \text{limit point} \\
+X = \text{metric space} 
 \end{aligned}
 $$
 
@@ -109,12 +111,12 @@ $$
 ### open formula
 $$
 \begin{aligned}
-S \subset X, \forall x \in S, \exists r > 0: N_{r}(x) \subset S \\
+\forall x \in S \subset X, \exists r > 0: B_{r}(x) \subset S  \\
+x = \text{interior point} \\
 S = \text{open set} \\
 X = \text{metric space} \\
-x = \text{interior point} \\
 r = \text{radius} \\
-N = \text{neighborhood}
+B = \text{open ball}
 \end{aligned}
 $$
 
@@ -126,12 +128,12 @@ $$
 ### relatively open formula
 $$
 \begin{aligned}
-S \subset Y \subset X, \forall x \in S, \exists r > 0: N_{r}(x) \cap Y \subset S \\
+\forall x \in S \subset Y \subset X, \exists r > 0: B_{r}(x) \cap Y \subset S \\
+x = \text{interior point} \\
 S = \text{relatively open set} \\
 X = \text{metric space} \\
 r = \text{radius} \\
-N = \text{neighborhood} \\
-x = \text{interior point}
+B = \text{open ball}
 \end{aligned}
 $$
 
@@ -151,21 +153,6 @@ X = \text{metric space}
 $$
 
 ---
-### perfect
-- closed set and every point of perfect set equal limit point of perfect set
-
----
-### perfect formula
-$$
-\begin{aligned}
-S' = S \subset X \\
-S' = \text{derived set} \\
-S = \text{perfect set} \\
-X = \text{metric space}
-\end{aligned}
-$$
-
----
 ### interior
 - largest open subset of the set
 
@@ -173,10 +160,11 @@ $$
 ### interior formula
 $$
 \begin{aligned}
-S^{\circ} = \{x \in X|\exists r > 0: N_{r}(x) \subset S\} \\
+S^{\circ} = \{x \in X|\exists r > 0: B_{r}(x) \subset S \subset X\} \\
 x = \text{interior point} \\
 X = \text{metric space} \\
-N = \text{neighborhood}
+r = \text{radius} \\
+B = \text{open ball}
 \end{aligned}
 $$
 
@@ -189,7 +177,7 @@ $$
 $$
 \begin{aligned}
 \overline S = S \cup S' \\
-S' = \text{derived set}
+S' = \text{derived set} 
 \end{aligned}
 $$
 
@@ -201,11 +189,25 @@ $$
 ### boundary formula
 $$
 \begin{aligned}
-\partial S = \overline S \setminus S^{\circ} = \overline S \cap \overline {S^c} = \set {x \in X| \forall r > 0: N_{r}(x) \cap S \ne \emptyset \land N_{r}(x) \cap S^c \ne \emptyset}\\
+\partial S = \overline S \setminus S^{\circ} = \overline S \cap \overline {S^c} \\
 \overline S = \text{closure} \\
 S^{\circ} = \text{interior} \\
-c = \text{complement} \\
-N = \text{neighborhood}
+c = \text{complement} 
+\end{aligned}
+$$
+
+---
+### perfect
+- closed set and every point of perfect set equal limit point of perfect set
+
+---
+### perfect formula
+$$
+\begin{aligned}
+S' = S \subset X \\
+S' = \text{derived set} \\
+S = \text{perfect set} \\
+X = \text{metric space}
 \end{aligned}
 $$
 
@@ -232,11 +234,11 @@ $$
 ### bounded formula
 $$
 \begin{aligned}
-S \subset X, \exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \\
-S = \text{bounded set} \\
-X = \text{metric space} \\
+\exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \subset X \\
 x_{0} = \text{center} \\
-r = \text{radius} 
+X = \text{metric space} \\
+r = \text{radius} \\
+S = \text{bounded set} 
 \end{aligned}
 $$
 
@@ -248,18 +250,20 @@ $$
 ### totally bounded formula
 $$
 \begin{aligned}
-S \subset X, \forall r > 0, \exists \set {a_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \\
-S = \text{totally bounded set} \\
+\forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \subset X \\
 r = \text{radius} \\
+x_{i} = \text{center} \\
+\set{x_{i}} = \text{sequence} \\
 X = \text{metric space} \\
-a_{n} = \text{sequence} \\
+S = \text{totally bounded set} \\
 B = \text{open ball} \\
-x_{i} = \text{center}
+
+
 \end{aligned}
 $$
 
 ---
-### absolute value property
+### euclidean metric property
 - negative
 - root
 - inequality
@@ -270,7 +274,7 @@ $$
 - absolute subtraction
 
 ---
-### absolute value property formula
+### euclidean metric property formula
 $$
 \begin{aligned}
 |x| = |-x| \\
@@ -292,44 +296,10 @@ $$
 ### interval limit point property
 $$
 \begin{aligned}
-(a, b) = S \subset X \implies S' = [a, b] \\
+S = (a, b) \subset X \implies S' = [a, b] \\
 S = \text{interval} \\
 S' = \text{derived set} \\
 X = \text{metric space}
-\end{aligned}
-$$
-
----
-### infinite limit point property
-- every neighborhood around limit point contain infinite point of set
-
----
-### infinite limit point property formula
-$$
-\begin{aligned}
-\{0, 1, \dots, n\} \not\sim S \subset X \implies \forall r > 0, \forall x_{0} \in S': |N_{r}(x_{0}) \setminus \{x_{0}\} \cap S| = \infty \\
-S = \text{infinite set} \\
-X = \text{metric space} \\
-r = \text{radius} \\
-x_{0} = \text{limit point} \\
-N = \text{neighborhood} 
-\end{aligned}
-$$
-
----
-### finite limit point property
-- every point of finite set equal isolated point of finite set
-
----
-### finite limit point property formula
-$$
-\begin{aligned}
-\{0, 1, \dots, n\} \sim S \subset X \implies \forall r > 0, \forall x \in S: N_{r}(x) \setminus \{x\} \cap S = \{x\} \\
-S = \text{finite set} \\
-X = \text{metric space} \\
-r = \text{radius} \\
-x = \text{isolated point} \\
-N = \text{neighborhood} 
 \end{aligned}
 $$
 
@@ -341,7 +311,7 @@ $$
 ### join complement property formula
 $$
 \begin{aligned}
-(\bigcup_{i} S_{i})^c = \bigcap_{i} (S_{i}^c) \\
+(\bigcup_{i \in I} S_{i})^c = \bigcap_{i \in I} (S_{i}^c) \\
 c = \text{complement}
 \end{aligned}
 $$
@@ -355,12 +325,12 @@ $$
 ### cover complement property formula
 $$
 \begin{aligned}
-S' \subset S \subset X \iff \forall x \in S^c, \exists r > 0: N_{r}(x) \subset S^c \\
-S \subset X, \forall x \in S, \exists r > 0: N_{r}(x) \subset S \iff (S')^c \subset S^c \subset X \\
+S' \subset S \subset X \iff \forall x \in S^c, \exists r > 0: B_{r}(x) \subset S^c \\
+\forall x \in S \subset X, \exists r > 0: B_{r}(x) \subset S \iff (S')^c \subset S^c  \\
 S' = \text{derived set} \\
 c = \text{complement} \\
 r = \text{radius} \\
-N = \text{neighborhood} 
+B = \text{open ball} 
 \end{aligned}
 $$
 
@@ -375,38 +345,10 @@ $$
 ### join cover property formula
 $$
 \begin{aligned}
-S \subset X, \forall x \in S, \exists r > 0: N_{r}(x) \subset S \implies N_{r}(x) \subset \bigcup_{i} S_{i} \\
-S' \subset S \subset X  \implies S' \subset \bigcap_{i} S_{i}   \\
-S \subset X, \forall x \in S, \exists r > 0: N_{r}(x) \subset S \implies N_{r}(x) \subset \bigcap_{i=1}^n S_{i} \\
-S' \subset S \subset X  \implies S' \subset \bigcup_{i}^n S_{i}  \\
-\end{aligned}
-$$
-
----
-### special cover property
-- empty set equal both open set and closed set
-- metric space equal both open set and closed set
-
----
-### special cover property formula
-$$
-\begin{aligned}
-\forall x \in \emptyset, X, \exists r > 0: N_{r}(x) \subset \emptyset, X \\
-\emptyset', X' \subset \emptyset, X 
-\end{aligned}
-$$
-
----
-### uncountable perfection property
-- nonempty perfect set of k-dimensional real numbers equal uncountable set
-
----
-### uncountable perfection property formula
-$$
-\begin{aligned}
-\emptyset \ne S' = S \subset \mathbb R^k \implies (\{0, 1, 2, 3, \dots, n\} \not \sim S) \land (\mathbb N \not\sim S) \\
-S = \text{perfect set} \\
-S' = \text{derived set} 
+\forall x \in S \subset X, \exists r > 0: B_{r}(x) \subset S \implies B_{r}(x) \subset \bigcup_{i \in I} S_{i} \\
+S' \subset S \subset X  \implies S' \subset \bigcap_{i \in I} S_{i}   \\
+\forall x \in S \subset X, \exists r > 0: B_{r}(x) \subset S \implies B_{r}(x) \subset \bigcap_{i=1}^n S_{i} \\
+S' \subset S \subset X  \implies S' \subset \bigcup_{i=1}^n S_{i}  \\
 \end{aligned}
 $$
 
@@ -424,9 +366,9 @@ $$
 \begin{aligned}
 \overline S' \subset \overline S \subset X \\
 S' \subset S \subset X \iff \overline S = S \\
-S \subset \mathbb R, \exists x_{0} \in \mathbb R, \exists r > 0:  S \subset B_{r}(x_{0}) \implies \exists \sup S \in \overline S \\ 
+\exists x_{0} \in \mathbb R, \exists r > 0:  S \subset B_{r}(x_{0}) \subset \mathbb R\implies \exists \sup S \in \overline S \\ 
 (S \subset K) \land (K' \subset K \subset X) \implies \overline S \subset \overline K = K \\
-\overline {\bigcup_{i} A_{i}} = \bigcup_{i} \overline A_{i} \\
+\overline {\bigcup_{i \in I} A_{i}} = \bigcup_{i \in I} \overline A_{i} \\
 \end{aligned}
 $$
 
@@ -440,9 +382,9 @@ $$
 ### totally bounded property formula
 $$
 \begin{aligned}
-S \subset X, \forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \implies \exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \\
-S \subset X, \exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \not\implies  \forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \\
-S \subset \mathbb R^k, \forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \iff \exists x_{0} \in \mathbb R^k, \exists r > 0: S \subset B_{r}(x_{0})
+\forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \subset X \implies \exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \\
+\exists x_{0} \in X, \exists r > 0: S \subset B_{r}(x_{0}) \subset X \not\implies  \forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset X: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \\
+\forall r > 0, \exists \set {x_{i}}_{i=1}^{n} \subset \mathbb R^k: S \subset \bigcup_{i=1}^n B_{r}(x_{i}) \subset \mathbb R^k \iff \exists x_{0} \in \mathbb R^k, \exists r > 0: S \subset B_{r}(x_{0})
 \end{aligned}
 $$
 
