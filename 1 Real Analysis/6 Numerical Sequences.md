@@ -92,6 +92,7 @@ $$
 $$
 \begin{aligned}
 S = \{a \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_{k}} = a\} \implies  \lim_{n\rightarrow \infty} \sup a_{n} = \sup S \\
+\lim_{n\rightarrow \infty} \sup a_{n} = \lim_{n \rightarrow \infty} \sup_{k \ge n} x_{k} \\
 a = \text{sequential limit} \\
 \set{a_{n_{k}}} = \text{subsequence} \\
 S = \text{derived set} \\
@@ -107,7 +108,8 @@ $$
 ### limit inferior formula
 $$
 \begin{aligned}
-S = \{a \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_{k}} = a\} \implies \lim_{n\rightarrow \infty} \inf a_{n} = \inf S\\
+S = \{a \in \mathbb R|\lim_{k\rightarrow \infty} a_{n_{k}} = a\} \implies \lim_{n\rightarrow \infty} \inf a_{n} = \inf S \\
+\lim_{n\rightarrow \infty} \inf a_{n} = \lim_{n \rightarrow \infty} \inf_{k \ge n} x_{k} \\
 a = \text{sequential limit} \\
 \set{a_{n_{k}}} = \text{subsequence} \\
 S = \text{derived set} \\

@@ -67,7 +67,7 @@ $$
 
 ---
 ### closed bounded compactness property
-- compact set of metric space equal closed bounded set
+- closed bounded set of metric space equal compact set
 
 ---
 ### closed bounded compactness property formula
@@ -133,7 +133,7 @@ $$
 
 ---
 ### bolzano-weierstrass compactness property
-- for every bounded set of k-dimensional real numbers there exists limit point of k-dimensional real numbers
+- for every bounded sequence of real numbers there exists convergent subsequence
 
 ---  
 ### bolzano-weierstrass compactness property formula
