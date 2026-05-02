@@ -213,7 +213,7 @@ $$
 ### calculate judicious guessing
 - solve the homogeneous solution of heterogeneous linear constant coefficient differential equation
 - judiciously guess the unknown function of particular solution
-- if guess equal homogeneous solution then guess multiplication with independent variable until guess not equal homogeneous solution
+- if guess equal term of homogeneous solution then guess multiplication with independent variable until guess not equal term of homogeneous solution
 - substitute guess and its derivatives into the differential equation
 - general solution equal homogeneous solution addition with particular solution
 
