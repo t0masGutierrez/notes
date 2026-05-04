@@ -14,7 +14,7 @@ $$
 
 ---
 ### uniform continuous
-- for every epsilon distance between every point of continuous function there exists delta distance between every input point
+- for every epsilon distance between every point of uniform continuous function there exists delta distance between every input point
 
 ---
 ### uniform continuous formula
@@ -97,8 +97,8 @@ $$
 ### path connected formula
 $$
 \begin{aligned}
-\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
-\gamma: [0, 1] \rightarrow S \subset X \\
+\forall x_{0}, x_{1} \in S  \subset X: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \\
+\gamma: [0, 1] \rightarrow S \\
 x_{0}, x_{1} = \text{coordinate} \\
 S  = \text{path connected set} \\
 \gamma = \text{continuous function} \\
@@ -377,8 +377,9 @@ $$
 ### extension uniform continuity property formula
 $$
 \begin{aligned}
-\exists ! F:X \rightarrow Y: F(S) = f(S) \\
-\land \forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies d(F(x_{1}), F(x_{2})) < \epsilon \\
+\exists ! F:X \rightarrow Y: F(S) = f(S) \land \\
+\forall \epsilon > 0, \exists \delta > 0, \forall x_{1}, x_{2} \in S: d(x_{1}, x_{2}) < \delta \implies \\
+d(F(x_{1}), F(x_{2})) < \epsilon \\
 f: \overline S = X \rightarrow Y \\
 f, F = \text{uniform continuous function} \\
 S = \text{dense set} \\
@@ -413,7 +414,7 @@ $$
 ### real connected property formula
 $$
 \begin{aligned}
-S \subset \mathbb R, \forall x, y \in S: x < y \implies [x, y] \subset S \\
+\forall x, y \in S \subset \mathbb R: x < y \implies [x, y] \subset S \\
 S = \text{connected set}
 \end{aligned}
 $$
@@ -440,8 +441,8 @@ $$
 ### path connected property formula
 $$
 \begin{aligned}
-\forall x_{0}, x_{1} \in S: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \implies \not\exists A, B \in X: S = A \cup B \\
-\gamma: [0, 1] \rightarrow S \subset X \\
+\forall x_{0}, x_{1} \in S \subset X: \gamma(0) = x_{0} \land \gamma(1) = x_{1} \implies \not\exists A, B \in X: S = A \cup B \\
+\gamma: [0, 1] \rightarrow S \\
 x_{0}, x_{1} = \text{coordinate} \\
 S  = \text{connected set} \\
 \gamma = \text{continuous function} \\

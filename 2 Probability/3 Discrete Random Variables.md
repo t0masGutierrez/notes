@@ -71,11 +71,11 @@ X = \text{random variable}
 $$
 
 ---
-### variation
-- variance of random variable around mean
+### variance
+- spread of random variable around mean
 
 ---
-### variation formula
+### variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = E[X^2] - (E[X])^2 = E[(X - E[X])^2] \\
@@ -99,12 +99,12 @@ E[g(X)] = \sum_{i} g(x_{i})P(X=x_{i}) \\
 $$
 
 ---
-### variation property
+### variance property
 - addition
 - multiplication
 
 ---
-### variation property formula
+### variance property formula
 $$
 \begin{aligned}
 \text{Var}(X + c) = \text{Var}(X) \\
@@ -144,7 +144,7 @@ p = \text{probability of success}
 $$
 
 ---
-### bernoulli PMF variation formula
+### bernoulli PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = pq \\
@@ -190,7 +190,7 @@ p = \text{probability of success}
 $$
 
 ---
-### binomial PMF variation formula
+### binomial PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = npq \\
@@ -240,7 +240,7 @@ q = \text{probability of failure}
 $$
 
 ---
-### geometric PMF variation formula
+### geometric PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{q}{p^2} \\
@@ -290,7 +290,7 @@ q = \text{probability of failure}
 $$
 
 ---
-### negative binomial PMF variation formula
+### negative binomial PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{rq}{p^2} \\
@@ -336,7 +336,7 @@ N = \text{population size}
 $$
 
 ---
-### hypergeometric PMF variation formula
+### hypergeometric PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = (\frac{nK}{N})(1 - \frac{K}{N})(\frac{N-n}{N-1}) \\
@@ -384,7 +384,7 @@ X = \text{random variable} \\
 $$
 
 ---
-### poisson PMF variation formula
+### poisson PMF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \lambda \\

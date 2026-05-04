@@ -25,7 +25,7 @@ $$
 
 ---
 ### variance
-- variance of random variable around mean
+- spread of random variable around mean
 
 ---
 ### variance formula
@@ -38,7 +38,7 @@ $$
 
 ---
 ### sample variance
-- sample variance of random variable around mean
+- sample spread of random variable around mean
 
 ---
 ### sample variance formula

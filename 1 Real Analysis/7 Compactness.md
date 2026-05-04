@@ -73,10 +73,10 @@ $$
 ### closed bounded compactness property formula
 $$
 \begin{aligned}
-(S' \subset S \subset X ) \\
-\land (S \subset X, \exists x_{0} \in X, \exists r > 0: B_{r}(x_{0}) \supset S) \\
-\implies \forall \set {a_{n}} \subset S \subset X, \exists \set {a_{n_{k}}} \subset \set {a_{n}}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_{k}} = L \\
-\lor \forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: S \subset \bigcup_{k=1}^n Y_{i_{k}} \subset X \\
+(S' \subset S \subset X ) \land \\
+(S \subset X, \exists x_{0} \in X, \exists r > 0: B_{r}(x_{0}) \supset S) \implies \\
+\forall \set {a_{n}} \subset S \subset X, \exists \set {a_{n_{k}}} \subset \set {a_{n}}, \exists L \in S:\lim_{k \rightarrow \infty} a_{n_{k}} = L \lor \\
+\forall \set{Y_{i}} \subset X, \exists \{Y_{i_{1}}, \dots Y_{i_{n}}\} \subset \{Y_{i}\}: S \subset \bigcup_{k=1}^n Y_{i_{k}} \subset X \\
 S' = \text{derived set} \\
 S = \text{compact set} \\
 X = \text{metric space} \\
@@ -116,9 +116,9 @@ $$
 ### heine-borel compactness property formula
 $$
 \begin{aligned}
-(S' \subset S \subset X ) \\
-\land (S \subset X, \exists x_{0} \in X, \exists r > 0: B_{r}(x_{0}) \supset S) \\
-\iff \forall \set{Y_{i}}_{i\in I} \subset X, \exists \{Y_{i_{j}}\}_{j=1}^n \subset \{Y_{i}\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_{j}} \subset X \\
+(S' \subset S \subset X ) \land \\
+(S \subset X, \exists x_{0} \in X, \exists r > 0: B_{r}(x_{0}) \supset S) \iff \\
+\forall \set{Y_{i}}_{i\in I} \subset X, \exists \{Y_{i_{j}}\}_{j=1}^n \subset \{Y_{i}\}_{i\in I}: S \subset \bigcup_{j=1}^n Y_{i_{j}} \subset X \\
 S = \text{compact set} \\
 S' = \text{derived set} \\
 X = \text{metric space} \\

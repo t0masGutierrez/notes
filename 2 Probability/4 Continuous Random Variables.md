@@ -57,11 +57,11 @@ X = \text{random variable}
 $$
 
 ---
-### variation
-- variance of random variable around mean
+### variance
+- spread of random variable around mean
 
 ---
-### variation formula
+### variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = E[X^2] - (E[X])^2 = E[(X - E[X])^2] \\
@@ -95,7 +95,7 @@ b = \text{upper endpoint}
 $$
 
 ---
-### uniform PDF variation formula
+### uniform PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = {\frac{(b-a)^2}{12}} \\
@@ -128,7 +128,7 @@ E[X] = \mu \\
 $$
 
 ---
-### normal PDF variation formula
+### normal PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \sigma^2 \\
@@ -158,7 +158,7 @@ E[X] = 0
 $$
 
 ---
-### standard normal PDF variation formula
+### standard normal PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = 1
@@ -189,7 +189,7 @@ E[X] = \frac{1}{\lambda} \\
 $$
 
 ---
-### exponential PDF variation formula
+### exponential PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{1}{\lambda^2} \\
@@ -225,7 +225,7 @@ r = \text{event number} \\
 $$
 
 ---
-### gamma PDF variation formula
+### gamma PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{r}{\lambda^2} \\
@@ -260,7 +260,7 @@ r, k = \text{parameter}
 $$
 
 ---
-### beta PDF variation formula
+### beta PDF variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \frac{rk}{(r + k)^2(r + k + 1)} \\

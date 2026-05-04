@@ -123,20 +123,6 @@ a = \text{dimensional exponent}
 $$
 
 ---
-### change of units example
-- $q = 9.8 \frac{m}{s^2}$ 
-- $U = \set{\text{m}, \text{s}}$ 
-- $U' = \set{\text{km}, \text{min}}$ 
-
----
-### change of units example formula
-$$
-\begin{aligned}
-q' = (9.8\frac{\text{m}}{\text{s}^2})(\frac{1\text{ km}}{1000\text{ m}})(\frac{60\text{ s}}{1\text{ min}})^{2} = 35.28 \frac{\text{km}}{\text{min}^2}
-\end{aligned}
-$$
-
----
 ### unit-free equation
 - every quantity of equation equal dimensionless quantity
 

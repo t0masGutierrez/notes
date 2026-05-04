@@ -123,11 +123,11 @@ A = \text{event}
 $$
 
 ---
-### indicator variation
-- variance of indicator random variable around mean
+### indicator variance
+- spread of indicator random variable around mean
 
 ---
-### indicator variation formula
+### indicator variance formula
 $$
 \begin{aligned}
 \text{Var}(X) = \text{Var}(\sum_{i=1}^n I_{i}) = \sum_{i=1}^n P(A_{i})Q(A_{i}) \\
@@ -224,11 +224,11 @@ X, Y = \text{random variable} \\
 $$
 
 ---
-### joint variation
-- variance of joint random variable around mean
+### joint variance
+- spread of joint random variable around mean
 
 ---
-### joint variation formula
+### joint variance formula
 $$
 \begin{aligned}
 \text{Var}(X, Y) = \begin{bmatrix} \text{Var}(X) & \text{Cov}(X, Y) \\
@@ -238,11 +238,11 @@ X, Y = \text{random variable}
 $$
 
 ---
-### variation addition property
-- variance of random variable equal sum of joint variance of two random variable
+### variance addition property
+- spread of random variable equal sum of joint variance and covariance
 
 ---
-### variation addition property formula
+### variance addition property formula
 $$
 \begin{aligned}
 \text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X, Y) \\
@@ -278,11 +278,11 @@ X, Y = \text{random variable}
 $$
 
 ---
-### covariation
-- joint variance of two random variable around mean
+### covariance
+- joint spread of two random variable around mean
 
 ---
-### covariation formula
+### covariance formula
 $$
 \begin{aligned}
 \text{Cov}(X, Y) = E[(X - E[X])(Y - E[Y])] = E[XY] - E[X]E[Y] \\
@@ -291,14 +291,14 @@ $$
 $$
 
 ---
-### covariation property
+### covariance property
 - symmetry
 - identity
 - linearity
 - independence
 
 ---
-### covariation property formula
+### covariance property formula
 $$
 \begin{aligned}
 \text{Cov}(X, Y) = \text{Cov}(Y, X) \\
@@ -340,11 +340,11 @@ n = \text{sample size} \\
 $$
 
 ---
-### iid variation
-- variance of iid random variable around mean
+### iid variance
+- spread of iid random variable around mean
 
 ---
-### iid variation formula
+### iid variance formula
 $$
 \begin{aligned}
 \text{Var}(\sum_{i=1}^n X_{i}) = n\sigma^2 \\

@@ -58,7 +58,9 @@ $$
 ### injection formula
 $$
 \begin{aligned}
-f: A \rightarrow B, \forall a \in A, \forall b \in B: f(a_{1}) = f(a_{2}) \implies a_{1} = a_{2}
+\forall a \in A, \forall b \in B: f(a_{1}) = f(a_{2}) \implies a_{1} = a_{2} \\
+f: A \rightarrow B \\
+f = \text{injection}
 \end{aligned}
 $$
 
@@ -70,7 +72,9 @@ $$
 ### surjection formula
 $$
 \begin{aligned}
-f: A \rightarrow B, \forall b \in B, \exists a \in A: f(a) = b
+\forall b \in B, \exists a \in A: f(a) = b \\
+f: A \rightarrow B \\
+f = \text{surjection}
 \end{aligned}
 $$
 
@@ -82,7 +86,9 @@ $$
 ### bijection formula
 $$
 \begin{aligned}
-f: A \rightarrow B, \forall b \in B, \exists !a \in A: f(a) = b
+\forall b \in B, \exists !a \in A: f(a) = b \\
+f: A \rightarrow B \\
+f = \text{bijection}
 \end{aligned}
 $$
 
