@@ -20,7 +20,7 @@
 ### dimension formula
 $$
 \begin{aligned}
-[q] = \prod_{i=1}^m D_{i}^{a_{i}} \iff \Delta_{q} = [a_{1}, \dots, a_{m}] \in \mathbb R^m \\
+{}[q] = \prod_{i=1}^m D_{i}^{a_{i}} \iff \Delta_{q} = [a_{1}, \dots, a_{m}] \in \mathbb R^m \\
 q = \text{quantity} \\ 
 D = \text{dimension} \\
 a = \text{dimensional exponent}
@@ -68,12 +68,12 @@ $$
 ### dimension property formula
 $$
 \begin{aligned}
-[p \pm q] \in D \iff [p] = [q] \\
-[p \cdot q] = [p] \cdot [q] \\
-[\frac{p}{q}] = \frac{[p]}{[q]} \\
-[q^k] = [q]^k \\
-[\int p \cdot dq] = [p] \cdot [q] \\
-[\frac{d^kp}{dq^k}] = \frac{[p]}{[q]^k}
+{}[p \pm q] \in D \iff [p] = [q] \\
+{}[p \cdot q] = [p] \cdot [q] \\
+{}[\frac{p}{q}] = \frac{[p]}{[q]} \\
+{}[q^k] = [q]^k \\
+{}[\int p \cdot dq] = [p] \cdot [q] \\
+{}[\frac{d^kp}{dq^k}] = \frac{[p]}{[q]^k}
 \end{aligned}
 $$
 
@@ -102,7 +102,7 @@ $$
 ### dimensionless formula
 $$
 \begin{aligned}
-[q] = 1 \iff \Delta_{q} = 0 \\
+{}[q] = 1 \iff \Delta_{q} = 0 \\
 q = \text{pure number}
 \end{aligned}
 $$
@@ -179,7 +179,7 @@ $$
 $$
 \begin{aligned}
 q_{1} = f(q_{2}, \dots, q_{n}) \sim \pi_{1} = \phi (\pi_{2}, \dots, \pi_{n-m-1}) \\
-[\pi] = 1 \iff \Delta_\pi = \sum_{i=1}^n b_{i}\Delta_{q_{i}} = A\vec b = 0 \\
+{}[\pi] = 1 \iff \Delta_\pi = \sum_{i=1}^n b_{i}\Delta_{q_{i}} = A\vec b = 0 \\
 A = [\Delta q_{1}, \dots, \Delta q_{n}] \in \mathcal M_{mn} \\
 \vec b = [b_{1}, \dots, b_{n}] \in \mathbb R^n \\
 q = \text{quantity} \\

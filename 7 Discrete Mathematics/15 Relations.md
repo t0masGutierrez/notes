@@ -188,7 +188,7 @@ $$
 ### equivalence class formula
 $$
 \begin{aligned}
-[a] = \{x \in A | x \sim a\}
+{}[a] = \{x \in A | x \sim a\}
 \end{aligned}
 $$
 
@@ -212,7 +212,7 @@ $$
 ### modulo congruence class formula
 $$
 \begin{aligned}
-[a] = \{x \in Z | x \equiv a \ \text{mod} \ n\}
+{}[a] = \{x \in Z | x \equiv a \ \text{mod} \ n\}
 \end{aligned}
 $$
 

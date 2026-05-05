@@ -18,7 +18,7 @@ $$
 ### coordinatization formula
 $$
 \begin{aligned}
-[\vec w ]_{B} = [c_{1}, \dots, c_{k}] \implies \vec w = c_{1} \vec x_{1} + \dots + c_{n} \vec x_{n} \\
+{}[\vec w ]_{B} = [c_{1}, \dots, c_{k}] \implies \vec w = c_{1} \vec x_{1} + \dots + c_{n} \vec x_{n} \\
 \vec w, \vec x = \text{vector} \\
 B = \text{basis} \\
 c = \text{coordinate}
@@ -37,7 +37,7 @@ $$
 ### standard basis property formula
 $$
 \begin{aligned}
-[\vec v]_{S} = \vec v \\
+{}[\vec v]_{S} = \vec v \\
 \vec v = \text{vector} \\
 S = \text{standard basis}
 \end{aligned}
@@ -58,7 +58,7 @@ B| \vec v \implies I| [\vec v]_{B} \\
 B = \text{basis} \\
 \vec v = \text{vector} \\
 I = \text{identity matrix} \\
-[\vec v]_{B} = \text{coordinatization} 
+{}[\vec v]_{B} = \text{coordinatization} 
 \end{aligned}
 $$
 
@@ -72,9 +72,9 @@ $$
 ### coordinatization property formula
 $$
 \begin{aligned}
-[\vec v_{1} + \vec v_{2}]_{B} = [\vec v_{1}]_{B} + [\vec v_{2}]_{B} \\
-[c\vec v]_{B} = c[\vec v]_{B} \\
-[c_{1}\vec v_{1} + \dots + c_{k}\vec v_{k}]_{B} = c_{1}[\vec v_{1}]_{B} + \dots + c_{k}[\vec v_{k}]_{B}
+{}[\vec v_{1} + \vec v_{2}]_{B} = [\vec v_{1}]_{B} + [\vec v_{2}]_{B} \\
+{}[c\vec v]_{B} = c[\vec v]_{B} \\
+{}[c_{1}\vec v_{1} + \dots + c_{k}\vec v_{k}]_{B} = c_{1}[\vec v_{1}]_{B} + \dots + c_{k}[\vec v_{k}]_{B}
 \end{aligned}
 $$
 
@@ -114,7 +114,7 @@ B, C = \text{basis} \\
 \mathcal V = \text{vector space} \\
 \vec v = \text{vector} \\
 P = \text{transition matrix} \\
-[\vec v]_{B}, [\vec v]_{C} = \text{coordinatization} \\
+{}[\vec v]_{B}, [\vec v]_{C} = \text{coordinatization} \\
 \end{aligned}
 $$
 
@@ -128,7 +128,7 @@ $$
 \begin{aligned}
 (B, C, D \in \mathcal V) \land ([\vec v]_{C} = P_{BC}[\vec v]_{B}) \land ([\vec v]_{D} = Q_{CD}[\vec v]_{C}) \implies ([\vec v]_{D} = Q_{CD}P_{BC}[\vec v]_{B}) \\
 B, C, D = \text{basis} \\
-[\vec v]_{B}, [\vec v]_{C}, [\vec v]_{D} = \text{coordinatization} \\
+{}[\vec v]_{B}, [\vec v]_{C}, [\vec v]_{D} = \text{coordinatization} \\
 \mathcal V = \text{vector space} \\
 \vec v = \text{vector} \\
 P, Q = \text{transition matrix}
@@ -146,7 +146,7 @@ $$
 (B, C \in \mathcal V) \land ([\vec v]_{C} = P_{BC}[\vec v]_{B}) \implies (|P| \ne 0) \land ([\vec v]_{B} = P_{BC}^{-1}[\vec v]_{C}) \\
 B, C = \text{basis} \\
 \mathcal V = \text{vector space} \\
-[\vec v]_{B}, [\vec v]_{C} = \text{coordinatization} \\
+{}[\vec v]_{B}, [\vec v]_{C} = \text{coordinatization} \\
 \vec v = \text{vector} \\
 P = \text{transition matrix} \\
 |P| = \text{number of elements} \\
@@ -164,12 +164,12 @@ $$
 ### diagonalization transition matrix formula
 $$
 \begin{aligned}
-[\vec v]_{S} = P[\vec v]_{B} \\
+{}[\vec v]_{S} = P[\vec v]_{B} \\
 D[\vec v]_{B} = [A\vec v]_{B} \\
 \vec v = \text{vector} \\
 S = \text{standard basis} \\
 B = \text{basis} \\
-[\vec v]_{S}, [\vec v]_{B} = \text{coordinatization} \\
+{}[\vec v]_{S}, [\vec v]_{B} = \text{coordinatization} \\
 P = \text{eigenmatrix} \\
 D = \text{diagonal matrix} \\
 A = \text{matrix}
