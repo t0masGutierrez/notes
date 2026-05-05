@@ -3,9 +3,13 @@ import re
 
 INLINE_MATH_PATTERN = re.compile(r"(?<!\\)\$(.+?)(?<!\\)\$")
 SINGLE_CHAR_SUBSCRIPT_PATTERN = re.compile(r"(?<!\\)_([A-Za-z0-9])(?![A-Za-z0-9{])")
+LEADING_SQUARE_BRACKET_PATTERN = re.compile(r"^(\s*)\[")
 
 def sanitize_math_text(text):
     return SINGLE_CHAR_SUBSCRIPT_PATTERN.sub(r"_{\g<1>}", text)
+
+def protect_mathjax_leading_square_bracket(text):
+    return LEADING_SQUARE_BRACKET_PATTERN.sub(r"\1{}[", text, count=1)
 
 def sanitize_inline_math(line):
     return INLINE_MATH_PATTERN.sub(
@@ -91,7 +95,7 @@ def update_notes():
                                     continue
 
                                 if in_math_block:
-                                    lines[i] = sanitize_math_text(lines[i])
+                                    lines[i] = protect_mathjax_leading_square_bracket(sanitize_math_text(lines[i]))
                                 else:
                                     lines[i] = sanitize_inline_math(lines[i])
                             
