@@ -7,16 +7,16 @@ $$
 \begin{aligned}
 f(t, y, \frac{dy}{dt}, \dots, \frac{d^ny}{dt^n}) = 0 \\
 t = \text{independent variable} \\
-y = \text{function} 
+y = \text{solution} 
 \end{aligned}
 $$
 
 ---
-### 1st order differential equation
+### 1st-order differential equation
 - ordinary differential equation where the highest derivative equal 1
 
 ---
-### 1st order differential equation formula
+### 1st-order differential equation formula
 $$
 \begin{aligned}
 \frac{dy}{dt} = f(t, y) \\
@@ -26,28 +26,28 @@ y = \text{solution}
 $$
 
 ---
-### general solution of 1st order ode
+### general solution of 1st-order ode
 - family of functions with arbitrary constants that satisfy the differential equation
 
 ---
-### general solution of 1st order ode formula
+### general solution of 1st-order ode formula
 $$
 \begin{aligned}
-y = \phi(t, C) \\
+y(t) = \phi(t, C) \\
 t = \text{independent variable} \\
 C = \text{constant}
 \end{aligned}
 $$
 
 ---
-### particular solution of 1st order ode
+### particular solution of 1st-order ode
 - single function with initial conditions that satisfy the differential equation
 
 ---
-### particular solution of 1st order ode formula
+### particular solution of 1st-order ode formula
 $$
 \begin{aligned}
-y = \phi(t, t_{0}, y_{0}) \\
+y(t) = \phi(t, t_{0}, y_{0}) \\
 t = \text{independent variable} \\
 t_{0}, y_{0} = \text{initial condition}
 \end{aligned}
@@ -124,25 +124,18 @@ $$
 - unknown function is dependent variable of coefficients
 
 ---
-### nonlinear ode
-- unknown function and its derivatives of degree >1
-- unknown function and its derivatives are products
-- unknown function and its derivatives are independent variables of nonlinear function
-- unknown function is independent variable of coefficients
-
----
-### 1st order homogeneous linear ode formula
+### linear ode formula
 $$
 \begin{aligned}
-\frac{dy}{dt} + a(t)y(t) = 0 \\
-y = \text{unknown function} \\
+\frac{dy}{dt} + a(t)y(t) = b(t) \\
+y = \text{solution} \\
 t = \text{independent variable} \\
 a = \text{coefficient} \\
 \end{aligned}
 $$
 
 ---
-### general solution of 1st order homogeneous linear ode formula
+### general solution of 1st-order homogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = C\exp(-\int a(t)dt) \\
@@ -153,7 +146,7 @@ t = \text{independent variable}
 $$
 
 ---
-### particular solution of 1st order homogeneous linear ode formula
+### particular solution of 1st-order homogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = y(t_{0})\exp(-\int_{t_{0}}^t a(r)dr) \\
@@ -181,18 +174,7 @@ y = \text{solution}
 $$
 
 ---
-### 1st order heterogeneous linear ode formula
-$$
-\begin{aligned}
-\frac{dy}{dt} + a(t)y(t) = b(t) \\
-y = \text{unknown function} \\
-t = \text{independent variable} \\
-a = \text{coefficient} 
-\end{aligned}
-$$
-
----
-### general solution of 1st order heterogeneous linear ode formula
+### general solution of 1st-order heterogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = \frac{1}{\mu(t)}(C + \int \mu(t) b(t)dt) \\
@@ -203,7 +185,7 @@ C = \text{constant}
 $$
 
 ---
-### particular solution of 1st order heterogeneous linear ode formula
+### particular solution of 1st-order heterogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = \frac{1}{\mu(t)}[y(t_{0}) +\int_{t_{0}}^t \mu(r) b(r)dr] \\
@@ -222,95 +204,25 @@ $$
 ### exact ode formula
 $$
 \begin{aligned}
-\frac{\partial M}{\partial y} = \frac{\partial N}{\partial t} \\
-M(t, y)dt + N(t, y)dy = 0 
-\end{aligned}
-$$
-
----
-### exact ode 1st method
-- test exactness
-- integrate $M(t, y)$ with respect to $t$
-- integrate $N(t, y)$ with respect to $y$
-- combine terms
-
----
-### general solution of exact ode 1st method formula
-$$
-\begin{aligned}
-\Phi(t, y) = \int M(t, y)dt + \int N(t, y)dy + C \\
-M = \frac{\partial \Phi}{\partial t} \\
-N = \frac{\partial \Phi}{\partial y} \\
-\Phi = \text{potential function} \\
+\frac{\partial M}{\partial y} = \frac{\partial N}{\partial t} \implies d\Phi = M(t, y)dt + N(t, y)dy \\
+M(t, y)dt + N(t, y)dy = 0 \\
 t = \text{independent variable} \\
 y = \text{solution} \\
-C = \text{constant} 
+\Phi = \text{potential function}
 \end{aligned}
 $$
 
 ---
-### exact ode 2nd method
-- test exactness
-- potential function equal integral of $M(t, y)$ with respect to $t$ 
-- differentiate potential function with respect to $y$ 
-- derivative of potential function subtraction with $N(t, y)$ equal constant of integration
-- integrate the derivative of the constant of integration
-- equate potential function with constant of integration
-- solve unknown function
-
----
-### general solution of exact ode 2nd method formula
+### general solution of exact ode formula
 $$
 \begin{aligned}
-\Phi(t, y) = \int M(t, y)dt + \int \left(N(t, y) - \frac{\partial }{\partial y}\int M(t, y)dt \right) \\
+\Phi(t, y) = \int M(t, y)dt + \int \left(N(t, y) - \frac{\partial }{\partial y}\int M(t, y)dt \right)dy \\
 M = \frac{\partial \Phi}{\partial t} \\
 N = \frac{\partial \Phi}{\partial y} \\
 \Phi = \text{potential function} \\
 t = \text{independent variable} \\
 y = \text{solution} \\
 C = \text{constant} \\
-\end{aligned}
-$$
-
----
-### exact ode integrating factor
-- nonexact ode multiplication with integrating factor such that the partial derivatives equal therefore becoming integrable
-
----
-### exact ode integrating factor formula
-$$
-\begin{aligned}
-f(t) = \frac{\frac{\partial M}{\partial y} - \frac{\partial N}{\partial t}}{N} \implies \mu(t) = \exp(\int f(t)dt) \\
-f(y) = \frac{\frac{\partial N}{\partial t} - \frac{\partial M}{\partial y}}{M} \implies \mu(y) = \exp(\int f(y)dy) \\
-\end{aligned}
-$$
-
----
-### general solution of nonexact ode 1st method formula
-$$
-\begin{aligned}
-\Phi(t, y) = \int \mu(t \lor y)M(t, y)dt + \int \mu(t \lor y)N(t, y)dy + C \\
-M = \frac{\partial \Phi}{\partial t} \\
-N = \frac{\partial \Phi}{\partial y} \\
-\Phi = \text{potential function} \\
-\mu = \text{integrating factor} \\
-t = \text{independent variable} \\
-y = \text{unknown function} \\
-C = \text{constant} \\
-\end{aligned}
-$$
-
----
-### general solution of nonexact ode 2nd method formula
-$$
-\begin{aligned}
-\Phi(t, y) = \int \mu(t \lor y)M(t, y)dt + \int \left(N(t, y) - \frac{\partial }{\partial y}\int M(t, y)dt \right) \\
-M = \frac{\partial \Phi}{\partial t} \\
-N = \frac{\partial \Phi}{\partial y} \\
-\Phi = \text{potential function} \\
-\mu = \text{integrating factor} \\
-t = \text{independent variable} \\
-y = \text{unknown function} 
 \end{aligned}
 $$
 
