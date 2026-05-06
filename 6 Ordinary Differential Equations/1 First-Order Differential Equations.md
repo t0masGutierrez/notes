@@ -12,11 +12,11 @@ y = \text{solution}
 $$
 
 ---
-### 1st-order differential equation
+### 1st-order ode
 - ordinary differential equation where the highest derivative equal 1
 
 ---
-### 1st-order differential equation formula
+### 1st-order ode formula
 $$
 \begin{aligned}
 \frac{dy}{dt} = f(t, y) \\
@@ -222,7 +222,22 @@ N = \frac{\partial \Phi}{\partial y} \\
 \Phi = \text{potential function} \\
 t = \text{independent variable} \\
 y = \text{solution} \\
-C = \text{constant} \\
+C = \text{constant} 
+\end{aligned}
+$$
+
+---
+### particular solution of exact ode formula
+$$
+\begin{aligned}
+\Phi(t, y) = \Phi(t_{0}, y_{0}) = C \\
+M = \frac{\partial \Phi}{\partial t} \\
+N = \frac{\partial \Phi}{\partial y} \\
+\Phi = \text{potential function} \\
+t = \text{independent variable} \\
+y = \text{solution} \\
+t_{0}, y_{0} = \text{initial condition} \\
+C = \text{constant} 
 \end{aligned}
 $$
 

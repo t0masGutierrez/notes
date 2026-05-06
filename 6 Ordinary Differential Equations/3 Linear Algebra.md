@@ -148,24 +148,7 @@ t = \text{independent variable} \\
 k = \text{number of generalized eigenvectors} \\
 m = \text{generalized rank} \\
 C = \text{constant} \\
-\vec v = \text{generalized eigenvector} \\
-A = \text{square matrix} \\
-I = \text{identity matrix} 
-\end{aligned}
-$$
-
----
-### matrix exponential
-- general solution of linear system ode
-
----
-### matrix exponential formula
-$$
-\begin{aligned}
-e^{At} = \sum_{i=0}^n \frac{A^it^i}{i!} \implies \vec x(t) = e^{At}\vec x(0) \\
-A = \text{coefficient matrix} \\
-t = \text{independent variable} \\
-\vec x = \text{solution}
+\vec v = \text{generalized eigenvector} 
 \end{aligned}
 $$
 
@@ -186,15 +169,18 @@ t = \text{independent variable}
 $$
 
 ---
-### fundamental matrix property
-- matrix whose columns equal the linearly independent eigensolutions
+### matrix exponential
+- general solution of linear system ode
 
 ---
-### fundamental matrix property formula
+### matrix exponential formula
 $$
 \begin{aligned}
-e^{At} = \Phi(t)\Phi^{-1}(0) \\
-\Phi(t) = \text{fundamental matrix}
+e^{At} = \sum_{i=0}^\infty \frac{A^it^i}{i!} = \Phi(t)\Phi^{-1}(0) \implies \vec x(t) = e^{At}\vec x(0) \\
+A = \text{coefficient matrix} \\
+t = \text{independent variable} \\
+\Phi = \text{fundamental matrix} \\
+\vec x = \text{solution}
 \end{aligned}
 $$
 
