@@ -5,12 +5,12 @@
 ### heat equation formula
 $$
 \begin{aligned}
-\frac{\partial u}{\partial t} = k\frac{\partial ^2 u}{\partial ^2 x} \\
+\frac{\partial u}{\partial t} = k\frac{\partial ^2 u}{\partial x^2} \\
 u(0, t) = u(L, t) = 0 \\
 u(x, 0) = f(x) \\
 u = \text{heat} \\
 t = \text{time} \\
-k = \text{constant} \\
+k = \text{thermal diffusivity} \\
 x = \text{space}
 \end{aligned}
 $$
@@ -42,8 +42,8 @@ T'(t) + \lambda kT(t) = 0 \\
 \end{cases} \\
 x = \text{space} \\
 t = \text{time} \\
-k = \text{constant} \\
-\lambda = \text{constant}
+k = \text{thermal diffusivity} \\
+\lambda = \text{eigenvalue}
 \end{aligned}
 $$
 
@@ -56,7 +56,7 @@ $$
 $$
 \begin{aligned}
 X(x) = \sin(\frac{n\pi}{L}x) \\
-n = 1, 2, 3, \dots \\
+n = \text{natural number} \\
 x = \text{space} \\
 L = \text{length} 
 \end{aligned}
@@ -71,8 +71,8 @@ $$
 $$
 \begin{aligned}
 T(t) = \exp(-k\frac{n^2\pi^2}{L^2}t) \\
-k = \text{constant} \\
-n = 1, 2, 3, \dots \\
+k = \text{thermal diffusivity} \\
+n = \text{natural number} \\
 L = \text{length} \\
 t = \text{time} \\
 \end{aligned}
@@ -80,33 +80,34 @@ $$
 
 ---
 ### general solution of heat equation
-- superposition of eigenmodes
+- superposition of spatial modes with temporal decay
 
 ---
 ### general solution of heat equation formula
 $$
 \begin{aligned}
-u(x, t) = \sum _{n = 1}^N C_{n} \sin(\frac{n\pi}{L}x) \exp(-k\frac{n^2\pi^2}{L^2}t) \\
-C = \text{fourier sine series} \\
-n = 1, 2, 3, \dots \\
-x = \text{space} \\
+u(x, t) = \sum _{n = 1}^N c_{n}\exp(-k\frac{n^2\pi^2}{L^2}t) \sin(\frac{n\pi}{L}x) \\
+c = \text{fourier sine series} \\
+k = \text{thermal diffusivity} \\
+n = \text{natural number} \\
 L = \text{length} \\
-k = \text{constant} \\
 t = \text{time} \\
+x = \text{space} \\
+L = \text{length} 
 \end{aligned}
 $$
 
 ---
 ### fourier sine series
-- represent function on the interval from $x = 0$ to $x = L$ as infinite sum of sine functions
+- represent function on the interval as infinite sum of sine functions
 
 ---
 ### fourier sine series formula
 $$
 \begin{aligned}
-C_{n} = \frac{2}{L}\int_{0}^L f(x)\sin(\frac{n\pi}{L}x)dx \\
+c_{n} = \frac{2}{L}\int_{0}^L f(x)\sin(\frac{n\pi}{L}x)dx \\
 L = \text{length} \\
-n = 1, 2, 3, \dots \\
+n = \text{natural number} \\
 x = \text{space} \\
 L = \text{length} 
 \end{aligned}
