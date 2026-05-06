@@ -92,26 +92,55 @@ $$
 - number of standard deviations between sample statistic and null hypothesis
 
 ---
-### calculate test statistic
-- sample statistic conversion critical value
+### test statistic formula
+$$
+\begin{aligned}
+T = \frac{X - X_{0}}{SE(X)} \\
+X = \text{sample statistic} \\
+X_{0} = \text{null hypothesis} \\
+SE = \text{standard error}
+\end{aligned}
+$$
 
 ---
 ### critical region
 - area under the probability distribution where we reject null hypothesis
+
 ---
 ### two-tail test
 - critical region under both tails
-- $H_{a}: \quad \ne$ 
+
+---
+### two-tail test formula
+$$
+\begin{aligned}
+H_{a} : \quad \ne 
+\end{aligned}
+$$
 
 ---
 ### left-tail test
 - critical region under the left tail  
-- $H_{a}: \quad <$ 
+
+---
+### left-tail test formula
+$$
+\begin{aligned}
+H_{a} : \quad <
+\end{aligned}
+$$
 
 ---
 ### right-tail test
 - critical region under the right tail  
-- $H_{a}: \quad >$ 
+
+---
+### right-tail test formula
+$$
+\begin{aligned}
+H_{a} : \quad > 
+\end{aligned}
+$$
 
 ---
 ### critical value hypothesis test

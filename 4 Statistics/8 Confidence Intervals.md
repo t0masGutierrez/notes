@@ -47,6 +47,7 @@ $$
 ---
 ### critical z-value
 - boundary point on normal distribution between rejection region and non-rejection region
+
 ---
 ### critical z-value formula
 $$
@@ -148,6 +149,7 @@ $$
 ---
 ### confidence level
 - probability of the population parameter lying inside the confidence interval
+
 ---
 ### confidence level formula
 $$
@@ -208,6 +210,7 @@ $$
 - random sample
 - independent observations
 - normal distribution or large sample size
+
 ---
 ### construct mean confidence interval
 - calculate sample proportion

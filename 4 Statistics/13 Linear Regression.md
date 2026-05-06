@@ -114,7 +114,6 @@ $$
 ---
 ### residual
 - difference between dependent variable and prediction equal random scatter around zero
-![432](4%20Statistics/Images/residual.png)
 
 ---
 ### residual formula
@@ -188,7 +187,6 @@ $$
 ---
 ### correlation
 - measure of the strength and direction of linear relationship
-![](4%20Statistics/Images/correlation.png)
 
 ---
 ### correlation formula

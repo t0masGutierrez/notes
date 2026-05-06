@@ -99,7 +99,8 @@ df = n - 1 \\
 \overline x = \text{sample mean} \\
 \mu = \text{mean} \\
 s = \text{sample standard deviation} \\
-n = \text{sample size}
+n = \text{sample size} \\
+df = \text{degrees of freedom} 
 \end{aligned}
 $$
 
@@ -143,7 +144,8 @@ $$
 df = n - 1 \\
 n = \text{sample size} \\
 s = \text{sample standard deviation} \\
-\sigma = \text{standard deviation}
+\sigma = \text{standard deviation} \\
+df = \text{degrees of freedom} 
 \end{aligned}
 $$
 

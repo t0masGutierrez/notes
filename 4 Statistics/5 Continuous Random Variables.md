@@ -230,7 +230,7 @@ $$
 $$
 \begin{aligned}
 f(x) = \frac{\Gamma(\frac{d+1}{2})}{ \Gamma(\frac{d}{2})\sqrt{d\pi}}(1+\frac{x^2}{d})^{-(d+1)/2} \\
-d = n-1 \\
+
 \Gamma = \text{gamma} \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} \\
@@ -251,7 +251,6 @@ $$
 $$
 \begin{aligned}
 \sigma = \sqrt \frac{d}{d-2} \\
-d = n - 1 \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} \\
 \end{aligned}
@@ -266,7 +265,6 @@ $$
 $$
 \begin{aligned}
 f(x) = \frac{x^{d/2 - 1}e^{-x/2}}{2^{d/2}\Gamma(\frac{d}{2})} \\
-d = n - 1 \\
 x = \text{$\chi^2$-statistic} \\
 \Gamma = \text{gamma} \\
 d = \text{degrees of freedom} \\
@@ -278,7 +276,7 @@ $$
 ### chi-square PDF mean formula
 $$
 \begin{aligned}
-\mu = d = n - 1 \\
+\mu = d \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 
 \end{aligned}
@@ -288,7 +286,7 @@ $$
 ### chi-square PDF standard deviation formula
 $$
 \begin{aligned}
-\sigma = \sqrt {2d} = \sqrt {2(n-1)} \\
+\sigma = \sqrt {2d} \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 
 \end{aligned}
@@ -305,7 +303,6 @@ $$
 f(x) = \frac{x^{0.5d_{1} - 1}\Gamma(\frac{d_{1}+d_{2}}{2})(\frac{d_{1}}{d_{2}})^{0.5d_{1}}  
 }
 {\Gamma(\frac{d_{1}}{2})\Gamma(\frac{d_{2}}{2})(1 + \frac{d_{1}}{d_{2}}x)^{\frac{-d_{1}-d_{2}}{2}}} \\
-d = n - 1 \\
 x = \text{F-statistic} \\
 \Gamma = \text{gamma} \\
 d = \text{degrees of freedom} \\
@@ -318,7 +315,6 @@ $$
 $$
 \begin{aligned}
 \mu = \frac{d_{2}}{d_{2} - 2} \\
-d = n - 1 \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 
 \end{aligned}
@@ -329,7 +325,6 @@ $$
 $$
 \begin{aligned}
 \sigma = \sqrt {\frac{2d_{2}^2(d_{1}+d_{2} - 2)}{d_{1}(d_{2} - 2)^2(d_{2} - 4)}} \\
-d = n - 1 \\
 d = \text{degrees of freedom} \\
 n = \text{sample size} 
 \end{aligned}
