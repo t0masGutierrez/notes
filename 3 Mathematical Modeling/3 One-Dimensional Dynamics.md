@@ -102,7 +102,7 @@ $$
 ### asymptotic equilibrium stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_{0} \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_{0} \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) 
 \land \forall u_{0} \in \mathbb R: \lim_{t \rightarrow \infty} u(t) = u_* \\
 u_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -120,7 +120,7 @@ $$
 ### neutral equilibrium stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_{0} \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: u_{0} \in N_{\delta}(u_*) \implies u(t) \in N_{\epsilon}(u_*) 
 \land \exists u_{0} \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 u_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
@@ -137,7 +137,7 @@ $$
 ### equilibrium instability formula
 $$
 \begin{aligned}
-\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: u_{0} \in N_{\delta}(u_*) \land u(t) \not\in N_{\epsilon}(u_*) \\
+\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: u_{0} \in N_{\delta}(u_*) \land u(t) \not\in N_{\epsilon}(u_*) 
 \land \forall u_{0} \in \mathbb R: \lim_{t \rightarrow \infty} u(t) \ne u_* \\
 u_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\

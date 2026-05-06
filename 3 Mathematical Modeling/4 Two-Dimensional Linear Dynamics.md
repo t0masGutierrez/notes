@@ -168,8 +168,8 @@ $$
 ### asymptotic equilibrium stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
-\land \forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \land \\
+\forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
@@ -186,8 +186,8 @@ $$
 ### neutral equilibrium stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
-\land \exists x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \land \\
+\exists x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
@@ -203,8 +203,8 @@ $$
 ### equilibrium instability formula
 $$
 \begin{aligned}
-\exists \epsilon > 0, \forall \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \\
-\land \forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
+\exists \epsilon > 0, \forall \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \land \\
+\forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
@@ -235,8 +235,8 @@ $$
 ### asymptotic periodic stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
-\land \forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \land \\
+\forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) = (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
@@ -253,8 +253,8 @@ $$
 ### neutral periodic stability formula
 $$
 \begin{aligned}
-\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \\
-\land \exists x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
+\forall \epsilon > 0, \exists \delta > 0, \forall t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \implies (x, y)(t) \in N_{\epsilon}(x_*, y_*) \land \\
+\exists x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\
@@ -270,8 +270,8 @@ $$
 ### periodic instability formula
 $$
 \begin{aligned}
-\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \\
-\land \forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
+\exists \epsilon > 0, \forall \delta > 0, \exists t \ge 0: (x_{0}, y_{0}) \in N_{\delta}(x_*, y_*) \land (x, y)(t) \not\in N_{\epsilon}(x_*, y_*) \land \\
+\forall x_{0}, y_{0} \in \mathbb R: \lim_{t \rightarrow \infty} (x, y)(t) \ne (x_*, y_*) \\
 x_{0}, y_{0} = \text{initial condition} \\
 N = \text{neighborhood} \\
 x_*, y_* = \text{equilibrium point} \\

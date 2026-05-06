@@ -161,11 +161,11 @@ $$
 ### poincare-bendixson property formula
 $$
 \begin{aligned}
-(R' \subset R \subset \mathbb R^2) \\
-\land (R \subset \mathbb R^2, \exists v_{0} \in \mathbb R^2, \exists (r > 0) \in \mathbb R: B_{r}(v_{0}) \supset R) \\
-\land (\forall x \in R: f(x) \ne 0) \\
-\land (\partial R \le 0) \\
-\implies \exists v \in R, \forall t \ge 0: v(t + P) = v(t) \\
+(R' \subset R \subset \mathbb R^2) \land \\
+(R \subset \mathbb R^2, \exists v_{0} \in \mathbb R^2, \exists (r > 0) \in \mathbb R: B_{r}(v_{0}) \supset R) \land \\
+(\forall x \in R: f(x) \ne 0) \land \\
+(\partial R \le 0) \implies \\
+\exists v \in R, \forall t \ge 0: v(t + P) = v(t) \\
 R = \text{compact set} \\
 R' = \text{derived set} \\
 f = \text{velocity} \\
