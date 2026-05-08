@@ -11,6 +11,20 @@
     "8 Continuity.md",
     "9 Functional Sequences.md"
   ],
+  "10 Geometry": [
+    "1 Elements.md",
+    "2 Triangle Congruence.md",
+    "3 Triangle Similarity.md",
+    "4 Trigonometry.md",
+    "5 Polygons and Quadrilaterals.md",
+    "6 Circles.md",
+    "7 Area and Volume.md",
+    "8 Analytic Geometry.md",
+    "9 Transformations.md"
+  ],
+  "11 Algebra": [
+    "1 Structure.md"
+  ],
   "2 Probability": [
     "1 Combinatorics.md",
     "2 Axioms.md",
