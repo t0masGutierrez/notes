@@ -400,7 +400,7 @@ $$
 $$
 \begin{aligned}
 f(x)g(x) \to \frac{f(x)}{\frac{1}{g(x)}} \\
-y = f(x)^{g(x)} \to ln(y) = g(x) \ln[f(x)] \\
+y = f(x)^{g(x)} \to \ln(y) = g(x) \ln[f(x)] \\
 \frac{1}{f(x)} \pm \frac{1}{g(x)} \to \frac{f(x) \pm g(x)}{f(x)g(x)}
 \end{aligned}
 $$
