@@ -29,11 +29,11 @@ $$
 $$
 
 ---
-### chain differentiation property
-- derivative of composite function equal composite of derivative
+### composite differentiation property
+- derivative of composite function equal composite function of derivative
 
 ---
-### chain differentiation property formula
+### composite differentiation property formula
 $$
 \begin{aligned}
 \forall t \in [a, b]:\lim_{x\rightarrow t}f(x) = f(t) \land \\
