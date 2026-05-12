@@ -5,7 +5,7 @@
 ### variable formula
 $$
 \begin{aligned}
-x, y, a, b, n, k
+x, y
 \end{aligned}
 $$
 
@@ -17,7 +17,7 @@ $$
 ### constant formula
 $$
 \begin{aligned}
-3, -5, \frac{1}{2}, 0.6, \pi
+0, 1
 \end{aligned}
 $$
 
@@ -73,7 +73,7 @@ $$
 ### like term formula
 $$
 \begin{aligned}
-ax^n + bx^n \implies (a+b)x^n 
+ax^n + bx^n = (a+b)x^n 
 \end{aligned}
 $$
 
