@@ -8,10 +8,9 @@ $$
 A = \begin{bmatrix} 
 a_{11}
 \end{bmatrix} \implies 
-|A| = a_{11} \\
-A = \text{matrix} \\
-a = \text{entry} \\
-|A| = \text{determinant} 
+\det(A) = a_{11} \\
+A = \text{square matrix} \\
+a = \text{entry} 
 \end{aligned}
 $$
 
@@ -27,10 +26,9 @@ A = \begin{bmatrix}
 a_{11} & a_{12} \\
 a_{21} & a_{22}
 \end{bmatrix} \implies 
-|A| = a_{11}a_{22} - a_{12}a_{21} \\
-A = \text{matrix} \\
-a = \text{entry} \\
-|A| = \text{determinant} 
+\det(A) = a_{11}a_{22} - a_{12}a_{21} \\
+A = \text{square matrix} \\
+a = \text{entry}
 \end{aligned}
 $$
 
@@ -47,10 +45,9 @@ a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33}
 \end{bmatrix} \implies 
-|A| = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} \\
-A = \text{matrix} \\
-a = \text{entry} \\
-|A| = \text{determinant} 
+\det(A) = a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} \\ -a_{13}a_{22}a_{31} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} \\
+A = \text{square matrix} \\
+a = \text{entry} 
 \end{aligned}
 $$
 
@@ -62,8 +59,8 @@ $$
 ### nxn determinant formula
 $$
 \begin{aligned}
-|A| = \text{det}(A) \\
-A = \text{matrix} \\
+|A| = n \times n \implies \text{det}(A) \in \mathbb R \\
+A = \text{square matrix} \\
 \end{aligned}
 $$
 
@@ -76,7 +73,6 @@ $$
 $$
 \begin{aligned}
 A_{ij} = A - (a_{i*} + a_{*j}) \\
-\forall n \ge 2: |A_{ij}| = (n - 1) \times (n - 1) \\
 A = \text{matrix} \\
 a_{i*} = \text{ith row} \\
 a_{*j} = \text{jth column} \\
@@ -85,126 +81,99 @@ $$
 
 ---
 ### minor
-- determinant of submatrix
+- determinant of square submatrix
 
 ---
 ### minor formula
 $$
 \begin{aligned}
-|A_{ij}| = \text{det}(A_{ij}) \\
-A_{ij} = \text{submatrix}
-\end{aligned}
-$$
-
----
-### number of minors
-- for every entry of matrix there exists minor
-
----
-### number of minors formula
-$$
-\begin{aligned}
-N = n^2 \\
-n = \text{number of rows} \\
-n = \text{number of columns}
+\forall n \ge 2: |A_{ij}| = (n-1) \times (n-1) \implies \det(A_{ij}) \\
+A_{ij} = \text{square submatrix}
 \end{aligned}
 $$
 
 ---
 ### cofactor
-- minor multiplication with $\pm 1$ depending on the parity of exponent
+- minor multiplication with parity of exponent
 
 ---
 ### cofactor formula
 $$
 \begin{aligned}
-\mathcal A_{ij} = (-1)^{i+j}|A_{ij}| \\
+\mathcal A_{ij} = (-1)^{i+j}\det(A_{ij}) \\
 i = \text{row index} \\
 j = \text{column index} \\
-|A_{ij}| = \text{minor}
+\det(A_{ij}) = \text{minor}
 \end{aligned}
 $$
 
 ---
 ### nxn determinant
-- cofactor expansion along row or column of square matrix
+- cofactor expansion along row of square matrix
+- cofactor expansion along column of square matrix
 
 ---
 ### nxn determinant formula
 $$
 \begin{aligned}
-|A| = a_{i1}\mathcal A_{i1} + a_{i2}\mathcal A_{i2} + \dots + a_{in}\mathcal A_{in} \\
-|A| = a_{1j}\mathcal A_{1j} + a_{2j}\mathcal A_{2j} + \dots + a_{nj}\mathcal A_{nj} \\
-\forall (1 \le i \le n) \\
-\forall (1 \le j \le n) \\
-A = \text{matrix} \\
-a_{i*} = \text{ith row} \\
-a_{*j} = \text{jth column} \\
-\mathcal A = \text{cofactor} \\
-n = \text{number of rows} \\
-n = \text{number of columns}
+\det(A) = \sum_{j=1}^n a_{ij}\mathcal A_{ij} \\
+\det(A) = \sum_{i=1}^n a_{ij}\mathcal A_{ij} \\
+A = \text{square matrix} \\
+i = \text{row index} \\
+j = \text{column index} \\
+n = \text{dimension} \\
+a = \text{entry} \\
+\mathcal A = \text{cofactor}
 \end{aligned}
 $$
 
 ---
-###  type I row operation on determinant
+###  type I determinant row operation
 - determinant scaling
 
 ---
-### type I row operation on determinant formula
+### type I determinant row operation formula
 $$
 \begin{aligned}
-|R_{1}(A)| = c|A| \\
+\det R_{1}(A) = c\det(A) \\
 R_{1} = \text{type I row operation} \\
-c = \text{scalar} \\
-|A| = \text{determinant}
+A = \text{square matrix} \\
+c = \text{scalar} 
 \end{aligned}
 $$
 
 ---
-### type II row operation on determinant
+### type II determinant row operation
 - determinant equality
 
 ---
-### type II row operation on determinant formula
+### type II determinant row operation formula
 $$
 \begin{aligned}
-|R_{2}(A)| = |A| \\
-R_{2} = \text{type II row operation} \\
-|A| = \text{determinant}
+\det R_{2}(A) = \det(A) \\
+R_{2} = \text{type II row operation}\\
+A = \text{square matrix} 
 \end{aligned}
 $$
 
 ---
-### type III row operation on determinant
+### type III determinant row operation
 - determinant negation
 
 ---
-### type III row operation on determinant formula
+### type III determinant row operation formula
 $$
 \begin{aligned}
-|R_{3}(A)| = -|A| \\
+\det R_{3}(A) = -\det(A) \\
 R_{3} = \text{type III row operation} \\
-|A| = \text{determinant}
-\end{aligned}
-$$
-
----
-### upper triangular matrix determinant
-- determinant of upper triangular matrix equal product of entries along the main diagonal
-
----
-### upper triangular matrix determinant formula
-$$
-\begin{aligned}
-A \in \mathcal U \implies |A| = a_{11}a_{22} \dots a_{nn} \\
-a = \text{entry}
+A = \text{square matrix}
 \end{aligned}
 $$
 
 ---
 ### determinant via gaussian elimination
 - perform gaussian elimination until square matrix equal upper triangular matrix
+- track determinant row operation
 - determinant of upper triangular matrix equal product of entries along the main diagonal
 - determinant division with scalar
 
@@ -212,55 +181,35 @@ $$
 ### determinant via gaussian elimination formula
 $$
 \begin{aligned}
-B = R_{k}( \dots R_{1}(A)\dots ) \in \mathcal U \implies |A| = \frac{1}{c}|B| \\
+B = R_{k}( \dots R_{1}(A)\dots ) \in \mathcal U \implies \det(A) = \frac{1}{c}\det(B) \\
 R = \text{row operation} \\
-A = \text{matrix} \\
-|A| = \text{determinant} \\
+A = \text{square matrix} \\
 c = \text{scalar}
 \end{aligned}
 $$
 
 ---
-### zero determinant
-- zero row or zero column
-- identical row or identical column
-
----
-### singularity property
-- nonsingular if and only if nonzero determinant
-
----
-### singularity property formula
-$$
-\begin{aligned}
-\text{det}(A) \ne 0 \iff |A| \ne 0 \\
-A = \text{matrix} \\
-\end{aligned}
-$$
-
----
-### rank property
-- rank equal size of square matrix if and only if nonzero determinant
-
----
-### rank property formula
-$$
-\begin{aligned}
-\text{rank}(A) = n \iff |A| \ne 0 \\
-A = \text{matrix} \\
-n = \text{number of rows} \\
-n = \text{number of columns}
-\end{aligned}
-$$
-
----
 ### singularity summary
-- nonsingular
-- rank equal size of square matrix
-- nonzero determinant
-- matrix row equivalent with identity matrix
-- every solution equal trivial solution for homogeneous system
-- there exists unique solution for nonhomogeneous system
+- for every nonsingular matrix there exists inverse matrix
+- rank of nonsingular matrix equal dimension of nonsingular matrix
+- nonsingular matrix equal nonzero determinant
+- nonsingular matrix row equivalent with identity matrix
+- every solution of homogeneous system with nonsingular coefficient matrix equal trivial solution
+- there exists nontrivial solution of nonhomogeneous system with nonsingular coefficient matrix
+---
+### upper triangular matrix determinant
+- product of entries along the main diagonal
+
+---
+### upper triangular matrix determinant formula
+$$
+\begin{aligned}
+A \in \mathcal U_{n} \implies \det(A) = \prod_{i=1}^n a_{ii} \\
+a = \text{entry} \\
+i = \text{diagonal index} 
+\end{aligned}
+$$
+
 ---
 ### identity matrix determinant
 - product of 1's along the main diagonal
@@ -269,23 +218,23 @@ $$
 ### identity matrix determinant formula
 $$
 \begin{aligned}
-|I| = 1
+\det(I) = 1 \\
+I = \text{identity matrix} 
 \end{aligned}
 $$
 
 ---
 ### scalar multiplication determinant
-- determinant of scalar quantity multiplication with square matrix
+- exponential scalar multiplication with determinant
 
 ---
 ### scalar multiplication determinant formula
 $$
 \begin{align}
-|cA| = c^n|A| \\
-A = \text{matrix} \\
+\det(cA) = c^n\det(A) \\
+A = \text{square matrix} \\
 c = \text{scalar} \\
-n = \text{number of rows} \\
-n = \text{number of columns}
+n = \text{dimension}
 \end{align}
 $$
 
@@ -297,9 +246,8 @@ $$
 ### matrix multiplication determinant formula
 $$
 \begin{aligned}
-|AB| = (|A|)(|B|) \\
-A, B = \text{matrix} \\
-|A| = \text{determinant}
+\det(AB) = \det(A)\det(B) \\
+A, B = \text{square matrix} 
 \end{aligned}
 $$
 
@@ -311,10 +259,9 @@ $$
 ### matrix inversion determinant formula
 $$
 \begin{aligned}
-|A^{-1}| = \frac{1}{|A|} \\
-|A| \ne 0 \\
-A = \text{matrix} \\
-|A| = \text{determinant}
+\det(A^{-1}) = \frac{1}{\det(A)} \\
+\det(A) \ne 0 \\
+A = \text{square matrix} 
 \end{aligned}
 $$
 
@@ -322,29 +269,70 @@ $$
 ### matrix transposition determinant
 - identity
 - multiple identity
-- transpositive
+- transposition
 
 ---
 ### matrix transposition determinant formula
 $$
 \begin{aligned}
-|R(I)| = |(R(I))^T| \\
-|R_{k}( \dots R_{1}(I)\dots )| = |(R_{k}( \dots R_{1}(I)\dots ))^T| \\
-|R(B)| = |(R(B))^T| \\
+\det R(I) = |(R(I))^T| \\
+\det R_{k}( \dots R_{1}(I)\dots ) = |(R_{k}( \dots R_{1}(I)\dots ))^T| \\
+\det R(B) = |(R(B))^T| \\
 \end{aligned}
 $$
 
 ---
 ### symmetric determinant
-- determinant of square matrix equal determinant of transposed square matrix
+- determinant of transposed square matrix
 
 ---
 ### symmetric determinant formula
 $$
 \begin{aligned}
-|A| = |A^T| \\
-A = \text{matrix} \\
+\det(A) = \det(A^T) \\
+A = \text{symmetric matrix} \\
 T = \text{transposition}
+\end{aligned}
+$$
+
+---
+### determinant zero property
+- zero row or zero column
+- identical row or identical column
+
+---
+### determinant zero property formula
+$$
+\begin{aligned}
+(\vec a_{i*} = 0) \lor (\vec a_{*j} = 0) \implies \det(A) = 0 \\
+(\vec a_{i_{1}*} = \vec a_{i_{2}*}) \lor (\vec a_{*j_{1}} = \vec a_{*j_{2}}) \implies \det(A) = 0
+\end{aligned}
+$$
+
+---
+### determinant singularity property
+- nonsingular matrix equal nonzero determinant
+
+---
+### determinant singularity property formula
+$$
+\begin{aligned}
+\text{det}(A) \ne 0 \iff \exists A^{-1} \\
+A = \text{nonsingular matrix} \\
+\end{aligned}
+$$
+
+---
+### determinant rank property
+- rank of square matrix with nonzero determinant equal dimension of square matrix
+
+---
+### determinant rank property formula
+$$
+\begin{aligned}
+\det(A) \ne 0 \iff \text{rank}(A) = n \\
+A = \text{square matrix} \\
+n = \text{dimension}
 \end{aligned}
 $$
 

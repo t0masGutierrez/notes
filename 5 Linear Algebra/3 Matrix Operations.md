@@ -248,7 +248,7 @@ $$
 $$
 \begin{aligned}
 A = A^T \\
-A = \text{matrix} \\
+A = \text{square matrix} \\
 T = \text{transposition}
 \end{aligned}
 $$
@@ -262,7 +262,7 @@ $$
 $$
 \begin{aligned}
 A = -A^T \\
-A = \text{matrix} \\
+A = \text{square matrix} \\
 T = \text{transposition}
 \end{aligned}
 $$
