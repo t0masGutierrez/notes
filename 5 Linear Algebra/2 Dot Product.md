@@ -5,18 +5,10 @@
 ### dot product formula
 $$
 \begin{aligned}
-\vec x \cdot \vec y = x_1y_{1} + ... + x_ny_{n} = \sum_{i=1}^n x_iy_{i} \\
+\vec x \cdot \vec y = \sum_{i=1}^n x_iy_{i} = (\| \vec x \|)(\| \vec y \|) \cos(\theta) \\
 x, y = \text{coordinate} \\
 n = \text{number of coordinates} \\
-i = \text{index}
-\end{aligned}
-$$
-
----
-### dot product formula
-$$
-\begin{aligned}
-\vec x \cdot \vec y = (\| \vec x \|)(\| \vec y \|) \cos(\theta) \\
+i = \text{index} \\
 \vec x, \vec y = \text{vector} \\
 \| \vec x \|, \| \vec y \| = \text{magnitude} \\
 \theta = \text{direction}

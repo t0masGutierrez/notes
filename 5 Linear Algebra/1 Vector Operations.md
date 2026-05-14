@@ -4,6 +4,7 @@
 ---
 ### vector
 - quantity with both magnitude and direction
+
 ---
 ### n-vector
 - ordered n-tuple of real numbers
@@ -27,20 +28,6 @@ $$
 $$
 \begin{aligned}
 \vec 0 = [0, ..., 0]
-\end{aligned}
-$$
-
----
-### vector equality
-- two vectors equal if and only if all corresponding coordinates equal 
-
----
-### vector equality formula
-$$
-\begin{aligned}
-\vec x = \vec y \iff [x_{1}, ..., x_{n}] = [y_{1}, ..., y_{n}] \\
-\vec x, \vec y = \text{vector} \\
-x, y = \text{coordinate}
 \end{aligned}
 $$
 
@@ -102,6 +89,97 @@ n = \text{number of coordinates}
 $$
 
 ---
+### vector addition
+- vector coordinate addition with corresponding vector coordinate
+
+---
+### vector addition formula
+$$
+\begin{aligned}
+\vec x + \vec y = [x_{1}+y_{1}, ..., x_{n}+y_{n}] \\
+x, y = \text{coordinate} \\
+n = \text{number of coordinates}
+\end{aligned}
+$$
+
+---
+### linear combination
+- sum of scalar multiplication with vector
+
+---
+### linear combination formula
+$$
+\begin{aligned}
+\vec y = \sum_{i = 1}^k c_{i}\vec x_{i} \\
+c = \text{scalar} \\
+\vec x = \text{vector} \\
+k = \text{number of vectors}
+\end{aligned}
+$$
+
+---
+### component
+- horizontal change equal first component
+- vertical change equal second component
+---
+### scalar component formula
+$$
+\begin{aligned}
+x_{1} = \|\vec x \| \cos (\theta) \\
+x_{2} = \|\vec x \| \sin (\theta) \\
+\|\vec x \| = \text{magnitude} \\
+\theta = \text{direction}
+\end{aligned}
+$$
+
+---
+### vector component formula
+$$
+\begin{aligned}
+\vec{x} = x_{1}\vec e_{1} + x_{2}\vec e_{2} \\
+x = \text{coordinate} \\
+\vec e = \text{standard unit vector} 
+\end{aligned}
+$$
+
+---
+### vector equality property
+- two vectors equal if and only if all corresponding coordinates equal 
+
+---
+### vector equality property formula
+$$
+\begin{aligned}
+\vec x = \vec y \iff [x_{1}, ..., x_{n}] = [y_{1}, ..., y_{n}] \\
+\vec x, \vec y = \text{vector} \\
+x, y = \text{coordinate}
+\end{aligned}
+$$
+
+---
+### vector addition property
+- commutative
+- associative
+- identity
+- inverse
+- distributive
+
+---
+### vector addition property formula
+$$
+\begin{aligned}
+\vec x + \vec y = \vec y + \vec x \\
+(\vec x + \vec y) + \vec z = \vec x + (\vec y + \vec z) \\
+cd(\vec x) = c(d\vec x) \\
+\vec x + \vec 0 = \vec x \\
+1(\vec x) = \vec x \\
+\vec x + (-\vec x) = \vec 0 \\
+c(\vec x + \vec y) = c\vec x + c\vec y \\
+(c + d)\vec x = c\vec x + d\vec x 
+\end{aligned}
+$$
+
+---
 ### scalar multiplication property
 - increase vector magnitude
 - decrease vector magnitude
@@ -120,11 +198,11 @@ c < 0 \implies (-)||\vec x|| \\
 $$
 
 ---
-### parallel property
+### scalar parallel property
 - equal direction if and only if there exists scalar such that scalar multiplication equal vector
 
 ---
-### parallel property formula
+### scalar parallel property formula
 $$
 \begin{aligned}
 \vec x \parallel \vec y \iff \exists c: \vec x = c\vec y \\
@@ -134,98 +212,14 @@ c = \text{scalar}
 $$
 
 ---
-### zero product property
+### scalar zero property
 - for every product of zero there exists factor of zero
 
 ---
-### zero product property formula
+### scalar zero property formula
 $$
 \begin{aligned}
 c\vec x = \vec 0 \implies (c = 0) \lor (\vec x = \vec 0)
-\end{aligned}
-$$
-
----
-### vector addition
-- vector coordinate addition with corresponding vector coordinate
-
----
-### vector addition formula
-$$
-\begin{aligned}
-\vec x + \vec y = [x_{1}+y_{1}, ..., x_{n}+y_{n}] \\
-x, y = \text{coordinate} \\
-n = \text{number of coordinates}
-\end{aligned}
-$$
-
----
-### graphical vector addition
-- vector *B* starts where vector *A* ends
-- vector sum *C* equal diagonal from where vector *A* starts to where vector *B* ends
----
-### vector addition property
-- commutative
-- associative
-- identity
-- inverse
-- distributive
-- scalar associative
-- multiplicative identity
-
----
-### vector addition property formula
-$$
-\begin{aligned}
-\vec x + \vec y = \vec y + \vec x \\
-(\vec x + \vec y) + \vec z = \vec x + (\vec y + \vec z) \\
-\vec x + \vec 0 = \vec x \\
-\vec x + (-\vec x) = \vec 0 \\
-c(\vec x + \vec y) = c\vec x + c\vec y \\
-(c + d)\vec x = c\vec x + d\vec x \\
-cd(\vec x) = c(d\vec x) \\
-1(\vec x) = \vec x
-\end{aligned}
-$$
-
----
-### linear combination
-- sum of scalar multiplication with vector
-- every vector of $\mathbb R^n$ equal linear combination of standard unit vector of $\mathbb R^n$ 
-
----
-### linear combination formula
-$$
-\begin{aligned}
-\vec y = \sum_{i = 1}^k c_{i}\vec x_{i} \\
-c = \text{scalar} \\
-\vec x = \text{vector} \\
-k = \text{number of vectors}
-\end{aligned}
-$$
-
----
-### component
-- horizontal change equal $x_{1}$ component
-- vertical change equal $x_{2}$ component
----
-### scalar component formula
-$$
-\begin{aligned}
-x_{1} = \|\vec x \| \cos (\theta) \\
-x_{2} = \|\vec x \| \sin (\theta) \\
-\|\vec x \| = \text{magnitude} \\
-\theta = \text{direction}
-\end{aligned}
-$$
-
----
-### vector component formula
-$$
-\begin{aligned}
-\vec{x} = x_{1}\vec e_{1} + x_{2}\vec e_{1} \\
-x = \text{coordinate} \\
-\vec e = \text{standard unit vector} 
 \end{aligned}
 $$
 
