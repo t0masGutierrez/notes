@@ -143,43 +143,6 @@ x = \text{coordinate} \\
 $$
 
 ---
-### vector equality property
-- two vectors equal if and only if all corresponding coordinates equal 
-
----
-### vector equality property formula
-$$
-\begin{aligned}
-\vec x = \vec y \iff [x_{1}, ..., x_{n}] = [y_{1}, ..., y_{n}] \\
-\vec x, \vec y = \text{vector} \\
-x, y = \text{coordinate}
-\end{aligned}
-$$
-
----
-### vector addition property
-- commutative
-- associative
-- identity
-- inverse
-- distributive
-
----
-### vector addition property formula
-$$
-\begin{aligned}
-\vec x + \vec y = \vec y + \vec x \\
-(\vec x + \vec y) + \vec z = \vec x + (\vec y + \vec z) \\
-cd(\vec x) = c(d\vec x) \\
-\vec x + \vec 0 = \vec x \\
-1(\vec x) = \vec x \\
-\vec x + (-\vec x) = \vec 0 \\
-c(\vec x + \vec y) = c\vec x + c\vec y \\
-(c + d)\vec x = c\vec x + d\vec x 
-\end{aligned}
-$$
-
----
 ### scalar multiplication property
 - increase vector magnitude
 - decrease vector magnitude
@@ -220,6 +183,43 @@ $$
 $$
 \begin{aligned}
 c\vec x = \vec 0 \implies (c = 0) \lor (\vec x = \vec 0)
+\end{aligned}
+$$
+
+---
+### vector equality property
+- two vectors equal if and only if all corresponding coordinates equal 
+
+---
+### vector equality property formula
+$$
+\begin{aligned}
+\vec x = \vec y \iff [x_{1}, ..., x_{n}] = [y_{1}, ..., y_{n}] \\
+\vec x, \vec y = \text{vector} \\
+x, y = \text{coordinate}
+\end{aligned}
+$$
+
+---
+### vector addition property
+- commutative
+- associative
+- identity
+- inverse
+- distributive
+
+---
+### vector addition property formula
+$$
+\begin{aligned}
+\vec x + \vec y = \vec y + \vec x \\
+(\vec x + \vec y) + \vec z = \vec x + (\vec y + \vec z) \\
+cd(\vec x) = c(d\vec x) \\
+\vec x + \vec 0 = \vec x \\
+1(\vec x) = \vec x \\
+\vec x + (-\vec x) = \vec 0 \\
+c(\vec x + \vec y) = c\vec x + c\vec y \\
+(c + d)\vec x = c\vec x + d\vec x 
 \end{aligned}
 $$
 

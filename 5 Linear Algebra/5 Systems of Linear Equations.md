@@ -5,10 +5,10 @@
 ### linear equation formula
 $$
 \begin{aligned}
-a_1x_{1} + a_1x_{2} + \cdots + a_1x_{n} = b_{1} \\
+\sum_{i=1}^n a_ix_{i} = b \\
 a = \text{coefficient} \\
-b = \text{constant} \\
-x = \text{variable}
+x = \text{variable} \\
+b = \text{constant} 
 \end{aligned}
 $$
 
@@ -27,38 +27,43 @@ a_{21}x_{1} + a_{22}x_{2} + \cdots + a_{2n}x_{n} = b_{2} \\
 a_{m1}x_{1} + a_{m2}x_{2} + \cdots + a_{mn}x_{n} = b_{m}
 \end{array} \\
 a = \text{coefficient} \\
-b = \text{constant} \\
-x = \text{variable}
+x = \text{variable} \\
+b = \text{constant} 
 \end{aligned}
 $$
 
 ---
 ### particular solution of system of linear equations
-- $n$ tuple of solutions that satisfy every linear equation of the system
+- $n$-tuple of solutions that satisfy every linear equation of the system
 
 ---
 ### particular solution of system of linear equations formula
 $$
 \begin{aligned}
-\sum_{i=1}^n a_{ji}y_{i} = b_{j} \\
+y = (y_{1}, \dots, y_{n}) \iff \forall j \in \set{1, \dots, m}:\sum_{i=1}^n a_{ji}y_{i} = b_{j} \\
+m = \text{number of linear equations} \\
+n = \text{number of variables} \\
 a = \text{coefficient} \\
-b = \text{constant} \\
 y = \text{solution} \\
-n = \text{number of variables}
+b = \text{constant}
 \end{aligned}
 $$
 
 ---
-### complete solution set of system of linear equations
-- set of all n tuple of solutions that satisfy every linear equation of the system
+### complete solution of system of linear equations
+- set of all $n$-tuple of solutions that satisfy every linear equation of the system
 
 ---
-### complete solution set of system of linear equations formula
+### complete solution of system of linear equations formula
 $$
 \begin{aligned}
-\{y_{1}, y_{2}, \dots, y_{n}\} \\
+Y = \{(y_{1}, \dots, y_{n}) \in \mathbb R^n \mid  \forall j \in \set{1, \dots, m}:\sum_{i=1}^n a_{ji}y_{i} = b_{j}\} \\
+Y = \text{complete solution set} \\
+m = \text{number of linear equations} \\
+n = \text{number of variables} \\
+a = \text{coefficient} \\
 y = \text{solution} \\
-n = \text{number of variables}
+b = \text{constant}
 \end{aligned}
 $$
 
@@ -160,11 +165,28 @@ $$
 ### augmented matrix formula
 $$
 \begin{aligned}
-A | B = \left[\begin{array}{cccc|c}
+A \mid B = \left[\begin{array}{cccc|c}
 a_{11} & a_{12} & \cdots & a_{1n} & b_{1} \\
 a_{21} & a_{22} & \cdots & a_{2n} & b_{2} \\
 \vdots & \vdots & \ddots & \vdots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn} & b_{m}
+\end{array}\right]
+\end{aligned}
+$$
+
+---
+### simultaneous matrix
+- combine augmented matrices with equal coefficient matrices but different constant matrices 
+
+---
+### simultaneous matrix formula
+$$
+\begin{aligned}
+A \mid B \mid B' = \left[\begin{array}{cccc|c|c}
+a_{11} & a_{12} & \cdots & a_{1n} & b_{1} & b_{1}' \\
+a_{21} & a_{22} & \cdots & a_{2n} & b_{2} & b_{2}' \\
+\vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} & b_{m} & b_{m}'
 \end{array}\right]
 \end{aligned}
 $$
@@ -194,18 +216,6 @@ $$
 ---
 ### inconsistent system
 - zero number of solutions
-
----
-### row echelon form
-- staircase pattern of pivot entries where all entries below pivot entry equal zero
-
----
-### gaussian elimination
-- form the augmented matrix of the system
-- perform type I row operation on the 1st entry of 1st row such that its 1
-- perform type II row operation on all entries below the pivot such that its 0
-- if zero pivot then perform type III row operation with lower row, if all zeros below zero pivot then skip column
-- back substitute for the particular solution of system of linear equations
 
 ---
 ### type I row operation
@@ -249,20 +259,6 @@ i, j = \text{row index}
 $$
 
 ---
-### row operation property
-- associative
-- multiple associative
-
----
-### row operation property formula
-$$
-\begin{aligned}
-R(AB) = (R(A))B \\
-R_{n}(\dots (R_{2}(R_{1}(AB))) \dots) = (R_{n}(\dots (R_{2}(R_{1}(A))) \dots))B \\
-\end{aligned}
-$$
-
----
 ### pivot entry
 - special entry equal 1
 
@@ -285,5 +281,32 @@ $$
 ---
 ### dependent variable
 - variable of pivot column equal solution of system of linear equations
+
+---
+### row echelon form
+- staircase pattern of pivot entries where all entries below pivot entry equal zero
+
+---
+### gaussian elimination
+- form the augmented matrix of the system
+- perform type I row operation on the 1st entry of 1st row such that its 1
+- perform type II row operation on all entries below the pivot entry such that its 0
+- if zero pivot entry then perform type III row operation with lower row, if all zeros below zero pivot entry then skip column
+- final form of the system equal row echelon form
+- back substitute for the particular solution of system of linear equations
+
+---
+### row operation property
+- associative
+- multiple associative
+
+---
+### row operation property formula
+$$
+\begin{aligned}
+R(AB) = (R(A))B \\
+R_{n}(\dots (R_{2}(R_{1}(AB))) \dots) = (R_{n}(\dots (R_{2}(R_{1}(A))) \dots))B \\
+\end{aligned}
+$$
 
 ---

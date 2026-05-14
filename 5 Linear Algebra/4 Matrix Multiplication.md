@@ -23,7 +23,7 @@ $$
 $$
 \begin{aligned}
 C_{i*} = \vec a_{i} \cdot B \\
-\vec a_{i} = \text{row vector} \\
+\vec a = \text{row vector} \\
 B = \text{matrix}
 \end{aligned}
 $$
@@ -37,42 +37,8 @@ $$
 $$
 \begin{aligned}
 C_{*j} = \vec b_{j} \cdot A \\
-\vec b_{j} = \text{column vector} \\
+\vec b = \text{column vector} \\
 A = \text{matrix}
-\end{aligned}
-$$
-
----
-### matrix multiplication size
-- number of columns of $A$ must equal number of rows of $B$
-
----
-### matrix multiplication size formula
-$$
-\begin{aligned}
-(|A| = m \times n) \land (|B| = n \times p) \implies |AB| = m \times p \\
-A = \text{matrix} \\
-m = \text{number of A rows} \\
-n = \text{number of A columns} \\
-n = \text{number of B rows} \\
-p = \text{number of B columns} 
-\end{aligned}
-$$
-
----
-### matrix multiplication property
-- associative
-- distributive
-- scalar associative
-
----
-### matrix multiplication property formula
-$$
-\begin{aligned}
-A(BC) = (AB)C \\
-A(B + C) = AB + AC \\
-(A + B)C = AC + BC \\
-c(AB) = (cA)B = A(cB)
 \end{aligned}
 $$
 
@@ -85,15 +51,48 @@ $$
 $$
 \begin{aligned}
 A^2 = A \\
-A = \text{matrix}
+A = \text{square matrix}
+\end{aligned}
+$$
+
+---
+### matrix size property
+- number of columns of $A$ must equal number of rows of $B$ 
+
+---
+### matrix size property formula
+$$
+\begin{aligned}
+(|A| = m \times n) \land (|B| = n \times p) \implies |AB| = m \times p \\
+A, B = \text{matrix} \\
+m = \text{number of A rows} \\
+n = \text{number of A columns} \\
+n = \text{number of B rows} \\
+p = \text{number of B columns} 
+\end{aligned}
+$$
+
+---
+### matrix multiplication property
+- associative
+- distributive
+
+---
+### matrix multiplication property formula
+$$
+\begin{aligned}
+A(BC) = (AB)C \\
+c(AB) = (cA)B = A(cB) \\
+A(B + C) = AB + AC \\
+(A + B)C = AC + BC
 \end{aligned}
 $$
 
 ---
 ### matrix exponentiation property
-- subtractive
-- multiplicative
-- additive
+- subtraction
+- multiplication
+- addition
 - identity
 - zero
 
@@ -120,7 +119,7 @@ $$
 (AB)^T = B^TA^T \\
 |B^T| = p \times n \\
 |A^T| = n \times m \\
-A = \text{matrix} \\
+A, B = \text{matrix} \\
 T = \text{transposition}
 \end{aligned}
 $$

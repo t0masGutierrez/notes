@@ -34,7 +34,7 @@ y = \text{solution}
 $$
 
 ---
-### general solution of 2nd-order heterogeneous linear ode formula
+### general solution of 2nd-order nonhomogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = y_{h}(t) + y_{p}(t) \\
@@ -217,7 +217,7 @@ $$
 
 ---
 ### undetermined coefficients
-- method of solving heterogeneous linear constant coefficient ode
+- method of solving nonhomogeneous linear constant coefficient ode
 - guess the form of particular solution based on RHS
 - if guess equal term of homogeneous solution then guess multiplication with independent variable until guess not equal term of homogeneous solution
 - substitute guess and its derivatives into the ode
@@ -235,7 +235,7 @@ $$
 
 ---
 ### variation of parameters
-- method of solving the particular solution of heterogeneous linear constant coefficient ode
+- method of solving the particular solution of nonhomogeneous linear constant coefficient ode
 - replace constant coefficients with variable coefficients
 - solve the variable coefficients
 - substitute variable coefficients into the particular solution
@@ -255,7 +255,7 @@ $$
 
 ---
 ### series solution
-- method of solving the general solution of heterogeneous linear variable coefficient ode
+- method of solving the general solution of nonhomogeneous linear variable coefficient ode
 - guess the form of general solution equal power series
 - compute derivatives of solution
 - substitute derivatives of solution into ode

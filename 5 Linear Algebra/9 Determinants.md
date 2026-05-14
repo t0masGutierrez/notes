@@ -260,7 +260,7 @@ $$
 - nonzero determinant
 - matrix row equivalent with identity matrix
 - every solution equal trivial solution for homogeneous system
-- there exists unique solution for heterogeneous system
+- there exists unique solution for nonhomogeneous system
 ---
 ### identity matrix determinant
 - product of 1's along the main diagonal

@@ -1,14 +1,14 @@
+### existence and uniqueness
+- for every matrix there exists unique reduced row echelon form
+- order of row operations do not change the reduced row echelon form
+
+---
 ### system equivalent
 - two systems of linear equations system equivalent if and only if they have the exact same solution set
 
 ---
 ### row equivalent
-- two augmented matrices row equivalent if and only if they're equal by finite number of row operations
-
----
-### existence and uniqueness
-- there exists unique reduced row echelon form for every matrix
-- same reduced row echelon form no matter the order of row operations
+- two augmented matrices row equivalent if and only if they equal via finite number of row operations
 
 ---
 ### inverse type I row operation
@@ -52,72 +52,17 @@ i, j = \text{row index} \\
 $$
 
 ---
-### row equivalence property
-- bidirectional
-- transitive
-
----
-### row equivalence property formula
-$$
-\begin{aligned}
-C \sim D \implies D \sim C \\
-(C \sim D) \land (D \sim E) \implies C \sim E
-\end{aligned}
-$$
-
----
-### system equivalence property
-- row equivalent system equal system equivalent system
-
----
-### system equivalence property formula
-$$
-\begin{aligned}
-C|D \sim A|B \implies CX = D \sim AX=B \\
-A, C = \text{coefficient matrix} \\
-D, B = \text{constant matrix} \\
-X = \text{variable matrix}
-\end{aligned}
-$$
-
----
-### RREF equality property
-- row equivalent matrices share the same RREF
-
----
-### RREF equality property formula
-$$
-\begin{aligned}
- A \sim B \iff \text{RREF}(A) = \text{RREF}(B) \\
- A, B = \text{matrix} \\
- \text{RREF} = \text{reduced row echelon form}
-\end{aligned}
-$$
-
----
 ### rank
 - number of nonzero rows of RREF
 - number of pivot columns of RREF
 
 ---
-### rank property
-- for the RREF if rank$(A)=n$ then every solution equal trivial solution
-- for the RREF if rank$(A)<n$ then there exists nontrivial solution and therefore infinite solutions
-
----
-### linear combination property
-- if there exists consistent system of vector equations then there exists linear combination of $m$ vectors, each with $n$ coordinates
-- number of coordinates must equal number of vectors
-
----
-### linear combination property formula
+### rank formula
 $$
 \begin{aligned}
-\exists y \in \text{RREF}(A | \vec x) \implies \vec x \in \text{Row}(A) \\
-y = \text{solution} \\
- \text{RREF} = \text{reduced row echelon form} \\
-A = \text{coefficient matrix} \\
-\vec x = \text{vector}
+\text{rank}(A) = k \\
+k = \text{number of RREF nonzero rows} \\
+k = \text{number of RREF pivot columns}
 \end{aligned}
 $$
 
@@ -138,25 +83,121 @@ c = \text{scalar} \\
 $$
 
 ---
-### row space equivalence property
+### row space test
+- generate augmented matrix whose columns equal the vectors of set and whose constant matrix equal the possible element of row space
+- form the reduced row echelon of the system
+- if consistent system then element of row space
+- if inconsistent system then not element of row space
+
+---
+### system equivalence property
+- row equivalent system equal system equivalent system
+
+---
+### system equivalence property formula
+$$
+\begin{aligned}
+A \mid B \sim C \mid D \implies AX=B \sim CX = D \\
+A, C = \text{coefficient matrix} \\
+D, B = \text{constant matrix} \\
+X = \text{variable matrix}
+\end{aligned}
+$$
+
+---
+### row equivalence direction property
+- bidirectional
 - transitive
-- equal
+
+---
+### row equivalence direction property formula
+$$
+\begin{aligned}
+A \sim B \implies B \sim A \\
+(A \sim B) \land (B \sim C) \implies A \sim C
+\end{aligned}
+$$
+
+---
+### row equivalence RREF property
+- row equivalent matrices equal RREF
+
+---
+### row equivalence RREF property formula
+$$
+\begin{aligned}
+ A \sim B \iff \text{RREF}(A) = \text{RREF}(B) \\
+ A, B = \text{matrix} \\
+ \text{RREF} = \text{reduced row echelon form}
+\end{aligned}
+$$
+
+---
+### rank size property
+- if rank of coefficient matrix equal dimension of square matrix then every homogeneous solution equal trivial homogeneous solution
+- if rank of coefficient matrix less dimension of square matrix then there exists nontrivial homogeneous solution
+
+---
+### rank size property formula
+$$
+\begin{aligned}
+\text{rank}(A) = n \iff Y = \set{0} \\
+\text{rank}(A) < n \iff Y \ne \set{0} \\
+AX = 0 \\
+A = \text{square matrix} \\
+n = \text{dimension} \\
+Y = \text{complete solution set}
+\end{aligned}
+$$
+
+---
+### row space transitivity property
+- row space element of subset equal row space element of superset
 
 ---
 ### row space equivalence property formula
 $$
 \begin{aligned}
-(a \in \text{Row}P) \land (\forall p \in P: p \in \text{Row}Q) \implies a \in \text{Row}(Q) \\
-A \sim B \implies \text{Row}(A) = \text{Row}(B)
+(a \in \text{Row} \ A) \land (\text{Row} \ A \subset \text{Row} \ B) \implies a \in \text{Row}(B) \\
+A, B = \text{matrix}
 \end{aligned}
 $$
 
 ---
-### zero vector property
+### row space equivalence property
+- row equivalent matrices equal row space
+
+---
+### row space equivalence property formula
+$$
+\begin{aligned}
+A \sim B \iff \text{Row}(A) = \text{Row}(B)
+\end{aligned}
+$$
+
+---
+### row space consistency property
+- for every consistent system of vector equations there exists linear combination of $n$ vectors, each with $n$ coordinates
+- number of vectors must equal number of coordinates
+
+---
+### row space consistency property formula
+$$
+\begin{aligned}
+\exists y \in \text{RREF}(A | \vec x) \implies \vec x \in \text{Row}(A) \\
+y = \text{solution} \\
+ \text{RREF} = \text{reduced row echelon form} \\
+A = \text{coefficient matrix} \\
+\vec x = \text{vector}
+\end{aligned}
+$$
+
+---
+### row space zero property
 - zero vector equal element of every row space
 
 ---
-### zero vector property formula
+### row space zero property formula
 $$
 \begin{aligned}
 \vec 0 = 0a_{1} + \dots + 0a_{m} \\
@@ -166,11 +207,11 @@ m = \text{number of rows}
 $$
 
 ---
-### ith row vector property
-- ith row vector equal element of every row space
+### row space row property
+- every row of matrix equal element of its row space
 
 ---
-### ith row vector property formula
+### row space row property formula
 $$
 \begin{aligned}
 \vec a_{i} = 0a_{1} + \dots + 1a_{i} + \dots + 0a_{m} \\
@@ -179,12 +220,5 @@ i = \text{row index} \\
 m = \text{number of rows} \\
 \end{aligned}
 $$
-
----
-### row space test
-- generate augmented matrix whose columns equal the vectors of set and whose constant matrix equal the possible element of row space
-- form the reduced row echelon of the system
-- if consistent system then element of row space
-- if inconsistent system then not element of row space
 
 ---

@@ -6,27 +6,9 @@
 $$
 \begin{aligned}
 AA^{-1} = A^{-1}A = I \\
-A = \text{matrix} \\
+A = \text{square matrix} \\
 A^{-1} = \text{inverse matrix} \\
 I = \text{identity matrix}
-\end{aligned}
-$$
-
----
-### identity matrix
-- diagonal matrix where all entries along main diagonal equal 1
-
----
-### identity matrix formula
-$$
-\begin{aligned}
-I = \begin{bmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
-0 & 0 & 1 
-\end{bmatrix} \iff \forall (i \ne j): (a_{ij} = 0) \land \forall (i = j): (a_{ij} = 1) \\
-i = \text{row index} \\
-j = \text{column index}
 \end{aligned}
 $$
 
@@ -37,49 +19,6 @@ $$
 ---
 ### singular matrix
 - noninvertible square matrix
-
----
-### existence and uniqueness
-- for every nonsingular matrix there exists unique inverse matrix
-
----
-### existence and uniqueness formula
-$$
-\begin{aligned}
-(AB=I) \land (AC=I) \implies B=C \\
-A = \text{matrix} \\
-B, C = \text{inverse matrix} \\
-I = \text{identity matrix}
-\end{aligned}
-$$
-
----
-### nonsingular matrix exponentiation property
-- inverse
-- inverse power
-- multiplicative
-- transpositive
-- power
-- multiplicative power
-- additive power
-- identity
-- zero
-
----
-### nonsingular matrix exponentiation property formula
-$$
-\begin{aligned}
-(A^{-1})^{-1} = A \\
-(A^{k})^{-1} = (A^{-1})^{k} = A^{-k} \\
-(AB)^{-1} = B^{-1}A^{-1} \\
-(A^T)^{-1} = (A^{-1})^{T} \\
-A^k = (A^{k-1})(A) \\  
-(A^s)^t = A^{st} = (A^t)^s \\  
- A^sA^t = A^{s+t} \\  
-A^1 = A \\  
-A^0 = I
-\end{aligned}
-$$
 
 ---
 ### 2x2 matrix inversion
@@ -97,40 +36,98 @@ $$
 ---
 ### nxn matrix inversion
 - form the $n\times 2n$ augmented matrix whose left columns equal square matrix and right columns equal identity matrix
-- convert augmented matrix into reduced row echelon form
-- if left columns equal identity matrix then nonsingular matrix and right columns equal inverse matrix
-- if left columns not equal identity matrix then singular matrix
+- convert left columns into reduced row echelon form
+- if RREF equal identity matrix then nonsingular matrix and right columns equal inverse matrix
+- if RREF not equal identity matrix then singular matrix
 
 ---
 ### nxn matrix inversion formula
 $$
 \begin{aligned}
 A|I \implies I|A^{-1} \\
-A = \text{matrix} \\
+A = \text{square matrix} \\
 I = \text{identity matrix} \\
 A^{-1} = \text{inverse matrix}
 \end{aligned}
 $$
 
 ---
-### nonsingular matrix property
-- nonsingular matrix if and only if rank equal number of columns
+### nonsingular uniqueness property
+- for every nonsingular matrix there exists unique inverse matrix
 
 ---
-### nonsingular matrix property formula
+### nonsingular uniqueness property formula
 $$
 \begin{aligned}
-\exists A^{-1} \iff \text{rank}(A)= n \\
-A^{-1} = \text{inverse matrix} \\
-A = \text{matrix} \\
-n = \text{number of columns}
+(AB=I) \land (AC=I) \implies B=C \\
+A = \text{square matrix} \\
+B, C = \text{inverse matrix} \\
+I = \text{identity matrix}
 \end{aligned}
 $$
 
 ---
-### coefficient matrix inversion
+### nonsingular exponentiation property
+- inverse
+- inverse power
+- multiplication
+- transposition
+- power
+- multiplicative power
+- additive power
+- identity
+- zero
+
+---
+### nonsingular exponentiation property formula
+$$
+\begin{aligned}
+(A^{-1})^{-1} = A \\
+(A^{k})^{-1} = (A^{-1})^{k} = A^{-k} \\
+(AB)^{-1} = B^{-1}A^{-1} \\
+(A^T)^{-1} = (A^{-1})^{T} \\
+A^k = (A^{k-1})(A) \\  
+(A^s)^t = A^{st} = (A^t)^s \\  
+ A^sA^t = A^{s+t} \\  
+A^1 = A \\  
+A^0 = I
+\end{aligned}
+$$
+
+---
+### nonsingular rank property
+- rank of nonsingular matrix equal dimension of nonsingular matrix
+
+---
+### nonsingular rank property formula
+$$
+\begin{aligned}
+\exists A^{-1} \iff \text{rank}(A)= n \\
+|A| = n \times n \\
+A^{-1} = \text{inverse matrix} \\
+A = \text{nonsingular matrix} \\
+n = \text{dimension}
+\end{aligned}
+$$
+
+---
+### nonsingular coefficient property
 - if nonsingular coefficient matrix then single solution equal $A^{-1}B$ 
 - if singular coefficient matrix then either zero solutions or infinite solutions
 - unique solution if and only if coefficient matrix equal nonsingular matrix
+
+---
+### nonsingular coefficient property
+$$
+\begin{aligned}
+(AX=B) \land (\exists A^{-1}) \implies Y = \set{A^{-1}B} \\
+(AX=B) \land (\not\exists A^{-1}) \implies Y = \emptyset \lor |Y| = \infty \\ 
+A = \text{coefficient matrix} \\
+X = \text{variable matrix} \\
+B = \text{constant matrix} \\
+A^{-1} = \text{inverse matrix} \\
+Y = \text{complete solution set} 
+\end{aligned}
+$$
 
 ---

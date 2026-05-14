@@ -103,11 +103,11 @@ y = \text{solution}
 $$
 
 ---
-### heterogeneous ode
+### nonhomogeneous ode
 - RHS equal nonzero
 
 ---
-### heterogeneous ode formula
+### nonhomogeneous ode formula
 $$
 \begin{aligned}
 f(t, y, \frac{dy}{dt}) \ne 0 \\
@@ -174,7 +174,7 @@ y = \text{solution}
 $$
 
 ---
-### general solution of 1st-order heterogeneous linear ode formula
+### general solution of 1st-order nonhomogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = \frac{1}{\mu(t)}(C + \int \mu(t) b(t)dt) \\
@@ -185,7 +185,7 @@ C = \text{constant}
 $$
 
 ---
-### particular solution of 1st-order heterogeneous linear ode formula
+### particular solution of 1st-order nonhomogeneous linear ode formula
 $$
 \begin{aligned}
 y(t) = \frac{1}{\mu(t)}[y(t_{0}) +\int_{t_{0}}^t \mu(r) b(r)dr] \\
