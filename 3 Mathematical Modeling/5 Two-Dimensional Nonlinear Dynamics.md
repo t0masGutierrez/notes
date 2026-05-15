@@ -47,7 +47,6 @@ $$
 \begin{aligned}
 f(u) = \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(u-a)^n \\
 f^{(n)} = \text{nth derivative} \\
-n! = \text{nth factorial} \\
 a = \text{center}
 \end{aligned}
 $$
