@@ -201,7 +201,7 @@ x, y = \text{coordinate}
 $$
 
 ---
-### vector addition property
+### vector arithmetic property
 - commutative
 - associative
 - identity
@@ -209,7 +209,7 @@ $$
 - distributive
 
 ---
-### vector addition property formula
+### vector arithmetic property formula
 $$
 \begin{aligned}
 \vec x + \vec y = \vec y + \vec x \\

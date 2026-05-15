@@ -286,7 +286,7 @@ n = \text{number of columns}
 $$
 
 ---
-### matrix addition property
+### matrix arithmetic property
 - commutative
 - associative
 - identity
@@ -294,7 +294,7 @@ $$
 - distributive
 
 ---
-### matrix addition property formula
+### matrix arithmetic property formula
 $$
 \begin{aligned}
 A + B = B + A \\

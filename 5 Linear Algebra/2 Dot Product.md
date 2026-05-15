@@ -73,7 +73,7 @@ k = \text{number of vectors} \\
 $$
 
 ---
-### dot product property
+### dot product arithmetic property
 - commutative
 - identity
 - zero
@@ -81,7 +81,7 @@ $$
 - distributive
 
 ---
-### dot product property formula
+### dot product arithmetic property formula
 $$
 \begin{aligned}
 \vec x \cdot \vec y = \vec y \cdot \vec x \\
@@ -93,16 +93,36 @@ c(\vec x \cdot \vec y) = (c\vec x) \cdot \vec y = \vec x \cdot (c\vec y) \\
 $$
 
 ---
-### unit vector property
+### dot product unit property
 - dot product of unit vector equal $\pm 1$ 
 
 ---
-### unit vector property formula
+### dot product unit property formula
 $$
 \begin{aligned}
 -1 \le \vec x \cdot \vec y \le 1 \\
 ||\vec x||, ||\vec y|| = 1 \\
 \vec x, \vec y = \text{vector} 
+\end{aligned}
+$$
+
+---
+### direction property
+- acute angle
+- right angle
+- obtuse angle
+- parallel direction
+- orthogonal direction
+
+---
+### direction property formula
+$$
+\begin{aligned}
+0 \le \theta \le 90 \iff \vec x \cdot \vec y > 0 \\
+\theta = 90 \iff \vec x \cdot \vec y = 0 \\
+90 \le \theta \le 180 \iff \vec x \cdot \vec y < 0 \\
+\vec x \parallel \vec y \iff \vec x \cdot \vec y = \pm (||\vec x ||)(||\vec y ||) \\
+\vec x \perp \vec y \iff \vec x \cdot \vec y = 0
 \end{aligned}
 $$
 
@@ -131,26 +151,6 @@ $$
 \|\vec{x} + \vec{y}\| \le \|\vec{x}\| + \|\vec{y}\| \\
 \vec x, \vec y = \text{vector} \\
 \| \vec x \|, \| \vec y \| = \text{magnitude}
-\end{aligned}
-$$
-
----
-### direction property
-- acute angle
-- right angle
-- obtuse angle
-- parallel direction
-- orthogonal direction
-
----
-### direction property formula
-$$
-\begin{aligned}
-0 \le \theta \le 90 \iff \vec x \cdot \vec y > 0 \\
-\theta = 90 \iff \vec x \cdot \vec y = 0 \\
-90 \le \theta \le 180 \iff \vec x \cdot \vec y < 0 \\
-\vec x \parallel \vec y \iff \vec x \cdot \vec y = \pm (||\vec x ||)(||\vec y ||) \\
-\vec x \perp \vec y \iff \vec x \cdot \vec y = 0
 \end{aligned}
 $$
 

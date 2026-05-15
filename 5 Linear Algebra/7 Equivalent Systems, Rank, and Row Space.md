@@ -155,7 +155,7 @@ $$
 - row space element of subset equal row space element of superset
 
 ---
-### row space equivalence property formula
+### row space transitivity property formula
 $$
 \begin{aligned}
 (a \in \text{Row} \ A) \land (\text{Row} \ A \subset \text{Row} \ B) \implies a \in \text{Row}(B) \\

@@ -80,21 +80,3 @@ a = \text{coefficient} \\
 $$
 
 ---
-### homogeneous size property
-- for collection of $m$ linear equations, each with linear combination of the same $n$ variables, if $m < n$ then there exists nontrivial homogeneous solution
-
----
-### homogeneous size property formula
-$$
-\begin{aligned}
-m < n \implies Y \ne \set{0} \\
-AX = 0 \\
-m = \text{number of rows} \\
-n = \text{number of columns} \\
-Y = \text{complete solution set} \\
-A = \text{coefficient matrix} \\
-X = \text{variable matrix}
-\end{aligned}
-$$
-
----
