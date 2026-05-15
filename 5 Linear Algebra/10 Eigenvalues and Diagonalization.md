@@ -3,48 +3,48 @@
 
 ---
 ### eigenvalue
-- scalar quantity that describes the magnitude of scalar multiplication with the corresponding eigenvector during transformation
+- scalar that describes the magnitude of scalar multiplication with the corresponding eigenvector under the transformation
 
 ---
 ### eigenvalue formula
 $$
 \begin{aligned}
 \lambda \iff A\vec x = \lambda \vec x \\
-\vec x \ne 0 \\
 \lambda = \text{eigenvalue} \\
-\vec x = \text{eigenvector} \\
-A = \text{matrix}
+A = \text{square matrix} \\
+\vec x = \text{eigenvector}
 \end{aligned}
 $$
 
 ---
 ### eigenvector
-- vector quantity along the direction unchanged by the transformation
+- nonzero vector whose direction remain unchanged under the transformation
 
 ---
 ### eigenvector formula
 $$
 \begin{aligned}
-\vec x \iff (A - \lambda I)\vec x = 0 \\
+\vec x \iff A\vec x = \lambda\vec x \\
 \vec x \ne 0 \\
-\lambda = \text{eigenvalue} \\
 \vec x = \text{eigenvector} \\
-A = \text{matrix}
+A = \text{square matrix} \\
+\lambda = \text{eigenvalue} 
 \end{aligned}
 $$
 
 ---
 ### eigenspace
-- set of all eigenvectors for square matrix associated with eigenvalue
+- set of all eigenvectors associated with eigenvalue including zero vector
 
 ---
 ### eigenspace formula
 $$
 \begin{aligned}
-E_{\lambda} = \{\vec x \in \mathbb R^n| A \vec x = \lambda \vec x, A \in \mathcal M_{n}, \lambda \in \mathbb R\} \\
+E_{\lambda} = \{\vec x \in \mathbb R^n| (A - \lambda I)\vec x = 0\} \\
 \vec x = \text{eigenvector} \\
-A = \text{matrix} \\
-\lambda = \text{eigenvalue}
+A = \text{square matrix} \\
+\lambda = \text{eigenvalue} \\
+I = \text{identity matrix}
 \end{aligned}
 $$
 
@@ -56,7 +56,7 @@ $$
 ### number of eigenvectors formula
 $$
 \begin{aligned}
-c\vec x \in E_{\lambda} \\
+(c \in \mathbb R) \land (\vec x \in E_\lambda) \implies c\vec x \in E_{\lambda} \\
 c = \text{scalar} \\
 \vec x = \text{eigenvector} \\
 E_{\lambda} = \text{eigenspace}
@@ -65,52 +65,42 @@ $$
 
 ---
 ### homogeneous system of linear equations
-- constant matrix equal zero matrix
+- eigenvectors for corresponding eigenvalue equal nontrivial solutions of the homogeneous system of linear equations
+- eigenspace for corresponding eigenvectors equal complete solution set of the homogeneous system of linear equations
 
 ---
 ### homogeneous system of linear equations formula
 $$
 \begin{aligned}
 (A - \lambda I)\vec x = 0 \\
+\begin{bmatrix}
+a_{11} - \lambda & \dots  & a_{1n} \\
+\vdots & a_{ii} - \lambda  & \vdots \\
+a_{m1} & \dots  & a_{mn} - \lambda
+\end{bmatrix} \begin{bmatrix}
+x_{1} \\
+\vdots \\
+x_{n}
+\end{bmatrix} = 0\\
+A = \text{square matrix} \\
 \lambda = \text{eigenvalue} \\
 I = \text{identity matrix} \\
-A = \text{matrix} 
-\end{aligned}
-$$
-
----
-### homogeneous solution set
-- eigenvectors for corresponding eigenvalue equal nontrivial solutions of the homogeneous system of linear equations
-- eigenspace for corresponding eigenvectors equal complete solution set of the homogeneous system of linear equations
-
----
-### singular coefficient property
-- nontrivial eigenvector if and only if singular coefficient matrix
-
----
-### singular coefficient property formula
-$$
-\begin{aligned}
-\vec x \ne 0 \iff |A - \lambda I| = 0 \\
-\vec x = \text{eigenvector} \\
-\lambda = \text{eigenvalue} \\
-I = \text{identity matrix} \\
-A = \text{matrix}
+\vec x = \text{eigenvector}
 \end{aligned}
 $$
 
 ---
 ### characteristic polynomial
-- polynomial whose real roots equal the eigenvalues of matrix
+- polynomial whose roots equal the eigenvalues of matrix
 
 ---
 ### characteristic polynomial formula
 $$
 \begin{aligned}
-p_{A}(\lambda) = |A - \lambda I| = 0 \\
+p_{A}(\lambda) = \det(A - \lambda I) = 0 \\
+A = \text{square matrix} \\
 \lambda = \text{eigenvalue} \\
-I = \text{identity matrix} \\
-A = \text{matrix}
+I = \text{identity matrix} 
 \end{aligned}
 $$
 
@@ -120,7 +110,7 @@ $$
 - substitute eigenvalues into coefficient matrix
 - form the reduced row echelon of the system
 - fundamental solutions of homogeneous system equal fundamental eigenvectors
-- test diagonalizability
+- if number of fundamental eigenvectors equal dimension of coefficient matrix then diagonalizable
 - form eigenmatrix whose column vectors equal fundamental eigenvectors
 - compute inverse eigenmatrix
 - matrix multiplication equal diagonal matrix
@@ -131,49 +121,51 @@ $$
 $$
 \begin{aligned}
 D = P^{-1}AP \iff A = PDP^{-1} \\
-|A| = n \times n \\
 \text{det}(P) \ne 0 \\
-P = \text{eigenmatrix} \\
-A = \text{matrix} \\
 D = \text{diagonal matrix} \\
-P^{-1} = \text{inverse eigenmatrix} 
+P^{-1} = \text{inverse eigenmatrix} \\
+A = \text{square matrix} \\
+P = \text{eigenmatrix}
 \end{aligned}
 $$
 
 ---
 ### similarity
 - similar matrices represent the same transformation but different coordinate system
-- similar matrices have the same size
+- similar matrices are square matrices of the same size
 - similar matrices are similar with themselves
-- similar matrices are commutative
+- similar matrices are reflexive
+- similar matrices are symmetric
 - similar matrices are transitive
-- similar matrices with identity matrix equal identity matrix
-- similar matrices have equal determinant
-- similar matrices have equal characteristic polynomial
+- similar matrices have the same determinant
+- similar matrices have the same trace
+- similar matrices have the same rank
+- similar matrices have the same characteristic polynomial
+- similar matrices have the same eigenvalues with the same algebraic multiplicity
 
 ---
 ### similarity formula
 $$
 \begin{aligned}
 A \sim D \iff \exists P: D = P^{-1}AP \\
-|A| = n \times n \\
 \text{det}(P) \ne 0 \\
-P = \text{eigenmatrix} \\
-A = \text{matrix} \\
+A = \text{square matrix} \\
 D = \text{diagonal matrix} \\
-P^{-1} = \text{inverse eigenmatrix} 
+P = \text{eigenmatrix} \\
+P^{-1} = \text{inverse eigenmatrix}
 \end{aligned}
 $$
 
 ---
-### matrix exponentiation property
-- square matrix exponentiation similar diagonal matrix exponentiation
+### similar exponentiation property
+- exponentiation of similar matrices preserve similarity
 
 ---
-### matrix exponentiation property formula
+### similar exponentiation property formula
 $$
 \begin{aligned}
 A^k = PD^kP^{-1} \\
+A = \text{square matrix} \\
 P = \text{eigenmatrix} \\
 D = \text{diagonal matrix} \\
 k = \text{positive integer} \\
