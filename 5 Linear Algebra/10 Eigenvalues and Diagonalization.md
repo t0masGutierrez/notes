@@ -105,12 +105,68 @@ I = \text{identity matrix}
 $$
 
 ---
+### similar
+- similar matrices represent the same transformation but different coordinate system
+- similar matrices are square matrices of the same size
+- similar matrices are similar with themselves
+- similar matrices are reflexive
+- similar matrices are symmetric
+- similar matrices are transitive
+- similar matrices have the same determinant
+- similar matrices have the same trace
+- similar matrices have the same rank
+- similar matrices have the same characteristic polynomial
+- similar matrices have the same eigenvalues with the same algebraic multiplicity
+
+---
+### similar formula
+$$
+\begin{aligned}
+A \sim D \iff \exists P: D = P^{-1}AP \\
+\text{det}(P) \ne 0 \\
+A = \text{square matrix} \\
+D = \text{diagonal matrix} \\
+P = \text{eigenmatrix} \\
+P^{-1} = \text{inverse eigenmatrix}
+\end{aligned}
+$$
+
+---
+### algebraic multiplicity
+- exponent corresponding with eigenvalue
+
+---
+### algebraic multiplicity formula
+$$
+\begin{aligned}
+p_{A}(x) = \prod_{i=1}^r (x - \lambda_{i})^{k_{i}} \\
+r = \text{number of eigenvalues} \\
+\lambda = \text{eigenvalue} \\
+k = \text{algebraic multiplicity}
+\end{aligned}
+$$
+
+---
+### geometric multiplicity
+- number of fundamental eigenvectors
+
+---
+### geometric multiplicity formula
+$$
+\begin{aligned}
+k = \sum_{i=1}^r \dim (E_{\lambda_{i}}) \\
+r = \text{number of eigenvalues} \\
+E_\lambda = \text{eigenspace} 
+\end{aligned}
+$$
+
+---
 ### diagonalization
 - compute characteristic polynomial
 - substitute eigenvalues into coefficient matrix
 - form the reduced row echelon of the system
 - fundamental solutions of homogeneous system equal fundamental eigenvectors
-- if number of fundamental eigenvectors equal dimension of coefficient matrix then diagonalizable
+- if geometric multiplicity equal dimension of coefficient matrix then diagonalizable
 - form eigenmatrix whose column vectors equal fundamental eigenvectors
 - compute inverse eigenmatrix
 - matrix multiplication equal diagonal matrix
@@ -130,33 +186,6 @@ P = \text{eigenmatrix}
 $$
 
 ---
-### similarity
-- similar matrices represent the same transformation but different coordinate system
-- similar matrices are square matrices of the same size
-- similar matrices are similar with themselves
-- similar matrices are reflexive
-- similar matrices are symmetric
-- similar matrices are transitive
-- similar matrices have the same determinant
-- similar matrices have the same trace
-- similar matrices have the same rank
-- similar matrices have the same characteristic polynomial
-- similar matrices have the same eigenvalues with the same algebraic multiplicity
-
----
-### similarity formula
-$$
-\begin{aligned}
-A \sim D \iff \exists P: D = P^{-1}AP \\
-\text{det}(P) \ne 0 \\
-A = \text{square matrix} \\
-D = \text{diagonal matrix} \\
-P = \text{eigenmatrix} \\
-P^{-1} = \text{inverse eigenmatrix}
-\end{aligned}
-$$
-
----
 ### similar exponentiation property
 - exponentiation of similar matrices preserve similarity
 
@@ -165,55 +194,25 @@ $$
 $$
 \begin{aligned}
 A^k = PD^kP^{-1} \\
+k \in \mathbb N \\
 A = \text{square matrix} \\
 P = \text{eigenmatrix} \\
 D = \text{diagonal matrix} \\
-k = \text{positive integer} \\
 P^{-1} = \text{inverse eigenmatrix}
 \end{aligned}
 $$
 
 ---
-### algebraic multiplicity
-- power of eigenvalue
+### multiplicity comparison property
+- geometric multiplicity less or equal algebraic multiplicity
 
 ---
-### algebraic multiplicity formula
+### multiplicity comparison property formula
 $$
 \begin{aligned}
-p_{A}(x) = (x - \lambda)^{k_{0}}(x - \lambda)^{k_{1}}\dots(x - \lambda)^{k_{n}} \\
-\lambda = \text{eigenvalue} \\
-k = \text{algebraic multiplicity}
-\end{aligned}
-$$
-
----
-### geometric multiplicity
-- number of fundamental eigenvectors
-
----
-### geometric multiplicity formula
-$$
-\begin{aligned}
-k = \sum \dim (E_{\lambda}) \\
-E = \text{eigenspace}
-\end{aligned}
-$$
-
----
-### diagonalizability 
-- geometric multiplicity equal number of columns if and only if diagonalizable
-
----
-### diagonalizability formula
-$$
-\begin{aligned}
-k = n \iff \exists P \\
-\text{det}(P) \ne 0 \\
-k = \text{geometric multiplicity} \\
-n = \text{number of rows} \\
-n = \text{number of columns} \\
-P = \text{eigenmatrix}
+1 \le \text{gm}(\lambda) \le \text{am}(\lambda) \\
+\text{gm} = \text{geometric multiplicity} \\
+\text{am} = \text{algebraic multiplicity} 
 \end{aligned}
 $$
 
