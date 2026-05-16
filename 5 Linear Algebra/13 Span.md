@@ -1,5 +1,5 @@
 ### span
-- set of all possible finite linear combinations of the vectors of subset
+- set of all possible finite linear combinations of the vectors of set
 
 ---
 ### span formula
@@ -33,8 +33,8 @@ $$
 ### span test
 - generate augmented matrix whose columns equal the vectors of set and whose constant matrix equal the possible element of span
 - form the reduced row echelon of the system
-- if consistent system then member of span
-- if inconsistent system then not member of span
+- if consistent system then element of span
+- if inconsistent system then not element of span
 
 ---
 ### spanning test
