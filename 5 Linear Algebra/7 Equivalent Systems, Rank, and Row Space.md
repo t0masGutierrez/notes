@@ -176,23 +176,6 @@ A \sim B \iff \text{Row}(A) = \text{Row}(B)
 $$
 
 ---
-### row space consistency property
-- for every consistent system of vector equations there exists linear combination of $n$ vectors, each with $n$ coordinates
-- number of vectors must equal number of coordinates
-
----
-### row space consistency property formula
-$$
-\begin{aligned}
-\exists y \in \text{RREF}(A | \vec x) \implies \vec x \in \text{Row}(A) \\
-y = \text{solution} \\
- \text{RREF} = \text{reduced row echelon form} \\
-A = \text{coefficient matrix} \\
-\vec x = \text{vector}
-\end{aligned}
-$$
-
----
 ### row space zero property
 - zero vector equal element of every row space
 

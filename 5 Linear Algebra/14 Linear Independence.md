@@ -24,6 +24,7 @@ $$
 $$
 \begin{aligned}
 \exists c_{i} \ne 0 : \sum_{i=1}^n c_{i} \vec v_{i} = \vec 0 \\
+S = \{\vec v_{1}, \dots, \vec v_{n}\} \subset \mathcal V \\
 n = \text{number of columns} \\
 c = \text{scalar} \\
 \vec v = \text{vector} \\
