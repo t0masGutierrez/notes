@@ -34,22 +34,6 @@ S = \text{linearly dependent set} \\
 $$
 
 ---
-### linear independence example
-- standard unit vector
-- standard unit polynomial
-- standard unit matrix
-
----
-### linear independence example formula
-$$
-\begin{aligned}
-\vec e_{4} = \set{0, 0, 0, 1} \\
-\vec p_{4}(x) = \set{1, x, x^2, x^3, x^4} \\
-\psi_{4} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix} 
-\end{aligned}
-$$
-
----
 ### linear independence test
 - generate matrix whose columns equal the vectors of set
 - form the reduced row echelon of the system
