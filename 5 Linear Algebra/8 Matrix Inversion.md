@@ -35,10 +35,10 @@ $$
 
 ---
 ### nxn matrix inversion
-- form the $n\times 2n$ augmented matrix whose left columns equal square matrix and right columns equal identity matrix
-- convert left columns into reduced row echelon form
-- if RREF equal identity matrix then nonsingular matrix and right columns equal inverse matrix
-- if RREF not equal identity matrix then singular matrix
+- generate augmented matrix whose left matrix equal coefficient matrix and whose right matrix equal identity matrix
+- form the reduced row echelon of the system
+- if RREF of left matrix equal identity matrix then nonsingular matrix and right matrix equal inverse matrix
+- if RREF of left matrix not equal identity matrix then singular matrix
 
 ---
 ### nxn matrix inversion formula

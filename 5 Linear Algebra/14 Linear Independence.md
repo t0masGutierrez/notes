@@ -37,6 +37,8 @@ $$
 ### linear independence test
 - generate matrix whose columns equal the vectors of set
 - form the reduced row echelon of the system
+- vectors of set corresponding with pivot columns of RREF equal the linearly independent vectors of set
+- vectors of set corresponding with nonpivot columns of RREF equal the linearly dependent vectors of set
 - if number of pivot columns equal number of columns then linearly independent set
 - if number of pivot columns not equal number of columns then linearly dependent set
 

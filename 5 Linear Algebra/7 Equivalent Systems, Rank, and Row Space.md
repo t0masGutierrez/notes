@@ -84,7 +84,7 @@ $$
 
 ---
 ### row space test
-- generate augmented matrix whose columns equal the vectors of set and whose constant matrix equal the possible element of row space
+- generate augmented matrix whose left rows equal the vectors of set and whose right matrix equal the possible element of row space
 - form the reduced row echelon of the system
 - if consistent system then element of row space
 - if inconsistent system then not element of row space

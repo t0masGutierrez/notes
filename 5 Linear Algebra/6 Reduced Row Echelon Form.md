@@ -7,7 +7,7 @@
 
 ---
 ### gauss-jordan row reduction
-- form the augmented matrix of the system
+- generate augmented matrix
 - perform type I row operation on the 1st entry of 1st row such that its 1
 - perform type II row operation on all entries below the pivot entry such that its 0
 - perform type II row operation on all entries above the pivot entry such that its 0

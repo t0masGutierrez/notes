@@ -1,54 +1,33 @@
-### spanning basis property
-- span simplification require spanning set
-- independent test require spanning set
+### basis spanning property
+- basis via spanning test require spanning set
+- basis via linear independence require spanning set
 
 ---
-### span simplification
-- generate matrix whose rows equal the vectors of subset of vector space
+### basis via spanning test
+- generate matrix whose rows equal the vectors of set
 - form the reduced row echelon of the system
-- zero rows of RREF equal the redundant vectors of subset
+- nonzero rows of RREF equal the basis vectors of set
 
 ---
-### basis via span simplification
-- span simplification
-- nonzero rows of RREF equal the basis vectors of subset
-
----
-### independence test
-- generate matrix whose columns equal the vectors of subset of vector space
+### basis via linear independence test
+- generate matrix whose columns equal the vectors of set
 - form the reduced row echelon of the system
-- nonpivot columns of RREF equal the redundant vectors of subset
+- vectors of set corresponding with pivot columns of RREF equal the basis vectors of set
 
 ---
-### basis via independence test
-- independence test
-- vectors of subset corresponding with pivot columns of RREF equal the basis vectors of subset
-
----
-### span simplification versus independence test
-- vectors equal rows of matrix
-- basis not subset of spanning set
-- nonzero rows equal basis vectors
----
-### independent basis property
-- enlargement require linearly independent set
+### basis linear independence property
+- basis via enlargement require linearly independent set
 
 ---
 ### basis via enlargement
-- form spanning set with standard unit vectors aka identity matrix
-- augment linearly independent set with spanning set
-- independence test
-- vectors of subset corresponding with pivot columns of RREF equal the basis vectors of subset
-
----
-### spanning versus independence
-- vector subtraction equal basis via spanning set
-- vector addition equal basis via linearly independent set
-
----
-### basis test
+- generate augmented matrix whose left columns equal the vectors of set and whose right matrix equal identity matrix
 - form the reduced row echelon of the system
-- if rank equal dimension of vector space then basis
-- if rank not equal dimension of vector space then not basis
+- vectors of set corresponding with pivot columns of RREF equal the basis vectors of set
+- aka linear independence test
+
+---
+### spanning versus linear independence
+- vector subtraction equal basis via spanning test
+- vector addition equal basis via linearly independent test
 
 ---
