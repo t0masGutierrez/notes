@@ -197,8 +197,8 @@ $$
 ### subspace transformation property formula
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal V' \le \mathcal V) \implies L(\mathcal V') = \{L(\vec v) | \vec v \in \mathcal V'\} \le \mathcal W \\
-(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \implies L^{-1}(\mathcal W') = \{\vec v | L(\vec v) \in \mathcal W'\} \le \mathcal V
+(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal V' \le \mathcal V) \implies L(\mathcal V') = \{L(\vec v) \mid \vec v \in \mathcal V'\} \le \mathcal W \\
+(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \implies L^{-1}(\mathcal W') = \{\vec v \mid L(\vec v) \in \mathcal W'\} \le \mathcal V
 \end{aligned}
 $$
 

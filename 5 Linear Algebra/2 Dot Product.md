@@ -101,7 +101,7 @@ $$
 $$
 \begin{aligned}
 -1 \le \vec x \cdot \vec y \le 1 \\
-||\vec x||, ||\vec y|| = 1 \\
+\| \vec x \|, \| \vec y \| = 1 \\
 \vec x, \vec y = \text{vector} 
 \end{aligned}
 $$
@@ -121,7 +121,7 @@ $$
 0 \le \theta \le 90 \iff \vec x \cdot \vec y > 0 \\
 \theta = 90 \iff \vec x \cdot \vec y = 0 \\
 90 \le \theta \le 180 \iff \vec x \cdot \vec y < 0 \\
-\vec x \parallel \vec y \iff \vec x \cdot \vec y = \pm (||\vec x ||)(||\vec y ||) \\
+\vec x \parallel \vec y \iff \vec x \cdot \vec y = \pm (\| \vec x \|)(\| \vec y \|) \\
 \vec x \perp \vec y \iff \vec x \cdot \vec y = 0
 \end{aligned}
 $$

@@ -107,7 +107,7 @@ $$
 ### basis diagonalization property formula
 $$
 \begin{aligned}
-A = PDP^{-1} \implies B = \{\vec x | A\vec x = \lambda \vec x \} \\
+A = PDP^{-1} \implies B = \{\vec x \mid A\vec x = \lambda \vec x \} \\
 A = \text{diagonalizable matrix} \\
 P = \text{eigenmatrix} \\
 D = \text{diagonal matrix} \\

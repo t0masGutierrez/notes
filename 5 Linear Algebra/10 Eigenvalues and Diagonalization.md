@@ -40,7 +40,7 @@ $$
 ### eigenspace formula
 $$
 \begin{aligned}
-E_{\lambda} = \{\vec x \in \mathbb R^n| (A - \lambda I)\vec x = 0\} \\
+E_{\lambda} = \{\vec x \in \mathbb R^n \mid  (A - \lambda I)\vec x = 0\} \\
 \vec x = \text{eigenvector} \\
 A = \text{square matrix} \\
 \lambda = \text{eigenvalue} \\

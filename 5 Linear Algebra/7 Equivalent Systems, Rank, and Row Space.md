@@ -74,7 +74,7 @@ $$
 ### row space formula
 $$
 \begin{aligned}
-\text{Row}(A) = \{\sum_{i=1}^m c_{i}\vec a_{i} | c \in \mathbb R, \vec a \in \mathbb R^n\} \\
+\text{Row}(A) = \{\sum_{i=1}^m c_{i}\vec a_{i} \mid c \in \mathbb R, \vec a \in \mathbb R^n\} \\
 m = \text{number of rows} \\
 n = \text{number of columns} \\
 c = \text{scalar} \\

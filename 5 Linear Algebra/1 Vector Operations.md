@@ -153,10 +153,10 @@ $$
 ### scalar multiplication property formula
 $$
 \begin{aligned}
-c > 1 \implies (+\Delta) ||\vec x || \\
-0 < c < 1 \implies (-\Delta) ||\vec x || \\
-c < 0 \implies (-)||\vec x|| \\
-|c| \implies ||c\vec x ||
+c > 1 \implies (+\Delta) \| \vec x \| \\
+0 < c < 1 \implies (-\Delta) \| \vec x \| \\
+c < 0 \implies (-)\| \vec x \| \\
+|c| \implies \| c\vec x \|
 \end{aligned}
 $$
 

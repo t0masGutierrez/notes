@@ -5,7 +5,7 @@
 ### span formula
 $$
 \begin{aligned}
-\text{span}(S) = \{\sum_{i=1}^n c_{i}\vec v_{i} | c \in \mathbb R, \vec v \in S\} \\
+\text{span}(S) = \{\sum_{i=1}^n c_{i}\vec v_{i} \mid c \in \mathbb R, \vec v \in S\} \\
 S = \text{set} \\
 n = \text{dimension} \\
 c = \text{scalar} \\
@@ -65,7 +65,7 @@ $$
 ### span intersection property formula
 $$
 \begin{aligned}
-\text{span}(S) = \bigcap \{\mathcal W \le \mathcal V| S \subset \mathcal W \} \\
+\text{span}(S) = \bigcap \{\mathcal W \le \mathcal V \mid S \subset \mathcal W \} \\
 \mathcal W = \text{subspace} \\
 \mathcal V = \text{vector space} \\
 S = \text{set} \\

@@ -44,7 +44,7 @@ $$
 ### nxn matrix inversion formula
 $$
 \begin{aligned}
-A|I \implies I|A^{-1} \\
+\text{RREF}(A \mid I) = I \mid A^{-1} \\
 A = \text{square matrix} \\
 I = \text{identity matrix} \\
 A^{-1} = \text{inverse matrix}

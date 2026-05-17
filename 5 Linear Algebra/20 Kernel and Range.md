@@ -5,7 +5,7 @@
 ### kernel formula
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \implies \text{ker}(L) = \{\vec v \in \mathcal V | L(\vec v) = \vec 0_{\mathcal W}\} \\
+(L: \mathcal V \rightarrow \mathcal W) \implies \text{ker}(L) = \{\vec v \in \mathcal V \mid L(\vec v) = \vec 0_{\mathcal W}\} \\
 L = \text{linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -21,7 +21,7 @@ $$
 ### range formula
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \implies \text{range}(L) = \{L(\vec v)| \vec v \in \mathcal V \} \\
+(L: \mathcal V \rightarrow \mathcal W) \implies \text{range}(L) = \{L(\vec v) \mid \vec v \in \mathcal V \} \\
 L = \text{linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
@@ -53,7 +53,7 @@ $$
 ### linear transformation kernel formula
 $$
 \begin{aligned}
-(L: \mathbb R^n \rightarrow \mathbb R^m) \land (\vec x \mapsto A\vec x) \implies \text{ker}(L) = \{\vec x \in \mathbb R^n| A\vec x = 0\} \\
+(L: \mathbb R^n \rightarrow \mathbb R^m) \land (\vec x \mapsto A\vec x) \implies \text{ker}(L) = \{\vec x \in \mathbb R^n \mid A\vec x = 0\} \\
 |A| = m \times n \\
 L = \text{linear transformation} \\
 A = \text{matrix transformation} \\
@@ -69,7 +69,7 @@ $$
 ### linear transformation range formula
 $$
 \begin{aligned}
-(L: \mathbb R^n \rightarrow \mathbb R^m) \land (\vec x \mapsto A\vec x) \implies \text{range}(L) = \{A\vec x \in \mathbb R^m | \vec x \in \mathbb R^n\} \\
+(L: \mathbb R^n \rightarrow \mathbb R^m) \land (\vec x \mapsto A\vec x) \implies \text{range}(L) = \{A\vec x \in \mathbb R^m \mid \vec x \in \mathbb R^n\} \\
 |A| = m \times n \\
 L = \text{linear transformation} \\
 A = \text{matrix transformation} \\
