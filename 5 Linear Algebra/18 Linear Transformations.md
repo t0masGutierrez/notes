@@ -5,59 +5,36 @@
 ### function formula
 $$
 \begin{aligned}
-f: A \to B \\
-f(a) = b
+f: A \to B \iff \forall a \in A, \exists ! b \in B: f(a) = b \\
+f = \text{function} \\
+A = \text{domain} \\
+B = \text{codomain} \\
+a = \text{preimage} \\
+f(a) = \text{image} \\
+f(A) = \text{range}
 \end{aligned}
 $$
 
 ---
-### domain
-- if $f$ equal function from A to B then A equal domain of $f$ 
-
----
-### codomain
-- if $f$ equal function from A to B then B equal codomain of $f$ 
-
----
-### preimage
-- if $f(a) = b$ then *a* equal preimage of *b* 
-
----
-### image
-- if $f(a) = b$ then *b* equal image of *a* 
-
----
-### range
-- if $f$ equal function from A to B then subset of B equal range of $f$ 
-
----
 ### linear transformation
-- function of vector space thats closed under vector addition and scalar multiplication
+- function of vector space closed under vector addition and scalar multiplication
 
 ---
 ### linear transformation formula
 $$
 \begin{aligned}
-L: \mathcal V \rightarrow \mathcal W \\
+L: \mathcal V \rightarrow \mathcal W \iff \begin{cases} 
 L(\vec v) = \vec w \\
 L(\vec v_{1} + \vec v_{2}) = L(\vec v_{1}) + L(\vec v_{2}) \\
 L(c\vec v) = cL(\vec v)
-\end{aligned}
-$$
-
----
-### linear transformation property
-- zero
-- negation
-- linearity
-
----
-### linear transformation property formula
-$$
-\begin{aligned}
-L(\vec 0_{\mathcal V}) = \vec 0_{\mathcal W} \\
-L(-\vec v) = -L(\vec v) \\
-L(c_{1}\vec v_{1} + \dots + c_{n}\vec v_{n}) = c_1L(\vec v_{1}) + \dots + c_nL(\vec v_{n}) \\
+\end{cases}
+\\
+L = \text{linear transformation} \\
+\mathcal V = \text{domain vector space} \\
+\mathcal W = \text{codomain vector space} \\
+\vec v = \text{preimage} \\
+\vec w = \text{image} \\
+c = \text{scalar}
 \end{aligned}
 $$
 
@@ -70,7 +47,7 @@ $$
 $$
 \begin{aligned}
 L : \mathcal V \rightarrow \mathcal V \\
-L = \text{linear transformation} \\
+L = \text{linear operator} \\
 \mathcal V = \text{vector space}
 \end{aligned}
 $$
@@ -83,8 +60,10 @@ $$
 ### identity linear operator formula
 $$
 \begin{aligned}
-i : \mathcal V \rightarrow \mathcal V \\
-L(\vec v) = \vec v
+I : \mathcal V \rightarrow \mathcal V \iff L(\vec v) = \vec v \\
+L = \text{identity linear operator} \\
+\mathcal V = \text{vector space} \\
+\vec v = \text{vector}
 \end{aligned}
 $$
 
@@ -121,7 +100,7 @@ $$
 $$
 \begin{aligned}
 {}[v_{1}, \dots, v_{i}, \dots, v_{n}] \mapsto [v_{1}, \dots, cv_{i}, \dots, v_{n}] \\
-0 \le c \le 1
+0 < c < 1
 \end{aligned}
 $$
 
@@ -170,35 +149,82 @@ $$
 ### matrix transformation formula
 $$
 \begin{aligned}
-L : \mathbb R^n \rightarrow \mathbb R^m \\
-L(\vec x) = A\vec x
+L : \mathbb R^n \rightarrow \mathbb R^m \iff \begin{cases} 
+\exists A \in \mathcal M_{mn}: L(\vec x) = A\vec x \\
+L(\vec v_{1} + \vec v_{2}) = L(\vec v_{1}) + L(\vec v_{2}) \\
+L(c\vec v) = cL(\vec v)
+\end{cases}
+\\
+L = \text{linear transformation} \\
+A = \text{matrix transformation} \\
+\vec v = \text{preimage} \\
+\vec w = \text{image} \\
+c = \text{scalar}
 \end{aligned}
 $$
 
 ---
-### composite transformation property
+### linear transformation zero property
+- linear transformation of domain zero vector equal codomain zero vector
+
+---
+### linear transformation zero property formula
+$$
+\begin{aligned}
+L(\vec 0_{\mathcal V}) = \vec 0_{\mathcal W} \\
+L = \text{linear transformation} \\
+\mathcal V = \text{domain vector space} \\
+\mathcal W = \text{codomain vector space}
+\end{aligned}
+$$
+
+---
+### linear transformation linearity property
+- linear transformation of linear combination equal linear combination of linear transformation
+
+---
+### linear transformation linearity property formula
+$$
+\begin{aligned}
+L(\sum_{i=1}^n c_{i}\vec v_{i}) = \sum_{i=1}^n c_{i} L(\vec v_{i}) \\
+L = \text{linear transformation} \\
+n = \text{dimension} \\
+c = \text{scalar} \\
+\vec v = \text{preimage} 
+\end{aligned}
+$$
+
+---
+### linear transformation composite property
 - composition of linear transformation equal linear transformation 
 
 ---
-### composite transformation property formula
+### linear transformation composite property formula
 $$
 \begin{aligned}
 (L_{1}: \mathcal V_{1} \rightarrow \mathcal V_{2}) \land (L_{2}: \mathcal V_{2} \rightarrow \mathcal V_{3}) \implies L_{2} \circ L_{1} : \mathcal V_{1} \rightarrow \mathcal V_{3} \\
-(L_{2} \circ L_{1})(\vec v) = L_{2}(L_{1}(\vec v))
+(L_{2} \circ L_{1})(\vec v) = L_{2}(L_{1}(\vec v)) \\
+L = \text{linear transformation} \\
+\mathcal V = \text{vector space} 
 \end{aligned}
 $$
 
 ---
-### subspace transformation property
+### linear transformation subspace property
 - image of domain subspace equal subspace of codomain
 - inverse image of codomain subspace equal subspace of domain
 
 ---
-### subspace transformation property formula
+### linear transformation subspace property formula
 $$
 \begin{aligned}
 (L : \mathcal V \rightarrow \mathcal W) \land (\mathcal V' \le \mathcal V) \implies L(\mathcal V') = \{L(\vec v) \mid \vec v \in \mathcal V'\} \le \mathcal W \\
-(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \implies L^{-1}(\mathcal W') = \{\vec v \mid L(\vec v) \in \mathcal W'\} \le \mathcal V
+(L : \mathcal V \rightarrow \mathcal W) \land (\mathcal W' \le \mathcal W) \implies L^{-1}(\mathcal W') = \{\vec v \mid L(\vec v) \in \mathcal W'\} \le \mathcal V \\
+L = \text{linear transformation} \\
+\mathcal V = \text{domain vector space} \\
+\mathcal W = \text{codomain vector space} \\
+\vec v = \text{preimage} \\
+L(\vec v) = \text{image}
 \end{aligned}
 $$
 

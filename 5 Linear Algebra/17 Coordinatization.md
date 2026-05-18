@@ -57,7 +57,7 @@ $$
 ### change of coordinates formula
 $$
 \begin{aligned}
-B \rightarrow C
+{}[\vec w]_{B} \rightarrow [\vec w]_{C}
 \end{aligned}
 $$
 
