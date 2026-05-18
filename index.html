@@ -790,6 +790,7 @@
             this.app = app;
             this.index = [];
             this.indexBuilt = false;
+            this.indexPromise = null;
             this.selectedIndex = -1;
 
             // Close search results when clicking outside
@@ -803,33 +804,41 @@
 
         async buildIndex() {
             if (this.indexBuilt) return;
-            this.index = [];
-            const folders = Object.keys(this.app.manifestData);
-            const fetches = [];
-            for (const folder of folders) {
-                for (const file of this.app.manifestData[folder]) {
-                    fetches.push(
-                        fetch(`${encodeURIComponent(folder)}/${file}`)
-                            .then(r => r.text())
-                            .then(text => {
-                                // Use raw split to preserve cardIndex alignment with loadFileContent
-                                const parts = text.split('---').map(p => p.trim()).filter(Boolean);
-                                parts.forEach((part, cardIndex) => {
-                                    const card = CardParser.parseCard(part);
-                                    if (card) {
-                                        this.index.push({
-                                            term: card.term,
-                                            definition: card.definition,
-                                            folder, file, cardIndex
-                                        });
-                                    }
-                                });
-                            }).catch(() => {})
-                    );
+            if (this.indexPromise) return this.indexPromise;
+            this.indexPromise = (async () => {
+                this.index = [];
+                const folders = Object.keys(this.app.manifestData);
+                const fetches = [];
+                for (const folder of folders) {
+                    for (const file of this.app.manifestData[folder]) {
+                        fetches.push(
+                            fetch(`${encodeURIComponent(folder)}/${file}`)
+                                .then(r => r.text())
+                                .then(text => {
+                                    // Use raw split to preserve cardIndex alignment with loadFileContent
+                                    const parts = text.split('---').map(p => p.trim()).filter(Boolean);
+                                    parts.forEach((part, cardIndex) => {
+                                        const card = CardParser.parseCard(part);
+                                        if (card) {
+                                            this.index.push({
+                                                term: card.term,
+                                                definition: card.definition,
+                                                folder, file, cardIndex
+                                            });
+                                        }
+                                    });
+                                }).catch(() => {})
+                        );
+                    }
                 }
+                await Promise.all(fetches);
+                this.indexBuilt = true;
+            })();
+            try {
+                await this.indexPromise;
+            } finally {
+                this.indexPromise = null;
             }
-            await Promise.all(fetches);
-            this.indexBuilt = true;
         }
 
         handleKeydown(e) {
@@ -1428,9 +1437,34 @@
 
         async init() {
             await this.loadFolders();
-            await this._restoreSession();
+            const initialSearch = this._getInitialSearchQuery();
+            if (initialSearch) {
+                await this.showSearchResults(initialSearch);
+            } else {
+                await this._restoreSession();
+            }
             this._initScrollButton();
             this._initKeyboardListeners();
+        }
+
+        _getInitialSearchQuery() {
+            const params = new URLSearchParams(window.location.search);
+            return (params.get('q') || params.get('search') || params.get('query') || '').trim();
+        }
+
+        async showSearchResults(query) {
+            ViewManager.show('home');
+            document.getElementById('learn-modal').style.display = 'none';
+            this.currentFolder = '';
+            this.currentFile = '';
+            SessionManager.saveNavState('home');
+            SessionManager.clearProgress();
+            await this.searchEngine.buildIndex();
+            const input = document.getElementById('search-input');
+            input.value = query;
+            this.searchEngine.selectedIndex = -1;
+            this.searchEngine.search();
+            input.focus();
         }
 
         // --- Navigation ---
