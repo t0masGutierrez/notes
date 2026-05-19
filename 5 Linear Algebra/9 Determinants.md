@@ -194,8 +194,8 @@ $$
 - rank of nonsingular matrix equal dimension of nonsingular matrix
 - nonsingular matrix equal nonzero determinant
 - nonsingular matrix row equivalent with identity matrix
-- every solution of homogeneous system with nonsingular coefficient matrix equal trivial solution
-- there exists nontrivial solution of nonhomogeneous system with nonsingular coefficient matrix
+- every solution of homogeneous linear system with nonsingular coefficient matrix equal trivial solution
+- there exists nontrivial solution of nonhomogeneous linear system with nonsingular coefficient matrix
 ---
 ### upper triangular matrix determinant
 - product of entries along the main diagonal

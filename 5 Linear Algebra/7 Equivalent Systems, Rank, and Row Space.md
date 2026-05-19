@@ -205,3 +205,17 @@ m = \text{number of rows} \\
 $$
 
 ---
+### row space dimension property
+- matrix rank equal matrix transposition rank
+- row space dimension equal column space dimension
+
+---
+### row space dimension property formula
+$$
+\begin{aligned}
+\text{Rank}(A) = \text{Rank}(A^T) \\
+\dim(\text{Row} \ A) = \dim(\text{Col} \ A) 
+\end{aligned}
+$$
+
+---

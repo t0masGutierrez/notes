@@ -165,7 +165,7 @@ $$
 - compute characteristic polynomial
 - substitute eigenvalues into coefficient matrix
 - form the reduced row echelon of the system
-- fundamental solutions of homogeneous system equal fundamental eigenvectors
+- fundamental solutions of homogeneous linear system equal fundamental eigenvectors
 - if geometric multiplicity equal dimension of coefficient matrix then diagonalizable
 - form eigenmatrix whose column vectors equal fundamental eigenvectors
 - compute inverse eigenmatrix

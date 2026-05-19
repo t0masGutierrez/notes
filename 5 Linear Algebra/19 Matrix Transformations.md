@@ -27,7 +27,8 @@ $$
 ### matrix transformation formula
 $$
 \begin{aligned}
-(L : \mathcal V \rightarrow \mathcal W) \land (B = \set{\vec b_{1}, \dots, \vec b_{n}}) \land (C = \set{\vec c_{1}, \dots \vec c_{m}}) \implies [L(\vec v)]_{C} = A_{BC} [\vec v]_{B} \\
+(L : \mathcal V \rightarrow \mathcal W) \land (B = \set{\vec b_{1}, \dots, \vec b_{n}}) \land (C = \set{\vec c_{1}, \dots \vec c_{m}}) \implies \\
+\forall \vec v \in \mathcal V: [L(\vec v)]_{C} = A_{BC} [\vec v]_{B} \\
 \dim (\mathcal V) = n \\
 \dim (\mathcal W) = m \\
 |A_{BC}| = m \times n \\
