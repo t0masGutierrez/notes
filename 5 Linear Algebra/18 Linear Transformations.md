@@ -142,28 +142,6 @@ $$
 $$
 
 ---
-### matrix transformation
-- map every element from $\mathbb R^n$ to 1 element of $\mathbb R^m$ 
-
----
-### matrix transformation formula
-$$
-\begin{aligned}
-L : \mathbb R^n \rightarrow \mathbb R^m \iff \begin{cases} 
-\exists A \in \mathcal M_{mn}: L(\vec x) = A\vec x \\
-L(\vec v_{1} + \vec v_{2}) = L(\vec v_{1}) + L(\vec v_{2}) \\
-L(c\vec v) = cL(\vec v)
-\end{cases}
-\\
-L = \text{linear transformation} \\
-A = \text{matrix transformation} \\
-\vec v = \text{preimage} \\
-\vec w = \text{image} \\
-c = \text{scalar}
-\end{aligned}
-$$
-
----
 ### linear transformation zero property
 - linear transformation of domain zero vector equal codomain zero vector
 

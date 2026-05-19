@@ -14,13 +14,28 @@ c = \text{scalar} \\
 $$
 
 ---
-### span example
+### spanning
+- span of set equal vector space
+
+---
+### spanning formula
+$$
+\begin{aligned}
+\text{span}(\set{\vec v_{1}, \dots, \vec v_{n}}) = \mathcal V \\
+\vec v = \text{vector} \\
+n = \text{dimension} \\
+\mathcal V = \text{vector space}
+\end{aligned}
+$$
+
+---
+### spanning example
 - standard unit vector
 - standard unit polynomial
 - standard unit matrix
 
 ---
-### span example formula
+### spanning example formula
 $$
 \begin{aligned}
 \text{span}(\{\vec e_{1}, \vec e_{2}, \dots , \vec e_{n}\}) = \mathbb R^n \\

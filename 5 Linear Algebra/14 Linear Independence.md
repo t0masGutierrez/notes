@@ -43,12 +43,6 @@ $$
 - if number of pivot columns not equal number of columns then linearly dependent set
 
 ---
-### summary
-- zero vector
-- redundant vector
-- finite subset
-- unique linear combination
----
 ### linear independence empty property
 - empty set equal linearly independent set
 

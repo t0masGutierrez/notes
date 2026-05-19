@@ -6,11 +6,12 @@
 ### injective linear transformation formula
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec v_{1}, \vec v_{2} \in \mathcal V: L(\vec v_{1}) = L(\vec v_{2}) \implies \vec v_{1} = \vec v_{2} \\
+L: \mathcal V \rightarrow \mathcal W \iff \forall \vec v_{1}, \vec v_{2} \in \mathcal V: L(\vec v_{1}) = L(\vec v_{2}) \implies \vec v_{1} = \vec v_{2} \\
 L = \text{injective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
-\vec v = \text{vector} 
+\vec v = \text{preimage} \\
+L(\vec v) = \text{image}
 \end{aligned}
 $$
 
@@ -23,38 +24,24 @@ $$
 ### surjective linear transformation formula
 $$
 \begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \iff \forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w \\
+L: \mathcal V \rightarrow \mathcal W \iff \forall \vec w \in \mathcal W, \exists \vec v \in \mathcal V: L(\vec v) = \vec w \\
 L = \text{surjective linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space} \\
-\vec v = \text{preimage vector} \\
-\vec w = \text{image vector} 
+\vec v = \text{preimage} \\
+L(\vec v) = \text{image}
 \end{aligned}
 $$
 
 ---
-### dimension property
-- dimension of injective kernel equal dimension of zero
-- dimension of surjective range equal dimension of codomain
+### bijective linear transformation
+- linear transformation with equal dimension between domain and codomain equal bijective linear transformation
 
 ---
-### dimension property formula
+### bijective linear transformation formula
 $$
 \begin{aligned}
-L = \text{injection} \iff (\text{ker}(L) = \{\vec 0_{\mathcal V}\}) \lor (\text{dim(ker} \ L) = 0) \\
-L = \text{surjection} \iff (\text{range}(L) = \mathcal W) \lor (\text{dim(range} \ L) = \dim(\mathcal W) \ne \infty) \\
-\end{aligned}
-$$
-
----
-### bijection property
-- vector space with equal dimension must satisfy bijection
-
----
-### bijection property formula
-$$
-\begin{aligned}
-(L: \mathcal V \rightarrow \mathcal W) \land (\dim(\mathcal V) = \dim(\mathcal W) \ne \infty) \implies L = \text{injection} \iff L = \text{surjection} \\
+L: \mathcal V \rightarrow \mathcal W \land \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \implies L = \text{injection} \iff L = \text{surjection} \\
 L = \text{linear transformation} \\
 \mathcal V = \text{domain vector space} \\
 \mathcal W = \text{codomain vector space}
@@ -62,16 +49,60 @@ L = \text{linear transformation} \\
 $$
 
 ---
-### spanning independence property
-- independent injective preimage equal independent image
-- spanning surjective preimage equal spanning image
+### injective dimension property
+- injective kernel equal trivial vector space
+- or dimension of injective kernel equal zero
 
 ---
-### spanning independence property
+### injective dimension property formula
 $$
 \begin{aligned}
-(L = \text{injection}) \land (\text{rank}(T \subseteq \mathcal V) = n) \implies \text{rank}(L(T) \subseteq \mathcal W) = n \\
-(L = \text{surjection}) \land (\text{span}(S \subseteq \mathcal V) = \mathcal V) \implies \text{span}(L(S) \subseteq \mathcal W) = \mathcal W \\
+\text{ker}(L) = \{\vec 0_{\mathcal V}\} \lor \text{dim(ker} \ L) = 0 \\
+L = \text{injective linear transformation}
+\end{aligned}
+$$
+
+---
+### injective linear independence property
+- injective linear transformation preserve linearly independence
+
+---
+### injective linear independence property formula
+$$
+\begin{aligned}
+L = \text{injection} \land \text{rank}(T) = \text{dim} (\mathcal V) \land L(T) = U \implies \text{rank}(U) = \text{dim}(\mathcal V) \\
+L : T \subset \mathcal V \rightarrow U \subset \mathcal W \\
+L = \text{injective linear transformation} \\
+T, L(T) = \text{linearly independent set}
+\end{aligned}
+$$
+
+---
+### surjective dimension property
+- surjective range equal codomain
+- or dimension of surjective range not finite
+
+---
+### surjective dimension property formula
+$$
+\begin{aligned}
+\text{range}(L) = \mathcal W \lor \text{dim(range} \ L) = \dim(\mathcal W) \ne \infty \\
+L = \text{surjective linear transformation}
+\end{aligned}
+$$
+
+---
+### surjective spanning property
+- surjective linear transformation preserve spanning
+
+---
+### surjective spanning property formula
+$$
+\begin{aligned}
+L = \text{surjection} \land \text{span}(T) = \mathcal V \land L(T) = U \implies \text{span}(U) = \mathcal W \\
+L : T \subset \mathcal V \rightarrow U \subset \mathcal W \\
+L = \text{surjective linear transformation} \\
+T, L(T) = \text{spanning set}
 \end{aligned}
 $$
 

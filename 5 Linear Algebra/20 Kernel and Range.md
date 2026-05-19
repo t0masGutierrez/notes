@@ -76,22 +76,6 @@ L = \text{linear transformation} \\
 $$
 
 ---
-### range subspace property
-- range equal subspace of codomain
-
----
-### range subspace property formula
-$$
-\begin{aligned}
-\text{range}(L) \le \mathcal W \\
-L: \mathcal V \rightarrow \mathcal W \\
-L = \text{linear transformation} \\
-\mathcal V = \text{domain vector space} \\
-\mathcal W = \text{codomain vector space} 
-\end{aligned}
-$$
-
----
 ### kernel solution property
 - kernel equal complete solution set of homogeneous linear system
 
@@ -100,22 +84,6 @@ $$
 $$
 \begin{aligned}
 \text{ker}(L) = \{\vec x \mid \vec x \in \mathbb R^n, A \in \mathcal M_{mn}, L: \mathbb R^n \rightarrow \mathbb R^m, A\vec x = 0\} \\
-L = \text{linear transformation} \\
-A = \text{matrix transformation} \\
-\vec x = \text{preimage} \\
-A\vec x = \text{image}
-\end{aligned}
-$$
-
----
-### range column property
-- range equal column space of matrix transformation
-
----
-### range column property formula
-$$
-\begin{aligned}
-\text{range}(L) = \{A\vec x \mid \vec x \in \mathbb R^n, A \in \mathcal M_{mn}, L: \mathbb R^n \rightarrow \mathbb R^m\} = \text{Col}(A) \\
 L = \text{linear transformation} \\
 A = \text{matrix transformation} \\
 \vec x = \text{preimage} \\
@@ -145,6 +113,40 @@ C = \text{codomain basis} \\
 $$
 
 ---
+### range subspace property
+- range equal subspace of codomain
+
+---
+### range subspace property formula
+$$
+\begin{aligned}
+\text{range}(L) \le \mathcal W \\
+L: \mathcal V \rightarrow \mathcal W \\
+L = \text{linear transformation} \\
+\mathcal V = \text{domain vector space} \\
+\mathcal W = \text{codomain vector space} 
+\end{aligned}
+$$
+
+---
+### range column property
+- range equal column space of matrix transformation
+
+---
+### range column property formula
+$$
+\begin{aligned}
+\text{range}(L) = \{A_{BC}\vec x \mid \vec x \in \mathbb R^n, A_{BC} \in \mathcal M_{mn}, L: \mathbb R^n \rightarrow \mathbb R^m\} = \text{Col}(A_{BC}) \\
+L = \text{linear transformation} \\
+A = \text{matrix transformation} \\
+B = \text{domain basis} \\
+C = \text{codomain basis} \\
+\vec x = \text{preimage} \\
+A\vec x = \text{image}
+\end{aligned}
+$$
+
+---
 ### range dimension property
 - dimension of range equal rank of matrix transformation
 
@@ -152,7 +154,7 @@ $$
 ### range dimension property formula
 $$
 \begin{aligned}
-{}[L(\vec v)]_{C} = A_{BC} [\vec v]_{B} \implies \dim(\text{range} \ L) = \text{rank}(A) \\
+{}[L(\vec v)]_{C} = A_{BC} [\vec v]_{B} \implies \dim(\text{range} \ L) = \text{rank}(A_{BC}) \\
 L: \mathcal V \rightarrow \mathcal W \\
 L = \text{linear transformation} \\
 {}[\vec v]_{B} = \text{preimage coordinate vector} \\

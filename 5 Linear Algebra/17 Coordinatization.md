@@ -51,7 +51,7 @@ $$
 
 ---
 ### change of coordinates
-- convert coordinates from 1st ordered basis to 2nd ordered basis
+- convert coordinate vector from 1st ordered basis to 2nd ordered basis
 
 ---
 ### change of coordinates formula
