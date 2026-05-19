@@ -54,7 +54,7 @@ $$
 \text{specific heat capacity} & \text{joule per kilogram-kelvin} & \frac{\text{J}}{\text{kg}\cdot\text{K}} & \\
 \text{thermal conductivity} & \text{watt per meter-kelvin} & \frac{\text{W}}{\text{m}\cdot\text{K}} & \\
 \text{radiant intensity} & \text{watt per steradian} & \text{W}/\text{sr} & \\
-\text{radioactive activity} & \text{becquerel} & \text{Bq} & \text{s}^{-1} \\
+\text{radioactivity} & \text{becquerel} & \text{Bq} & \text{s}^{-1} \\
 \text{radiation dose} & \text{gray} & \text{Gy} & \text{J}/\text{kg} \\
 \text{radiation dose equivalent} & \text{sievert} & \text{Sv} & \text{J}/\text{kg}
 \end{array}

@@ -13,7 +13,9 @@
 $$
 \begin{aligned}
 \hat{i} = \frac{\vec{A_{x}}}{A_{x}} \\ 
-\hat{j} = \frac{\vec{A_{y}}}{A_{y}}
+\hat{j} = \frac{\vec{A_{y}}}{A_{y}} \\
+\vec A_{x}, \vec A_{y} = \text{vector component} \\
+A_{x}, A_{y} = \text{scalar component}
 \end{aligned}
 $$
 
@@ -36,17 +38,19 @@ $$
 ### vector component formula
 $$
 \begin{aligned}
-\vec{A} = A_{x}\hat{i} + A_{y}\hat{j} \\
+\vec{A} = \vec A_{x} + \vec A_{y} = A_{x}\hat{i} + A_{y}\hat{j} \\
+\vec A_{x} = \text{x vector component} \\
+\vec A_{y} = \text{y vector component} \\
 A_{x} = \text{x scalar component} \\
-\hat{i} = \text{x direction} \\
 A_{y} = \text{y scalar component} \\
+\hat{i} = \text{x direction} \\
 \hat{j} = \text{y direction}
 \end{aligned}
 $$
 
 ---
 ### magnitude
-- distance from origin
+- distance from the origin
 
 ---
 ### magnitude formula
@@ -67,75 +71,48 @@ $$
 ### direction formula
 $$
 \begin{aligned}
-\theta = \arctan (\frac{A_{y}}{A_{x}}) \\
-A_{x} = \text{x scalar component} \\
-A_{y} = \text{y scalar component}
+\theta = \begin{cases}
+\arctan (\frac{A_{y}}{A_{x}}), \ A_{x} > 0 \\
+\arctan (\frac{A_{y}}{A_{x}}) + 180^\circ, \ A_{x} < 0  
+\end{cases} \\
+A_{y} = \text{y scalar component} \\
+A_{x} = \text{x scalar component} 
 \end{aligned}
 $$
 
 ---
 ### inverse tangent range
-- $[\frac{-\pi}{2} \le \theta \le \frac{\pi}{2}] = [-90 \le \theta \le 90] = Q_{1} \lor Q_{4}$  
-- negative $A_{x}$ equal 180 addition with direction
+- 1st quadrant or 4th quadrant
 ---
-### vector equality
-- equal magnitude and equal direction
-
----
-### vector equality formula
+### inverse tangent range formula
 $$
 \begin{aligned}
-\vec{A} = \vec{B} \iff
-\begin{cases}
-A_{x} = B_{x} \\
-A_{y} = B_{y}
-\end{cases}
-\end{aligned}
-$$
-
----
-### vector property
-- commutative
-- associative
-- additive identity
-- additive inverse
-- distributive
-- multiplicative identity
-- multiplicative zero
-
----
-### vector property formula
-$$
-\begin{aligned}
-\vec A + \vec B = \vec B + \vec A \\
-(\vec A + \vec B) + \vec C = \vec A + (\vec B + \vec C) \\
-\vec A + 0 = \vec A \\
-\vec A + (-\vec A) = 0 \\
-c(\vec A + \vec B) = c\vec A + c\vec B \\
-1(\vec A) = \vec A 
-0(\vec A) = 0
+{}[\frac{-\pi}{2} \le \theta \le \frac{\pi}{2}] = [-90 \le \theta \le 90] \\
+\theta = \text{direction}
 \end{aligned}
 $$
 
 ---
 ### scalar multiplication
-- scalar quantity multiplication with vector component
-- negative scalar quantity equal 180 addition with direction or negative vector component
+- scalar quantity multiplication with vector
+- if negative scalar then direction addition with 180 or negative vector component
 
 ---
 ### scalar multiplication formula
 $$
 \begin{aligned}
-a\vec{A} = aA_{x}\hat{i} + aA_{y}\hat{j} \\
-a = \text{scalar quantity} \\
-A_{x} \hat i = \text{x vector component} \\
-A_{y} \hat j = \text{y vector component}
+c\vec{A} = cA_{x}\hat{i} + cA_{y}\hat{j} \\
+c = \text{scalar} \\
+A_{x} = \text{x scalar component} \\
+\hat{i} = \text{x direction} \\
+A_{y} = \text{y scalar component} \\
+\hat{j} = \text{y direction}
 \end{aligned}
 $$
 
 ---
 ### vector addition
-- vector *A* component(s) addition with corresponding vector *B* component(s) 
+- vector *A* component(s) addition with corresponding vector *B* component(s)
 
 ---
 ### vector addition formula
@@ -153,39 +130,34 @@ $$
 ### graphical vector addition
 - vector *B* starts where vector *A* ends
 - vector sum *C* equal diagonal from where vector *A* starts to where vector *B* ends
+![256](8%20Physics/Images/graphical%20vector%20addition.png)
+
 ---
 ### parallelogram vector addition
-- both vectors start via origin
+- both vectors start from the origin
 - construct two parallel vectors
-- vector sum *C* equal diagonal from origin to where parallel vectors intersect
----
-### graphical vector subtraction
-- anti parallel vector *B* starts where vector *A* ends
-- vector sum equal diagonal from where vector *A* starts to where anti parallel vector *B* ends
+- vector sum *C* equal diagonal from the origin to where the parallel vectors intersect
+![256](8%20Physics/Images/parallelogram%20vector%20addition.png)
+
 ---
 ### dot product
 - scalar quantity of similarity between two vectors
-- aka scalar product
 ---
 ### dot product formula
 $$
 \begin{aligned}
-\vec{A} \cdot \vec{B} = AB \cos (\theta) \\
-A = \text{magnitude} \\
-\theta = \text{angle between vectors}
+\vec{A} \cdot \vec{B} = AB \cos (\theta) = A_xB_{x} + A_yB_{y} + A_zB_{z} \\
+A, B = \text{magnitude} \\
+\theta = \text{angle between vectors} \\
+A_{x}, B_{x} = \text{x scalar component} \\
+A_{y}, B_{y} = \text{y scalar component} \\
+A_{z}, B_{z} = \text{z scalar component} 
 \end{aligned}
 $$
 
 ---
-### dot product formula
-$$
-\begin{aligned}
-\vec{A} \cdot \vec{B} = A_xB_{x} + A_yB_{y} + A_zB_{z} \\
-A_{x} = \text{x scalar component} \\
-A_{y} = \text{y scalar component} \\
-A_{z} = \text{z scalar component}
-\end{aligned}
-$$
+### unit vector dot product
+- scalar quantity of similarity between two perpendicular unit vectors equal zero
 
 ---
 ### unit vector dot product formula
@@ -199,41 +171,39 @@ $$
 $$
 
 ---
-### calculate dot product
-- acute angle equal positive dot product
-- obtuse angle equal negative dot product
-- parallel vectors equal $AB$ 
-- anti parallel vectors equal negative $AB$
-- perpendicular vectors equal 0
-- same vectors equal $A^2$ 
-
----
 ### cross product
 - vector quantity of dissimilarity between two vectors
-- aka vector product
+![256](8%20Physics/Images/cross%20product.png)
+
 ---
-### cross product formula
+### scalar cross product formula
 $$
 \begin{aligned}
-|\vec{A} \times \vec{B}| = AB \sin (\theta) \\
-A = \text{magnitude} \\
+\|\vec{A} \times \vec{B}\| = AB \sin (\theta) \\
+A, B = \text{magnitude} \\
 \theta = \text{angle between vectors}
 \end{aligned}
 $$
 
 ---
-### cross product formula
+### vector cross product formula
 $$
 \begin{aligned}
 \vec{A} \times \vec{B} = (A_yB_{z} - A_zB_{y})\hat{i} + (A_zB_{x} - A_xB_{z})\hat{j} + (A_xB_{y} - A_yB_{x})\hat{k} \\
-A_{x} = \text{x scalar component} \\
+A_{x}, B_{x} = \text{x scalar component} \\
 \hat i = \text{x direction} \\
-A_{y} = \text{y scalar component} \\
+A_{y}, B_{y} = \text{y scalar component} \\
 \hat j = \text{y direction} \\
-A_{z} = \text{z scalar component} \\
+A_{z}, B_{z} = \text{z scalar component} \\
 \hat k = \text{z direction}
 \end{aligned}
 $$
+
+---
+### unit vector cross product
+- horizontal cross vertical equal longitudinal
+- vertical cross longitudinal equal horizontal
+- longitudinal cross horizontal equal vertical
 
 ---
 ### unit vector cross product formula
@@ -249,22 +219,100 @@ $$
 $$
 
 ---
-### calculate cross product
-- right angle equal $AB$ 
-- parallel vectors equal 0
-- anti parallel vectors equal 0
-- same vectors equal 0
-
----
 ### right hand rule
 - point hand to vector *A*
 - curl palm to vector *B*
 - point thumb to vector $A \times B$
+![256](8%20Physics/Images/right%20hand%20rule.png)
+
 ---
+### right hand rule formula
+$$
+\begin{aligned}
+C \perp A \hookrightarrow B \\
+-C \perp A \hookleftarrow B
+\end{aligned}
+$$
 
+---
+### vector equality property
+- equal magnitude and equal direction
 
+---
+### vector equality property formula
+$$
+\begin{aligned}
+\vec{A} = \vec{B} \iff
+\begin{cases}
+A_{x} = B_{x} \\
+A_{y} = B_{y}
+\end{cases} \\
+\vec A, \vec B = \text{vector} \\
+A_{x}, B_{x} = \text{x scalar component} \\
+A_{y}, B_{y} = \text{y scalar component}
+\end{aligned}
+$$
 
+---
+### vector arithmetic property
+- commutative
+- associative
+- identity
+- inverse
+- distributive
 
+---
+### vector arithmetic property formula
+$$
+\begin{aligned}
+\vec A + \vec B = \vec B + \vec A \\
+(\vec A + \vec B) + \vec C = \vec A + (\vec B + \vec C) \\
+\vec A + 0 = \vec A \\
+1(\vec A) = \vec A \\
+\vec A + (-\vec A) = 0 \\
+0(\vec A) = 0 \\
+c(\vec A + \vec B) = c\vec A + c\vec B
+\end{aligned}
+$$
 
+---
+### dot product direction property
+- acute angle equal positive dot product
+- obtuse angle equal negative dot product
+- perpendicular vectors equal zero
+- parallel vectors equal product of magnitude
+- anti parallel vectors equal negative product of magnitude
+- same vectors equal squared magnitude
 
+---
+### dot product direction property formula
+$$
+\begin{aligned}
+0^\circ \le \theta < 90^\circ \iff \vec A \cdot \vec B > 0 \\
+90^\circ \le \theta < 180^\circ \iff \vec A \cdot \vec B < 0 \\
+\theta = 90^\circ \iff \vec A \cdot \vec B = 0 \\
+\theta = 0^\circ \iff \vec A \cdot \vec B = AB \\
+\theta = 180^\circ \iff \vec A \cdot \vec B = -AB \\
+\vec A = \vec B \implies (\theta = 0^\circ) \land (\vec A \cdot \vec B = A^2)
+\end{aligned}
+$$
 
+---
+### cross product direction property
+- perpendicular vectors equal product of magnitude
+- parallel vectors equal zero
+- anti parallel vectors equal zero
+- same vectors equal zero
+
+---
+### cross product direction property formula
+$$
+\begin{aligned}
+\theta = 90^\circ &\iff \| \vec A \times \vec B \| = AB \\  
+\theta = 0^\circ &\iff \| \vec A \times \vec B \| = 0 \\  
+\theta = 180^\circ &\iff \| \vec A \times \vec B \| = 0 \\
+\vec A = \vec B &\implies (\theta = 0^\circ) \land (\| \vec A \times \vec B \| = 0)
+\end{aligned}
+$$
+
+---
