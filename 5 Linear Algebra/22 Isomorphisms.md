@@ -91,33 +91,6 @@ L(\vec v) = \text{image}
 $$
 
 ---
-### isomorphic dimension property
-- equal dimension between isomorphic vector space
-
----
-### isomorphic dimension property formula
-$$
-\begin{aligned}
-\mathcal V \cong \mathcal W \iff \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \\
-\mathcal V, \mathcal W = \text{isomorphic vector space} 
-\end{aligned}
-$$
-
----
-### isomorphic real property
-- n-dimensional vector space isomorphic with n-dimensional real numbers
-
----
-### isomorphic real property formula
-$$
-\begin{aligned}
-\dim(\mathcal V) = n \implies \mathcal V \cong \mathbb R^n \\
-\mathcal V, \mathbb R^n = \text{isomorphic vector space} \\
-n = \text{dimension} \\
-\end{aligned}
-$$
-
----
 ### isomorphism matrix kernel property
 - matrix transformation kernel equal isomorphism of matrix transformation kernel
 - image coordinate vector of zero equal zero vector of matrix transformation
@@ -178,6 +151,33 @@ B = \text{domain basis} \\
 C = \text{codomain basis} \\
 {}[L(\vec v)]_{C} = \text{image coordinate vector} \\
 {}[\vec v]_{B} = \text{preimage coordinate vector}
+\end{aligned}
+$$
+
+---
+### isomorphic dimension property
+- equal dimension between isomorphic vector space
+
+---
+### isomorphic dimension property formula
+$$
+\begin{aligned}
+\mathcal V \cong \mathcal W \iff \dim(\mathcal V) = \dim(\mathcal W) \ne \infty \\
+\mathcal V, \mathcal W = \text{isomorphic vector space} 
+\end{aligned}
+$$
+
+---
+### isomorphic real property
+- n-dimensional vector space isomorphic with n-dimensional real numbers
+
+---
+### isomorphic real property formula
+$$
+\begin{aligned}
+\dim(\mathcal V) = n \implies \mathcal V \cong \mathbb R^n \\
+\mathcal V, \mathbb R^n = \text{isomorphic vector space} \\
+n = \text{dimension} \\
 \end{aligned}
 $$
 
