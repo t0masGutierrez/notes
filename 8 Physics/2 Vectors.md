@@ -95,7 +95,7 @@ $$
 ---
 ### scalar multiplication
 - scalar quantity multiplication with vector
-- if negative scalar then direction addition with 180 or negative vector component
+- if negative scalar then direction addition with 180 or negate vector component
 
 ---
 ### scalar multiplication formula
